@@ -1,0 +1,1112 @@
+[
+  {
+    "text": "Our world is made of so many chores and jobs.",
+    "start": "00:00:00",
+    "end": "00:00:02"
+  },
+  {
+    "text": "What if AI could actually lift that load instead of handing you yet another job?",
+    "start": "00:00:02",
+    "end": "00:00:07"
+  },
+  {
+    "text": "And I know how that sounds.",
+    "start": "00:00:07",
+    "end": "00:00:10"
+  },
+  {
+    "text": "It It sounds too good to be true.",
+    "start": "00:00:08",
+    "end": "00:00:12"
+  },
+  {
+    "text": "Most AI still comes back to us, right?",
+    "start": "00:00:12",
+    "end": "00:00:13"
+  },
+  {
+    "text": "Prompt me again.",
+    "start": "00:00:13",
+    "end": "00:00:13"
+  },
+  {
+    "text": "Tell me what changed.",
+    "start": "00:00:13",
+    "end": "00:00:16"
+  },
+  {
+    "text": "Decide what I should do next.",
+    "start": "00:00:16",
+    "end": "00:00:17"
+  },
+  {
+    "text": "So, I built a better version.",
+    "start": "00:00:17",
+    "end": "00:00:18"
+  },
+  {
+    "text": "I call it a loop of loops.",
+    "start": "00:00:18",
+    "end": "00:00:19"
+  },
+  {
+    "text": "And by the end of this video, I want you to understand that concept well enough that you can see one you could build for yourself.",
+    "start": "00:00:19",
+    "end": "00:00:27"
+  },
+  {
+    "text": "Now, a loop of loops is how you go from driving one AI task at a time to organizing useful agents around the recurring jobs that are real labor and a burden in your world.",
+    "start": "00:00:27",
+    "end": "00:00:39"
+  },
+  {
+    "text": "And I'm going to give you specific examples.",
+    "start": "00:00:39",
+    "end": "00:00:41"
+  },
+  {
+    "text": "And that's my promise in this video.",
+    "start": "00:00:40",
+    "end": "00:00:42"
+  },
+  {
+    "text": "I want you to go from understanding prompts to understanding agents and understand that what I'm talking about is not a magical life manager.",
+    "start": "00:00:42",
+    "end": "00:00:50"
+  },
+  {
+    "text": "I'm just talking about tackling the practical stuff in your world in a way that reduces your mental load.",
+    "start": "00:00:50",
+    "end": "00:00:56"
+  },
+  {
+    "text": "So, like think of the dental appointment you need to prep for.",
+    "start": "00:00:56",
+    "end": "00:00:59"
+  },
+  {
+    "text": "Or a school trip you need to handle.",
+    "start": "00:00:59",
+    "end": "00:01:01"
+  },
+  {
+    "text": "Or a customer you need to update.",
+    "start": "00:01:01",
+    "end": "00:01:03"
+  },
+  {
+    "text": "These are the jobs that make a week feel heavy.",
+    "start": "00:01:03",
+    "end": "00:01:06"
+  },
+  {
+    "text": "And a loop of loops is the first agent idea I have used that actually points at that load without pretending AI should just run your life.",
+    "start": "00:01:06",
+    "end": "00:01:16"
+  },
+  {
+    "text": "So, today I want loops to stop sounding mysterious.",
+    "start": "00:01:14",
+    "end": "00:01:17"
+  },
+  {
+    "text": "You should understand what a loop is, how it's different from a prompt, how agents fit into it, why a loop of loops matters, and how to look at one repeated job in your own life and say, \"That's a loop that I could build.",
+    "start": "00:01:17",
+    "end": "00:01:31"
+  },
+  {
+    "text": "\" So, let's keep it really simple.",
+    "start": "00:01:31",
+    "end": "00:01:35"
+  },
+  {
+    "text": "A prompt is one request.",
+    "start": "00:01:35",
+    "end": "00:01:36"
+  },
+  {
+    "text": "A loop is one recurring job with memory.",
+    "start": "00:01:36",
+    "end": "00:01:39"
+  },
+  {
+    "text": "A loop of loops is what happens when recurring jobs can notice each other and share what changed and stop when they hit your boundaries.",
+    "start": "00:01:39",
+    "end": "00:01:46"
+  },
+  {
+    "text": "So, one prompt might get you an answer.",
+    "start": "00:01:46",
+    "end": "00:01:49"
+  },
+  {
+    "text": "One loop can save you from running that answer again and again.",
+    "start": "00:01:49",
+    "end": "00:01:54"
+  },
+  {
+    "text": "And a loop of loops can save you from becoming the full-time manager of all those automations, right?",
+    "start": "00:01:54",
+    "end": "00:01:59"
+  },
+  {
+    "text": "Now, it's not a magic assistant.",
+    "start": "00:01:59",
+    "end": "00:02:00"
+  },
+  {
+    "text": "It's not some kind of nanny in a box, and it's not an agent that pretends to run your life.",
+    "start": "00:02:00",
+    "end": "00:02:06"
+  },
+  {
+    "text": "It's just small remembered workflows that notice what changed, hand off to each other, stop in the right places, and bring you in when your judgment matters.",
+    "start": "00:02:06",
+    "end": "00:02:15"
+  },
+  {
+    "text": "And that's why I find agents interesting.",
+    "start": "00:02:14",
+    "end": "00:02:17"
+  },
+  {
+    "text": "Agents are interesting because agents are loop managers.",
+    "start": "00:02:17",
+    "end": "00:02:21"
+  },
+  {
+    "text": "Start with something really ordinary like make me a packing list for the school trip.",
+    "start": "00:02:21",
+    "end": "00:02:25"
+  },
+  {
+    "text": "That's a fine prompt, right?",
+    "start": "00:02:23",
+    "end": "00:02:26"
+  },
+  {
+    "text": "That can be useful.",
+    "start": "00:02:26",
+    "end": "00:02:26"
+  },
+  {
+    "text": "AI can give you a raincoat if you live in Seattle, and lunch, and water bottle, and sunscreen, and whatever.",
+    "start": "00:02:26",
+    "end": "00:02:31"
+  },
+  {
+    "text": "But, the prompt was never the whole job, was it, right?",
+    "start": "00:02:31",
+    "end": "00:02:34"
+  },
+  {
+    "text": "You still had to know the trip was happening.",
+    "start": "00:02:34",
+    "end": "00:02:37"
+  },
+  {
+    "text": "You still had to find the school email.",
+    "start": "00:02:37",
+    "end": "00:02:38"
+  },
+  {
+    "text": "You still had to remember whether this was the outdoor trip or the museum trip.",
+    "start": "00:02:38",
+    "end": "00:02:42"
+  },
+  {
+    "text": "You still had to check the weather.",
+    "start": "00:02:42",
+    "end": "00:02:45"
+  },
+  {
+    "text": "You still had to know, uh you know, whether the raincoat was something that the kid had outgrown or not.",
+    "start": "00:02:45",
+    "end": "00:02:49"
+  },
+  {
+    "text": "And next month when the trip shows up, you have to do it again.",
+    "start": "00:02:49",
+    "end": "00:02:51"
+  },
+  {
+    "text": "And that's a loop, right?",
+    "start": "00:02:51",
+    "end": "00:02:54"
+  },
+  {
+    "text": "The school sends something, you notice it, you gather the details, you compare it against what you know, you make the list, you buy what's missing, you get the idea.",
+    "start": "00:02:54",
+    "end": "00:02:59"
+  },
+  {
+    "text": "The loop is still ours.",
+    "start": "00:02:59",
+    "end": "00:03:02"
+  },
+  {
+    "text": "It rests on our shoulders.",
+    "start": "00:03:02",
+    "end": "00:03:04"
+  },
+  {
+    "text": "So, now go a level higher.",
+    "start": "00:03:04",
+    "end": "00:03:04"
+  },
+  {
+    "text": "A loop of loops says there's a school trip coming, so I'm waking up the packing loop, the weather loop, the school schedule loop, and the calendar conflict loop.",
+    "start": "00:03:04",
+    "end": "00:03:14"
+  },
+  {
+    "text": "The packing loop checks what you already own.",
+    "start": "00:03:12",
+    "end": "00:03:15"
+  },
+  {
+    "text": "The weather loop sees that it's rain.",
+    "start": "00:03:15",
+    "end": "00:03:16"
+  },
+  {
+    "text": "The school schedule loop sees pick up moved earlier.",
+    "start": "00:03:16",
+    "end": "00:03:19"
+  },
+  {
+    "text": "And the calendar loop sees that the pick up now conflicts with a meeting you're in.",
+    "start": "00:03:19",
+    "end": "00:03:24"
+  },
+  {
+    "text": "So, the message loop drives a text to the other parent, but stops before sending it.",
+    "start": "00:03:23",
+    "end": "00:03:27"
+  },
+  {
+    "text": "And that's self-organizing in the only sense that I can really trust.",
+    "start": "00:03:27",
+    "end": "00:03:31"
+  },
+  {
+    "text": "It's not the AI that actually sends all of the messages for me, and I have to run to the computer, and I have to unplug it.",
+    "start": "00:03:31",
+    "end": "00:03:38"
+  },
+  {
+    "text": "It's actually just recurring jobs that notice each other, and can actually hand off context in ways that make my life easier.",
+    "start": "00:03:38",
+    "end": "00:03:45"
+  },
+  {
+    "text": "And I find that a much more interesting idea than just AI that can prompt itself.",
+    "start": "00:03:45",
+    "end": "00:03:50"
+  },
+  {
+    "text": "Because most useful work is not a single question.",
+    "start": "00:03:48",
+    "end": "00:03:51"
+  },
+  {
+    "text": "It's actually a recurring situation in a load that we carry, right?",
+    "start": "00:03:51",
+    "end": "00:03:54"
+  },
+  {
+    "text": "A customer needs follow-up, a draft needs a revision, a database needs refreshing, a client needs the response today.",
+    "start": "00:03:54",
+    "end": "00:04:00"
+  },
+  {
+    "text": "And none of these are as simple as give me an answer.",
+    "start": "00:04:00",
+    "end": "00:04:04"
+  },
+  {
+    "text": "They're actually jobs that take memory.",
+    "start": "00:04:04",
+    "end": "00:04:05"
+  },
+  {
+    "text": "And this is where apps have failed us, right?",
+    "start": "00:04:05",
+    "end": "00:04:08"
+  },
+  {
+    "text": "Apps give us pieces of the loop.",
+    "start": "00:04:08",
+    "end": "00:04:09"
+  },
+  {
+    "text": "Your email has the confirmation, the school portal has the pickup change, the grocery app has the grocery list.",
+    "start": "00:04:09",
+    "end": "00:04:14"
+  },
+  {
+    "text": "But the loop doesn't live inside any one of those apps.",
+    "start": "00:04:14",
+    "end": "00:04:18"
+  },
+  {
+    "text": "The loop lives between them.",
+    "start": "00:04:18",
+    "end": "00:04:19"
+  },
+  {
+    "text": "And for the last 20 years that's been on us, right?",
+    "start": "00:04:19",
+    "end": "00:04:22"
+  },
+  {
+    "text": "We have to open the calendar, we have to text the parent, we have to look up the address, we have to set the reminder.",
+    "start": "00:04:22",
+    "end": "00:04:29"
+  },
+  {
+    "text": "The apps digitized every piece of life and quietly made you do all the wiring in between.",
+    "start": "00:04:26",
+    "end": "00:04:32"
+  },
+  {
+    "text": "The first useful agent then is not another app inside a box, right?",
+    "start": "00:04:32",
+    "end": "00:04:37"
+  },
+  {
+    "text": "It's an agent that has to sit across the loop that carries your load.",
+    "start": "00:04:35",
+    "end": "00:04:41"
+  },
+  {
+    "text": "And the better version does something even more powerful.",
+    "start": "00:04:41",
+    "end": "00:04:44"
+  },
+  {
+    "text": "It actually sits across multiple loops, and that's the loop of loops.",
+    "start": "00:04:44",
+    "end": "00:04:47"
+  },
+  {
+    "text": "And this is where I want you to be careful.",
+    "start": "00:04:47",
+    "end": "00:04:49"
+  },
+  {
+    "text": "The version I built for my own work is only an example.",
+    "start": "00:04:49",
+    "end": "00:04:53"
+  },
+  {
+    "text": "I'm not showing it because your job is to care about how I do research.",
+    "start": "00:04:53",
+    "end": "00:04:57"
+  },
+  {
+    "text": "I'm showing it because it illustrates the concept.",
+    "start": "00:04:57",
+    "end": "00:05:00"
+  },
+  {
+    "text": "And once you see that shape in one place, you can spot it in a bunch of places, right?",
+    "start": "00:05:00",
+    "end": "00:05:04"
+  },
+  {
+    "text": "I want you to look at the remembered workflows in your life, the load in your life, and ask yourself, \"What is the current state I carry in my head for all of these recurring jobs?",
+    "start": "00:05:04",
+    "end": "00:05:19"
+  },
+  {
+    "text": "Where do I check things for quality?",
+    "start": "00:05:16",
+    "end": "00:05:23"
+  },
+  {
+    "text": "Where do I need to see multiple versions to trust something?",
+    "start": "00:05:19",
+    "end": "00:05:25"
+  },
+  {
+    "text": "What is waiting on me?",
+    "start": "00:05:25",
+    "end": "00:05:26"
+  },
+  {
+    "text": "What is blocked?",
+    "start": "00:05:26",
+    "end": "00:05:28"
+  },
+  {
+    "text": "What changed since the last pass?",
+    "start": "00:05:28",
+    "end": "00:05:29"
+  },
+  {
+    "text": "\" Let's say your job relies on research.",
+    "start": "00:05:29",
+    "end": "00:05:32"
+  },
+  {
+    "text": "Let's say you need to know if a loop read the source, if it's relying on actual files, or if it's relying on vibes.",
+    "start": "00:05:32",
+    "end": "00:05:39"
+  },
+  {
+    "text": "Let's say you need to know if a particular transcript said something, or if you just wish it said something.",
+    "start": "00:05:39",
+    "end": "00:05:44"
+  },
+  {
+    "text": "Let's say you need a loop that watches for your open tasks.",
+    "start": "00:05:44",
+    "end": "00:05:50"
+  },
+  {
+    "text": "The loops that I am describing essentially organize attention.",
+    "start": "00:05:50",
+    "end": "00:05:54"
+  },
+  {
+    "text": "They organize your attention.",
+    "start": "00:05:54",
+    "end": "00:05:56"
+  },
+  {
+    "text": "And your job is to make as many loops run cleanly as you can, so you only get woken up if it really matters.",
+    "start": "00:05:56",
+    "end": "00:06:05"
+  },
+  {
+    "text": "And so think about loops and the idea of loops of loops as a way of allocating your attention once to build something useful.",
+    "start": "00:06:05",
+    "end": "00:06:16"
+  },
+  {
+    "text": "You should be able to think clearly enough about what is going on in your life and where the labor is and where the load is that you can actually describe a particular series of loops across multiple apps that you want to hand off.",
+    "start": "00:06:16",
+    "end": "00:06:31"
+  },
+  {
+    "text": "And that's really my objective for you.",
+    "start": "00:06:31",
+    "end": "00:06:33"
+  },
+  {
+    "text": "We're going to start very simple.",
+    "start": "00:06:33",
+    "end": "00:06:34"
+  },
+  {
+    "text": "Let's say it's a sales loop.",
+    "start": "00:06:34",
+    "end": "00:06:35"
+  },
+  {
+    "text": "It remembers the call and then there's an objection and then there's a promise deck and then there's a pricing question and an overdue follow-up and the customer asking for security details and maybe the pricing is uncertain.",
+    "start": "00:06:35",
+    "end": "00:06:47"
+  },
+  {
+    "text": "Maybe you have to have a support loop at the same time that tracks unresolved issues.",
+    "start": "00:06:46",
+    "end": "00:06:49"
+  },
+  {
+    "text": "Maybe you have to have a trip loop for your upcoming business trip that wakes the packing loop and the passport loop and the school schedule loop and all of the rest of it.",
+    "start": "00:06:49",
+    "end": "00:06:58"
+  },
+  {
+    "text": "I'm giving you examples to get your mind working, right?",
+    "start": "00:06:58",
+    "end": "00:07:00"
+  },
+  {
+    "text": "I think sometimes we need to get our brains working a little bit differently to think about AI.",
+    "start": "00:07:00",
+    "end": "00:07:04"
+  },
+  {
+    "text": "I don't think loops are an intuitive concept.",
+    "start": "00:07:04",
+    "end": "00:07:05"
+  },
+  {
+    "text": "That's why I'm being so specific here.",
+    "start": "00:07:05",
+    "end": "00:07:07"
+  },
+  {
+    "text": "I'm talking about what I've built.",
+    "start": "00:07:07",
+    "end": "00:07:08"
+  },
+  {
+    "text": "Again, mine leans heavily into research.",
+    "start": "00:07:08",
+    "end": "00:07:11"
+  },
+  {
+    "text": "I I nerd out on AI.",
+    "start": "00:07:11",
+    "end": "00:07:14"
+  },
+  {
+    "text": "I have loops for Twitter.",
+    "start": "00:07:14",
+    "end": "00:07:14"
+  },
+  {
+    "text": "I have loops for understanding the news.",
+    "start": "00:07:14",
+    "end": "00:07:17"
+  },
+  {
+    "text": "I have loops for doing deep research across particular topics.",
+    "start": "00:07:17",
+    "end": "00:07:20"
+  },
+  {
+    "text": "I have loops for helping me think through whether I'm being rigorous enough.",
+    "start": "00:07:20",
+    "end": "00:07:24"
+  },
+  {
+    "text": "And I have loops to connect that, right?",
+    "start": "00:07:24",
+    "end": "00:07:26"
+  },
+  {
+    "text": "The loop of loops concept.",
+    "start": "00:07:26",
+    "end": "00:07:29"
+  },
+  {
+    "text": "And the thing that I want you to understand is that the difference between just prompting for that and getting into the loop space is 99% of your mental effort.",
+    "start": "00:07:27",
+    "end": "00:07:40"
+  },
+  {
+    "text": "Like if you can get get a place where you just tell an agent, \"You know what?",
+    "start": "00:07:40",
+    "end": "00:07:44"
+  },
+  {
+    "text": "Every Monday, I want to know what's going on in the AI world.",
+    "start": "00:07:44",
+    "end": "00:07:47"
+  },
+  {
+    "text": "Give me the top 50 tweets, and then come back and do it again next Monday, and hey, organize them by theme.",
+    "start": "00:07:47",
+    "end": "00:07:53"
+  },
+  {
+    "text": "\" Well, now you have a loop.",
+    "start": "00:07:53",
+    "end": "00:07:57"
+  },
+  {
+    "text": "It comes back and organizes it by theme, and it gives it to you.",
+    "start": "00:07:57",
+    "end": "00:07:59"
+  },
+  {
+    "text": "It's the simplest version.",
+    "start": "00:07:59",
+    "end": "00:08:00"
+  },
+  {
+    "text": "If you want to get into loop of loops territory, all you're doing is having a second loop check multiple individual loops inside to find what's good.",
+    "start": "00:08:00",
+    "end": "00:08:10"
+  },
+  {
+    "text": "If that sounds confusing, I'll give you an example.",
+    "start": "00:08:10",
+    "end": "00:08:14"
+  },
+  {
+    "text": "Let's say you have the Twitter loop, and you're testing that, and let's say you're searching for AI news on Google as well.",
+    "start": "00:08:12",
+    "end": "00:08:19"
+  },
+  {
+    "text": "And you can, you know, you can either record uh Codex using your screen and do a Google search, or obviously both Claude and Codex can search directly, which is probably vastly easier.",
+    "start": "00:08:19",
+    "end": "00:08:30"
+  },
+  {
+    "text": "And so, you set up a little loop for that.",
+    "start": "00:08:28",
+    "end": "00:08:32"
+  },
+  {
+    "text": "A loop of loops in its simplest form would look across both of these news sources, aggregate them up, and give you a perspective on what matters today.",
+    "start": "00:08:30",
+    "end": "00:08:42"
+  },
+  {
+    "text": "It's just a small set of remembered jobs that take notice of each other.",
+    "start": "00:08:39",
+    "end": "00:08:44"
+  },
+  {
+    "text": "That say to each other, \"Here's what changed.",
+    "start": "00:08:44",
+    "end": "00:08:47"
+  },
+  {
+    "text": "Here's what ran.",
+    "start": "00:08:45",
+    "end": "00:08:47"
+  },
+  {
+    "text": "Here's what needs you, the human.",
+    "start": "00:08:47",
+    "end": "00:08:48"
+  },
+  {
+    "text": "Here's what needs the other agent.",
+    "start": "00:08:48",
+    "end": "00:08:50"
+  },
+  {
+    "text": "Here's what woke up another lap in the trigger.",
+    "start": "00:08:50",
+    "end": "00:08:53"
+  },
+  {
+    "text": "Here's what stopped.",
+    "start": "00:08:53",
+    "end": "00:08:55"
+  },
+  {
+    "text": "\" Once you see the world this way, you can't unsee it.",
+    "start": "00:08:55",
+    "end": "00:08:57"
+  },
+  {
+    "text": "And the boring examples become really obvious, like kids clothing sizes and when to rebuy.",
+    "start": "00:08:57",
+    "end": "00:09:03"
+  },
+  {
+    "text": "Like, what clothes should I buy for my 7-year-old, and my 7-year-old is in the 95th percentile, and so how do I size up, right?",
+    "start": "00:09:03",
+    "end": "00:09:09"
+  },
+  {
+    "text": "Fine, maybe useful.",
+    "start": "00:09:09",
+    "end": "00:09:11"
+  },
+  {
+    "text": "But the loop version remembers what size you bought last time, notices the season coming, is aware of where the kid was, tracks that growth, and says, \"Hey, you may need to size up.",
+    "start": "00:09:11",
+    "end": "00:09:21"
+  },
+  {
+    "text": "\" The loop version catches the problem before it happens, and it moves so much pain and load out of your brain as a result.",
+    "start": "00:09:21",
+    "end": "00:09:30"
+  },
+  {
+    "text": "Right?",
+    "start": "00:09:30",
+    "end": "00:09:31"
+  },
+  {
+    "text": "That's the thing I'm interested in.",
+    "start": "00:09:31",
+    "end": "00:09:34"
+  },
+  {
+    "text": "I'm not interested in AI that stresses me out because I have 20 different things demanding my attention because I have to prompt better.",
+    "start": "00:09:34",
+    "end": "00:09:40"
+  },
+  {
+    "text": "I'm interested in AI that actually helps me live my life more easily.",
+    "start": "00:09:40",
+    "end": "00:09:45"
+  },
+  {
+    "text": "Like, let me give you another example.",
+    "start": "00:09:45",
+    "end": "00:09:47"
+  },
+  {
+    "text": "This one is from a friend of mine.",
+    "start": "00:09:47",
+    "end": "00:09:48"
+  },
+  {
+    "text": "Tell me when my spinach goes bad.",
+    "start": "00:09:48",
+    "end": "00:09:52"
+  },
+  {
+    "text": "Do we have an AI for that?",
+    "start": "00:09:50",
+    "end": "00:09:52"
+  },
+  {
+    "text": "And the prompt version would be like, oh, well, tell me when you bought the spinach.",
+    "start": "00:09:52",
+    "end": "00:09:57"
+  },
+  {
+    "text": "Show me a picture.",
+    "start": "00:09:54",
+    "end": "00:09:56"
+  },
+  {
+    "text": "The loop version knows that it was in your grocery cart on Sunday and pops up on Wednesday night and says you should probably put spinach in your dinner recipe cuz you probably only have 24 hours left on that spinach.",
+    "start": "00:09:56",
+    "end": "00:10:10"
+  },
+  {
+    "text": "And I'm not saying everybody has trouble managing their groceries in the fridge.",
+    "start": "00:10:07",
+    "end": "00:10:13"
+  },
+  {
+    "text": "I'm not saying that we're putting that in the next keynote for Anthropic, right?",
+    "start": "00:10:12",
+    "end": "00:10:16"
+  },
+  {
+    "text": "I'm saying that I really care about those practical use cases that make my life easier much, much more than some benchmark score.",
+    "start": "00:10:16",
+    "end": "00:10:27"
+  },
+  {
+    "text": "I care about the loops that eat our real brains up, right?",
+    "start": "00:10:27",
+    "end": "00:10:30"
+  },
+  {
+    "text": "Cuz these are things that eat our brains up and make us tired.",
+    "start": "00:10:30",
+    "end": "00:10:34"
+  },
+  {
+    "text": "We should be able to have ways to get after it, right?",
+    "start": "00:10:34",
+    "end": "00:10:36"
+  },
+  {
+    "text": "This is not about never asking, right?",
+    "start": "00:10:36",
+    "end": "00:10:40"
+  },
+  {
+    "text": "I think some people hear the idea of a loop and they think the agent is out of control.",
+    "start": "00:10:40",
+    "end": "00:10:44"
+  },
+  {
+    "text": "The agent that never asks is dangerous and that's true.",
+    "start": "00:10:44",
+    "end": "00:10:51"
+  },
+  {
+    "text": "I want you to think about loops as giving your agent a world state to engage in.",
+    "start": "00:10:51",
+    "end": "00:10:56"
+  },
+  {
+    "text": "Maybe it researches it, maybe there's a trigger.",
+    "start": "00:10:55",
+    "end": "00:10:57"
+  },
+  {
+    "text": "Give it a set of reasonable choices to reason through and then give it an action you feel comfortable with.",
+    "start": "00:10:57",
+    "end": "00:11:05"
+  },
+  {
+    "text": "And then it's supposed to loop and do that again, right?",
+    "start": "00:11:04",
+    "end": "00:11:07"
+  },
+  {
+    "text": "Because the whole idea of loops is you should find things in your life that recur enough, like the spinach going bad or figuring out school pick up or after school activities or figuring out the sales motion or figuring out the next time you do a PRD, you can loop that stuff, right?",
+    "start": "00:11:07",
+    "end": "00:11:27"
+  },
+  {
+    "text": "If it's recurring, you can loop it.",
+    "start": "00:11:27",
+    "end": "00:11:29"
+  },
+  {
+    "text": "And I want to encourage you as I kind of start to zero in on the heart of this video, to think specifically in terms of the question quality you ask.",
+    "start": "00:11:29",
+    "end": "00:11:39"
+  },
+  {
+    "text": "What can it do safely?",
+    "start": "00:11:39",
+    "end": "00:11:39"
+  },
+  {
+    "text": "What should it ask?",
+    "start": "00:11:39",
+    "end": "00:11:42"
+  },
+  {
+    "text": "What record should it leave behind?",
+    "start": "00:11:42",
+    "end": "00:11:44"
+  },
+  {
+    "text": "And how would it get smarter for next time?",
+    "start": "00:11:44",
+    "end": "00:11:46"
+  },
+  {
+    "text": "What other recurring job should know about this thing?",
+    "start": "00:11:46",
+    "end": "00:11:48"
+  },
+  {
+    "text": "If the trip loop finds rain, what else needs to know about that?",
+    "start": "00:11:48",
+    "end": "00:11:53"
+  },
+  {
+    "text": "If the hiring loop finds a candidate, who needs to know about that?",
+    "start": "00:11:53",
+    "end": "00:11:56"
+  },
+  {
+    "text": "If the finance loop sees a charge tied to travel, does the trip loop need to know, right?",
+    "start": "00:11:56",
+    "end": "00:12:02"
+  },
+  {
+    "text": "You start to think about your world in terms of the questions you need to ask to lift the load off your shoulders.",
+    "start": "00:12:02",
+    "end": "00:12:10"
+  },
+  {
+    "text": "And that's really where I want to start is I want to challenge you to do that.",
+    "start": "00:12:10",
+    "end": "00:12:16"
+  },
+  {
+    "text": "Ask your AI.",
+    "start": "00:12:16",
+    "end": "00:12:16"
+  },
+  {
+    "text": "Take this transcript.",
+    "start": "00:12:16",
+    "end": "00:12:19"
+  },
+  {
+    "text": "Ask your AI, help me think through my life and figure out where I have mental load that loops could lift.",
+    "start": "00:12:19",
+    "end": "00:12:27"
+  },
+  {
+    "text": "And just the first few loops can make a normal week feel lighter.",
+    "start": "00:12:27",
+    "end": "00:12:35"
+  },
+  {
+    "text": "And if you can start to go from loops to loops of loops, it gets exponentially lighter.",
+    "start": "00:12:35",
+    "end": "00:12:39"
+  },
+  {
+    "text": "And I will get into that.",
+    "start": "00:12:39",
+    "end": "00:12:43"
+  },
+  {
+    "text": "So, when you think about loops of loops, the questions change.",
+    "start": "00:12:43",
+    "end": "00:12:45"
+  },
+  {
+    "text": "And this is not well covered.",
+    "start": "00:12:45",
+    "end": "00:12:46"
+  },
+  {
+    "text": "I haven't seen this covered well, so I want to be really honest with you here.",
+    "start": "00:12:46",
+    "end": "00:12:50"
+  },
+  {
+    "text": "A loop of loops, which is really a control pattern across those loops so that they're useful, you don't get at it by asking those questions.",
+    "start": "00:12:50",
+    "end": "00:13:02"
+  },
+  {
+    "text": "Instead, what you're willing to let go of from a process perspective that you feel safe having the AI tackle.",
+    "start": "00:12:58",
+    "end": "00:13:09"
+  },
+  {
+    "text": "And that's different from saying, \"Where's the specific pain in this particular area of my life?",
+    "start": "00:13:09",
+    "end": "00:13:14"
+  },
+  {
+    "text": "\" Because when you're talking about individual loops, you're really saying, \"I have pain here.",
+    "start": "00:13:14",
+    "end": "00:13:22"
+  },
+  {
+    "text": "It recurs.",
+    "start": "00:13:22",
+    "end": "00:13:20"
+  },
+  {
+    "text": "Let me describe it in enough detail that I can get an AI to do something about it.",
+    "start": "00:13:20",
+    "end": "00:13:25"
+  },
+  {
+    "text": "\" When you're talking about loops of loops, you're really looking at a higher level saying, \"I can delegate out the entire process of getting the kids ready for summer camp, and I can trust an AI to help me do that.",
+    "start": "00:13:25",
+    "end": "00:13:38"
+  },
+  {
+    "text": "\" Now, you don't really get to that point till you start to think about those individual pieces of pain, which is why I spent so much of this video talking about that.",
+    "start": "00:13:38",
+    "end": "00:13:48"
+  },
+  {
+    "text": "Now, if you want to move to loops of loops, and you feel like you're ready, maybe you're someone who's got loops, I've got good news for you.",
+    "start": "00:13:48",
+    "end": "00:13:54"
+  },
+  {
+    "text": "I'm actually going to show you how I built that and put that all together.",
+    "start": "00:13:54",
+    "end": "00:14:00"
+  },
+  {
+    "text": "I'm going to do that on Friday.",
+    "start": "00:13:59",
+    "end": "00:14:01"
+  },
+  {
+    "text": "I have a whole build for it.",
+    "start": "00:14:01",
+    "end": "00:14:02"
+  },
+  {
+    "text": "It's going to be super exciting.",
+    "start": "00:14:02",
+    "end": "00:14:03"
+  },
+  {
+    "text": "And if you're just like trying to figure out what the heck is a loop, this video helps you get there and get ready, so you're ready for Friday.",
+    "start": "00:14:03",
+    "end": "00:14:15"
+  },
+  {
+    "text": "And one small tidbit, one juicy tidbit for you as you think about loops and what you're doing with them, if you want to get an early start on loops of loops, I would encourage you to pick a process that you feel really confident if it runs off the rails, you can live with it and chuckle.",
+    "start": "00:14:12",
+    "end": "00:14:32"
+  },
+  {
+    "text": "And if it works, it's going to be a huge load off your shoulders.",
+    "start": "00:14:32",
+    "end": "00:14:38"
+  },
+  {
+    "text": "So, probably that's something tedious, but not incredibly impactful, right?",
+    "start": "00:14:35",
+    "end": "00:14:42"
+  },
+  {
+    "text": "If it works, then the whole process gets handed off, and it's six loops inside, and you've looped it all up, it's going to be fantastic.",
+    "start": "00:14:42",
+    "end": "00:14:48"
+  },
+  {
+    "text": "And if it doesn't work, it's not the end of the world, right?",
+    "start": "00:14:48",
+    "end": "00:14:52"
+  },
+  {
+    "text": "As an example, don't do anything with banking for your initial loop of loops.",
+    "start": "00:14:52",
+    "end": "00:14:57"
+  },
+  {
+    "text": "That's a bad idea.",
+    "start": "00:14:55",
+    "end": "00:14:57"
+  },
+  {
+    "text": "Pick something maybe a little tedious like filling out use cases for your product.",
+    "start": "00:14:57",
+    "end": "00:15:02"
+  },
+  {
+    "text": "It's a little bit painful, and then laddering those into linear tickets, and then having another loop that tackles PRDs.",
+    "start": "00:15:02",
+    "end": "00:15:08"
+  },
+  {
+    "text": "Like, you can get that into a loop of loop situation.",
+    "start": "00:15:08",
+    "end": "00:15:09"
+  },
+  {
+    "text": "And if it goes wrong, you're going to have some work to do, but you can chuckle about it.",
+    "start": "00:15:09",
+    "end": "00:15:15"
+  },
+  {
+    "text": "That's a good example as a bonus of how a loop of loops works.",
+    "start": "00:15:15",
+    "end": "00:15:19"
+  },
+  {
+    "text": "Anyway, I will see you Friday.",
+    "start": "00:15:19",
+    "end": "00:15:20"
+  },
+  {
+    "text": "I cannot wait to show you in way more detail how I actually put the loop of loops together.",
+    "start": "00:15:20",
+    "end": "00:15:26"
+  },
+  {
+    "text": "It was it's such a big build.",
+    "start": "00:15:26",
+    "end": "00:15:27"
+  },
+  {
+    "text": "I wanted to talk about the concept, introduce it.",
+    "start": "00:15:27",
+    "end": "00:15:30"
+  },
+  {
+    "text": "We're going to get into it in more depth Friday.",
+    "start": "00:15:30",
+    "end": "00:15:34"
+  },
+  {
+    "text": "I'll see you then.",
+    "start": "00:15:34",
+    "end": "00:15:33"
+  },
+  {
+    "text": "Cheers.",
+    "start": "00:15:33",
+    "end": "00:15:34"
+  }
+]

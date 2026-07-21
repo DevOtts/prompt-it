@@ -1,0 +1,1122 @@
+[
+  {
+    "text": "[music]",
+    "start": 3.929,
+    "duration": 3.911
+  },
+  {
+    "text": ">> Most people try to fix bad AI answers by",
+    "start": 4.64,
+    "duration": 5.4
+  },
+  {
+    "text": "writing bigger prompts. That's the wrong",
+    "start": 7.84,
+    "duration": 3.48
+  },
+  {
+    "text": "move.",
+    "start": 10.04,
+    "duration": 3.44
+  },
+  {
+    "text": "If you have been padding prompts like an",
+    "start": 11.32,
+    "duration": 4.56
+  },
+  {
+    "text": "essay to make your model give you better",
+    "start": 13.48,
+    "duration": 4.56
+  },
+  {
+    "text": "answers, then stick around. In a few",
+    "start": 15.88,
+    "duration": 4.44
+  },
+  {
+    "text": "minutes, you'll learn how to use context",
+    "start": 18.04,
+    "duration": 5.08
+  },
+  {
+    "text": "engineering in a simple way to make your",
+    "start": 20.32,
+    "duration": 5.56
+  },
+  {
+    "text": "AI systems smarter and way more",
+    "start": 23.12,
+    "duration": 4.72
+  },
+  {
+    "text": "reliable. By the end of this video,",
+    "start": 25.88,
+    "duration": 3.76
+  },
+  {
+    "text": "you'll know exactly what context",
+    "start": 27.84,
+    "duration": 4.279
+  },
+  {
+    "text": "engineering is, why it's different from",
+    "start": 29.64,
+    "duration": 5.6
+  },
+  {
+    "text": "just prompting, and a step-by-step way",
+    "start": 32.119,
+    "duration": 5.561
+  },
+  {
+    "text": "to use it on real projects. We'll road",
+    "start": 35.24,
+    "duration": 5.72
+  },
+  {
+    "text": "test it on a tiny but realistic agent,",
+    "start": 37.68,
+    "duration": 5.56
+  },
+  {
+    "text": "show you where context usually fall",
+    "start": 40.96,
+    "duration": 4.96
+  },
+  {
+    "text": "apart, and give you a checklist on how",
+    "start": 43.24,
+    "duration": 4.56
+  },
+  {
+    "text": "to fix them really fast. Context",
+    "start": 45.92,
+    "duration": 4.48
+  },
+  {
+    "text": "engineering is the craft of deciding",
+    "start": 47.8,
+    "duration": 5.68
+  },
+  {
+    "text": "exactly what the model should see and",
+    "start": 50.4,
+    "duration": 5.72
+  },
+  {
+    "text": "what it shouldn't at each step. It",
+    "start": 53.48,
+    "duration": 5.8
+  },
+  {
+    "text": "includes your system message, tools,",
+    "start": 56.12,
+    "duration": 6.4
+  },
+  {
+    "text": "retrieved facts, short-term notes,",
+    "start": 59.28,
+    "duration": 6.36
+  },
+  {
+    "text": "long-term memories, format rules, and",
+    "start": 62.52,
+    "duration": 5.6
+  },
+  {
+    "text": "also recent history. If prompt",
+    "start": 65.64,
+    "duration": 6.32
+  },
+  {
+    "text": "engineering is how you word the ask,",
+    "start": 68.12,
+    "duration": 6.52
+  },
+  {
+    "text": "then context engineering is everything",
+    "start": 71.96,
+    "duration": 5.28
+  },
+  {
+    "text": "you feed the model so it can actually do",
+    "start": 74.64,
+    "duration": 5.52
+  },
+  {
+    "text": "the job. This is a huge shift that AI",
+    "start": 77.24,
+    "duration": 5.2
+  },
+  {
+    "text": "teams across the industry are calling",
+    "start": 80.16,
+    "duration": 4.8
+  },
+  {
+    "text": "out, where we are moving from perfect",
+    "start": 82.44,
+    "duration": 6.08
+  },
+  {
+    "text": "prompts to curating the smallest set of",
+    "start": 84.96,
+    "duration": 5.92
+  },
+  {
+    "text": "high-signal tokens that steer the",
+    "start": 88.52,
+    "duration": 4.68
+  },
+  {
+    "text": "behavior of your model into the right",
+    "start": 90.88,
+    "duration": 5.76
+  },
+  {
+    "text": "direction, especially in agents that run",
+    "start": 93.2,
+    "duration": 6.2
+  },
+  {
+    "text": "for many turns and use tools. So now",
+    "start": 96.64,
+    "duration": 5.96
+  },
+  {
+    "text": "context is being treated like a scarce",
+    "start": 99.4,
+    "duration": 5.96
+  },
+  {
+    "text": "working memory, and AI developers are",
+    "start": 102.6,
+    "duration": 4.84
+  },
+  {
+    "text": "looking at it differently. Why does this",
+    "start": 105.36,
+    "duration": 3.56
+  },
+  {
+    "text": "matter?",
+    "start": 107.44,
+    "duration": 4.48
+  },
+  {
+    "text": "So models keep getting larger context",
+    "start": 108.92,
+    "duration": 4.08
+  },
+  {
+    "text": "windows,",
+    "start": 111.92,
+    "duration": 4.56
+  },
+  {
+    "text": "but longer context isn't always better.",
+    "start": 113,
+    "duration": 6.2
+  },
+  {
+    "text": "When you fill up that window, accuracy",
+    "start": 116.48,
+    "duration": 6
+  },
+  {
+    "text": "often drops because errors sneak in and",
+    "start": 119.2,
+    "duration": 6.44
+  },
+  {
+    "text": "the model gets distracted by stale or",
+    "start": 122.48,
+    "duration": 6.6
+  },
+  {
+    "text": "irrelevant text or two pieces of context",
+    "start": 125.64,
+    "duration": 5.44
+  },
+  {
+    "text": "which actually quietly contradict each",
+    "start": 129.08,
+    "duration": 4.879
+  },
+  {
+    "text": "other. This shows up most in agents",
+    "start": 131.08,
+    "duration": 6.32
+  },
+  {
+    "text": "where the conversation and tools output",
+    "start": 133.959,
+    "duration": 6.241
+  },
+  {
+    "text": "snowballs. So, you'll see four common",
+    "start": 137.4,
+    "duration": 5.52
+  },
+  {
+    "text": "failure modes in the wild. First off, we",
+    "start": 140.2,
+    "duration": 6.56
+  },
+  {
+    "text": "have poisoning where a hallucinated fact",
+    "start": 142.92,
+    "duration": 6.8
+  },
+  {
+    "text": "gets into context and is reused over and",
+    "start": 146.76,
+    "duration": 5.32
+  },
+  {
+    "text": "over again. Second, we have something",
+    "start": 149.72,
+    "duration": 4.6
+  },
+  {
+    "text": "called distraction where the model",
+    "start": 152.08,
+    "duration": 5.2
+  },
+  {
+    "text": "fixates on a huge history instead of",
+    "start": 154.32,
+    "duration": 6.08
+  },
+  {
+    "text": "making a fresh plan. Third is confusion",
+    "start": 157.28,
+    "duration": 6.08
+  },
+  {
+    "text": "where extra unrelated details nudge it",
+    "start": 160.4,
+    "duration": 5.84
+  },
+  {
+    "text": "into the wrong answer. And fourth is",
+    "start": 163.36,
+    "duration": 4.04
+  },
+  {
+    "text": "clash",
+    "start": 166.24,
+    "duration": 4.16
+  },
+  {
+    "text": "where two sources disagree and the model",
+    "start": 167.4,
+    "duration": 5.08
+  },
+  {
+    "text": "picks the wrong one. So, why am I",
+    "start": 170.4,
+    "duration": 4.36
+  },
+  {
+    "text": "mentioning this? Because knowing these",
+    "start": 172.48,
+    "duration": 5.4
+  },
+  {
+    "text": "names can help you fix what is wrong.",
+    "start": 174.76,
+    "duration": 5.04
+  },
+  {
+    "text": "Next, we need to talk about what the",
+    "start": 177.88,
+    "duration": 3.96
+  },
+  {
+    "text": "difference is between context",
+    "start": 179.8,
+    "duration": 4.92
+  },
+  {
+    "text": "engineering versus prompt engineering.",
+    "start": 181.84,
+    "duration": 5.76
+  },
+  {
+    "text": "So, prompt engineering is how you write",
+    "start": 184.72,
+    "duration": 5.48
+  },
+  {
+    "text": "and structure instructions, examples,",
+    "start": 187.6,
+    "duration": 4.12
+  },
+  {
+    "text": "and constraints.",
+    "start": 190.2,
+    "duration": 4.16
+  },
+  {
+    "text": "It's still very relevant and useful, but",
+    "start": 191.72,
+    "duration": 5.12
+  },
+  {
+    "text": "context engineering is how you assemble",
+    "start": 194.36,
+    "duration": 4.92
+  },
+  {
+    "text": "everything that model will see at run",
+    "start": 196.84,
+    "duration": 4.88
+  },
+  {
+    "text": "time like the right tools, the right",
+    "start": 199.28,
+    "duration": 5.04
+  },
+  {
+    "text": "facts, the right history, and the right",
+    "start": 201.72,
+    "duration": 6
+  },
+  {
+    "text": "format. It's dynamic and happens before",
+    "start": 204.32,
+    "duration": 5.6
+  },
+  {
+    "text": "every model call, so it's pretty",
+    "start": 207.72,
+    "duration": 4.28
+  },
+  {
+    "text": "powerful. Think of the model like a",
+    "start": 209.92,
+    "duration": 4.76
+  },
+  {
+    "text": "brain with a limited short-term memory.",
+    "start": 212,
+    "duration": 4.959
+  },
+  {
+    "text": "Your job is to pack it with all the",
+    "start": 214.68,
+    "duration": 4.88
+  },
+  {
+    "text": "things that it needs for the next step",
+    "start": 216.959,
+    "duration": 4.961
+  },
+  {
+    "text": "and you have limited space to do so.",
+    "start": 219.56,
+    "duration": 4.8
+  },
+  {
+    "text": "Here is what is in a context stack",
+    "start": 221.92,
+    "duration": 5.68
+  },
+  {
+    "text": "currently for most models that we use.",
+    "start": 224.36,
+    "duration": 5.599
+  },
+  {
+    "text": "There are seven pieces involved. First,",
+    "start": 227.6,
+    "duration": 4.64
+  },
+  {
+    "text": "we have instructions which are the",
+    "start": 229.959,
+    "duration": 5.041
+  },
+  {
+    "text": "system prompt and guardrails.",
+    "start": 232.24,
+    "duration": 5.4
+  },
+  {
+    "text": "Clear and plain language wins here.",
+    "start": 235,
+    "duration": 5.16
+  },
+  {
+    "text": "Second, we have user input, which is the",
+    "start": 237.64,
+    "duration": 5.28
+  },
+  {
+    "text": "current ask from the user. Third, we",
+    "start": 240.16,
+    "duration": 5.36
+  },
+  {
+    "text": "have retrieved facts, which are the few",
+    "start": 242.92,
+    "duration": 5.56
+  },
+  {
+    "text": "snippets that matter the most. Fourth,",
+    "start": 245.52,
+    "duration": 5.68
+  },
+  {
+    "text": "we have tools, which are functions that",
+    "start": 248.48,
+    "duration": 5.12
+  },
+  {
+    "text": "the model can call, as well as their",
+    "start": 251.2,
+    "duration": 3.92
+  },
+  {
+    "text": "descriptions, which are part of the",
+    "start": 253.6,
+    "duration": 2.84
+  },
+  {
+    "text": "context.",
+    "start": 255.12,
+    "duration": 4.2
+  },
+  {
+    "text": "Fifth, we have short-term notes, which",
+    "start": 256.44,
+    "duration": 5.84
+  },
+  {
+    "text": "summarizes all the recent steps, so that",
+    "start": 259.32,
+    "duration": 5.16
+  },
+  {
+    "text": "the model remembers what has changed",
+    "start": 262.28,
+    "duration": 4.96
+  },
+  {
+    "text": "recently. Sixth, we have long-term",
+    "start": 264.48,
+    "duration": 4.16
+  },
+  {
+    "text": "memory,",
+    "start": 267.24,
+    "duration": 3.48
+  },
+  {
+    "text": "which contains stable facts about the",
+    "start": 268.64,
+    "duration": 5.8
+  },
+  {
+    "text": "user or project, selected on demand. And",
+    "start": 270.72,
+    "duration": 6.48
+  },
+  {
+    "text": "lastly, we have output format, which are",
+    "start": 274.44,
+    "duration": 5.88
+  },
+  {
+    "text": "schemas or examples that lock the shape",
+    "start": 277.2,
+    "duration": 6
+  },
+  {
+    "text": "of the answer. Now, let's dive into a",
+    "start": 280.32,
+    "duration": 5.44
+  },
+  {
+    "text": "single example. Let's build a simple",
+    "start": 283.2,
+    "duration": 6.96
+  },
+  {
+    "text": "agent called Log Look, which is a helper",
+    "start": 285.76,
+    "duration": 7.24
+  },
+  {
+    "text": "that triages security alerts when they",
+    "start": 290.16,
+    "duration": 5.759
+  },
+  {
+    "text": "occur, and drafts a one-paragraph",
+    "start": 293,
+    "duration": 5.68
+  },
+  {
+    "text": "summary of the alert, plus a severity",
+    "start": 295.919,
+    "duration": 5.681
+  },
+  {
+    "text": "score of how severe the alert is. The",
+    "start": 298.68,
+    "duration": 5.76
+  },
+  {
+    "text": "chatbot way is to say,",
+    "start": 301.6,
+    "duration": 5.08
+  },
+  {
+    "text": "\"Hey, here you go. Analyze today's logs",
+    "start": 304.44,
+    "duration": 3.88
+  },
+  {
+    "text": "and tell me what's wrong.\"",
+    "start": 306.68,
+    "duration": 3.12
+  },
+  {
+    "text": "It might actually just spit out random",
+    "start": 308.32,
+    "duration": 4.28
+  },
+  {
+    "text": "guesses at that point. But with context",
+    "start": 309.8,
+    "duration": 5.52
+  },
+  {
+    "text": "engineering, we feed Log Look, our",
+    "start": 312.6,
+    "duration": 5.2
+  },
+  {
+    "text": "agent, a clean plate of the following",
+    "start": 315.32,
+    "duration": 3.44
+  },
+  {
+    "text": "things.",
+    "start": 317.8,
+    "duration": 3.56
+  },
+  {
+    "text": "First, we give system instructions, like",
+    "start": 318.76,
+    "duration": 6.2
+  },
+  {
+    "text": "summarize incidents into one paragraph,",
+    "start": 321.36,
+    "duration": 7.2
+  },
+  {
+    "text": "plus a severity score between 0 and 4.",
+    "start": 324.96,
+    "duration": 6.12
+  },
+  {
+    "text": "Only use provided context, and if",
+    "start": 328.56,
+    "duration": 5.56
+  },
+  {
+    "text": "missing data exist, ask for a specific",
+    "start": 331.08,
+    "duration": 6.08
+  },
+  {
+    "text": "file path. Second, we will list tools",
+    "start": 334.12,
+    "duration": 5.28
+  },
+  {
+    "text": "that it requires in order to answer the",
+    "start": 337.16,
+    "duration": 4.44
+  },
+  {
+    "text": "questions that we ask it.",
+    "start": 339.4,
+    "duration": 5.84
+  },
+  {
+    "text": "So, for example, reading file, or grep,",
+    "start": 341.6,
+    "duration": 7.64
+  },
+  {
+    "text": "or get known false positives. Third, we",
+    "start": 345.24,
+    "duration": 6.56
+  },
+  {
+    "text": "provide retrieved facts which only",
+    "start": 349.24,
+    "duration": 5.16
+  },
+  {
+    "text": "contain today's log slice",
+    "start": 351.8,
+    "duration": 5.8
+  },
+  {
+    "text": "and only lines with error or critical",
+    "start": 354.4,
+    "duration": 5.64
+  },
+  {
+    "text": "from the last hour will be sent to our",
+    "start": 357.6,
+    "duration": 5.16
+  },
+  {
+    "text": "agent. And also, the team's false",
+    "start": 360.04,
+    "duration": 5.36
+  },
+  {
+    "text": "positive list for noisy alerts is",
+    "start": 362.76,
+    "duration": 4.44
+  },
+  {
+    "text": "something that we'll also flag to our",
+    "start": 365.4,
+    "duration": 3.96
+  },
+  {
+    "text": "agent. The fourth thing that we're going",
+    "start": 367.2,
+    "duration": 4.84
+  },
+  {
+    "text": "to be passing to our agent is short-term",
+    "start": 369.36,
+    "duration": 3.96
+  },
+  {
+    "text": "notes.",
+    "start": 372.04,
+    "duration": 4.52
+  },
+  {
+    "text": "So, we've already checked this file.",
+    "start": 373.32,
+    "duration": 6.4
+  },
+  {
+    "text": "Next, scan this log instead. And then,",
+    "start": 376.56,
+    "duration": 4.44
+  },
+  {
+    "text": "we're also going to be giving it a",
+    "start": 379.72,
+    "duration": 4.6
+  },
+  {
+    "text": "format. We want it to expect JSON",
+    "start": 381,
+    "duration": 6.28
+  },
+  {
+    "text": "formats input and output. So, that's the",
+    "start": 384.32,
+    "duration": 5.76
+  },
+  {
+    "text": "difference. Same model, but with way",
+    "start": 387.28,
+    "duration": 5.12
+  },
+  {
+    "text": "better context. Now, let's talk about",
+    "start": 390.08,
+    "duration": 5.16
+  },
+  {
+    "text": "the four steps of context engineering.",
+    "start": 392.4,
+    "duration": 5.32
+  },
+  {
+    "text": "These show up across the best agent",
+    "start": 395.24,
+    "duration": 5.08
+  },
+  {
+    "text": "systems and they're really simple to",
+    "start": 397.72,
+    "duration": 6.52
+  },
+  {
+    "text": "remember. Write, select, compress, and",
+    "start": 400.32,
+    "duration": 5.16
+  },
+  {
+    "text": "isolate.",
+    "start": 404.24,
+    "duration": 3.48
+  },
+  {
+    "text": "First, we have write, which means to",
+    "start": 405.48,
+    "duration": 4.68
+  },
+  {
+    "text": "save notes outside of the context",
+    "start": 407.72,
+    "duration": 3.48
+  },
+  {
+    "text": "window.",
+    "start": 410.16,
+    "duration": 2.92
+  },
+  {
+    "text": "This actually lets the agent keep a",
+    "start": 411.2,
+    "duration": 4.68
+  },
+  {
+    "text": "scratch pad which contains plans,",
+    "start": 413.08,
+    "duration": 4.32
+  },
+  {
+    "text": "intermediate results, and open",
+    "start": 415.88,
+    "duration": 2.96
+  },
+  {
+    "text": "questions.",
+    "start": 417.4,
+    "duration": 4.48
+  },
+  {
+    "text": "It also makes sure that we don't squeeze",
+    "start": 418.84,
+    "duration": 5.28
+  },
+  {
+    "text": "all of that into the next call, but",
+    "start": 421.88,
+    "duration": 4.76
+  },
+  {
+    "text": "instead keep it external and only pull",
+    "start": 424.12,
+    "duration": 5.56
+  },
+  {
+    "text": "from it when it's relevant. This keeps",
+    "start": 426.64,
+    "duration": 5.52
+  },
+  {
+    "text": "the working context clean while",
+    "start": 429.68,
+    "duration": 5.239
+  },
+  {
+    "text": "preserving memory. So, for our agent log",
+    "start": 432.16,
+    "duration": 6.4
+  },
+  {
+    "text": "look, we can store all of that into",
+    "start": 434.919,
+    "duration": 7.041
+  },
+  {
+    "text": "something called investigation steps.md,",
+    "start": 438.56,
+    "duration": 5.64
+  },
+  {
+    "text": "which will contain a bulleted list of",
+    "start": 441.96,
+    "duration": 5.04
+  },
+  {
+    "text": "what's been checked. Second step is",
+    "start": 444.2,
+    "duration": 5.8
+  },
+  {
+    "text": "select, which means pull only what",
+    "start": 447,
+    "duration": 6.16
+  },
+  {
+    "text": "matters right now. So, use retrieval to",
+    "start": 450,
+    "duration": 6.04
+  },
+  {
+    "text": "fetch just the log slices and policy",
+    "start": 453.16,
+    "duration": 5.36
+  },
+  {
+    "text": "lines needed for this turn. Hybrid",
+    "start": 456.04,
+    "duration": 5.2
+  },
+  {
+    "text": "retrieval, which contains both keyword",
+    "start": 458.52,
+    "duration": 5.96
+  },
+  {
+    "text": "and semantics, often beats embedding",
+    "start": 461.24,
+    "duration": 6.08
+  },
+  {
+    "text": "only search on messy logs. The point is",
+    "start": 464.48,
+    "duration": 5.52
+  },
+  {
+    "text": "selection and not hoarding.",
+    "start": 467.32,
+    "duration": 4.76
+  },
+  {
+    "text": "So if our agent log look, we'll be",
+    "start": 470,
+    "duration": 4.6
+  },
+  {
+    "text": "selecting the top end number of error",
+    "start": 472.08,
+    "duration": 5.4
+  },
+  {
+    "text": "bursts and the specific section on",
+    "start": 474.6,
+    "duration": 6.24
+  },
+  {
+    "text": "severity scoring from our runbook.",
+    "start": 477.48,
+    "duration": 6.4
+  },
+  {
+    "text": "At third step, we have compress, which",
+    "start": 480.84,
+    "duration": 6
+  },
+  {
+    "text": "means keep the signal but drop the rest.",
+    "start": 483.88,
+    "duration": 5.08
+  },
+  {
+    "text": "What we need to do is periodically",
+    "start": 486.84,
+    "duration": 5.88
+  },
+  {
+    "text": "summarize long histories into short loss",
+    "start": 488.96,
+    "duration": 6.2
+  },
+  {
+    "text": "aware notes and then continue with a",
+    "start": 492.72,
+    "duration": 3.88
+  },
+  {
+    "text": "fresh window.",
+    "start": 495.16,
+    "duration": 4.64
+  },
+  {
+    "text": "So this keeps the last few raw items for",
+    "start": 496.6,
+    "duration": 6.16
+  },
+  {
+    "text": "safety, but then it also beats dragging",
+    "start": 499.8,
+    "duration": 5.4
+  },
+  {
+    "text": "a huge chat history everywhere.",
+    "start": 502.76,
+    "duration": 4.4
+  },
+  {
+    "text": "So for log look, we'll be keeping the",
+    "start": 505.2,
+    "duration": 5.96
+  },
+  {
+    "text": "last five findings, but everything older",
+    "start": 507.16,
+    "duration": 6.84
+  },
+  {
+    "text": "will be rolled into a three-line recap.",
+    "start": 511.16,
+    "duration": 5.2
+  },
+  {
+    "text": "The fourth and final step is isolate,",
+    "start": 514,
+    "duration": 5.52
+  },
+  {
+    "text": "which means sandbox sources to avoid",
+    "start": 516.36,
+    "duration": 6
+  },
+  {
+    "text": "cross talk. We can do this by splitting",
+    "start": 519.52,
+    "duration": 6.36
+  },
+  {
+    "text": "big jobs into sub agents or phases.",
+    "start": 522.36,
+    "duration": 6.64
+  },
+  {
+    "text": "Each explores its own context and then",
+    "start": 525.88,
+    "duration": 6.72
+  },
+  {
+    "text": "returns a short digest to a coordinator.",
+    "start": 529,
+    "duration": 6.2
+  },
+  {
+    "text": "This reduces leakage between tools and",
+    "start": 532.6,
+    "duration": 5.36
+  },
+  {
+    "text": "prevents one noisy source from poisoning",
+    "start": 535.2,
+    "duration": 3.84
+  },
+  {
+    "text": "the rest.",
+    "start": 537.96,
+    "duration": 4.36
+  },
+  {
+    "text": "So for our agent log look, a reader sub",
+    "start": 539.04,
+    "duration": 5.88
+  },
+  {
+    "text": "agent just extracts the facts and then a",
+    "start": 542.32,
+    "duration": 5.56
+  },
+  {
+    "text": "scorer sub agent applies the policy,",
+    "start": 544.92,
+    "duration": 5.76
+  },
+  {
+    "text": "while a writer sub agent composes the",
+    "start": 547.88,
+    "duration": 5.72
+  },
+  {
+    "text": "final summary from their digest. If you",
+    "start": 550.68,
+    "duration": 5.24
+  },
+  {
+    "text": "remember one thing from all of this,",
+    "start": 553.6,
+    "duration": 5.52
+  },
+  {
+    "text": "it's really important to curate instead",
+    "start": 555.92,
+    "duration": 6.96
+  },
+  {
+    "text": "of dumping a large chunk of prompts.",
+    "start": 559.12,
+    "duration": 5.36
+  },
+  {
+    "text": "Context engineering isn't just a",
+    "start": 562.88,
+    "duration": 4.04
+  },
+  {
+    "text": "buzzword, it's a natural progression of",
+    "start": 564.48,
+    "duration": 4.24
+  },
+  {
+    "text": "prompt engineering.",
+    "start": 566.92,
+    "duration": 4.24
+  },
+  {
+    "text": "It's a discipline of building robust,",
+    "start": 568.72,
+    "duration": 5.16
+  },
+  {
+    "text": "reliable, and truly useful applications.",
+    "start": 571.16,
+    "duration": 5.52
+  },
+  {
+    "text": "It's how we move from simple chatbots to",
+    "start": 573.88,
+    "duration": 4.96
+  },
+  {
+    "text": "complex AI [music] agents that can",
+    "start": 576.68,
+    "duration": 4.64
+  },
+  {
+    "text": "become our collaborators. Hope you found",
+    "start": 578.84,
+    "duration": 4.68
+  },
+  {
+    "text": "this video helpful and hope you've",
+    "start": 581.32,
+    "duration": 4.256
+  },
+  {
+    "text": "learned how context engineering actually",
+    "start": 583.52,
+    "duration": 4
+  },
+  {
+    "text": "[music] works and how it differs from",
+    "start": 585.576,
+    "duration": 5.424
+  },
+  {
+    "text": "something like prompt engineering.",
+    "start": 587.52,
+    "duration": 3.48
+  }
+]

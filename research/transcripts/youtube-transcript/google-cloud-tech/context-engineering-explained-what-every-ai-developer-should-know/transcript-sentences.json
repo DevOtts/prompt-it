@@ -1,0 +1,427 @@
+[
+  {
+    "text": "[music] >> Most people try to fix bad AI answers by writing bigger prompts.",
+    "start": "00:00:03",
+    "end": "00:00:09"
+  },
+  {
+    "text": "That's the wrong move.",
+    "start": "00:00:09",
+    "end": "00:00:13"
+  },
+  {
+    "text": "If you have been padding prompts like an essay to make your model give you better answers, then stick around.",
+    "start": "00:00:11",
+    "end": "00:00:19"
+  },
+  {
+    "text": "In a few minutes, you'll learn how to use context engineering in a simple way to make your AI systems smarter and way more reliable.",
+    "start": "00:00:19",
+    "end": "00:00:26"
+  },
+  {
+    "text": "By the end of this video, you'll know exactly what context engineering is, why it's different from just prompting, and a step-by-step way to use it on real projects.",
+    "start": "00:00:26",
+    "end": "00:00:39"
+  },
+  {
+    "text": "We'll road test it on a tiny but realistic agent, show you where context usually fall apart, and give you a checklist on how to fix them really fast.",
+    "start": "00:00:39",
+    "end": "00:00:49"
+  },
+  {
+    "text": "Context engineering is the craft of deciding exactly what the model should see and what it shouldn't at each step.",
+    "start": "00:00:49",
+    "end": "00:00:58"
+  },
+  {
+    "text": "It includes your system message, tools, retrieved facts, short-term notes, long-term memories, format rules, and also recent history.",
+    "start": "00:00:58",
+    "end": "00:01:09"
+  },
+  {
+    "text": "If prompt engineering is how you word the ask, then context engineering is everything you feed the model so it can actually do the job.",
+    "start": "00:01:09",
+    "end": "00:01:18"
+  },
+  {
+    "text": "This is a huge shift that AI teams across the industry are calling out, where we are moving from perfect prompts to curating the smallest set of high-signal tokens that steer the behavior of your model into the right direction, especially in agents that run for many turns and use tools.",
+    "start": "00:01:18",
+    "end": "00:01:41"
+  },
+  {
+    "text": "So now context is being treated like a scarce working memory, and AI developers are looking at it differently.",
+    "start": "00:01:41",
+    "end": "00:01:47"
+  },
+  {
+    "text": "Why does this matter?",
+    "start": "00:01:47",
+    "end": "00:01:51"
+  },
+  {
+    "text": "So models keep getting larger context windows, but longer context isn't always better.",
+    "start": "00:01:48",
+    "end": "00:01:59"
+  },
+  {
+    "text": "When you fill up that window, accuracy often drops because errors sneak in and the model gets distracted by stale or irrelevant text or two pieces of context which actually quietly contradict each other.",
+    "start": "00:01:56",
+    "end": "00:02:12"
+  },
+  {
+    "text": "This shows up most in agents where the conversation and tools output snowballs.",
+    "start": "00:02:12",
+    "end": "00:02:18"
+  },
+  {
+    "text": "So, you'll see four common failure modes in the wild.",
+    "start": "00:02:18",
+    "end": "00:02:24"
+  },
+  {
+    "text": "First off, we have poisoning where a hallucinated fact gets into context and is reused over and over again.",
+    "start": "00:02:24",
+    "end": "00:02:31"
+  },
+  {
+    "text": "Second, we have something called distraction where the model fixates on a huge history instead of making a fresh plan.",
+    "start": "00:02:31",
+    "end": "00:02:40"
+  },
+  {
+    "text": "Third is confusion where extra unrelated details nudge it into the wrong answer.",
+    "start": "00:02:40",
+    "end": "00:02:45"
+  },
+  {
+    "text": "And fourth is clash where two sources disagree and the model picks the wrong one.",
+    "start": "00:02:45",
+    "end": "00:02:53"
+  },
+  {
+    "text": "So, why am I mentioning this?",
+    "start": "00:02:53",
+    "end": "00:02:54"
+  },
+  {
+    "text": "Because knowing these names can help you fix what is wrong.",
+    "start": "00:02:54",
+    "end": "00:02:59"
+  },
+  {
+    "text": "Next, we need to talk about what the difference is between context engineering versus prompt engineering.",
+    "start": "00:02:57",
+    "end": "00:03:07"
+  },
+  {
+    "text": "So, prompt engineering is how you write and structure instructions, examples, and constraints.",
+    "start": "00:03:04",
+    "end": "00:03:14"
+  },
+  {
+    "text": "It's still very relevant and useful, but context engineering is how you assemble everything that model will see at run time like the right tools, the right facts, the right history, and the right format.",
+    "start": "00:03:11",
+    "end": "00:03:25"
+  },
+  {
+    "text": "It's dynamic and happens before every model call, so it's pretty powerful.",
+    "start": "00:03:25",
+    "end": "00:03:31"
+  },
+  {
+    "text": "Think of the model like a brain with a limited short-term memory.",
+    "start": "00:03:31",
+    "end": "00:03:36"
+  },
+  {
+    "text": "Your job is to pack it with all the things that it needs for the next step and you have limited space to do so.",
+    "start": "00:03:34",
+    "end": "00:03:44"
+  },
+  {
+    "text": "Here is what is in a context stack currently for most models that we use.",
+    "start": "00:03:41",
+    "end": "00:03:49"
+  },
+  {
+    "text": "There are seven pieces involved.",
+    "start": "00:03:47",
+    "end": "00:03:51"
+  },
+  {
+    "text": "First, we have instructions which are the system prompt and guardrails.",
+    "start": "00:03:51",
+    "end": "00:03:57"
+  },
+  {
+    "text": "Clear and plain language wins here.",
+    "start": "00:03:55",
+    "end": "00:04:00"
+  },
+  {
+    "text": "Second, we have user input, which is the current ask from the user.",
+    "start": "00:03:57",
+    "end": "00:04:04"
+  },
+  {
+    "text": "Third, we have retrieved facts, which are the few snippets that matter the most.",
+    "start": "00:04:04",
+    "end": "00:04:10"
+  },
+  {
+    "text": "Fourth, we have tools, which are functions that the model can call, as well as their descriptions, which are part of the context.",
+    "start": "00:04:10",
+    "end": "00:04:19"
+  },
+  {
+    "text": "Fifth, we have short-term notes, which summarizes all the recent steps, so that the model remembers what has changed recently.",
+    "start": "00:04:16",
+    "end": "00:04:25"
+  },
+  {
+    "text": "Sixth, we have long-term memory, which contains stable facts about the user or project, selected on demand.",
+    "start": "00:04:25",
+    "end": "00:04:36"
+  },
+  {
+    "text": "And lastly, we have output format, which are schemas or examples that lock the shape of the answer.",
+    "start": "00:04:36",
+    "end": "00:04:42"
+  },
+  {
+    "text": "Now, let's dive into a single example.",
+    "start": "00:04:42",
+    "end": "00:04:46"
+  },
+  {
+    "text": "Let's build a simple agent called Log Look, which is a helper that triages security alerts when they occur, and drafts a one-paragraph summary of the alert, plus a severity score of how severe the alert is.",
+    "start": "00:04:46",
+    "end": "00:05:03"
+  },
+  {
+    "text": "The chatbot way is to say, \"Hey, here you go.",
+    "start": "00:05:03",
+    "end": "00:05:06"
+  },
+  {
+    "text": "Analyze today's logs and tell me what's wrong.",
+    "start": "00:05:06",
+    "end": "00:05:09"
+  },
+  {
+    "text": "\" It might actually just spit out random guesses at that point.",
+    "start": "00:05:09",
+    "end": "00:05:12"
+  },
+  {
+    "text": "But with context engineering, we feed Log Look, our agent, a clean plate of the following things.",
+    "start": "00:05:12",
+    "end": "00:05:21"
+  },
+  {
+    "text": "First, we give system instructions, like summarize incidents into one paragraph, plus a severity score between 0 and 4.",
+    "start": "00:05:18",
+    "end": "00:05:31"
+  },
+  {
+    "text": "Only use provided context, and if missing data exist, ask for a specific file path.",
+    "start": "00:05:28",
+    "end": "00:05:35"
+  },
+  {
+    "text": "Second, we will list tools that it requires in order to answer the questions that we ask it.",
+    "start": "00:05:35",
+    "end": "00:05:45"
+  },
+  {
+    "text": "So, for example, reading file, or grep, or get known false positives.",
+    "start": "00:05:41",
+    "end": "00:05:50"
+  },
+  {
+    "text": "Third, we provide retrieved facts which only contain today's log slice and only lines with error or critical from the last hour will be sent to our agent.",
+    "start": "00:05:50",
+    "end": "00:06:01"
+  },
+  {
+    "text": "And also, the team's false positive list for noisy alerts is something that we'll also flag to our agent.",
+    "start": "00:06:01",
+    "end": "00:06:07"
+  },
+  {
+    "text": "The fourth thing that we're going to be passing to our agent is short-term notes.",
+    "start": "00:06:07",
+    "end": "00:06:16"
+  },
+  {
+    "text": "So, we've already checked this file.",
+    "start": "00:06:13",
+    "end": "00:06:19"
+  },
+  {
+    "text": "Next, scan this log instead.",
+    "start": "00:06:16",
+    "end": "00:06:19"
+  },
+  {
+    "text": "And then, we're also going to be giving it a format.",
+    "start": "00:06:19",
+    "end": "00:06:22"
+  },
+  {
+    "text": "We want it to expect JSON formats input and output.",
+    "start": "00:06:22",
+    "end": "00:06:27"
+  },
+  {
+    "text": "So, that's the difference.",
+    "start": "00:06:27",
+    "end": "00:06:28"
+  },
+  {
+    "text": "Same model, but with way better context.",
+    "start": "00:06:28",
+    "end": "00:06:32"
+  },
+  {
+    "text": "Now, let's talk about the four steps of context engineering.",
+    "start": "00:06:32",
+    "end": "00:06:37"
+  },
+  {
+    "text": "These show up across the best agent systems and they're really simple to remember.",
+    "start": "00:06:35",
+    "end": "00:06:41"
+  },
+  {
+    "text": "Write, select, compress, and isolate.",
+    "start": "00:06:41",
+    "end": "00:06:47"
+  },
+  {
+    "text": "First, we have write, which means to save notes outside of the context window.",
+    "start": "00:06:45",
+    "end": "00:06:53"
+  },
+  {
+    "text": "This actually lets the agent keep a scratch pad which contains plans, intermediate results, and open questions.",
+    "start": "00:06:51",
+    "end": "00:07:01"
+  },
+  {
+    "text": "It also makes sure that we don't squeeze all of that into the next call, but instead keep it external and only pull from it when it's relevant.",
+    "start": "00:06:58",
+    "end": "00:07:10"
+  },
+  {
+    "text": "This keeps the working context clean while preserving memory.",
+    "start": "00:07:10",
+    "end": "00:07:15"
+  },
+  {
+    "text": "So, for our agent log look, we can store all of that into something called investigation steps.",
+    "start": "00:07:15",
+    "end": "00:07:23"
+  },
+  {
+    "text": "md, which will contain a bulleted list of what's been checked.",
+    "start": "00:07:23",
+    "end": "00:07:27"
+  },
+  {
+    "text": "Second step is select, which means pull only what matters right now.",
+    "start": "00:07:27",
+    "end": "00:07:32"
+  },
+  {
+    "text": "So, use retrieval to fetch just the log slices and policy lines needed for this turn.",
+    "start": "00:07:32",
+    "end": "00:07:40"
+  },
+  {
+    "text": "Hybrid retrieval, which contains both keyword and semantics, often beats embedding only search on messy logs.",
+    "start": "00:07:40",
+    "end": "00:07:48"
+  },
+  {
+    "text": "The point is selection and not hoarding.",
+    "start": "00:07:48",
+    "end": "00:07:52"
+  },
+  {
+    "text": "So if our agent log look, we'll be selecting the top end number of error bursts and the specific section on severity scoring from our runbook.",
+    "start": "00:07:50",
+    "end": "00:08:03"
+  },
+  {
+    "text": "At third step, we have compress, which means keep the signal but drop the rest.",
+    "start": "00:08:00",
+    "end": "00:08:08"
+  },
+  {
+    "text": "What we need to do is periodically summarize long histories into short loss aware notes and then continue with a fresh window.",
+    "start": "00:08:06",
+    "end": "00:08:19"
+  },
+  {
+    "text": "So this keeps the last few raw items for safety, but then it also beats dragging a huge chat history everywhere.",
+    "start": "00:08:16",
+    "end": "00:08:27"
+  },
+  {
+    "text": "So for log look, we'll be keeping the last five findings, but everything older will be rolled into a three-line recap.",
+    "start": "00:08:25",
+    "end": "00:08:36"
+  },
+  {
+    "text": "The fourth and final step is isolate, which means sandbox sources to avoid cross talk.",
+    "start": "00:08:34",
+    "end": "00:08:41"
+  },
+  {
+    "text": "We can do this by splitting big jobs into sub agents or phases.",
+    "start": "00:08:41",
+    "end": "00:08:49"
+  },
+  {
+    "text": "Each explores its own context and then returns a short digest to a coordinator.",
+    "start": "00:08:45",
+    "end": "00:08:55"
+  },
+  {
+    "text": "This reduces leakage between tools and prevents one noisy source from poisoning the rest.",
+    "start": "00:08:52",
+    "end": "00:09:02"
+  },
+  {
+    "text": "So for our agent log look, a reader sub agent just extracts the facts and then a scorer sub agent applies the policy, while a writer sub agent composes the final summary from their digest.",
+    "start": "00:08:59",
+    "end": "00:09:14"
+  },
+  {
+    "text": "If you remember one thing from all of this, it's really important to curate instead of dumping a large chunk of prompts.",
+    "start": "00:09:14",
+    "end": "00:09:24"
+  },
+  {
+    "text": "Context engineering isn't just a buzzword, it's a natural progression of prompt engineering.",
+    "start": "00:09:22",
+    "end": "00:09:31"
+  },
+  {
+    "text": "It's a discipline of building robust, reliable, and truly useful applications.",
+    "start": "00:09:28",
+    "end": "00:09:36"
+  },
+  {
+    "text": "It's how we move from simple chatbots to complex AI [music] agents that can become our collaborators.",
+    "start": "00:09:33",
+    "end": "00:09:41"
+  },
+  {
+    "text": "Hope you found this video helpful and hope you've learned how context engineering actually [music] works and how it differs from something like prompt engineering.",
+    "start": "00:09:41",
+    "end": "00:09:51"
+  }
+]

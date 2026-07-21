@@ -1,0 +1,309 @@
+
+# ADD MCP TO ENGINE PLAN
+
+plan-it
+
+Nowadays our system is really robust but we are missing one important concept. MCPs! Nowadays our brain-connectors and brain integration are really powerfull and it is a good way to quickly integrate and to ingest data into the brain, but we don't have a easy and plug-in-play way to let LLM and brain-apps to directly use the MCP that these third-party provide us. 
+
+/goal reasearch the ENgine codebase, how we structure module and features to create a plan on how can we leverage third-party MCPs availability to our tenants.
+
+In my view, in the "integrations" settings, like we have backfill, webhooks, we now can add an MCP session, and if that third-party has it, we let the user install. Like we did in "automations" and "ontology", we can have an AI area where the user asks or pass the MCP documentation, github, or url and we install it for them. This would be a new session in the integration json. 
+
+The impact of this is:
+- brain-agent, zeroclaw, backbones needs to have visibility of the MCPs available and this is add to the smart-composer so the user call tag it (new type, new color, summit with "/")
+- brain-apps has access to them as well. Like we give integrations so brain-apps doesn't need to handle this, the MCP needs to have the same behaviour. Also, our MCP gateway that we build for the backbones and brain-agents should also be available native to the brain-apps, so they can easily call and use brain-agent, Skills, AI Agents, and easy access to the data of our ontology.
+
+A few MCPs examples
+- https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server
+- https://developers.meta.com/horizon/essentials/ai-tooling-mcp/
+- https://developers.facebook.com/documentation/mcp
+- https://developers.hubspot.com/ai-tools/mcp
+- https://support.airtable.com/docs/using-the-airtable-mcp-server
+
+
+notes:
+-  I recommend run all of these DoDs in parallel using claude teams.
+-  Token-aware: this is a small single-feature fix — coordinator on Fable, one Sonnet builder against the test contract, escalate only on struggle. Don't over-build.
+------
+
+# BRAIN-DOCS REFACTOR PROMPT
+
+fable-it plan-it
+
+This weekend we made a MAJOR refactor in our engine's codebase, adding real Ontology ( @brain-docs/implementations/palantir-ontology) , creating full-praxya apps (brain-docs/implementations/full-praxya), smart-composer, doing a MAJOR refactor in our database standards ( @brain-docs/architecture/database-design.md @brain-docs/architecture/database-atlas.html )  
+
+Even though in all sessions we ran session-debriefs, as this represents a MAJOR update that we can't just relly on the debriefs, /goal it is time to work on a major refactor, clean up and update of our documentation as a lot of architecture and business logic now is different.
+
+DoD: 
+1. Let's plan and research our codebase. 
+1.1. Check the last 5 days commits, PR, merges in all repos that we work here
+1.2. Read the chats (across claude subscriptions) of this folder to have better contexts/read-chat  --recent
+2. Research about the new OKF format, if it makes sense and can help our LLM to better understand our code, let's implement it.
+	- https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing
+	- https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
+	- https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/toolbox/mdcode/demo
+3. Review if we have the ADR concepts in our brain-docs, if not, it is time to add them.
+4. Review what we will need to update/clean up/ refactor in Obsidian /claude-obsidian:wiki
+
+After all of there research, create a plan-it documentation that will guide the next session on rebuilding our documentation.
+
+I recommend run all of these DoDs in parallel using claude teams.
+
+notes:
+-  .understand-anything is out of this scope, we will work on this in another time
+-  Token-aware: this is a small single-feature fix — coordinator on Fable, one Sonnet builder against the test contract, escalate only on struggle. Don't over-build.
+
+--------
+# LLM EXTRACTION Prompt
+
+fable-it
+
+Build the ontology "per-Space LLM key source" fix (W3-KEY) to its Definition of Done.
+
+Package (read in order):
+- brain-docs/implementations/palantir-ontology/delivery/KICKOFF-llm-key-source.md  (hard-won
+  context: the one client factory, the reference impl to copy, praxya live state, the org-id
+  design decision, gotchas, the K-11 [REAL] proof method)
+- brain-docs/implementations/palantir-ontology/delivery/prds/prd-llm-key-source.md
+- brain-docs/implementations/palantir-ontology/delivery/epics/epics-llm-key-source.md  (binding
+  11-case Test Contract; DoD = 100%)
+
+Goal: make ontology's OpenRouter client resolve the per-Space `Direct (OpenRouter)` backbone
+connection key (backbone-first → OPENROUTER_API_KEY → OPENAI_API_KEY fallback), mirroring
+brain-api-core/src/triggers/trigger-draft.service.ts, instead of reading the global pod env var.
+Single repo: brain-api-core, branch epic/W3-KEY-llm-key-source. praxya is the only rollout tenant
+(sha-pinned kubectl set image). CONTRACT amend as v1.8.
+
+Definition of Done (binding):
+1. Test Contract 11/11 green — 9 unit (K-1..K-9) + K-10/K-11 [REAL] on praxya. Unreachable
+   target = IMPLEMENTED-NOT-VERIFIED, never faked.
+2. One resolution point (the single createOpenRouterClient seam) — no second copy of the
+   precedence logic.
+3. No praxya regression: env==connection there, so extraction still bills the same key (K-10
+   parity); K-11 proves a distinct per-Space key is actually honored (then restore it).
+4. Merged to main, praxya rolled, CONTRACT v1.8 dated, honest per-case report.
+
+Token-aware: this is a small single-feature fix — coordinator on Fable, one Sonnet builder
+against the test contract, escalate only on struggle. Don't over-build.
+
+
+--------------------
+# Enhance Observability prompt plan
+
+plan-it 
+
+Great job at complete the observability. 
+
+Now we need to enhace and extend our Feedback thumb up and thumb down component. 
+
+We got a few feedbacks that can become DoDs in our next enhance implementations on observability.
+1. apply the component to all messages sent or actions made by an interaction with LLM in all pages where we chat:
+   - Intel: https://test.beacon.anm.com/intel
+   - Design: https://test.beacon.anm.com/design/6a7de70e-1266-45bf-8ef1-518c4638e4f7
+   - Regenerate Brief
+   - Regenerate SOW
+   - Generate SOW
+   - Generate Plan
+   - All regenerations or generations we have in the system.
+
+2. When we generate or regenerate something, after we do this, we should popup a modal showing the new Feedback feature and asking the user to review and give his feedback about the content created.
+
+3. If the user send a thumbs down, let's introduce a popup with a really small form with a textarea asking to explain what it is not good and making clear  that this will help to enhance the system.
+
+4. In langsmith, we can only see llm.generate, but we don't know from where it came from, if it was from the design, intel, from a Regenerated Brief or Regenerated SOW, etc.
+
+5. We have a few LLM calls that are step by step and actually is a multi-step process, (looks like intel is one of them). On this ones, we expect to see these steps separated in langfuse so we have full visibility of the process, with understandable names.
+
+Before start
+/read-chat "done-observability-beacon"
+
+also split the research using claude teams and analyse which subagent that can use lower models and change their models for us to save tokens. keep the main coordinator one as fable so if it sees that
+  the lower model is not handling well in that subagent, it can decide if changes it to fable again.
+  
+  
+----------------
+# PLAN HOW TO IMPROVE FABLE-IT V3
+
+plan-it
+I've been using the plugin during the whole week, and I'm really proud and happy with the quality of the implementations we've been building so far.
+
+Now it is time for us to take a good look at the chats we built across all projects and Claude subscriptions: `claudinho`, `claudeanm`, `claudeloudr`, and `claude8ftools`, using `/read-chat`.
+
+To save us time, we already did this research in another session and consolidated the findings at `@docs/research/v3-research`. This should help us focus on the most important things to improve.
+
+**WARNING:** This research was created to help us enhance the `plan-it` plugin.
+
+Compare the planning sessions with the execution sessions for each plan. As a senior analyst and software architect, analyze the differences and propose improvements that can further enhance the planning phase. Focus especially on things we may not have enforced properly or may have forgotten in the current version.
+
+Another source of study is how we can make Opus, Sonnet, and other models more Fable-like. Review the following repositories:
+
+* https://github.com/teamchong/pxpipe
+* https://github.com/per-simmons/damon-ade
+  Focus only on the Fable and builder parts. We handle planning and tests in other plugins.
+
+Also research the internet to check whether, in the last few days, new examples have appeared showing how to make models more Fable-like. Use anything useful to enhance the current version of `fable-it`.
+
+Spin up Claude teams using lower-tier models so we do not spend Fable 5 tokens on this research and generation work.
+
+/goal improve the `fable-it` plugin by using the research and learnings from historical chats to build v3.
+
+**IMPORTANT:** Today is the last day I have access to Fable 5, so we need to make the most of it.
+
+--------------------
+# BEACON FEEDBACKS 
+
+plan-it 
+
+Great job at complete the observability. 
+
+Now we need to enhace and extend our Feedback thumb up and thumb down component. 
+
+We got a few feedbacks that can become DoDs in our next enhance implementations on observability.
+1. apply the component to all messages sent or actions made by an interaction with LLM in all pages where we chat:
+   - Intel: https://test.beacon.anm.com/intel
+   - Design: https://test.beacon.anm.com/design/6a7de70e-1266-45bf-8ef1-518c4638e4f7
+   - Regenerate Brief
+   - Regenerate SOW
+   - Generate SOW
+   - Generate Plan
+   - All regenerations or generations we have in the system.
+
+2. When we generate or regenerate something, after we do this, we should popup a modal showing the new Feedback feature and asking the user to review and give his feedback about the content created.
+
+3. If the user send a thumbs down, let's introduce a popup with a really small form with a textarea asking to explain what it is not good and making clear  that this will help to enhance the system.
+
+4. In langsmith, we can only see llm.generate, but we don't know from where it came from, if it was from the design, intel, from a Regenerated Brief or Regenerated SOW, etc.
+
+5. We have a few LLM calls that are step by step and actually is a multi-step process, (looks like intel is one of them). On this ones, we expect to see these steps separated in langfuse so we have full visibility of the process, with understandable names.
+
+Before start
+/read-chat "done-observability-beacon"
+
+also split the research using claude teams and analyse which subagent that can use lower models and change their models for us to save tokens. keep the main coordinator one as fable so if it sees that
+  the lower model is not handling well in that subagent, it can decide if changes it to fable again.
+  
+------------------
+# RESEARCH 5 DAYS PALANTIR
+
+/plan-it
+
+We implement the Palantir ontology in our brain, what improve A LOT our system. 
+Now we need to continue the Palantir research, now focusing on a major sucess business story of their 5 days POC playbook.
+
+"The mechanism that makes even the fast part possible is the FDE model. FDEs are full-stack software engineers who work directly inside customer environments, often for long periods, building production systems that support real operational decisions — not traditional consultants or sales engineers. This is what lets them show something working on live client data within days. Palantir popularized this so effectively that Amazon recently announced a $1 billion investment to implement forward deployed engineers in customer environments, essentially copying the playbook."
+
+One of the most impressive things they accomplish on their system is the following:
+
+"The kinetic half — this is what really drives the speed
+Actions are where a lot of the deployment velocity comes from. An action type is a schema definition of a set of edits a user can make to objects, properties, and links all at once, plus side effects. The crucial detail: a form UI is automatically generated from the action definition, so the writeback logic and the user interface aren't defined separately. A classic example is a "Modify Flight Destination" action — you define which object and which properties it can change, and the operator-facing form comes for free."
+
+And that is exactly what I'm aiming for the brain.
+We will have hundreds of tenants, and each tenant might be from a different sector entirely. 
+One might be a hospital, other an accounting firm, other a marketing agency, other a soil farm or a oil industry. How to make the customization and to fit the brain in their reality fast, is crucial for the suceess of what we are building.
+
+Take a deep look in the @docs/implementation/palantier-kinetic/research/palantir-ontology-research.md and spin up subagents to study the source links provided in it.
+SUbagents to study how we implemented the ontology so far in:
+- codebase
+- @brain-docs/implementations/0-done/palantir-ontology
+- @brain-docs
+- /claude-obsidian:wiki
+
+
+So the /goal of our research is to deeply understand the palantir playbook and kinetic half, understand our codebase and create a documentation on how can we do the same, what is the effort, show examples and benchmarks that can help us on what is the best way to implement this.
+
+
+IMPORTANT: Be token aware to avoid spend too much: split the analyses using claude teams and analyse which subagent that can use lower models and change their models for us to save tokens. keep the main coordinator one as fable so if it sees that the lower model is not handling well in that subagent, it can decide if changes it to fable again.
+
+---------
+# LANGFUSE OBSERVABILITY
+
+plan-it
+
+  Engine already has a lot of modules, LLM is invoke in multiple places in different
+  times and we have ZERO visibility of our costs, where we are spending it, which
+  models and so on.
+
+  Without this knowledge we are just blind. we don't know if we are using one model
+  and we could being using a more afordable one depending on the task, we can't find
+  token leaks easily.
+
+  The goal of this plan-it session is to plan to track our entire system and every
+  single place where we use LLM, brain-apps included so we have proper LLM
+  observability.
+
+  Langfuse should be a new service in a global level, deployed in
+  contabo_brain_apps_master_vps  @.secrets/.full.credentials VPS. Each tenant will be
+  a langfuse project.
+
+  for you to have a quick understand on how to implement, check Beacon project
+  @/Users/macbook/Workspace/ANM/Beacon/ where we implemented langfuse. It is
+  important for us to be able to have a good name tracing so we quickly know from
+  where this trace came from, example:
+  "chat"
+  "app:pulse"
+  "automation:[name-of-automation]"
+
+
+  split in claude teams the research.
+
+
+  IMPORTANT: Be token aware to avoid spend too much: split the analyses using claude
+  teams and analyse which subagent that can use lower models and change their models
+  for us to save tokens. keep the main coordinator one as fable so if it sees that
+  the lower model is not handling well in that subagent, it can decide if changes it
+  to fable again. Fable model is the orchestrator and reviewer of what the subagents
+  did.
+  
+  
+  -------------
+  ## PROMPT TO BUILD REVIEW-IT plugin
+  
+  
+It is time for us to consolidate all our knowledge from several implementations we've being doing in the last 2 weeks on code-quality, unit tests, review, e2e and production read code into one new skill, plugin that will live under @/Users/macbook/Workspace/Devotts/[new skill]
+
+
+As you know we are creating a new family of plugins to help us tackle the entire development lifecycle:
+  - @/Users/macbook/Workspace/Devotts/fable-it
+  - @/Users/macbook/Workspace/Devotts/parallel-lifecycle
+  - @/Users/macbook/Workspace/Devotts/plan-it
+
+
+  So far we built a few QA/test skills like:
+  - @/Users/macbook/.claude/skills/worktree-test-isolation
+  - @/Users/macbook/.claude/skills/full-qa
+  - @/Users/macbook/Workspace/Engine/Engine-Core/.claude/skills/review-pr
+
+And our /goal is to create a new one called test-it or review-it or qa-it, (not sure what is the best name yet)
+
+First, we need to study andresearch what we already achieve. 
+Use a few claude teams subagents, use fable to orchestrate and call these subagents using lower models to save tokens.
+
+1. Check the session where we go deeper on this matter:
+   - @docs/implementation/0-done/qa-system
+   - /read-chat "done-e2e-unit-tests-execution" (claude8ftools subscription at this project)
+
+2. research our sessions history to learn from our mistakes and right decisions:
+  /read-chat --recents (the last two weeks - btw I think we already did that and we might have the session history consolidated somewhere)
+
+3. We just finished an implementation with fable-it that took my attention on the size of     back-and-forth we had with it.
+
+  Check this session that we had under claudeloudr subscription at @/Users/macbook/Workspace/Loudr/
+  /read-chat "done-airtable-write-exec"
+
+  Doing postmorten of what happened on this session. We had a few problems during this
+    implementation.
+    A few things to point out:
+    1. You already had a clear directive to when working with thirdy-party integrations, to always use the
+    credentials in brain integration/brian-connector. you question if we should add it in the k8s env var.
+    1. Once it was done, we said you ran the e2e tests using CDP but the dropdown had UI errors and I had to run
+    the test to figure out.
+    1. I tested again and I wasn't able to save in tasks cause I need to enable it. This is fine, what I question
+    is if you actually test adding it to airtable and going to airtable to see the result previously. If you
+    didn't, this is also a problem.
+
+    I'm pointing this out not as your fault, but an opportunity for us to improve our testing, test-cases scenarios
+    and overall quality of our deliverables.
+
+Let's research and plan-it 
+
+------------

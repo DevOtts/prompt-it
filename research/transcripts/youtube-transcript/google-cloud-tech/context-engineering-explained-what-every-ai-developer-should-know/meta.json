@@ -1,0 +1,84 @@
+{
+  "videoId": "BBPQYtR7oUk",
+  "title": "Context engineering explained: What every AI developer should know",
+  "channel": "Google Cloud Tech",
+  "channelId": "UCJS9pqu9BzkAMNTmzNMNhvg",
+  "description": "White-paper on context engineering → https://goo.gle/3QiKYbT \nMore info on context engineering → https://goo.gle/43fII8c \n\nContext Engineering: Why writing bigger prompts won't fix your AI, and what to do instead. In this video, Smitha Kolan explains what context engineering is, how it's different from prompt engineering, and gives you a practical step-by-step framework to build smarter, more reliable AI agents.\n\nModels keep getting larger context windows, but longer context isn't always better. When the windows is stuffed with everything, accuracy drops and errors sneak in. Context engineering is the discipline of curating the smallest set of high-signal information the model needs at each step: the right instructions, the right tools, the right facts, and nothing more.\n\nIn this video you'll learn:\n* 📌 The 7 components of a well engineered context stack.\n* ⚠️ The 4 failure modes that break AI agents.\n* 🛠️ The 4 steps of context engineering.\n\nChapters:\n0:00 - Bigger prompts don't fix bad AI\n0:47 - What is context engineering?\n1:39 - Why context size isn't everything\n2:18 - Four failure modes: Poisoning, distraction, confusion, clash\n2:58 - Context engineering vs prompt engineering\n4:16 - The seven components of a context stack\n5:02 - Building LogLook: A realistic agent example\n7:00 - The 4 steps of context engineering\n7:08 - Step 1: Write\n7:50 - Step 2: Select\n8:34 - Step 3: Compress\n9:14 - Step 4: Isolate\n9:50 - Curate, don't dump\n\nMore resources:\nMCP Explained → https://goo.gle/3QY4Hhw\nMCP vs API → https://goo.gle/4ffLPCF\n\nWatch more Modern AI Agents: From Theory to Production → https://goo.gle/Learn-with-Smitha\n🔔 Subscribe to Google Cloud Tech → https://goo.gle/GoogleCloudTech\n\n#ContextEngineering #PromptEngineering #AIAgents #GoogleCloud #Gemini #ArtificialIntelligence #MachineLearning\n\nSpeaker: Smitha Kolan\nProducts Mentioned: AI Infrastructure",
+  "duration": 605,
+  "publishDate": "2026-07-15",
+  "url": "https://www.youtube.com/watch?v=BBPQYtR7oUk",
+  "coverImage": "imgs/cover.jpg",
+  "thumbnailUrl": "https://i.ytimg.com/vi/BBPQYtR7oUk/maxresdefault.jpg",
+  "language": {
+    "code": "en",
+    "name": "English",
+    "isGenerated": true
+  },
+  "chapters": [
+    {
+      "title": "- Bigger prompts don't fix bad AI",
+      "start": 0,
+      "end": 47
+    },
+    {
+      "title": "- What is context engineering?",
+      "start": 47,
+      "end": 99
+    },
+    {
+      "title": "- Why context size isn't everything",
+      "start": 99,
+      "end": 138
+    },
+    {
+      "title": "- Four failure modes: Poisoning, distraction, confusion, clash",
+      "start": 138,
+      "end": 178
+    },
+    {
+      "title": "- Context engineering vs prompt engineering",
+      "start": 178,
+      "end": 256
+    },
+    {
+      "title": "- The seven components of a context stack",
+      "start": 256,
+      "end": 302
+    },
+    {
+      "title": "- Building LogLook: A realistic agent example",
+      "start": 302,
+      "end": 420
+    },
+    {
+      "title": "- The 4 steps of context engineering",
+      "start": 420,
+      "end": 428
+    },
+    {
+      "title": "- Step 1: Write",
+      "start": 428,
+      "end": 470
+    },
+    {
+      "title": "- Step 2: Select",
+      "start": 470,
+      "end": 514
+    },
+    {
+      "title": "- Step 3: Compress",
+      "start": 514,
+      "end": 554
+    },
+    {
+      "title": "- Step 4: Isolate",
+      "start": 554,
+      "end": 590
+    },
+    {
+      "title": "- Curate, don't dump",
+      "start": 590,
+      "end": 605
+    }
+  ]
+}

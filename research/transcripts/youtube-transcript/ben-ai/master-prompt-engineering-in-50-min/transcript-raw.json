@@ -1,0 +1,6897 @@
+[
+  {
+    "text": "hey guys so in this video I'll break",
+    "start": 0.28,
+    "duration": 3.159
+  },
+  {
+    "text": "down everything you need to know about",
+    "start": 1.959,
+    "duration": 3.721
+  },
+  {
+    "text": "prompt engineering inside of AI agent",
+    "start": 3.439,
+    "duration": 4.681
+  },
+  {
+    "text": "and AI automation systems now I know",
+    "start": 5.68,
+    "duration": 4.039
+  },
+  {
+    "text": "there's a ton of content out there on",
+    "start": 8.12,
+    "duration": 3.679
+  },
+  {
+    "text": "prompting but I find most of it either",
+    "start": 9.719,
+    "duration": 5.321
+  },
+  {
+    "text": "very theoretical or without a focus on",
+    "start": 11.799,
+    "duration": 5.281
+  },
+  {
+    "text": "prompting inside of AI agents and AI",
+    "start": 15.04,
+    "duration": 4.399
+  },
+  {
+    "text": "automations so in this video I'll try to",
+    "start": 17.08,
+    "duration": 4.359
+  },
+  {
+    "text": "be very practical and second of all",
+    "start": 19.439,
+    "duration": 4.041
+  },
+  {
+    "text": "really focus on prompt engineering for",
+    "start": 21.439,
+    "duration": 4
+  },
+  {
+    "text": "these AI agent and air automation",
+    "start": 23.48,
+    "duration": 4.879
+  },
+  {
+    "text": "systems now I think many people think",
+    "start": 25.439,
+    "duration": 4.84
+  },
+  {
+    "text": "they know prompting because they can use",
+    "start": 28.359,
+    "duration": 4.4
+  },
+  {
+    "text": "chat GPT efficiently and trust me I've",
+    "start": 30.279,
+    "duration": 4.641
+  },
+  {
+    "text": "been there too uh but prompting inside",
+    "start": 32.759,
+    "duration": 4.48
+  },
+  {
+    "text": "of these AI agent and automation systems",
+    "start": 34.92,
+    "duration": 3.799
+  },
+  {
+    "text": "is actually very different than",
+    "start": 37.239,
+    "duration": 4.401
+  },
+  {
+    "text": "prompting from within J chat gbt uh with",
+    "start": 38.719,
+    "duration": 4.84
+  },
+  {
+    "text": "chat gbt you can go back and forth as",
+    "start": 41.64,
+    "duration": 3.759
+  },
+  {
+    "text": "much as you want really to get the right",
+    "start": 43.559,
+    "duration": 4.081
+  },
+  {
+    "text": "output so understandably most people",
+    "start": 45.399,
+    "duration": 4.521
+  },
+  {
+    "text": "don't really worry or focus on using",
+    "start": 47.64,
+    "duration": 4.719
+  },
+  {
+    "text": "best practices and to be fair you don't",
+    "start": 49.92,
+    "duration": 4.439
+  },
+  {
+    "text": "really need it but when you're designing",
+    "start": 52.359,
+    "duration": 4.921
+  },
+  {
+    "text": "these AI automation or AI agent systems",
+    "start": 54.359,
+    "duration": 4.441
+  },
+  {
+    "text": "you first of all don't have the luxury",
+    "start": 57.28,
+    "duration": 3.68
+  },
+  {
+    "text": "of that back and forth tweak you need to",
+    "start": 58.8,
+    "duration": 4.04
+  },
+  {
+    "text": "get it right with a single prompt and",
+    "start": 60.96,
+    "duration": 3.239
+  },
+  {
+    "text": "second of all when you actually start",
+    "start": 62.84,
+    "duration": 3.16
+  },
+  {
+    "text": "implementing these systems inside of",
+    "start": 64.199,
+    "duration": 3.56
+  },
+  {
+    "text": "businesses and start running it on a",
+    "start": 66,
+    "duration": 3.88
+  },
+  {
+    "text": "large volume of tasks you need your",
+    "start": 67.759,
+    "duration": 4.761
+  },
+  {
+    "text": "system to be consistently reliable H",
+    "start": 69.88,
+    "duration": 4.68
+  },
+  {
+    "text": "even with the edge cases and that really",
+    "start": 72.52,
+    "duration": 4.639
+  },
+  {
+    "text": "does require good prompt engineering and",
+    "start": 74.56,
+    "duration": 4.599
+  },
+  {
+    "text": "again I've learned this the hard way uh",
+    "start": 77.159,
+    "duration": 4.081
+  },
+  {
+    "text": "so in my opinion uh good prompt",
+    "start": 79.159,
+    "duration": 3.681
+  },
+  {
+    "text": "engineering is really the number one",
+    "start": 81.24,
+    "duration": 3.519
+  },
+  {
+    "text": "core skill you should Master when you",
+    "start": 82.84,
+    "duration": 5.44
+  },
+  {
+    "text": "want to deliver reliable AI systems to",
+    "start": 84.759,
+    "duration": 5.441
+  },
+  {
+    "text": "companies now if you don't know know me",
+    "start": 88.28,
+    "duration": 3.519
+  },
+  {
+    "text": "yet I'm Ben I've been implementing AI",
+    "start": 90.2,
+    "duration": 3.239
+  },
+  {
+    "text": "agents and AI automations inside of",
+    "start": 91.799,
+    "duration": 4.28
+  },
+  {
+    "text": "companies uh since the end of 2023 now",
+    "start": 93.439,
+    "duration": 4.68
+  },
+  {
+    "text": "just a disclaimer I'm not pretending to",
+    "start": 96.079,
+    "duration": 3.72
+  },
+  {
+    "text": "be some genius prompt engineer I don't",
+    "start": 98.119,
+    "duration": 3.96
+  },
+  {
+    "text": "have a PhD in AI or anything like that",
+    "start": 99.799,
+    "duration": 4.401
+  },
+  {
+    "text": "I'm still learning every day myself uh",
+    "start": 102.079,
+    "duration": 3.601
+  },
+  {
+    "text": "I'm also very aware that there are many",
+    "start": 104.2,
+    "duration": 3.72
+  },
+  {
+    "text": "different ways to efficiently prompt and",
+    "start": 105.68,
+    "duration": 4.039
+  },
+  {
+    "text": "except for a few proven and study",
+    "start": 107.92,
+    "duration": 3.839
+  },
+  {
+    "text": "techniques there are lots of ways to get",
+    "start": 109.719,
+    "duration": 3.841
+  },
+  {
+    "text": "consistent outcomes this is just an",
+    "start": 111.759,
+    "duration": 4.201
+  },
+  {
+    "text": "overview of what I've learned what works",
+    "start": 113.56,
+    "duration": 5.4
+  },
+  {
+    "text": "for me and hopefully it can help you but",
+    "start": 115.96,
+    "duration": 4.68
+  },
+  {
+    "text": "again this is not the only way to do it",
+    "start": 118.96,
+    "duration": 3.28
+  },
+  {
+    "text": "so I've broken this video down into five",
+    "start": 120.64,
+    "duration": 3.32
+  },
+  {
+    "text": "sections in the first section I'll give",
+    "start": 122.24,
+    "duration": 3.199
+  },
+  {
+    "text": "you just a high level overview of some",
+    "start": 123.96,
+    "duration": 2.839
+  },
+  {
+    "text": "key Concepts that I think you should",
+    "start": 125.439,
+    "duration": 3.201
+  },
+  {
+    "text": "know when prompting inside of these AI",
+    "start": 126.799,
+    "duration": 4.001
+  },
+  {
+    "text": "automation systems then I'll go over my",
+    "start": 128.64,
+    "duration": 4.44
+  },
+  {
+    "text": "prompting Frameworks which include uh",
+    "start": 130.8,
+    "duration": 4.28
+  },
+  {
+    "text": "short structured prompting long",
+    "start": 133.08,
+    "duration": 3.799
+  },
+  {
+    "text": "structured prompting and agent prompting",
+    "start": 135.08,
+    "duration": 3.32
+  },
+  {
+    "text": "and I'll also give you my initial take",
+    "start": 136.879,
+    "duration": 4.36
+  },
+  {
+    "text": "on how to prompt the new gb01 model then",
+    "start": 138.4,
+    "duration": 5.08
+  },
+  {
+    "text": "I'll go over all the most common prompt",
+    "start": 141.239,
+    "duration": 4.121
+  },
+  {
+    "text": "use cases you will actually find when",
+    "start": 143.48,
+    "duration": 3.839
+  },
+  {
+    "text": "you're designing these AI automation or",
+    "start": 145.36,
+    "duration": 4.08
+  },
+  {
+    "text": "AI agent systems and I'll give you my",
+    "start": 147.319,
+    "duration": 3.801
+  },
+  {
+    "text": "recommend ations for each of the use",
+    "start": 149.44,
+    "duration": 4.72
+  },
+  {
+    "text": "cases on which prompt framework to use",
+    "start": 151.12,
+    "duration": 5.56
+  },
+  {
+    "text": "uh some examples and also which model to",
+    "start": 154.16,
+    "duration": 4.439
+  },
+  {
+    "text": "use to get the most Roi out of your",
+    "start": 156.68,
+    "duration": 4.04
+  },
+  {
+    "text": "system then I'll go over very quickly",
+    "start": 158.599,
+    "duration": 3.761
+  },
+  {
+    "text": "some other prompting use cases that",
+    "start": 160.72,
+    "duration": 3.96
+  },
+  {
+    "text": "you'll need in agent systems like uh",
+    "start": 162.36,
+    "duration": 4.08
+  },
+  {
+    "text": "tool input prompting and sub agent",
+    "start": 164.68,
+    "duration": 4.36
+  },
+  {
+    "text": "prompting and lastly I'll go over my",
+    "start": 166.44,
+    "duration": 5.32
+  },
+  {
+    "text": "recently updated agent prompting tool",
+    "start": 169.04,
+    "duration": 4.64
+  },
+  {
+    "text": "now this tool doesn't replace your agent",
+    "start": 171.76,
+    "duration": 3.6
+  },
+  {
+    "text": "prompt but it will help you help you",
+    "start": 173.68,
+    "duration": 3.919
+  },
+  {
+    "text": "write them better and faster and I'll",
+    "start": 175.36,
+    "duration": 4.48
+  },
+  {
+    "text": "explain you quickly how to use it now",
+    "start": 177.599,
+    "duration": 3.681
+  },
+  {
+    "text": "before starting why do we actually need",
+    "start": 179.84,
+    "duration": 3.16
+  },
+  {
+    "text": "good prompt engineering you've probably",
+    "start": 181.28,
+    "duration": 3.12
+  },
+  {
+    "text": "heard the phrase English is the new",
+    "start": 183,
+    "duration": 3.799
+  },
+  {
+    "text": "programming language by now and I think",
+    "start": 184.4,
+    "duration": 4.28
+  },
+  {
+    "text": "it's very true because non-coders like",
+    "start": 186.799,
+    "duration": 4.561
+  },
+  {
+    "text": "me can now build extremely powerful uh",
+    "start": 188.68,
+    "duration": 5.16
+  },
+  {
+    "text": "applications and automations uh with",
+    "start": 191.36,
+    "duration": 5.12
+  },
+  {
+    "text": "just plain English but communicating",
+    "start": 193.84,
+    "duration": 4.72
+  },
+  {
+    "text": "with L&M is different than with humans",
+    "start": 196.48,
+    "duration": 3.72
+  },
+  {
+    "text": "so learning how to efficiently",
+    "start": 198.56,
+    "duration": 4
+  },
+  {
+    "text": "communicate with L&M is in my opinion",
+    "start": 200.2,
+    "duration": 4.08
+  },
+  {
+    "text": "the number one core skill in building",
+    "start": 202.56,
+    "duration": 4.399
+  },
+  {
+    "text": "these AI systems and it will also",
+    "start": 204.28,
+    "duration": 4.36
+  },
+  {
+    "text": "increase the reliability of your system",
+    "start": 206.959,
+    "duration": 3.081
+  },
+  {
+    "text": "it will increase the accuracy your",
+    "start": 208.64,
+    "duration": 3.959
+  },
+  {
+    "text": "system and also it will lower the cost",
+    "start": 210.04,
+    "duration": 4
+  },
+  {
+    "text": "of your system which becomes very",
+    "start": 212.599,
+    "duration": 2.64
+  },
+  {
+    "text": "important when you actually start",
+    "start": 214.04,
+    "duration": 3
+  },
+  {
+    "text": "implementing these systems inside of",
+    "start": 215.239,
+    "duration": 4.08
+  },
+  {
+    "text": "businesses and start running it on large",
+    "start": 217.04,
+    "duration": 3.32
+  },
+  {
+    "text": "volume",
+    "start": 219.319,
+    "duration": 4.361
+  },
+  {
+    "text": "tasks so here are the key Concepts I",
+    "start": 220.36,
+    "duration": 5.2
+  },
+  {
+    "text": "just want to go over very quickly uh",
+    "start": 223.68,
+    "duration": 3.4
+  },
+  {
+    "text": "first of all as I said there's a big",
+    "start": 225.56,
+    "duration": 2.759
+  },
+  {
+    "text": "difference between conversational",
+    "start": 227.08,
+    "duration": 2.96
+  },
+  {
+    "text": "prompting and structured prompting right",
+    "start": 228.319,
+    "duration": 3.12
+  },
+  {
+    "text": "conversational prompting is what we do",
+    "start": 230.04,
+    "duration": 3.399
+  },
+  {
+    "text": "inside of chat GPT where we go back and",
+    "start": 231.439,
+    "duration": 4.041
+  },
+  {
+    "text": "forth until we get the right output now",
+    "start": 233.439,
+    "duration": 3.921
+  },
+  {
+    "text": "we don't have that flexibility inside of",
+    "start": 235.48,
+    "duration": 3.8
+  },
+  {
+    "text": "our systems so that's why we use",
+    "start": 237.36,
+    "duration": 4.36
+  },
+  {
+    "text": "structured prompting right and structure",
+    "start": 239.28,
+    "duration": 4.039
+  },
+  {
+    "text": "prompting basically follows a framework",
+    "start": 241.72,
+    "duration": 4.159
+  },
+  {
+    "text": "and incorporates proven best practices",
+    "start": 243.319,
+    "duration": 3.801
+  },
+  {
+    "text": "right so that's really what we're trying",
+    "start": 245.879,
+    "duration": 2.92
+  },
+  {
+    "text": "to do with structured prompting right is",
+    "start": 247.12,
+    "duration": 3.679
+  },
+  {
+    "text": "first of all we're trying to incorporate",
+    "start": 248.799,
+    "duration": 3.921
+  },
+  {
+    "text": "those best practices now I'm want to",
+    "start": 250.799,
+    "duration": 3.44
+  },
+  {
+    "text": "make this video practical so I'm not",
+    "start": 252.72,
+    "duration": 3.6
+  },
+  {
+    "text": "going to go over them in depth but we",
+    "start": 254.239,
+    "duration": 4.161
+  },
+  {
+    "text": "want to incorporate these studied and",
+    "start": 256.32,
+    "duration": 4.159
+  },
+  {
+    "text": "proven techniques like rle prompting few",
+    "start": 258.4,
+    "duration": 4.04
+  },
+  {
+    "text": "shot prompting chain of thoughts",
+    "start": 260.479,
+    "duration": 4.16
+  },
+  {
+    "text": "emotional manipulation and markdown",
+    "start": 262.44,
+    "duration": 5
+  },
+  {
+    "text": "formatting and to make sure to ensure",
+    "start": 264.639,
+    "duration": 5.921
+  },
+  {
+    "text": "that we that we incorporate incorporate",
+    "start": 267.44,
+    "duration": 5.28
+  },
+  {
+    "text": "those best practices we use a framework",
+    "start": 270.56,
+    "duration": 4.96
+  },
+  {
+    "text": "right so that framework basically serves",
+    "start": 272.72,
+    "duration": 5.52
+  },
+  {
+    "text": "to incorporate those best practices to",
+    "start": 275.52,
+    "duration": 5.76
+  },
+  {
+    "text": "have uh a good structure in your prompt",
+    "start": 278.24,
+    "duration": 5.2
+  },
+  {
+    "text": "but maybe mo more most importantly it",
+    "start": 281.28,
+    "duration": 4.96
+  },
+  {
+    "text": "will give you a framework for every time",
+    "start": 283.44,
+    "duration": 5.64
+  },
+  {
+    "text": "when you need to write a new prompt uh",
+    "start": 286.24,
+    "duration": 4.64
+  },
+  {
+    "text": "by going through that framework yourself",
+    "start": 289.08,
+    "duration": 3.48
+  },
+  {
+    "text": "you basically make it easier for",
+    "start": 290.88,
+    "duration": 4.28
+  },
+  {
+    "text": "yourself to always optimize your prompt",
+    "start": 292.56,
+    "duration": 3.84
+  },
+  {
+    "text": "and make sure that you include",
+    "start": 295.16,
+    "duration": 3.36
+  },
+  {
+    "text": "everything that you need to include and",
+    "start": 296.4,
+    "duration": 4.32
+  },
+  {
+    "text": "then lastly uh in these structured",
+    "start": 298.52,
+    "duration": 3.72
+  },
+  {
+    "text": "prompting we really want to always go",
+    "start": 300.72,
+    "duration": 4
+  },
+  {
+    "text": "for single task optimization right L&M",
+    "start": 302.24,
+    "duration": 4.32
+  },
+  {
+    "text": "are not good at performing multiple",
+    "start": 304.72,
+    "duration": 4.039
+  },
+  {
+    "text": "tasks so we always want to optimize",
+    "start": 306.56,
+    "duration": 5.32
+  },
+  {
+    "text": "these prompts for one specific uh uh",
+    "start": 308.759,
+    "duration": 6.361
+  },
+  {
+    "text": "small task right and if we have complex",
+    "start": 311.88,
+    "duration": 4.92
+  },
+  {
+    "text": "tasks that have have to be done that's",
+    "start": 315.12,
+    "duration": 3.16
+  },
+  {
+    "text": "where chain prompting comes into play",
+    "start": 316.8,
+    "duration": 3.6
+  },
+  {
+    "text": "because basically we break that complex",
+    "start": 318.28,
+    "duration": 4.8
+  },
+  {
+    "text": "tasks down into separate tasks and put",
+    "start": 320.4,
+    "duration": 5.079
+  },
+  {
+    "text": "it in a chain where we use the output of",
+    "start": 323.08,
+    "duration": 4.36
+  },
+  {
+    "text": "the previous language model into the",
+    "start": 325.479,
+    "duration": 4.56
+  },
+  {
+    "text": "next language model uh and through that",
+    "start": 327.44,
+    "duration": 4.52
+  },
+  {
+    "text": "system we can through that chain",
+    "start": 330.039,
+    "duration": 3.121
+  },
+  {
+    "text": "prompting we can increase the",
+    "start": 331.96,
+    "duration": 3.32
+  },
+  {
+    "text": "reliability and the consistency of our",
+    "start": 333.16,
+    "duration": 4.84
+  },
+  {
+    "text": "system so just this is just an example",
+    "start": 335.28,
+    "duration": 4.56
+  },
+  {
+    "text": "of uh a tool that I delivered to a",
+    "start": 338,
+    "duration": 4.6
+  },
+  {
+    "text": "client which is a reformat CV tool so",
+    "start": 339.84,
+    "duration": 5.96
+  },
+  {
+    "text": "basically uh this client needed to take",
+    "start": 342.6,
+    "duration": 5.439
+  },
+  {
+    "text": "an original CV from a candidate and",
+    "start": 345.8,
+    "duration": 4.48
+  },
+  {
+    "text": "basically put it inside of a new layout",
+    "start": 348.039,
+    "duration": 4.921
+  },
+  {
+    "text": "and also take out um the contact",
+    "start": 350.28,
+    "duration": 4.84
+  },
+  {
+    "text": "information so instead of trying to do",
+    "start": 352.96,
+    "duration": 5.44
+  },
+  {
+    "text": "all of that inside of one L&M step or",
+    "start": 355.12,
+    "duration": 5.359
+  },
+  {
+    "text": "language model step which would not have",
+    "start": 358.4,
+    "duration": 3.44
+  },
+  {
+    "text": "that much reliability it would make",
+    "start": 360.479,
+    "duration": 3.961
+  },
+  {
+    "text": "mistakes Etc we break that complex task",
+    "start": 361.84,
+    "duration": 5.16
+  },
+  {
+    "text": "down into smaller tasks like first",
+    "start": 364.44,
+    "duration": 5.24
+  },
+  {
+    "text": "organize the text right then reformat",
+    "start": 367,
+    "duration": 5.319
+  },
+  {
+    "text": "the CV then take out the contact info",
+    "start": 369.68,
+    "duration": 6.56
+  },
+  {
+    "text": "and then HTML format the new uh CV so do",
+    "start": 372.319,
+    "duration": 5.641
+  },
+  {
+    "text": "we always need these really long",
+    "start": 376.24,
+    "duration": 4.2
+  },
+  {
+    "text": "structured prompts now in my experience",
+    "start": 377.96,
+    "duration": 4.12
+  },
+  {
+    "text": "no sometimes we can get away with short",
+    "start": 380.44,
+    "duration": 3.44
+  },
+  {
+    "text": "prompts now really depending on the use",
+    "start": 382.08,
+    "duration": 4.36
+  },
+  {
+    "text": "case and the complexity of the task uh",
+    "start": 383.88,
+    "duration": 4.64
+  },
+  {
+    "text": "in my experience sometimes language",
+    "start": 386.44,
+    "duration": 3.68
+  },
+  {
+    "text": "models actually get confed fused with",
+    "start": 388.52,
+    "duration": 3.48
+  },
+  {
+    "text": "these really long prompts for simple",
+    "start": 390.12,
+    "duration": 4.199
+  },
+  {
+    "text": "tasks second of all we're also trying to",
+    "start": 392,
+    "duration": 3.72
+  },
+  {
+    "text": "of course make this system as",
+    "start": 394.319,
+    "duration": 3.081
+  },
+  {
+    "text": "cost-efficient as possible and the",
+    "start": 395.72,
+    "duration": 3.36
+  },
+  {
+    "text": "longer our prompt the more it's going to",
+    "start": 397.4,
+    "duration": 4.519
+  },
+  {
+    "text": "cost us and thirdly it also saves you",
+    "start": 399.08,
+    "duration": 5.76
+  },
+  {
+    "text": "time so depending on on the use case and",
+    "start": 401.919,
+    "duration": 4.761
+  },
+  {
+    "text": "for some of the simpler task we can",
+    "start": 404.84,
+    "duration": 3.4
+  },
+  {
+    "text": "actually use a short structured",
+    "start": 406.68,
+    "duration": 4.519
+  },
+  {
+    "text": "framework which I invented but basically",
+    "start": 408.24,
+    "duration": 5.32
+  },
+  {
+    "text": "uh therefore we have three different uh",
+    "start": 411.199,
+    "duration": 3.761
+  },
+  {
+    "text": "Frameworks which is the short structured",
+    "start": 413.56,
+    "duration": 3.319
+  },
+  {
+    "text": "framework the long structured framework",
+    "start": 414.96,
+    "duration": 3.679
+  },
+  {
+    "text": "and the agent framework because for",
+    "start": 416.879,
+    "duration": 4.081
+  },
+  {
+    "text": "agents we also use a slightly different",
+    "start": 418.639,
+    "duration": 5.12
+  },
+  {
+    "text": "uh setup uh to make those agents as",
+    "start": 420.96,
+    "duration": 5.72
+  },
+  {
+    "text": "efficient as possible now when do we use",
+    "start": 423.759,
+    "duration": 5.041
+  },
+  {
+    "text": "which one that really depends on the use",
+    "start": 426.68,
+    "duration": 4.4
+  },
+  {
+    "text": "case for your prompt and basically I've",
+    "start": 428.8,
+    "duration": 5.88
+  },
+  {
+    "text": "identified six of the main use cases for",
+    "start": 431.08,
+    "duration": 5.2
+  },
+  {
+    "text": "prompts that you will find when you're",
+    "start": 434.68,
+    "duration": 4.4
+  },
+  {
+    "text": "designing these AI systems and the first",
+    "start": 436.28,
+    "duration": 4.759
+  },
+  {
+    "text": "one is extracting data uh then we have",
+    "start": 439.08,
+    "duration": 4
+  },
+  {
+    "text": "generating content classification or",
+    "start": 441.039,
+    "duration": 4.481
+  },
+  {
+    "text": "categorization evaluation data",
+    "start": 443.08,
+    "duration": 4.04
+  },
+  {
+    "text": "transformation and decision- making now",
+    "start": 445.52,
+    "duration": 2.88
+  },
+  {
+    "text": "of course these are very broad",
+    "start": 447.12,
+    "duration": 2.759
+  },
+  {
+    "text": "categories and there are a lot of",
+    "start": 448.4,
+    "duration": 3.479
+  },
+  {
+    "text": "specific use cases underneath each of",
+    "start": 449.879,
+    "duration": 3.921
+  },
+  {
+    "text": "those and if I'm forgetting a big one",
+    "start": 451.879,
+    "duration": 3.481
+  },
+  {
+    "text": "please let me know in the comments below",
+    "start": 453.8,
+    "duration": 3.2
+  },
+  {
+    "text": "but I've basically boiled it down to",
+    "start": 455.36,
+    "duration": 3.92
+  },
+  {
+    "text": "these six and later in this presentation",
+    "start": 457,
+    "duration": 5.319
+  },
+  {
+    "text": "I'll give you my recommendation on which",
+    "start": 459.28,
+    "duration": 4.639
+  },
+  {
+    "text": "uh prompt framework to use for each of",
+    "start": 462.319,
+    "duration": 3.921
+  },
+  {
+    "text": "the use cases which language model to",
+    "start": 463.919,
+    "duration": 4.081
+  },
+  {
+    "text": "use for each of these use cases to get",
+    "start": 466.24,
+    "duration": 3.88
+  },
+  {
+    "text": "the most Roi out of your system and I'll",
+    "start": 468,
+    "duration": 4.56
+  },
+  {
+    "text": "give you an example for each of these",
+    "start": 470.12,
+    "duration": 4.56
+  },
+  {
+    "text": "but before that I do want to go over the",
+    "start": 472.56,
+    "duration": 4.88
+  },
+  {
+    "text": "three uh prompting",
+    "start": 474.68,
+    "duration": 5
+  },
+  {
+    "text": "Frameworks so first I'll do the long",
+    "start": 477.44,
+    "duration": 4.24
+  },
+  {
+    "text": "structured prompting framework uh then",
+    "start": 479.68,
+    "duration": 3.44
+  },
+  {
+    "text": "I'll do the short prompting framework",
+    "start": 481.68,
+    "duration": 2.88
+  },
+  {
+    "text": "because it's basically a reduced version",
+    "start": 483.12,
+    "duration": 3.28
+  },
+  {
+    "text": "of the long one uh then I'll go over the",
+    "start": 484.56,
+    "duration": 3.319
+  },
+  {
+    "text": "agent prompting framework and then I'll",
+    "start": 486.4,
+    "duration": 4.079
+  },
+  {
+    "text": "give you my initial uh tips on prompting",
+    "start": 487.879,
+    "duration": 5.481
+  },
+  {
+    "text": "with the gb01 model uh which is a little",
+    "start": 490.479,
+    "duration": 4.761
+  },
+  {
+    "text": "bit different than uh with the other",
+    "start": 493.36,
+    "duration": 3.6
+  },
+  {
+    "text": "models now before showing you the",
+    "start": 495.24,
+    "duration": 3.679
+  },
+  {
+    "text": "framework very quickly if you don't know",
+    "start": 496.96,
+    "duration": 3.88
+  },
+  {
+    "text": "yet markdown formatting is basically a",
+    "start": 498.919,
+    "duration": 3.921
+  },
+  {
+    "text": "way where you can uh structure your",
+    "start": 500.84,
+    "duration": 6.079
+  },
+  {
+    "text": "prompt with headers bold uh Etc um which",
+    "start": 502.84,
+    "duration": 6.84
+  },
+  {
+    "text": "open AI actually themselves use in",
+    "start": 506.919,
+    "duration": 4.4
+  },
+  {
+    "text": "system prompt so it's probably a good",
+    "start": 509.68,
+    "duration": 3
+  },
+  {
+    "text": "idea and it seems like these language",
+    "start": 511.319,
+    "duration": 3.681
+  },
+  {
+    "text": "models understand therefore they can",
+    "start": 512.68,
+    "duration": 4.32
+  },
+  {
+    "text": "understand sort of different sections",
+    "start": 515,
+    "duration": 4.519
+  },
+  {
+    "text": "and you know importance of things by",
+    "start": 517,
+    "duration": 4.479
+  },
+  {
+    "text": "using markdown formatting right and",
+    "start": 519.519,
+    "duration": 3.041
+  },
+  {
+    "text": "second of all it also helps you",
+    "start": 521.479,
+    "duration": 3.161
+  },
+  {
+    "text": "structure it if you use relevance AI",
+    "start": 522.56,
+    "duration": 4.04
+  },
+  {
+    "text": "you'll see it pop up like that",
+    "start": 524.64,
+    "duration": 4.12
+  },
+  {
+    "text": "automatically right so the way you do it",
+    "start": 526.6,
+    "duration": 5
+  },
+  {
+    "text": "is basically you use one hash for H1 a",
+    "start": 528.76,
+    "duration": 5.68
+  },
+  {
+    "text": "double hash for H2 three hashes for H3",
+    "start": 531.6,
+    "duration": 4.64
+  },
+  {
+    "text": "then you have two asteris on each side",
+    "start": 534.44,
+    "duration": 5.24
+  },
+  {
+    "text": "of the word or sentence for bold and a",
+    "start": 536.24,
+    "duration": 6.039
+  },
+  {
+    "text": "dash for a bullet point and you can",
+    "start": 539.68,
+    "duration": 4.92
+  },
+  {
+    "text": "actually use three dashes to get that uh",
+    "start": 542.279,
+    "duration": 5.56
+  },
+  {
+    "text": "line you see here um that's what I these",
+    "start": 544.6,
+    "duration": 5.64
+  },
+  {
+    "text": "is are the ones I use and I think is",
+    "start": 547.839,
+    "duration": 4.321
+  },
+  {
+    "text": "everything you need in terms of markdown",
+    "start": 550.24,
+    "duration": 4.12
+  },
+  {
+    "text": "formatting so let me go over the",
+    "start": 552.16,
+    "duration": 3.919
+  },
+  {
+    "text": "framework for the long structured",
+    "start": 554.36,
+    "duration": 3.919
+  },
+  {
+    "text": "prompts now again this is not the only",
+    "start": 556.079,
+    "duration": 3.921
+  },
+  {
+    "text": "way you you can do this there are",
+    "start": 558.279,
+    "duration": 3.401
+  },
+  {
+    "text": "multiple ways this is just how I do it",
+    "start": 560,
+    "duration": 4.44
+  },
+  {
+    "text": "and what works for me now basically I",
+    "start": 561.68,
+    "duration": 4.48
+  },
+  {
+    "text": "have seven sections inside of these long",
+    "start": 564.44,
+    "duration": 3.68
+  },
+  {
+    "text": "structured prompts which is the role the",
+    "start": 566.16,
+    "duration": 5.2
+  },
+  {
+    "text": "objective context instructions examples",
+    "start": 568.12,
+    "duration": 5.8
+  },
+  {
+    "text": "variables and notes now I'll go through",
+    "start": 571.36,
+    "duration": 4.84
+  },
+  {
+    "text": "each one very quickly and explain what",
+    "start": 573.92,
+    "duration": 4.44
+  },
+  {
+    "text": "you should do in each one um but if you",
+    "start": 576.2,
+    "duration": 3.759
+  },
+  {
+    "text": "want to look at this in detail I'll also",
+    "start": 578.36,
+    "duration": 3.2
+  },
+  {
+    "text": "make sure to add the link of this",
+    "start": 579.959,
+    "duration": 3.521
+  },
+  {
+    "text": "presentation inside of my free community",
+    "start": 581.56,
+    "duration": 3.36
+  },
+  {
+    "text": "if you want to check it out in more",
+    "start": 583.48,
+    "duration": 3.44
+  },
+  {
+    "text": "detail so basically first we have the",
+    "start": 584.92,
+    "duration": 4.68
+  },
+  {
+    "text": "role uh also sometimes called Persona",
+    "start": 586.92,
+    "duration": 4.64
+  },
+  {
+    "text": "right these namings really don't matter",
+    "start": 589.6,
+    "duration": 3.76
+  },
+  {
+    "text": "that much it's more again a framework",
+    "start": 591.56,
+    "duration": 4.64
+  },
+  {
+    "text": "for you to to make sure that you include",
+    "start": 593.36,
+    "duration": 4.36
+  },
+  {
+    "text": "everything you need to include inside of",
+    "start": 596.2,
+    "duration": 3.72
+  },
+  {
+    "text": "your prompts so in this Ro prompt of",
+    "start": 597.72,
+    "duration": 4.28
+  },
+  {
+    "text": "course quite extensively studied that if",
+    "start": 599.92,
+    "duration": 4
+  },
+  {
+    "text": "you give these language models a role",
+    "start": 602,
+    "duration": 4.24
+  },
+  {
+    "text": "they seem to perform better right so",
+    "start": 603.92,
+    "duration": 4.32
+  },
+  {
+    "text": "besides assigning a role we also want to",
+    "start": 606.24,
+    "duration": 4.12
+  },
+  {
+    "text": "assign qualities and these qualities we",
+    "start": 608.24,
+    "duration": 5.24
+  },
+  {
+    "text": "can basically describe um we can give it",
+    "start": 610.36,
+    "duration": 5.52
+  },
+  {
+    "text": "qualities for the specific task we're",
+    "start": 613.48,
+    "duration": 5.479
+  },
+  {
+    "text": "trying to um execute with this uh prompt",
+    "start": 615.88,
+    "duration": 5.8
+  },
+  {
+    "text": "right so I tried to put in here the way",
+    "start": 618.959,
+    "duration": 5.481
+  },
+  {
+    "text": "you can think about uh phrasing this or",
+    "start": 621.68,
+    "duration": 4.44
+  },
+  {
+    "text": "or coming up with this part of the",
+    "start": 624.44,
+    "duration": 3.32
+  },
+  {
+    "text": "prompt in each of the sections so in",
+    "start": 626.12,
+    "duration": 3.92
+  },
+  {
+    "text": "this case just try to imagine imagine",
+    "start": 627.76,
+    "duration": 3.68
+  },
+  {
+    "text": "giving the greatest description of",
+    "start": 630.04,
+    "duration": 2.56
+  },
+  {
+    "text": "someone you could ever give right",
+    "start": 631.44,
+    "duration": 2.639
+  },
+  {
+    "text": "because besides assigning this role and",
+    "start": 632.6,
+    "duration": 3.08
+  },
+  {
+    "text": "these qualities we also really want to",
+    "start": 634.079,
+    "duration": 4.921
+  },
+  {
+    "text": "Hype it up uh in terms of how good it it",
+    "start": 635.68,
+    "duration": 5.719
+  },
+  {
+    "text": "is at that specific task right so useful",
+    "start": 639,
+    "duration": 4.48
+  },
+  {
+    "text": "sentences could be you're a world class",
+    "start": 641.399,
+    "duration": 4.081
+  },
+  {
+    "text": "right with a with particular expertise",
+    "start": 643.48,
+    "duration": 4
+  },
+  {
+    "text": "in right so an example here you can see",
+    "start": 645.48,
+    "duration": 3.68
+  },
+  {
+    "text": "I use the markdown formatting right to",
+    "start": 647.48,
+    "duration": 4.56
+  },
+  {
+    "text": "get an H1 right you're a worldclass CV",
+    "start": 649.16,
+    "duration": 5.16
+  },
+  {
+    "text": "formatter with a particular expertise in",
+    "start": 652.04,
+    "duration": 4.44
+  },
+  {
+    "text": "carefully reformatting an original CV",
+    "start": 654.32,
+    "duration": 6.519
+  },
+  {
+    "text": "into a new layout right so give roll and",
+    "start": 656.48,
+    "duration": 6.12
+  },
+  {
+    "text": "um some qualities right now if you're",
+    "start": 660.839,
+    "duration": 3.841
+  },
+  {
+    "text": "using relevant AI you can actually add",
+    "start": 662.6,
+    "duration": 4.4
+  },
+  {
+    "text": "this part this R prompt part of the",
+    "start": 664.68,
+    "duration": 5.12
+  },
+  {
+    "text": "prompt inside of um the system prompt so",
+    "start": 667,
+    "duration": 4.44
+  },
+  {
+    "text": "if you click here on advanced settings",
+    "start": 669.8,
+    "duration": 3.52
+  },
+  {
+    "text": "in your L&M step you actually see here",
+    "start": 671.44,
+    "duration": 3.959
+  },
+  {
+    "text": "this field system prompt you can add",
+    "start": 673.32,
+    "duration": 4.84
+  },
+  {
+    "text": "that part of your prompt in there and",
+    "start": 675.399,
+    "duration": 4.761
+  },
+  {
+    "text": "some people say it gives you actually",
+    "start": 678.16,
+    "duration": 5.52
+  },
+  {
+    "text": "better out outcomes um now for the",
+    "start": 680.16,
+    "duration": 5.679
+  },
+  {
+    "text": "second part we have our objective also",
+    "start": 683.68,
+    "duration": 4.52
+  },
+  {
+    "text": "some people call it task um which is",
+    "start": 685.839,
+    "duration": 4.521
+  },
+  {
+    "text": "basically a direct description of what",
+    "start": 688.2,
+    "duration": 4.199
+  },
+  {
+    "text": "needs to be done and you can think of",
+    "start": 690.36,
+    "duration": 4.76
+  },
+  {
+    "text": "this as what would you tell chat GPT",
+    "start": 692.399,
+    "duration": 4.601
+  },
+  {
+    "text": "right so it's it's really just a direct",
+    "start": 695.12,
+    "duration": 3.76
+  },
+  {
+    "text": "description of what needs to be done in",
+    "start": 697,
+    "duration": 3
+  },
+  {
+    "text": "this prompt and it's one of the most",
+    "start": 698.88,
+    "duration": 3.48
+  },
+  {
+    "text": "important part of this prompt right uh",
+    "start": 700,
+    "duration": 3.8
+  },
+  {
+    "text": "some useful sentences you can always",
+    "start": 702.36,
+    "duration": 2.919
+  },
+  {
+    "text": "start with something like your goal is",
+    "start": 703.8,
+    "duration": 4.4
+  },
+  {
+    "text": "to right and we can also incorporate",
+    "start": 705.279,
+    "duration": 5.721
+  },
+  {
+    "text": "this Chain of Thought uh in this section",
+    "start": 708.2,
+    "duration": 5.439
+  },
+  {
+    "text": "which is also proven to to improve uh",
+    "start": 711,
+    "duration": 4.88
+  },
+  {
+    "text": "outputs right and outcomes so we can use",
+    "start": 713.639,
+    "duration": 4.401
+  },
+  {
+    "text": "this think step by step so for example",
+    "start": 715.88,
+    "duration": 4.12
+  },
+  {
+    "text": "your goal is carefully read the original",
+    "start": 718.04,
+    "duration": 4.32
+  },
+  {
+    "text": "CV profile and reformat the CV into the",
+    "start": 720,
+    "duration": 4.36
+  },
+  {
+    "text": "new format you'll think step by step",
+    "start": 722.36,
+    "duration": 3.36
+  },
+  {
+    "text": "through the following process to ensure",
+    "start": 724.36,
+    "duration": 3.2
+  },
+  {
+    "text": "a good outcome one carefully read the",
+    "start": 725.72,
+    "duration": 3.799
+  },
+  {
+    "text": "original CV two add content from the",
+    "start": 727.56,
+    "duration": 4.12
+  },
+  {
+    "text": "original CV into the new layout for the",
+    "start": 729.519,
+    "duration": 4.361
+  },
+  {
+    "text": "new CV and three add any information",
+    "start": 731.68,
+    "duration": 3.88
+  },
+  {
+    "text": "that was present in the original CV but",
+    "start": 733.88,
+    "duration": 3.759
+  },
+  {
+    "text": "that doesn't have a clear place to input",
+    "start": 735.56,
+    "duration": 5.32
+  },
+  {
+    "text": "in a new CV uh to the end right so just",
+    "start": 737.639,
+    "duration": 5.401
+  },
+  {
+    "text": "a high level overview of what it has to",
+    "start": 740.88,
+    "duration": 4.319
+  },
+  {
+    "text": "do right and then we have the third part",
+    "start": 743.04,
+    "duration": 4.84
+  },
+  {
+    "text": "which is the context part now this is",
+    "start": 745.199,
+    "duration": 4.361
+  },
+  {
+    "text": "basically you're describing to the",
+    "start": 747.88,
+    "duration": 4.199
+  },
+  {
+    "text": "language model why is it doing this task",
+    "start": 749.56,
+    "duration": 5.24
+  },
+  {
+    "text": "so you show him why this how this task",
+    "start": 752.079,
+    "duration": 4.56
+  },
+  {
+    "text": "basically fits into the bigger picture",
+    "start": 754.8,
+    "duration": 4.08
+  },
+  {
+    "text": "and why do we do this again it's been",
+    "start": 756.639,
+    "duration": 3.841
+  },
+  {
+    "text": "sort of studied that if you give the",
+    "start": 758.88,
+    "duration": 4.68
+  },
+  {
+    "text": "language models an idea of the bigger",
+    "start": 760.48,
+    "duration": 5.56
+  },
+  {
+    "text": "context and why it is doing it uh it",
+    "start": 763.56,
+    "duration": 5.8
+  },
+  {
+    "text": "actually can improve um outcome uh too",
+    "start": 766.04,
+    "duration": 5.2
+  },
+  {
+    "text": "so some useful sentences you can use",
+    "start": 769.36,
+    "duration": 4.4
+  },
+  {
+    "text": "here are it is vital to my career which",
+    "start": 771.24,
+    "duration": 4.599
+  },
+  {
+    "text": "it sounds crazy but the sort of what",
+    "start": 773.76,
+    "duration": 4.84
+  },
+  {
+    "text": "they call Em emotional manipulation uh",
+    "start": 775.839,
+    "duration": 5.8
+  },
+  {
+    "text": "tricks also seem to improve outcomes so",
+    "start": 778.6,
+    "duration": 5.359
+  },
+  {
+    "text": "why not use them uh so in this case for",
+    "start": 781.639,
+    "duration": 4.241
+  },
+  {
+    "text": "example this task is crucial for our",
+    "start": 783.959,
+    "duration": 3.921
+  },
+  {
+    "text": "recruitment firm the reformatted CV will",
+    "start": 785.88,
+    "duration": 3.68
+  },
+  {
+    "text": "be sent to potential clients and",
+    "start": 787.88,
+    "duration": 3.12
+  },
+  {
+    "text": "therefore it is vital to my career that",
+    "start": 789.56,
+    "duration": 3.519
+  },
+  {
+    "text": "the CV is reformatted in the specific",
+    "start": 791,
+    "duration": 4.72
+  },
+  {
+    "text": "format mentioned below it is also vital",
+    "start": 793.079,
+    "duration": 4.401
+  },
+  {
+    "text": "uh to my firm that information from the",
+    "start": 795.72,
+    "duration": 4.96
+  },
+  {
+    "text": "original uh CV doesn't get lost or is",
+    "start": 797.48,
+    "duration": 5.159
+  },
+  {
+    "text": "changed as this would undermine the",
+    "start": 800.68,
+    "duration": 4.68
+  },
+  {
+    "text": "quality of the CB right so just a high",
+    "start": 802.639,
+    "duration": 5.841
+  },
+  {
+    "text": "level uh description of why this task is",
+    "start": 805.36,
+    "duration": 5
+  },
+  {
+    "text": "important or how it fits into the bigger",
+    "start": 808.48,
+    "duration": 3.88
+  },
+  {
+    "text": "picture then we have the fourth part of",
+    "start": 810.36,
+    "duration": 3.64
+  },
+  {
+    "text": "our prompt which is instructions now",
+    "start": 812.36,
+    "duration": 4.12
+  },
+  {
+    "text": "some people also call them rules or",
+    "start": 814,
+    "duration": 4.8
+  },
+  {
+    "text": "specifics um now basically in this part",
+    "start": 816.48,
+    "duration": 3.84
+  },
+  {
+    "text": "we're going to really go into details",
+    "start": 818.8,
+    "duration": 3.8
+  },
+  {
+    "text": "right so usually we want to include in",
+    "start": 820.32,
+    "duration": 4.68
+  },
+  {
+    "text": "this part all the rules right that it",
+    "start": 822.6,
+    "duration": 5.2
+  },
+  {
+    "text": "has to follow we want to also output uh",
+    "start": 825,
+    "duration": 5.36
+  },
+  {
+    "text": "output structure specifications if we",
+    "start": 827.8,
+    "duration": 4.64
+  },
+  {
+    "text": "have them so if it needs to you know",
+    "start": 830.36,
+    "duration": 4.52
+  },
+  {
+    "text": "output it in a specific format like Json",
+    "start": 832.44,
+    "duration": 5.88
+  },
+  {
+    "text": "or uh a specific sort of um structure",
+    "start": 834.88,
+    "duration": 5.959
+  },
+  {
+    "text": "then we want to lay that out here too",
+    "start": 838.32,
+    "duration": 4.8
+  },
+  {
+    "text": "and the way I usually approach this",
+    "start": 840.839,
+    "duration": 5
+  },
+  {
+    "text": "section is basically I start predicting",
+    "start": 843.12,
+    "duration": 4.719
+  },
+  {
+    "text": "before I actually run it what could go",
+    "start": 845.839,
+    "duration": 3.481
+  },
+  {
+    "text": "wrong in the output right and that's",
+    "start": 847.839,
+    "duration": 3.881
+  },
+  {
+    "text": "sort of how I come up with these rules",
+    "start": 849.32,
+    "duration": 4.56
+  },
+  {
+    "text": "right so also again some useful",
+    "start": 851.72,
+    "duration": 3.84
+  },
+  {
+    "text": "sentences here you can read these rules",
+    "start": 853.88,
+    "duration": 4.12
+  },
+  {
+    "text": "you can play around a bit with these em",
+    "start": 855.56,
+    "duration": 4.48
+  },
+  {
+    "text": "emotional manipulation tricks it really",
+    "start": 858,
+    "duration": 3.959
+  },
+  {
+    "text": "sounds crazy right it's like I will tip",
+    "start": 860.04,
+    "duration": 4.28
+  },
+  {
+    "text": "you $1,000 if right and you put in the",
+    "start": 861.959,
+    "duration": 5.56
+  },
+  {
+    "text": "rule it is vital to my career or caps",
+    "start": 864.32,
+    "duration": 6.24
+  },
+  {
+    "text": "important right it sounds crazy but uh",
+    "start": 867.519,
+    "duration": 5.161
+  },
+  {
+    "text": "it it seems to actually really work so",
+    "start": 870.56,
+    "duration": 5.04
+  },
+  {
+    "text": "why not use it so here I have an example",
+    "start": 872.68,
+    "duration": 5.079
+  },
+  {
+    "text": "right it is absolutely vited to my",
+    "start": 875.6,
+    "duration": 4.919
+  },
+  {
+    "text": "career that you do not add text make new",
+    "start": 877.759,
+    "duration": 4.44
+  },
+  {
+    "text": "facts up or edit anything from the",
+    "start": 880.519,
+    "duration": 3.841
+  },
+  {
+    "text": "original text right and then I go",
+    "start": 882.199,
+    "duration": 4.801
+  },
+  {
+    "text": "through all the rules right things that",
+    "start": 884.36,
+    "duration": 4.719
+  },
+  {
+    "text": "might go wrong that you could that you",
+    "start": 887,
+    "duration": 3.399
+  },
+  {
+    "text": "can already sort of predict that might",
+    "start": 889.079,
+    "duration": 3.68
+  },
+  {
+    "text": "go wrong put them in here or things you",
+    "start": 890.399,
+    "duration": 5.041
+  },
+  {
+    "text": "when you run it and you see things that",
+    "start": 892.759,
+    "duration": 4.961
+  },
+  {
+    "text": "go wrong you can also add that uh in",
+    "start": 895.44,
+    "duration": 4.8
+  },
+  {
+    "text": "here right and then also in this case I",
+    "start": 897.72,
+    "duration": 4.359
+  },
+  {
+    "text": "also have output specifications which",
+    "start": 900.24,
+    "duration": 3.92
+  },
+  {
+    "text": "you can see I actually used an H2 header",
+    "start": 902.079,
+    "duration": 4.601
+  },
+  {
+    "text": "here to let the language model mode know",
+    "start": 904.16,
+    "duration": 5.08
+  },
+  {
+    "text": "this is still part of the instruction uh",
+    "start": 906.68,
+    "duration": 4.88
+  },
+  {
+    "text": "section right so here's the new format",
+    "start": 909.24,
+    "duration": 5.159
+  },
+  {
+    "text": "for the CV right I put in the output",
+    "start": 911.56,
+    "duration": 5.399
+  },
+  {
+    "text": "specifications and that's it uh so",
+    "start": 914.399,
+    "duration": 4.521
+  },
+  {
+    "text": "that's it for the instructions then we",
+    "start": 916.959,
+    "duration": 4.56
+  },
+  {
+    "text": "have examples now of course examples is",
+    "start": 918.92,
+    "duration": 4.56
+  },
+  {
+    "text": "one of the most important part of our",
+    "start": 921.519,
+    "duration": 4.361
+  },
+  {
+    "text": "prompt um it's been really well",
+    "start": 923.48,
+    "duration": 5
+  },
+  {
+    "text": "documented right now that giving in",
+    "start": 925.88,
+    "duration": 5.72
+  },
+  {
+    "text": "input and output examples does increase",
+    "start": 928.48,
+    "duration": 5.159
+  },
+  {
+    "text": "the reliability of these prompts so much",
+    "start": 931.6,
+    "duration": 3.88
+  },
+  {
+    "text": "more so this is really important to do",
+    "start": 933.639,
+    "duration": 4.081
+  },
+  {
+    "text": "and one tip if you don't have any",
+    "start": 935.48,
+    "duration": 5.4
+  },
+  {
+    "text": "examples uh just leave this section out",
+    "start": 937.72,
+    "duration": 5.479
+  },
+  {
+    "text": "first run it once with the best model",
+    "start": 940.88,
+    "duration": 5.8
+  },
+  {
+    "text": "you can then uh let it run get an output",
+    "start": 943.199,
+    "duration": 5.961
+  },
+  {
+    "text": "right change it if you need to if to",
+    "start": 946.68,
+    "duration": 4.839
+  },
+  {
+    "text": "make it better and then use that uh as",
+    "start": 949.16,
+    "duration": 5.88
+  },
+  {
+    "text": "an example input and output uh cuz it's",
+    "start": 951.519,
+    "duration": 6.081
+  },
+  {
+    "text": "better to do that 2 minute extra work",
+    "start": 955.04,
+    "duration": 4.279
+  },
+  {
+    "text": "because it will increase that",
+    "start": 957.6,
+    "duration": 4.84
+  },
+  {
+    "text": "reliability so much more so the way I do",
+    "start": 959.319,
+    "duration": 5.481
+  },
+  {
+    "text": "it is again I have the H1 header with",
+    "start": 962.44,
+    "duration": 4.68
+  },
+  {
+    "text": "examples then I put a H2 header with",
+    "start": 964.8,
+    "duration": 5.32
+  },
+  {
+    "text": "example one and then I have bold input",
+    "start": 967.12,
+    "duration": 5.24
+  },
+  {
+    "text": "now put in the input right and the",
+    "start": 970.12,
+    "duration": 6.04
+  },
+  {
+    "text": "output bold and this is the the output",
+    "start": 972.36,
+    "duration": 6.159
+  },
+  {
+    "text": "right so in this case to not make it",
+    "start": 976.16,
+    "duration": 4.64
+  },
+  {
+    "text": "really long I I only put in one but in",
+    "start": 978.519,
+    "duration": 6
+  },
+  {
+    "text": "general good to do two at least uh so",
+    "start": 980.8,
+    "duration": 5.92
+  },
+  {
+    "text": "that's it then the last the next part is",
+    "start": 984.519,
+    "duration": 3.961
+  },
+  {
+    "text": "the variable which I call the variable",
+    "start": 986.72,
+    "duration": 4.16
+  },
+  {
+    "text": "basically if you're going to feed it uh",
+    "start": 988.48,
+    "duration": 5.4
+  },
+  {
+    "text": "a variable then put it in this section",
+    "start": 990.88,
+    "duration": 5.519
+  },
+  {
+    "text": "so this section will change depending on",
+    "start": 993.88,
+    "duration": 4.36
+  },
+  {
+    "text": "what the prompt is about so in this case",
+    "start": 996.399,
+    "duration": 4.44
+  },
+  {
+    "text": "this CV you will reformat today right",
+    "start": 998.24,
+    "duration": 4.76
+  },
+  {
+    "text": "and then I put in the the variable where",
+    "start": 1000.839,
+    "duration": 4.92
+  },
+  {
+    "text": "they output the original CV right so any",
+    "start": 1003,
+    "duration": 4.319
+  },
+  {
+    "text": "variable you might have I usually do it",
+    "start": 1005.759,
+    "duration": 3.961
+  },
+  {
+    "text": "under a separate header in this sixth",
+    "start": 1007.319,
+    "duration": 5.561
+  },
+  {
+    "text": "sort of section um and then lastly we",
+    "start": 1009.72,
+    "duration": 5.96
+  },
+  {
+    "text": "have notes and notes in my experience",
+    "start": 1012.88,
+    "duration": 4.92
+  },
+  {
+    "text": "and I've Incorporated this only the last",
+    "start": 1015.68,
+    "duration": 4.48
+  },
+  {
+    "text": "few months have been really important",
+    "start": 1017.8,
+    "duration": 5.12
+  },
+  {
+    "text": "because L&M actually take the beginning",
+    "start": 1020.16,
+    "duration": 5.159
+  },
+  {
+    "text": "and the end of prompts more into account",
+    "start": 1022.92,
+    "duration": 3.6
+  },
+  {
+    "text": "than the middle of the prompts and",
+    "start": 1025.319,
+    "duration": 2.52
+  },
+  {
+    "text": "especially that's the case for these",
+    "start": 1026.52,
+    "duration": 3.64
+  },
+  {
+    "text": "longer prompts so what we want to do in",
+    "start": 1027.839,
+    "duration": 4.401
+  },
+  {
+    "text": "this note section is really double down",
+    "start": 1030.16,
+    "duration": 4
+  },
+  {
+    "text": "on all the important things so all the",
+    "start": 1032.24,
+    "duration": 3.959
+  },
+  {
+    "text": "important roles we can double down on",
+    "start": 1034.16,
+    "duration": 4
+  },
+  {
+    "text": "output formats which is of course also",
+    "start": 1036.199,
+    "duration": 4.201
+  },
+  {
+    "text": "very important for our prompts and we",
+    "start": 1038.16,
+    "duration": 4.2
+  },
+  {
+    "text": "can also double down on best practices",
+    "start": 1040.4,
+    "duration": 3.559
+  },
+  {
+    "text": "like this Chain of Thought like think",
+    "start": 1042.36,
+    "duration": 4.92
+  },
+  {
+    "text": "step by step and then also really useful",
+    "start": 1043.959,
+    "duration": 6.361
+  },
+  {
+    "text": "if you see um your model making mistakes",
+    "start": 1047.28,
+    "duration": 4.92
+  },
+  {
+    "text": "or not doing what you want the model to",
+    "start": 1050.32,
+    "duration": 4
+  },
+  {
+    "text": "do then add those things where it goes",
+    "start": 1052.2,
+    "duration": 4.359
+  },
+  {
+    "text": "wrong those rules whatever inside of the",
+    "start": 1054.32,
+    "duration": 4.84
+  },
+  {
+    "text": "note section and you'll see that it will",
+    "start": 1056.559,
+    "duration": 4.761
+  },
+  {
+    "text": "actually uh start correcting itself very",
+    "start": 1059.16,
+    "duration": 3.759
+  },
+  {
+    "text": "quickly if you add them here in the",
+    "start": 1061.32,
+    "duration": 3.28
+  },
+  {
+    "text": "notes instead of of course you can",
+    "start": 1062.919,
+    "duration": 3.321
+  },
+  {
+    "text": "always add it in the instruction section",
+    "start": 1064.6,
+    "duration": 3.36
+  },
+  {
+    "text": "too but because it's at the end of The",
+    "start": 1066.24,
+    "duration": 4.72
+  },
+  {
+    "text": "Prompt it usually corrects itself very",
+    "start": 1067.96,
+    "duration": 6.32
+  },
+  {
+    "text": "quickly um so again you can use some",
+    "start": 1070.96,
+    "duration": 5
+  },
+  {
+    "text": "emotional manipulation and chain of",
+    "start": 1074.28,
+    "duration": 3.279
+  },
+  {
+    "text": "thoughts so here's just an example it is",
+    "start": 1075.96,
+    "duration": 2.959
+  },
+  {
+    "text": "absolutely vital to my career so",
+    "start": 1077.559,
+    "duration": 3.881
+  },
+  {
+    "text": "basically just used some of the core",
+    "start": 1078.919,
+    "duration": 5.841
+  },
+  {
+    "text": "rules right again here and uh that's it",
+    "start": 1081.44,
+    "duration": 4.8
+  },
+  {
+    "text": "so that's it for the long structure",
+    "start": 1084.76,
+    "duration": 4.08
+  },
+  {
+    "text": "prompting now basically for the short",
+    "start": 1086.24,
+    "duration": 4.72
+  },
+  {
+    "text": "prompt framework we basically reduce",
+    "start": 1088.84,
+    "duration": 4.92
+  },
+  {
+    "text": "that long one down to the most important",
+    "start": 1090.96,
+    "duration": 5.28
+  },
+  {
+    "text": "part which are the objective plus",
+    "start": 1093.76,
+    "duration": 5.68
+  },
+  {
+    "text": "instructions right the rules the",
+    "start": 1096.24,
+    "duration": 5.64
+  },
+  {
+    "text": "examples and the variable of course we",
+    "start": 1099.44,
+    "duration": 5
+  },
+  {
+    "text": "need the variable if if if that applies",
+    "start": 1101.88,
+    "duration": 5.6
+  },
+  {
+    "text": "right so basically these two things so",
+    "start": 1104.44,
+    "duration": 4.4
+  },
+  {
+    "text": "you can see here I have an example",
+    "start": 1107.48,
+    "duration": 2.679
+  },
+  {
+    "text": "please identify the name from the person",
+    "start": 1108.84,
+    "duration": 3.48
+  },
+  {
+    "text": "in the CV below so in this prompt all we",
+    "start": 1110.159,
+    "duration": 5.88
+  },
+  {
+    "text": "need to do is get the name from that CV",
+    "start": 1112.32,
+    "duration": 5.68
+  },
+  {
+    "text": "right now that's a really easy task",
+    "start": 1116.039,
+    "duration": 3.241
+  },
+  {
+    "text": "right so we don't have to go with this",
+    "start": 1118,
+    "duration": 3.2
+  },
+  {
+    "text": "whole long prompt because it's a really",
+    "start": 1119.28,
+    "duration": 4.2
+  },
+  {
+    "text": "easy task uh and we don't actually want",
+    "start": 1121.2,
+    "duration": 5.52
+  },
+  {
+    "text": "to spend these amount of of tokens on a",
+    "start": 1123.48,
+    "duration": 6.16
+  },
+  {
+    "text": "long prompt when it's such a simple task",
+    "start": 1126.72,
+    "duration": 4.68
+  },
+  {
+    "text": "right so you can see basically here I",
+    "start": 1129.64,
+    "duration": 3.44
+  },
+  {
+    "text": "have the objective in one sentence",
+    "start": 1131.4,
+    "duration": 3.08
+  },
+  {
+    "text": "please identify the name of the from the",
+    "start": 1133.08,
+    "duration": 3.68
+  },
+  {
+    "text": "person in the CV below right and then",
+    "start": 1134.48,
+    "duration": 3.92
+  },
+  {
+    "text": "here I have the instructions the to",
+    "start": 1136.76,
+    "duration": 4.279
+  },
+  {
+    "text": "rules right only output the full name no",
+    "start": 1138.4,
+    "duration": 4.56
+  },
+  {
+    "text": "summary no explanation nothing but the",
+    "start": 1141.039,
+    "duration": 4.681
+  },
+  {
+    "text": "full name now this is a useful sentence",
+    "start": 1142.96,
+    "duration": 5.599
+  },
+  {
+    "text": "by the way if you struggle with your",
+    "start": 1145.72,
+    "duration": 5.12
+  },
+  {
+    "text": "model outputting more than just a name",
+    "start": 1148.559,
+    "duration": 4.041
+  },
+  {
+    "text": "because if you don't instruct it to do",
+    "start": 1150.84,
+    "duration": 3.04
+  },
+  {
+    "text": "this a lot of times what you'll see is",
+    "start": 1152.6,
+    "duration": 3.28
+  },
+  {
+    "text": "your language model will say um",
+    "start": 1153.88,
+    "duration": 3.72
+  },
+  {
+    "text": "something like the name of the person in",
+    "start": 1155.88,
+    "duration": 4.4
+  },
+  {
+    "text": "the CV is benas brundle instead of only",
+    "start": 1157.6,
+    "duration": 4.24
+  },
+  {
+    "text": "the name right and sometimes we only",
+    "start": 1160.28,
+    "duration": 2.72
+  },
+  {
+    "text": "really need that name because we're",
+    "start": 1161.84,
+    "duration": 3.199
+  },
+  {
+    "text": "going to save it somewhere or we have a",
+    "start": 1163,
+    "duration": 3.76
+  },
+  {
+    "text": "condition after so if you want to make",
+    "start": 1165.039,
+    "duration": 4
+  },
+  {
+    "text": "sure that it only outputs let's say a",
+    "start": 1166.76,
+    "duration": 4.76
+  },
+  {
+    "text": "URL or in this case only the name then",
+    "start": 1169.039,
+    "duration": 5.081
+  },
+  {
+    "text": "this is the way I found um that works",
+    "start": 1171.52,
+    "duration": 4.96
+  },
+  {
+    "text": "really well for it to never give an",
+    "start": 1174.12,
+    "duration": 4.2
+  },
+  {
+    "text": "explanation or nothing like that so only",
+    "start": 1176.48,
+    "duration": 3.48
+  },
+  {
+    "text": "output the full name no summary no",
+    "start": 1178.32,
+    "duration": 3.359
+  },
+  {
+    "text": "explanation nothing but the full name",
+    "start": 1179.96,
+    "duration": 3.32
+  },
+  {
+    "text": "right and then I've put in another one",
+    "start": 1181.679,
+    "duration": 4.401
+  },
+  {
+    "text": "which is also good if there is a chance",
+    "start": 1183.28,
+    "duration": 5.56
+  },
+  {
+    "text": "that the name is not present for example",
+    "start": 1186.08,
+    "duration": 5.32
+  },
+  {
+    "text": "or in any other prompt use case where",
+    "start": 1188.84,
+    "duration": 4.88
+  },
+  {
+    "text": "there's a there's a chance that the",
+    "start": 1191.4,
+    "duration": 4.68
+  },
+  {
+    "text": "information it's looking for will not be",
+    "start": 1193.72,
+    "duration": 4.76
+  },
+  {
+    "text": "available and it's very good to add this",
+    "start": 1196.08,
+    "duration": 4.76
+  },
+  {
+    "text": "if if you don't find a name only output",
+    "start": 1198.48,
+    "duration": 5
+  },
+  {
+    "text": "no name found nothing else no summary no",
+    "start": 1200.84,
+    "duration": 5.48
+  },
+  {
+    "text": "explanation now it's very very important",
+    "start": 1203.48,
+    "duration": 4.8
+  },
+  {
+    "text": "to Define what to do if you can't find",
+    "start": 1206.32,
+    "duration": 4
+  },
+  {
+    "text": "it because if you don't what you'll see",
+    "start": 1208.28,
+    "duration": 3.32
+  },
+  {
+    "text": "is they're going to start hallucinating",
+    "start": 1210.32,
+    "duration": 4.28
+  },
+  {
+    "text": "or they're going to use example outputs",
+    "start": 1211.6,
+    "duration": 5.92
+  },
+  {
+    "text": "right from your example sections so very",
+    "start": 1214.6,
+    "duration": 4.76
+  },
+  {
+    "text": "important to instruct these models also",
+    "start": 1217.52,
+    "duration": 5.279
+  },
+  {
+    "text": "what to do if they can't find it right",
+    "start": 1219.36,
+    "duration": 6.6
+  },
+  {
+    "text": "uh now in this case I've not even put in",
+    "start": 1222.799,
+    "duration": 6.24
+  },
+  {
+    "text": "a an example input because this is this",
+    "start": 1225.96,
+    "duration": 5.64
+  },
+  {
+    "text": "huge blob of text a huge CV which going",
+    "start": 1229.039,
+    "duration": 4.361
+  },
+  {
+    "text": "to cost us a lot of tokens and it's such",
+    "start": 1231.6,
+    "duration": 4
+  },
+  {
+    "text": "a simple task that all I do is I give it",
+    "start": 1233.4,
+    "duration": 4.639
+  },
+  {
+    "text": "an example output so it understands that",
+    "start": 1235.6,
+    "duration": 5.12
+  },
+  {
+    "text": "I only want the name as the output uh",
+    "start": 1238.039,
+    "duration": 4.241
+  },
+  {
+    "text": "but that's it but of course for other",
+    "start": 1240.72,
+    "duration": 3.48
+  },
+  {
+    "text": "use cases when you you might not have a",
+    "start": 1242.28,
+    "duration": 3.84
+  },
+  {
+    "text": "huge BL of text in general it is good",
+    "start": 1244.2,
+    "duration": 5.24
+  },
+  {
+    "text": "practice to put in the input to at least",
+    "start": 1246.12,
+    "duration": 5.36
+  },
+  {
+    "text": "um and then of course the variable CV",
+    "start": 1249.44,
+    "duration": 3.68
+  },
+  {
+    "text": "you have to identify the name from right",
+    "start": 1251.48,
+    "duration": 2.72
+  },
+  {
+    "text": "and then we have the",
+    "start": 1253.12,
+    "duration": 3.96
+  },
+  {
+    "text": "variable but yeah like this is sort of",
+    "start": 1254.2,
+    "duration": 5.08
+  },
+  {
+    "text": "the the the short prompt framework now",
+    "start": 1257.08,
+    "duration": 4.4
+  },
+  {
+    "text": "of course what you can do is if you see",
+    "start": 1259.28,
+    "duration": 4.08
+  },
+  {
+    "text": "your model is actually struggling then",
+    "start": 1261.48,
+    "duration": 5.319
+  },
+  {
+    "text": "you can slowly add more sections to it",
+    "start": 1263.36,
+    "duration": 5.72
+  },
+  {
+    "text": "to to make it work right so you'd",
+    "start": 1266.799,
+    "duration": 4.801
+  },
+  {
+    "text": "probably first try the example input to",
+    "start": 1269.08,
+    "duration": 5
+  },
+  {
+    "text": "add that here see how it goes then right",
+    "start": 1271.6,
+    "duration": 5.439
+  },
+  {
+    "text": "then you go um and you add the r prompt",
+    "start": 1274.08,
+    "duration": 5.719
+  },
+  {
+    "text": "right then you add um maybe the context",
+    "start": 1277.039,
+    "duration": 4.601
+  },
+  {
+    "text": "and then lastly if it's still struggling",
+    "start": 1279.799,
+    "duration": 3.321
+  },
+  {
+    "text": "you can add in the note section to",
+    "start": 1281.64,
+    "duration": 3.039
+  },
+  {
+    "text": "double down on rules right but you can",
+    "start": 1283.12,
+    "duration": 3.08
+  },
+  {
+    "text": "sort of think of it like that if it's a",
+    "start": 1284.679,
+    "duration": 3.201
+  },
+  {
+    "text": "simple task just start with this simple",
+    "start": 1286.2,
+    "duration": 3.04
+  },
+  {
+    "text": "template and then if it's still",
+    "start": 1287.88,
+    "duration": 3.08
+  },
+  {
+    "text": "struggling you can always add some other",
+    "start": 1289.24,
+    "duration": 3.88
+  },
+  {
+    "text": "things on top agent prompting is the",
+    "start": 1290.96,
+    "duration": 4.56
+  },
+  {
+    "text": "hardest type of prompting and that's",
+    "start": 1293.12,
+    "duration": 4.24
+  },
+  {
+    "text": "because agents usually have multiple",
+    "start": 1295.52,
+    "duration": 3.72
+  },
+  {
+    "text": "responsibilities and as I said before",
+    "start": 1297.36,
+    "duration": 4.24
+  },
+  {
+    "text": "language models are not good at uh",
+    "start": 1299.24,
+    "duration": 4.679
+  },
+  {
+    "text": "performing multiple tasks and agents",
+    "start": 1301.6,
+    "duration": 4.4
+  },
+  {
+    "text": "usually are in charge of quite a lot of",
+    "start": 1303.919,
+    "duration": 4.24
+  },
+  {
+    "text": "uh different things and that's why the",
+    "start": 1306,
+    "duration": 4.159
+  },
+  {
+    "text": "prompting becomes very important and",
+    "start": 1308.159,
+    "duration": 3.921
+  },
+  {
+    "text": "it's also why they these agent systems",
+    "start": 1310.159,
+    "duration": 4.4
+  },
+  {
+    "text": "some sometimes fail right so first of",
+    "start": 1312.08,
+    "duration": 4
+  },
+  {
+    "text": "all it's really important to know that",
+    "start": 1314.559,
+    "duration": 2.72
+  },
+  {
+    "text": "we want to give as little",
+    "start": 1316.08,
+    "duration": 3.16
+  },
+  {
+    "text": "responsibilities to our agent as",
+    "start": 1317.279,
+    "duration": 5.601
+  },
+  {
+    "text": "possible right so RI agents ideally",
+    "start": 1319.24,
+    "duration": 6.16
+  },
+  {
+    "text": "their only responsibility is in decision",
+    "start": 1322.88,
+    "duration": 5.32
+  },
+  {
+    "text": "making right when to use which tool and",
+    "start": 1325.4,
+    "duration": 5.12
+  },
+  {
+    "text": "which order or sub agent which is sort",
+    "start": 1328.2,
+    "duration": 4.04
+  },
+  {
+    "text": "of the decision-making part and of",
+    "start": 1330.52,
+    "duration": 3.08
+  },
+  {
+    "text": "course our agent also needs",
+    "start": 1332.24,
+    "duration": 2.88
+  },
+  {
+    "text": "communication right so it either",
+    "start": 1333.6,
+    "duration": 3.439
+  },
+  {
+    "text": "communicates with us or with their sub",
+    "start": 1335.12,
+    "duration": 4.32
+  },
+  {
+    "text": "agents and that's already multiple",
+    "start": 1337.039,
+    "duration": 4.561
+  },
+  {
+    "text": "responsibilities and therefore we really",
+    "start": 1339.44,
+    "duration": 3.92
+  },
+  {
+    "text": "want to offload all the other work that",
+    "start": 1341.6,
+    "duration": 4.36
+  },
+  {
+    "text": "has to be done in this system to tools",
+    "start": 1343.36,
+    "duration": 4.08
+  },
+  {
+    "text": "and sub agents right we really want to",
+    "start": 1345.96,
+    "duration": 3.12
+  },
+  {
+    "text": "reduce down that responsib ility to the",
+    "start": 1347.44,
+    "duration": 3.92
+  },
+  {
+    "text": "core bare minimum and this is really",
+    "start": 1349.08,
+    "duration": 5.68
+  },
+  {
+    "text": "ideal for an functioning AI agent system",
+    "start": 1351.36,
+    "duration": 6.64
+  },
+  {
+    "text": "uh and therefore because it's hard to do",
+    "start": 1354.76,
+    "duration": 4.84
+  },
+  {
+    "text": "add language models struggle with",
+    "start": 1358,
+    "duration": 3.799
+  },
+  {
+    "text": "multiple tasks and it's decision- making",
+    "start": 1359.6,
+    "duration": 4.04
+  },
+  {
+    "text": "we always want to use the best models",
+    "start": 1361.799,
+    "duration": 3.921
+  },
+  {
+    "text": "right so for example we never want our",
+    "start": 1363.64,
+    "duration": 5.84
+  },
+  {
+    "text": "agent to besides using tools Etc to also",
+    "start": 1365.72,
+    "duration": 5.839
+  },
+  {
+    "text": "for example your job is to categorize an",
+    "start": 1369.48,
+    "duration": 4.96
+  },
+  {
+    "text": "email write an email or generate content",
+    "start": 1371.559,
+    "duration": 4.761
+  },
+  {
+    "text": "no we don't we'll never want to do that",
+    "start": 1374.44,
+    "duration": 3.719
+  },
+  {
+    "text": "we want to go for something like your",
+    "start": 1376.32,
+    "duration": 3.839
+  },
+  {
+    "text": "job to manage my inbox and decide the",
+    "start": 1378.159,
+    "duration": 3.921
+  },
+  {
+    "text": "right course of action to take according",
+    "start": 1380.159,
+    "duration": 3.64
+  },
+  {
+    "text": "to the instructions given to you you",
+    "start": 1382.08,
+    "duration": 3.32
+  },
+  {
+    "text": "have the following tools Available to",
+    "start": 1383.799,
+    "duration": 3.401
+  },
+  {
+    "text": "You categorize email write email",
+    "start": 1385.4,
+    "duration": 4
+  },
+  {
+    "text": "generate content so he's not doing this",
+    "start": 1387.2,
+    "duration": 4.599
+  },
+  {
+    "text": "himself this is done by the tools or the",
+    "start": 1389.4,
+    "duration": 5.24
+  },
+  {
+    "text": "sub agents now I wanted to mention this",
+    "start": 1391.799,
+    "duration": 4.36
+  },
+  {
+    "text": "quote that I recently heard from someone",
+    "start": 1394.64,
+    "duration": 3.48
+  },
+  {
+    "text": "who's builts a lot of AI agents which",
+    "start": 1396.159,
+    "duration": 3.441
+  },
+  {
+    "text": "stuck with me because I think it's very",
+    "start": 1398.12,
+    "duration": 4.36
+  },
+  {
+    "text": "true the solution to problems of AI is",
+    "start": 1399.6,
+    "duration": 5.48
+  },
+  {
+    "text": "usually more Ai and I think it's very",
+    "start": 1402.48,
+    "duration": 4.84
+  },
+  {
+    "text": "true for the AI agent space if your",
+    "start": 1405.08,
+    "duration": 4.8
+  },
+  {
+    "text": "agent which most people seen doesn't",
+    "start": 1407.32,
+    "duration": 4.52
+  },
+  {
+    "text": "behave or perform the way you want",
+    "start": 1409.88,
+    "duration": 4
+  },
+  {
+    "text": "usually the solution is more AI in the",
+    "start": 1411.84,
+    "duration": 5.12
+  },
+  {
+    "text": "forms of tools or sub agents so the",
+    "start": 1413.88,
+    "duration": 4.96
+  },
+  {
+    "text": "things he can't do or the things that go",
+    "start": 1416.96,
+    "duration": 4.199
+  },
+  {
+    "text": "wrong usually you can solve it by adding",
+    "start": 1418.84,
+    "duration": 5.24
+  },
+  {
+    "text": "in another tool and adding in extra AI",
+    "start": 1421.159,
+    "duration": 6.241
+  },
+  {
+    "text": "there or another sub agent so what is",
+    "start": 1424.08,
+    "duration": 5.52
+  },
+  {
+    "text": "the framework for our a AI agent",
+    "start": 1427.4,
+    "duration": 3.96
+  },
+  {
+    "text": "prompting it's very similar to The Long",
+    "start": 1429.6,
+    "duration": 3.36
+  },
+  {
+    "text": "structured prompting but with two main",
+    "start": 1431.36,
+    "duration": 3.76
+  },
+  {
+    "text": "differences first it has a section",
+    "start": 1432.96,
+    "duration": 4.28
+  },
+  {
+    "text": "called sop because it is usually in",
+    "start": 1435.12,
+    "duration": 3.919
+  },
+  {
+    "text": "charge of this decision making",
+    "start": 1437.24,
+    "duration": 3.52
+  },
+  {
+    "text": "uh process we want to give it more",
+    "start": 1439.039,
+    "duration": 4.801
+  },
+  {
+    "text": "context an idea through an sop like what",
+    "start": 1440.76,
+    "duration": 5.08
+  },
+  {
+    "text": "do you have to do in which case right",
+    "start": 1443.84,
+    "duration": 4.16
+  },
+  {
+    "text": "and second of course most agents have",
+    "start": 1445.84,
+    "duration": 4.319
+  },
+  {
+    "text": "access to tools or sub agents and we",
+    "start": 1448,
+    "duration": 3.799
+  },
+  {
+    "text": "have to actually add in a section where",
+    "start": 1450.159,
+    "duration": 3.88
+  },
+  {
+    "text": "we describe what these tools can do and",
+    "start": 1451.799,
+    "duration": 5.041
+  },
+  {
+    "text": "how to uh how to use them right so those",
+    "start": 1454.039,
+    "duration": 4.281
+  },
+  {
+    "text": "are the two main differences so very",
+    "start": 1456.84,
+    "duration": 3.52
+  },
+  {
+    "text": "quickly right role Persona is very",
+    "start": 1458.32,
+    "duration": 3.68
+  },
+  {
+    "text": "similar to The Long structured prompt",
+    "start": 1460.36,
+    "duration": 3.08
+  },
+  {
+    "text": "right you're Ben friend worldclass",
+    "start": 1462,
+    "duration": 3.32
+  },
+  {
+    "text": "personal assistant manager agent with",
+    "start": 1463.44,
+    "duration": 3.479
+  },
+  {
+    "text": "particular expertise in meticulous and",
+    "start": 1465.32,
+    "duration": 3.04
+  },
+  {
+    "text": "accurate management of his personal ad",
+    "start": 1466.919,
+    "duration": 3.521
+  },
+  {
+    "text": "ministration related to email inbox",
+    "start": 1468.36,
+    "duration": 3.919
+  },
+  {
+    "text": "calendar and notion databases right",
+    "start": 1470.44,
+    "duration": 3.64
+  },
+  {
+    "text": "object objective and task here we can",
+    "start": 1472.279,
+    "duration": 3.361
+  },
+  {
+    "text": "just give a high level overview we don't",
+    "start": 1474.08,
+    "duration": 3.64
+  },
+  {
+    "text": "have to go into the detailed SRP here",
+    "start": 1475.64,
+    "duration": 4.12
+  },
+  {
+    "text": "just yet so what is this General",
+    "start": 1477.72,
+    "duration": 3.92
+  },
+  {
+    "text": "responsibility right again we can use",
+    "start": 1479.76,
+    "duration": 4.84
+  },
+  {
+    "text": "these sentences right think step by step",
+    "start": 1481.64,
+    "duration": 4.399
+  },
+  {
+    "text": "and in this case using your team of",
+    "start": 1484.6,
+    "duration": 3.64
+  },
+  {
+    "text": "specialized agents so your goal is to",
+    "start": 1486.039,
+    "duration": 4.081
+  },
+  {
+    "text": "help Ben perform tasks related to his",
+    "start": 1488.24,
+    "duration": 3.4
+  },
+  {
+    "text": "email inbox calendar to-do list and",
+    "start": 1490.12,
+    "duration": 3.36
+  },
+  {
+    "text": "YouTube content calendar using your team",
+    "start": 1491.64,
+    "duration": 3.919
+  },
+  {
+    "text": "of specialized sub agents think step by",
+    "start": 1493.48,
+    "duration": 5.319
+  },
+  {
+    "text": "step to ensure thoro thoro and accurate",
+    "start": 1495.559,
+    "duration": 4.881
+  },
+  {
+    "text": "task management when Ben sends you",
+    "start": 1498.799,
+    "duration": 2.76
+  },
+  {
+    "text": "request you have three key",
+    "start": 1500.44,
+    "duration": 2.88
+  },
+  {
+    "text": "responsibilities one decide which sub",
+    "start": 1501.559,
+    "duration": 4.041
+  },
+  {
+    "text": "agents to delegate task to communicate",
+    "start": 1503.32,
+    "duration": 3.76
+  },
+  {
+    "text": "clearly to the sub agents what needs to",
+    "start": 1505.6,
+    "duration": 3.679
+  },
+  {
+    "text": "be done and then thirdly communicate any",
+    "start": 1507.08,
+    "duration": 3.64
+  },
+  {
+    "text": "work that has been done by your sub",
+    "start": 1509.279,
+    "duration": 3.361
+  },
+  {
+    "text": "agents back to Ben using the send",
+    "start": 1510.72,
+    "duration": 4.6
+  },
+  {
+    "text": "WhatsApp tool right then the third is",
+    "start": 1512.64,
+    "duration": 5.759
+  },
+  {
+    "text": "context why is it doing this task again",
+    "start": 1515.32,
+    "duration": 4.28
+  },
+  {
+    "text": "right very similar to The Long",
+    "start": 1518.399,
+    "duration": 2.52
+  },
+  {
+    "text": "structured prompt right you're with",
+    "start": 1519.6,
+    "duration": 3
+  },
+  {
+    "text": "triggered bit request from Ben as Ben",
+    "start": 1520.919,
+    "duration": 3.76
+  },
+  {
+    "text": "world class same thing uh not that",
+    "start": 1522.6,
+    "duration": 4.72
+  },
+  {
+    "text": "important um then we have the SOP right",
+    "start": 1524.679,
+    "duration": 4.72
+  },
+  {
+    "text": "which is unique to these agent systems",
+    "start": 1527.32,
+    "duration": 4.479
+  },
+  {
+    "text": "so very important also in these agent",
+    "start": 1529.399,
+    "duration": 4.721
+  },
+  {
+    "text": "systems so break down the steps in a",
+    "start": 1531.799,
+    "duration": 4
+  },
+  {
+    "text": "numerical way right so what are the",
+    "start": 1534.12,
+    "duration": 4.159
+  },
+  {
+    "text": "steps to take in the process right and",
+    "start": 1535.799,
+    "duration": 3.961
+  },
+  {
+    "text": "then you can use if statements for",
+    "start": 1538.279,
+    "duration": 4
+  },
+  {
+    "text": "conditions right also you you should",
+    "start": 1539.76,
+    "duration": 4.279
+  },
+  {
+    "text": "double down if you're using relevance on",
+    "start": 1542.279,
+    "duration": 4.161
+  },
+  {
+    "text": "the SOP inside of the flow Builder",
+    "start": 1544.039,
+    "duration": 4.801
+  },
+  {
+    "text": "that's really where it translates to and",
+    "start": 1546.44,
+    "duration": 3.76
+  },
+  {
+    "text": "in that flow Builder you can double down",
+    "start": 1548.84,
+    "duration": 4.8
+  },
+  {
+    "text": "on it but late more on that later so you",
+    "start": 1550.2,
+    "duration": 5.44
+  },
+  {
+    "text": "can see in this case it's quite a simple",
+    "start": 1553.64,
+    "duration": 4.039
+  },
+  {
+    "text": "sop there are more difficult ones it is",
+    "start": 1555.64,
+    "duration": 3.68
+  },
+  {
+    "text": "vital to bank career you all think step",
+    "start": 1557.679,
+    "duration": 3.401
+  },
+  {
+    "text": "by step through the following process",
+    "start": 1559.32,
+    "duration": 4
+  },
+  {
+    "text": "you also want to use that uh Chain of",
+    "start": 1561.08,
+    "duration": 4.839
+  },
+  {
+    "text": "Thought prompting in that sop right the",
+    "start": 1563.32,
+    "duration": 4.479
+  },
+  {
+    "text": "side W agent right in this case very",
+    "start": 1565.919,
+    "duration": 4.281
+  },
+  {
+    "text": "similar as the objective but normally if",
+    "start": 1567.799,
+    "duration": 5.12
+  },
+  {
+    "text": "you have maybe a more detailed sop or",
+    "start": 1570.2,
+    "duration": 4.8
+  },
+  {
+    "text": "more complex agent you'd have to go in",
+    "start": 1572.919,
+    "duration": 6.24
+  },
+  {
+    "text": "more detail here right so one uh two",
+    "start": 1575,
+    "duration": 6.48
+  },
+  {
+    "text": "three right but sometimes you can go 1.1",
+    "start": 1579.159,
+    "duration": 6.041
+  },
+  {
+    "text": "right if this happens then 1.1 1.2 1.3",
+    "start": 1581.48,
+    "duration": 6.319
+  },
+  {
+    "text": "and then two right you give it sort of",
+    "start": 1585.2,
+    "duration": 4.599
+  },
+  {
+    "text": "exactly it has to be what what it has to",
+    "start": 1587.799,
+    "duration": 4.76
+  },
+  {
+    "text": "do in in the right sequence right then",
+    "start": 1589.799,
+    "duration": 5.401
+  },
+  {
+    "text": "we have again our instructions or roles",
+    "start": 1592.559,
+    "duration": 4.161
+  },
+  {
+    "text": "right important roles double down on",
+    "start": 1595.2,
+    "duration": 4
+  },
+  {
+    "text": "important roles for sop uh communication",
+    "start": 1596.72,
+    "duration": 4.48
+  },
+  {
+    "text": "rules with the sub agents again you can",
+    "start": 1599.2,
+    "duration": 3.719
+  },
+  {
+    "text": "think of it what can go wrong in the",
+    "start": 1601.2,
+    "duration": 4.079
+  },
+  {
+    "text": "output very similar as a long structured",
+    "start": 1602.919,
+    "duration": 4.161
+  },
+  {
+    "text": "prompt then we have our tools and sub",
+    "start": 1605.279,
+    "duration": 5.321
+  },
+  {
+    "text": "agent uh section which in this part you",
+    "start": 1607.08,
+    "duration": 5.319
+  },
+  {
+    "text": "want to give as much context as possible",
+    "start": 1610.6,
+    "duration": 3.84
+  },
+  {
+    "text": "to your agent on what these tools do",
+    "start": 1612.399,
+    "duration": 5.081
+  },
+  {
+    "text": "when to use it and how to use it so",
+    "start": 1614.44,
+    "duration": 6.16
+  },
+  {
+    "text": "example in this case we we are",
+    "start": 1617.48,
+    "duration": 7.12
+  },
+  {
+    "text": "describing sub agents right so in",
+    "start": 1620.6,
+    "duration": 6
+  },
+  {
+    "text": "relevance AI by the way you can use a a",
+    "start": 1624.6,
+    "duration": 5.319
+  },
+  {
+    "text": "slash right to find um the your your",
+    "start": 1626.6,
+    "duration": 6.24
+  },
+  {
+    "text": "tools and your your sub agents just so",
+    "start": 1629.919,
+    "duration": 4.961
+  },
+  {
+    "text": "to make it even clearer so in this part",
+    "start": 1632.84,
+    "duration": 4.079
+  },
+  {
+    "text": "you can see uh first I have you've been",
+    "start": 1634.88,
+    "duration": 3.679
+  },
+  {
+    "text": "equipped with one tool and three sub",
+    "start": 1636.919,
+    "duration": 3.401
+  },
+  {
+    "text": "agents to achieve your goals right I",
+    "start": 1638.559,
+    "duration": 3.961
+  },
+  {
+    "text": "give it the the first sub agent email",
+    "start": 1640.32,
+    "duration": 4.12
+  },
+  {
+    "text": "manager agent this agent can handle all",
+    "start": 1642.52,
+    "duration": 3.8
+  },
+  {
+    "text": "tasks related to B's inbox including",
+    "start": 1644.44,
+    "duration": 4.2
+  },
+  {
+    "text": "getting emails sending emails in writing",
+    "start": 1646.32,
+    "duration": 4.64
+  },
+  {
+    "text": "emails right so I describe what they can",
+    "start": 1648.64,
+    "duration": 4.639
+  },
+  {
+    "text": "do right then I have another section",
+    "start": 1650.96,
+    "duration": 4.28
+  },
+  {
+    "text": "when to use for any task related to",
+    "start": 1653.279,
+    "duration": 4.4
+  },
+  {
+    "text": "Ben's email inbox right and then how to",
+    "start": 1655.24,
+    "duration": 3.96
+  },
+  {
+    "text": "communicate now this one is actually",
+    "start": 1657.679,
+    "duration": 3.761
+  },
+  {
+    "text": "also important because we want our",
+    "start": 1659.2,
+    "duration": 4.079
+  },
+  {
+    "text": "manager agent which in this case is a",
+    "start": 1661.44,
+    "duration": 4.56
+  },
+  {
+    "text": "manager agent to communicate clearly to",
+    "start": 1663.279,
+    "duration": 4.361
+  },
+  {
+    "text": "our sub agent because if it doesn't our",
+    "start": 1666,
+    "duration": 3.36
+  },
+  {
+    "text": "sub agent can't do their work properly",
+    "start": 1667.64,
+    "duration": 3.519
+  },
+  {
+    "text": "and the system will fail so when you",
+    "start": 1669.36,
+    "duration": 4.24
+  },
+  {
+    "text": "delegate a task to email manager agent",
+    "start": 1671.159,
+    "duration": 3.76
+  },
+  {
+    "text": "be as detailed as possible when",
+    "start": 1673.6,
+    "duration": 3.04
+  },
+  {
+    "text": "instructing him what to do and includes",
+    "start": 1674.919,
+    "duration": 3.921
+  },
+  {
+    "text": "all relevant details and I even add in",
+    "start": 1676.64,
+    "duration": 4.2
+  },
+  {
+    "text": "an example for example please retrieve",
+    "start": 1678.84,
+    "duration": 3.959
+  },
+  {
+    "text": "all unread emails from Ben's email inbox",
+    "start": 1680.84,
+    "duration": 4.319
+  },
+  {
+    "text": "from the last month right and then we go",
+    "start": 1682.799,
+    "duration": 4.281
+  },
+  {
+    "text": "through all of them for",
+    "start": 1685.159,
+    "duration": 4.961
+  },
+  {
+    "text": "tools uh we we do the same right but we",
+    "start": 1687.08,
+    "duration": 5.92
+  },
+  {
+    "text": "don't have to of course uh specify how",
+    "start": 1690.12,
+    "duration": 4.039
+  },
+  {
+    "text": "we communicate because they don't",
+    "start": 1693,
+    "duration": 2.48
+  },
+  {
+    "text": "communicate with tools but what we can",
+    "start": 1694.159,
+    "duration": 3.64
+  },
+  {
+    "text": "say is like expected output of the tool",
+    "start": 1695.48,
+    "duration": 4.559
+  },
+  {
+    "text": "or things like that so this tool sends",
+    "start": 1697.799,
+    "duration": 3.681
+  },
+  {
+    "text": "messages to Ben through WhatsApp you",
+    "start": 1700.039,
+    "duration": 3.48
+  },
+  {
+    "text": "will always use this tool to communicate",
+    "start": 1701.48,
+    "duration": 3.48
+  },
+  {
+    "text": "and I didn't finish here but to",
+    "start": 1703.519,
+    "duration": 3.801
+  },
+  {
+    "text": "communicate any updates questions Etc to",
+    "start": 1704.96,
+    "duration": 3.8
+  },
+  {
+    "text": "Ben",
+    "start": 1707.32,
+    "duration": 3.4
+  },
+  {
+    "text": "right and then uh lastly examples now",
+    "start": 1708.76,
+    "duration": 3.32
+  },
+  {
+    "text": "this is an interesting section because",
+    "start": 1710.72,
+    "duration": 3.4
+  },
+  {
+    "text": "of course in these agent systems it's",
+    "start": 1712.08,
+    "duration": 4.76
+  },
+  {
+    "text": "more about following a process an sop",
+    "start": 1714.12,
+    "duration": 5.12
+  },
+  {
+    "text": "and it's not really an input output",
+    "start": 1716.84,
+    "duration": 4.439
+  },
+  {
+    "text": "right so you might ask what do we do in",
+    "start": 1719.24,
+    "duration": 4.64
+  },
+  {
+    "text": "the example uh section and many people",
+    "start": 1721.279,
+    "duration": 4.601
+  },
+  {
+    "text": "don't even use it in my experience it's",
+    "start": 1723.88,
+    "duration": 3.679
+  },
+  {
+    "text": "actually really good to still use this",
+    "start": 1725.88,
+    "duration": 3.48
+  },
+  {
+    "text": "and it will improve the out outcome a",
+    "start": 1727.559,
+    "duration": 4.761
+  },
+  {
+    "text": "lot so instead of an input output what I",
+    "start": 1729.36,
+    "duration": 4.84
+  },
+  {
+    "text": "what I think the best way to do this in",
+    "start": 1732.32,
+    "duration": 4.479
+  },
+  {
+    "text": "agent systems is we put in an input so",
+    "start": 1734.2,
+    "duration": 5.44
+  },
+  {
+    "text": "we give it an example of request right",
+    "start": 1736.799,
+    "duration": 4.561
+  },
+  {
+    "text": "and then we give it an example of his",
+    "start": 1739.64,
+    "duration": 4.32
+  },
+  {
+    "text": "sop for that request right so it",
+    "start": 1741.36,
+    "duration": 5.24
+  },
+  {
+    "text": "understands what to do with one or two",
+    "start": 1743.96,
+    "duration": 4.68
+  },
+  {
+    "text": "requests and in my experience this",
+    "start": 1746.6,
+    "duration": 4.799
+  },
+  {
+    "text": "really helps so for example you can see",
+    "start": 1748.64,
+    "duration": 4.879
+  },
+  {
+    "text": "here example one input please check",
+    "start": 1751.399,
+    "duration": 3.721
+  },
+  {
+    "text": "please schedule meeting with John Doe",
+    "start": 1753.519,
+    "duration": 3.52
+  },
+  {
+    "text": "tomorrow at 3 pm to discuss the new",
+    "start": 1755.12,
+    "duration": 3.679
+  },
+  {
+    "text": "project also send him an email",
+    "start": 1757.039,
+    "duration": 4.24
+  },
+  {
+    "text": "confirming the meeting invite right so",
+    "start": 1758.799,
+    "duration": 5.321
+  },
+  {
+    "text": "first we we show him the SOP he should",
+    "start": 1761.279,
+    "duration": 4.88
+  },
+  {
+    "text": "follow right your sop decide which",
+    "start": 1764.12,
+    "duration": 4.799
+  },
+  {
+    "text": "agents delegate to calar manager agent",
+    "start": 1766.159,
+    "duration": 5.561
+  },
+  {
+    "text": "and email manager agent right then",
+    "start": 1768.919,
+    "duration": 4.88
+  },
+  {
+    "text": "instruct calendar manager agent and we",
+    "start": 1771.72,
+    "duration": 3.959
+  },
+  {
+    "text": "even describe what he would have to tell",
+    "start": 1773.799,
+    "duration": 3.961
+  },
+  {
+    "text": "him right please schedule a meeting with",
+    "start": 1775.679,
+    "duration": 4.12
+  },
+  {
+    "text": "John do tomorrow at 3M so power of time",
+    "start": 1777.76,
+    "duration": 4.12
+  },
+  {
+    "text": "to discuss the new project right and",
+    "start": 1779.799,
+    "duration": 4.12
+  },
+  {
+    "text": "same for the email manager agent and",
+    "start": 1781.88,
+    "duration": 4
+  },
+  {
+    "text": "then last step would be to communicate",
+    "start": 1783.919,
+    "duration": 3.6
+  },
+  {
+    "text": "back to me right inform everything that",
+    "start": 1785.88,
+    "duration": 3.639
+  },
+  {
+    "text": "has been done by your sub agents back to",
+    "start": 1787.519,
+    "duration": 3.681
+  },
+  {
+    "text": "Ben viia send WhatsApp tool and then",
+    "start": 1789.519,
+    "duration": 3.481
+  },
+  {
+    "text": "example again the meeting with John do",
+    "start": 1791.2,
+    "duration": 4.88
+  },
+  {
+    "text": "has been booked at 3 P.M sapo uh time",
+    "start": 1793,
+    "duration": 5.48
+  },
+  {
+    "text": "and the and the email has has been sent",
+    "start": 1796.08,
+    "duration": 4.199
+  },
+  {
+    "text": "to confirm the meeting right and then we",
+    "start": 1798.48,
+    "duration": 4.079
+  },
+  {
+    "text": "can even set add in the email right so",
+    "start": 1800.279,
+    "duration": 4.721
+  },
+  {
+    "text": "it knows how to communicate back to you",
+    "start": 1802.559,
+    "duration": 4.281
+  },
+  {
+    "text": "but this really in my experience really",
+    "start": 1805,
+    "duration": 3.799
+  },
+  {
+    "text": "helps when your agents when you see your",
+    "start": 1806.84,
+    "duration": 4.559
+  },
+  {
+    "text": "agent is struggling following this this",
+    "start": 1808.799,
+    "duration": 5.201
+  },
+  {
+    "text": "sop and by the way you can you can even",
+    "start": 1811.399,
+    "duration": 4.88
+  },
+  {
+    "text": "instructed what I noticed helped a lot",
+    "start": 1814,
+    "duration": 3.88
+  },
+  {
+    "text": "is if you have these edge cases where it",
+    "start": 1816.279,
+    "duration": 3.52
+  },
+  {
+    "text": "sort of goes wrong like in general goes",
+    "start": 1817.88,
+    "duration": 3.32
+  },
+  {
+    "text": "well but there's some Ed Edge cases",
+    "start": 1819.799,
+    "duration": 3.48
+  },
+  {
+    "text": "where it doesn't go well then put those",
+    "start": 1821.2,
+    "duration": 5.44
+  },
+  {
+    "text": "edge cases in as the examples right Same",
+    "start": 1823.279,
+    "duration": 5.961
+  },
+  {
+    "text": "by the way for prompting inside of AI",
+    "start": 1826.64,
+    "duration": 4.08
+  },
+  {
+    "text": "tools right with a long structured",
+    "start": 1829.24,
+    "duration": 4.159
+  },
+  {
+    "text": "prompt if you if you give them examples",
+    "start": 1830.72,
+    "duration": 5.24
+  },
+  {
+    "text": "of these how to handle these edge cases",
+    "start": 1833.399,
+    "duration": 4.961
+  },
+  {
+    "text": "you'll see that that the outcome for",
+    "start": 1835.96,
+    "duration": 4.24
+  },
+  {
+    "text": "these edge cases will be a lot",
+    "start": 1838.36,
+    "duration": 4.72
+  },
+  {
+    "text": "better and then lastly notes same as the",
+    "start": 1840.2,
+    "duration": 5.16
+  },
+  {
+    "text": "long structured prompt Right double down",
+    "start": 1843.08,
+    "duration": 3.959
+  },
+  {
+    "text": "on any important roles double down on",
+    "start": 1845.36,
+    "duration": 4.6
+  },
+  {
+    "text": "any anything important in the S Etc",
+    "start": 1847.039,
+    "duration": 5.24
+  },
+  {
+    "text": "lastly very quickly um on prompting the",
+    "start": 1849.96,
+    "duration": 4.839
+  },
+  {
+    "text": "gpt1 this is going to probably change",
+    "start": 1852.279,
+    "duration": 4.481
+  },
+  {
+    "text": "prompting a bit uh for these specific",
+    "start": 1854.799,
+    "duration": 3.641
+  },
+  {
+    "text": "models because they work they're",
+    "start": 1856.76,
+    "duration": 3.6
+  },
+  {
+    "text": "fundamentally designed in a different",
+    "start": 1858.44,
+    "duration": 4.119
+  },
+  {
+    "text": "way uh now we're very new to this and it",
+    "start": 1860.36,
+    "duration": 3.96
+  },
+  {
+    "text": "will also depend on the use case but at",
+    "start": 1862.559,
+    "duration": 4.84
+  },
+  {
+    "text": "least what open AI um put out there is",
+    "start": 1864.32,
+    "duration": 5.16
+  },
+  {
+    "text": "that keeping prompts a little simpler",
+    "start": 1867.399,
+    "duration": 3.841
+  },
+  {
+    "text": "seem to work better for these types of",
+    "start": 1869.48,
+    "duration": 4.52
+  },
+  {
+    "text": "models um so we might not have to go",
+    "start": 1871.24,
+    "duration": 4.319
+  },
+  {
+    "text": "extremely long I think it's still good",
+    "start": 1874,
+    "duration": 3.84
+  },
+  {
+    "text": "to have this framework in mind we might",
+    "start": 1875.559,
+    "duration": 4.881
+  },
+  {
+    "text": "not have to give it as much context uh",
+    "start": 1877.84,
+    "duration": 4.799
+  },
+  {
+    "text": "as we as we do in our long structured",
+    "start": 1880.44,
+    "duration": 5
+  },
+  {
+    "text": "prompt for example um because they say",
+    "start": 1882.639,
+    "duration": 4.121
+  },
+  {
+    "text": "these models are trained to work best if",
+    "start": 1885.44,
+    "duration": 2.599
+  },
+  {
+    "text": "you write simple straightforward for",
+    "start": 1886.76,
+    "duration": 3
+  },
+  {
+    "text": "prompt so especially that sort of task",
+    "start": 1888.039,
+    "duration": 3.6
+  },
+  {
+    "text": "or objective uh part of the prompt is",
+    "start": 1889.76,
+    "duration": 3.879
+  },
+  {
+    "text": "going to be very important uh they won't",
+    "start": 1891.639,
+    "duration": 3.601
+  },
+  {
+    "text": "need extensive guidance because they can",
+    "start": 1893.639,
+    "duration": 4.081
+  },
+  {
+    "text": "find the optimal path themselves right",
+    "start": 1895.24,
+    "duration": 4.559
+  },
+  {
+    "text": "and then uh also uh they recommend to",
+    "start": 1897.72,
+    "duration": 3.72
+  },
+  {
+    "text": "avoid using Chain of Thought prompting",
+    "start": 1899.799,
+    "duration": 3.041
+  },
+  {
+    "text": "because of course this Chain of Thought",
+    "start": 1901.44,
+    "duration": 4.079
+  },
+  {
+    "text": "prompting is baked inside of the model",
+    "start": 1902.84,
+    "duration": 5.439
+  },
+  {
+    "text": "already right using your own reasing in",
+    "start": 1905.519,
+    "duration": 4.721
+  },
+  {
+    "text": "the prompts won't work or even might",
+    "start": 1908.279,
+    "duration": 3.961
+  },
+  {
+    "text": "hinder the performance right and then",
+    "start": 1910.24,
+    "duration": 4.64
+  },
+  {
+    "text": "thirdly it seemed that seems that still",
+    "start": 1912.24,
+    "duration": 4.039
+  },
+  {
+    "text": "uh you should use the markdown",
+    "start": 1914.88,
+    "duration": 3.44
+  },
+  {
+    "text": "formatting uh just like we we were doing",
+    "start": 1916.279,
+    "duration": 4.201
+  },
+  {
+    "text": "in a long structure formatting uh",
+    "start": 1918.32,
+    "duration": 4
+  },
+  {
+    "text": "because it seems to still perform better",
+    "start": 1920.48,
+    "duration": 3.88
+  },
+  {
+    "text": "with that markdown formatting but uh",
+    "start": 1922.32,
+    "duration": 3.599
+  },
+  {
+    "text": "we'll see how this develops in the",
+    "start": 1924.36,
+    "duration": 3.76
+  },
+  {
+    "text": "upcoming weeks and months now I think",
+    "start": 1925.919,
+    "duration": 4.161
+  },
+  {
+    "text": "this gp01 model will become very",
+    "start": 1928.12,
+    "duration": 3.72
+  },
+  {
+    "text": "interesting for these agent systems",
+    "start": 1930.08,
+    "duration": 3.559
+  },
+  {
+    "text": "because as I said these agents have a",
+    "start": 1931.84,
+    "duration": 3.24
+  },
+  {
+    "text": "lot of responsibility at the moment and",
+    "start": 1933.639,
+    "duration": 3.88
+  },
+  {
+    "text": "that's why they sometimes fail right and",
+    "start": 1935.08,
+    "duration": 5.04
+  },
+  {
+    "text": "if we can get a gp01 model to basically",
+    "start": 1937.519,
+    "duration": 5.721
+  },
+  {
+    "text": "generate this sop for our agents we",
+    "start": 1940.12,
+    "duration": 4.96
+  },
+  {
+    "text": "basically take some responsibility out",
+    "start": 1943.24,
+    "duration": 4.72
+  },
+  {
+    "text": "of our agent agent hand and they can",
+    "start": 1945.08,
+    "duration": 4.839
+  },
+  {
+    "text": "just execute on these tasks instead of",
+    "start": 1947.96,
+    "duration": 4.88
+  },
+  {
+    "text": "coming up with uh the soop for specific",
+    "start": 1949.919,
+    "duration": 5.041
+  },
+  {
+    "text": "request I think it will uh improve the",
+    "start": 1952.84,
+    "duration": 3.959
+  },
+  {
+    "text": "reliability of our systems a lot so I",
+    "start": 1954.96,
+    "duration": 4.8
+  },
+  {
+    "text": "see a lot of potential in um using this",
+    "start": 1956.799,
+    "duration": 5.801
+  },
+  {
+    "text": "gp1 to basically generate this specific",
+    "start": 1959.76,
+    "duration": 5.519
+  },
+  {
+    "text": "sop for each request before letting our",
+    "start": 1962.6,
+    "duration": 6.84
+  },
+  {
+    "text": "agent execute um on uh on these tasks",
+    "start": 1965.279,
+    "duration": 6.28
+  },
+  {
+    "text": "right and using the tools Etc uh because",
+    "start": 1969.44,
+    "duration": 4.719
+  },
+  {
+    "text": "of course gp1 at the moment we can't use",
+    "start": 1971.559,
+    "duration": 4.24
+  },
+  {
+    "text": "tool calling so we can't use it as our",
+    "start": 1974.159,
+    "duration": 3.681
+  },
+  {
+    "text": "actual agent so now I want to go over",
+    "start": 1975.799,
+    "duration": 4.12
+  },
+  {
+    "text": "over the most common prompting use cases",
+    "start": 1977.84,
+    "duration": 3.52
+  },
+  {
+    "text": "and my recommendation for which",
+    "start": 1979.919,
+    "duration": 3.12
+  },
+  {
+    "text": "prompting framework to use and which",
+    "start": 1981.36,
+    "duration": 3.84
+  },
+  {
+    "text": "language model to use so first we have",
+    "start": 1983.039,
+    "duration": 4.041
+  },
+  {
+    "text": "extracting data now again of course this",
+    "start": 1985.2,
+    "duration": 4.28
+  },
+  {
+    "text": "is a very broad uh categorization but",
+    "start": 1987.08,
+    "duration": 4.24
+  },
+  {
+    "text": "there's lots of types of extracting data",
+    "start": 1989.48,
+    "duration": 3.64
+  },
+  {
+    "text": "and I also included summarization in",
+    "start": 1991.32,
+    "duration": 4.16
+  },
+  {
+    "text": "this uh but you'll you'll come across",
+    "start": 1993.12,
+    "duration": 4.159
+  },
+  {
+    "text": "these use cases a lot in designing these",
+    "start": 1995.48,
+    "duration": 4.36
+  },
+  {
+    "text": "AI systems which is things like",
+    "start": 1997.279,
+    "duration": 5
+  },
+  {
+    "text": "extracting URLs uh from Google search",
+    "start": 1999.84,
+    "duration": 4.52
+  },
+  {
+    "text": "results getting data specific data",
+    "start": 2002.279,
+    "duration": 4.041
+  },
+  {
+    "text": "points from a scraped LinkedIn profile",
+    "start": 2004.36,
+    "duration": 4
+  },
+  {
+    "text": "but really any data you capture out of a",
+    "start": 2006.32,
+    "duration": 4.599
+  },
+  {
+    "text": "longer text or even summarization of a",
+    "start": 2008.36,
+    "duration": 4.52
+  },
+  {
+    "text": "longer text uh I consider under",
+    "start": 2010.919,
+    "duration": 3.72
+  },
+  {
+    "text": "extracting data now L&M are actually",
+    "start": 2012.88,
+    "duration": 4.84
+  },
+  {
+    "text": "really good at uh sort of identifying",
+    "start": 2014.639,
+    "duration": 4.721
+  },
+  {
+    "text": "these specific data points inside of a",
+    "start": 2017.72,
+    "duration": 5.72
+  },
+  {
+    "text": "longer um text so because of that we can",
+    "start": 2019.36,
+    "duration": 6.159
+  },
+  {
+    "text": "actually get away in my experience with",
+    "start": 2023.44,
+    "duration": 4.199
+  },
+  {
+    "text": "short structured prompting now of course",
+    "start": 2025.519,
+    "duration": 3.321
+  },
+  {
+    "text": "again take this with a great assault",
+    "start": 2027.639,
+    "duration": 2.201
+  },
+  {
+    "text": "because it really depends on the",
+    "start": 2028.84,
+    "duration": 3
+  },
+  {
+    "text": "complexity of the task we have a really",
+    "start": 2029.84,
+    "duration": 4.719
+  },
+  {
+    "text": "complex data extraction prompt of course",
+    "start": 2031.84,
+    "duration": 5.48
+  },
+  {
+    "text": "we're going to go long but in general uh",
+    "start": 2034.559,
+    "duration": 5.041
+  },
+  {
+    "text": "what I what I see in general you can get",
+    "start": 2037.32,
+    "duration": 4.239
+  },
+  {
+    "text": "away with short structured prompting and",
+    "start": 2039.6,
+    "duration": 3.24
+  },
+  {
+    "text": "also because these language models are",
+    "start": 2041.559,
+    "duration": 2.881
+  },
+  {
+    "text": "so good at it we can also get away with",
+    "start": 2042.84,
+    "duration": 3.4
+  },
+  {
+    "text": "using these cheaper models right so I'm",
+    "start": 2044.44,
+    "duration": 4.76
+  },
+  {
+    "text": "a big fan of GPT 40 mini very cheap and",
+    "start": 2046.24,
+    "duration": 5.48
+  },
+  {
+    "text": "seems to perform really well so but any",
+    "start": 2049.2,
+    "duration": 3.919
+  },
+  {
+    "text": "of the cheaper model will probably do",
+    "start": 2051.72,
+    "duration": 3.8
+  },
+  {
+    "text": "this right right so we can this this use",
+    "start": 2053.119,
+    "duration": 3.881
+  },
+  {
+    "text": "case we can get usually away with short",
+    "start": 2055.52,
+    "duration": 3.319
+  },
+  {
+    "text": "structured prompting right then we have",
+    "start": 2057,
+    "duration": 4.32
+  },
+  {
+    "text": "the second one which is classification",
+    "start": 2058.839,
+    "duration": 4.441
+  },
+  {
+    "text": "or categorization and now common use",
+    "start": 2061.32,
+    "duration": 4.2
+  },
+  {
+    "text": "cases for example email categorization",
+    "start": 2063.28,
+    "duration": 4.44
+  },
+  {
+    "text": "or topic classification now this depends",
+    "start": 2065.52,
+    "duration": 3.599
+  },
+  {
+    "text": "depends a little on the complexity of",
+    "start": 2067.72,
+    "duration": 3.199
+  },
+  {
+    "text": "the categorization now if it's a really",
+    "start": 2069.119,
+    "duration": 3.72
+  },
+  {
+    "text": "easy one uh we can get away with short",
+    "start": 2070.919,
+    "duration": 4.361
+  },
+  {
+    "text": "structured prompting uh for example in",
+    "start": 2072.839,
+    "duration": 3.961
+  },
+  {
+    "text": "the example here classify the email",
+    "start": 2075.28,
+    "duration": 3.16
+  },
+  {
+    "text": "below as action needed or no action",
+    "start": 2076.8,
+    "duration": 4.72
+  },
+  {
+    "text": "needed uh really simple way of",
+    "start": 2078.44,
+    "duration": 5.04
+  },
+  {
+    "text": "categorizing now again these L&M are",
+    "start": 2081.52,
+    "duration": 3.8
+  },
+  {
+    "text": "really good at this so we can get away",
+    "start": 2083.48,
+    "duration": 3.679
+  },
+  {
+    "text": "with short structured prompting and with",
+    "start": 2085.32,
+    "duration": 4.519
+  },
+  {
+    "text": "cheaper models right now when you get to",
+    "start": 2087.159,
+    "duration": 4.281
+  },
+  {
+    "text": "subjective classification or",
+    "start": 2089.839,
+    "duration": 3.56
+  },
+  {
+    "text": "categorization no so not action needed",
+    "start": 2091.44,
+    "duration": 3.719
+  },
+  {
+    "text": "or no action needed but maybe something",
+    "start": 2093.399,
+    "duration": 3.801
+  },
+  {
+    "text": "more subjective is like uh really",
+    "start": 2095.159,
+    "duration": 5.401
+  },
+  {
+    "text": "important and low priority and medium",
+    "start": 2097.2,
+    "duration": 5.879
+  },
+  {
+    "text": "priority like we have to give the model",
+    "start": 2100.56,
+    "duration": 5.6
+  },
+  {
+    "text": "context on when we believe something is",
+    "start": 2103.079,
+    "duration": 5.081
+  },
+  {
+    "text": "medium or low priority and of course",
+    "start": 2106.16,
+    "duration": 3.52
+  },
+  {
+    "text": "then we need a long prompt to actually",
+    "start": 2108.16,
+    "duration": 3.64
+  },
+  {
+    "text": "give the rules and the instructions of",
+    "start": 2109.68,
+    "duration": 4.52
+  },
+  {
+    "text": "when to classify it in which way right",
+    "start": 2111.8,
+    "duration": 4.64
+  },
+  {
+    "text": "so this really depends on the type of",
+    "start": 2114.2,
+    "duration": 4
+  },
+  {
+    "text": "classification or categorization but in",
+    "start": 2116.44,
+    "duration": 3.84
+  },
+  {
+    "text": "general even with these subjective",
+    "start": 2118.2,
+    "duration": 3.56
+  },
+  {
+    "text": "classifications in my experience you can",
+    "start": 2120.28,
+    "duration": 3.6
+  },
+  {
+    "text": "still get away with cheaper models right",
+    "start": 2121.76,
+    "duration": 3.28
+  },
+  {
+    "text": "then we have the third one which is",
+    "start": 2123.88,
+    "duration": 3.16
+  },
+  {
+    "text": "generating content again really broad",
+    "start": 2125.04,
+    "duration": 4.44
+  },
+  {
+    "text": "category of course but basically I mean",
+    "start": 2127.04,
+    "duration": 5.4
+  },
+  {
+    "text": "to say that this this one is any use",
+    "start": 2129.48,
+    "duration": 4.32
+  },
+  {
+    "text": "case of prompting where you're",
+    "start": 2132.44,
+    "duration": 4.28
+  },
+  {
+    "text": "generating content out of nothing right",
+    "start": 2133.8,
+    "duration": 5.44
+  },
+  {
+    "text": "and you can think of writing blog post",
+    "start": 2136.72,
+    "duration": 4.639
+  },
+  {
+    "text": "write analysis write an email but",
+    "start": 2139.24,
+    "duration": 4.68
+  },
+  {
+    "text": "anything it's generating or even image",
+    "start": 2141.359,
+    "duration": 5.041
+  },
+  {
+    "text": "generation Etc now because this is the",
+    "start": 2143.92,
+    "duration": 4.56
+  },
+  {
+    "text": "hardest for L&M and is where they",
+    "start": 2146.4,
+    "duration": 4.28
+  },
+  {
+    "text": "hallucinate most and make most mistakes",
+    "start": 2148.48,
+    "duration": 5.08
+  },
+  {
+    "text": "we want to really uh go long structured",
+    "start": 2150.68,
+    "duration": 4.919
+  },
+  {
+    "text": "prompting here give it as much context",
+    "start": 2153.56,
+    "duration": 3.6
+  },
+  {
+    "text": "as possible to get the best outcome",
+    "start": 2155.599,
+    "duration": 3.921
+  },
+  {
+    "text": "possible and also we always want to use",
+    "start": 2157.16,
+    "duration": 4.4
+  },
+  {
+    "text": "our the best language models here right",
+    "start": 2159.52,
+    "duration": 5
+  },
+  {
+    "text": "so gp01 some people say that actually",
+    "start": 2161.56,
+    "duration": 6.36
+  },
+  {
+    "text": "for creative writing Some people prefer",
+    "start": 2164.52,
+    "duration": 7.72
+  },
+  {
+    "text": "GPT 40 still um so you have to see what",
+    "start": 2167.92,
+    "duration": 6.04
+  },
+  {
+    "text": "works best for you but again for",
+    "start": 2172.24,
+    "duration": 4.079
+  },
+  {
+    "text": "generating content right we want to use",
+    "start": 2173.96,
+    "duration": 3.92
+  },
+  {
+    "text": "the best models right because this is",
+    "start": 2176.319,
+    "duration": 4.52
+  },
+  {
+    "text": "the hardest to do for these eles now for",
+    "start": 2177.88,
+    "duration": 6.08
+  },
+  {
+    "text": "the next one we have evaluation now",
+    "start": 2180.839,
+    "duration": 6.361
+  },
+  {
+    "text": "evaluation uh in some common use cases",
+    "start": 2183.96,
+    "duration": 4.96
+  },
+  {
+    "text": "that I use for example a lot in my",
+    "start": 2187.2,
+    "duration": 4.119
+  },
+  {
+    "text": "systems is evaluation of a vector search",
+    "start": 2188.92,
+    "duration": 4.28
+  },
+  {
+    "text": "output right so I have a quick example",
+    "start": 2191.319,
+    "duration": 3.921
+  },
+  {
+    "text": "here you're an AI assistant responsible",
+    "start": 2193.2,
+    "duration": 4
+  },
+  {
+    "text": "for verifying the relevance of search",
+    "start": 2195.24,
+    "duration": 3.839
+  },
+  {
+    "text": "results from Vector data against the",
+    "start": 2197.2,
+    "duration": 3.48
+  },
+  {
+    "text": "user's question right so we actually",
+    "start": 2199.079,
+    "duration": 3.641
+  },
+  {
+    "text": "check if the result we get from a vector",
+    "start": 2200.68,
+    "duration": 3.639
+  },
+  {
+    "text": "search for example when answering a",
+    "start": 2202.72,
+    "duration": 4.84
+  },
+  {
+    "text": "question from a uh um a customer uh",
+    "start": 2204.319,
+    "duration": 4.721
+  },
+  {
+    "text": "actually makes sense right if it's",
+    "start": 2207.56,
+    "duration": 3.24
+  },
+  {
+    "text": "relates to the original question right",
+    "start": 2209.04,
+    "duration": 5.079
+  },
+  {
+    "text": "so it sort of has to evaluate if uh if",
+    "start": 2210.8,
+    "duration": 6
+  },
+  {
+    "text": "that question is is right now another",
+    "start": 2214.119,
+    "duration": 5.041
+  },
+  {
+    "text": "example could be senent analysis LM",
+    "start": 2216.8,
+    "duration": 5.16
+  },
+  {
+    "text": "output quality assessments which I I'm",
+    "start": 2219.16,
+    "duration": 4.8
+  },
+  {
+    "text": "starting to use more and more too so",
+    "start": 2221.96,
+    "duration": 4.2
+  },
+  {
+    "text": "evaluation is a little bit subjective in",
+    "start": 2223.96,
+    "duration": 4.96
+  },
+  {
+    "text": "general and therefore and Depends highly",
+    "start": 2226.16,
+    "duration": 5.6
+  },
+  {
+    "text": "on the context so therefore in general",
+    "start": 2228.92,
+    "duration": 4.96
+  },
+  {
+    "text": "uh I go for long structured prompts give",
+    "start": 2231.76,
+    "duration": 4.28
+  },
+  {
+    "text": "it as much context and details as",
+    "start": 2233.88,
+    "duration": 4.04
+  },
+  {
+    "text": "possible to get the best best outcomes",
+    "start": 2236.04,
+    "duration": 4.16
+  },
+  {
+    "text": "and also in general in my experience use",
+    "start": 2237.92,
+    "duration": 3.64
+  },
+  {
+    "text": "the best models for this also because",
+    "start": 2240.2,
+    "duration": 3.6
+  },
+  {
+    "text": "these tasks are usually very important",
+    "start": 2241.56,
+    "duration": 4.759
+  },
+  {
+    "text": "uh in your overall system functioning",
+    "start": 2243.8,
+    "duration": 5.36
+  },
+  {
+    "text": "well so that's just my recommendation",
+    "start": 2246.319,
+    "duration": 5.481
+  },
+  {
+    "text": "for the evaluation use case then we have",
+    "start": 2249.16,
+    "duration": 4.8
+  },
+  {
+    "text": "data transformation right so very common",
+    "start": 2251.8,
+    "duration": 4.799
+  },
+  {
+    "text": "too in these AI systems right for",
+    "start": 2253.96,
+    "duration": 4.28
+  },
+  {
+    "text": "example you need specific formatting",
+    "start": 2256.599,
+    "duration": 2.961
+  },
+  {
+    "text": "like the example I gave before right we",
+    "start": 2258.24,
+    "duration": 4.24
+  },
+  {
+    "text": "need a CV in a specific format new",
+    "start": 2259.56,
+    "duration": 5.96
+  },
+  {
+    "text": "format we need Jon outputs we need HTML",
+    "start": 2262.48,
+    "duration": 4.839
+  },
+  {
+    "text": "formatting for maybe making a nice",
+    "start": 2265.52,
+    "duration": 4.76
+  },
+  {
+    "text": "Google Docs or whatever uh in general",
+    "start": 2267.319,
+    "duration": 5.841
+  },
+  {
+    "text": "again I models are pretty good at this",
+    "start": 2270.28,
+    "duration": 5.4
+  },
+  {
+    "text": "this data transformation so we can do",
+    "start": 2273.16,
+    "duration": 4.959
+  },
+  {
+    "text": "short structured prompting",
+    "start": 2275.68,
+    "duration": 3.919
+  },
+  {
+    "text": "but again this depends because for",
+    "start": 2278.119,
+    "duration": 3.401
+  },
+  {
+    "text": "example this CV format or tool I used",
+    "start": 2279.599,
+    "duration": 3.48
+  },
+  {
+    "text": "before I used long structured prompt",
+    "start": 2281.52,
+    "duration": 3.079
+  },
+  {
+    "text": "because you know the output",
+    "start": 2283.079,
+    "duration": 3.961
+  },
+  {
+    "text": "specifications was very specific and",
+    "start": 2284.599,
+    "duration": 4.561
+  },
+  {
+    "text": "very long and there were quite some",
+    "start": 2287.04,
+    "duration": 4.24
+  },
+  {
+    "text": "things that could go wrong so in that",
+    "start": 2289.16,
+    "duration": 4.4
+  },
+  {
+    "text": "case I gave it a long structured prompt",
+    "start": 2291.28,
+    "duration": 4.16
+  },
+  {
+    "text": "but if we just go like maybe HTML",
+    "start": 2293.56,
+    "duration": 3.6
+  },
+  {
+    "text": "formatting or things like that in my",
+    "start": 2295.44,
+    "duration": 2.96
+  },
+  {
+    "text": "experience we can get away with short",
+    "start": 2297.16,
+    "duration": 2.679
+  },
+  {
+    "text": "structured prompting although in my",
+    "start": 2298.4,
+    "duration": 2.52
+  },
+  {
+    "text": "experience we really have to put in",
+    "start": 2299.839,
+    "duration": 4.601
+  },
+  {
+    "text": "those input and output uh examples in",
+    "start": 2300.92,
+    "duration": 5.64
+  },
+  {
+    "text": "these short structured prompts uh and",
+    "start": 2304.44,
+    "duration": 3.56
+  },
+  {
+    "text": "even if we go with short in my",
+    "start": 2306.56,
+    "duration": 3.24
+  },
+  {
+    "text": "experience for this data transformation",
+    "start": 2308,
+    "duration": 3.92
+  },
+  {
+    "text": "it's better to go with uh the higher",
+    "start": 2309.8,
+    "duration": 4.68
+  },
+  {
+    "text": "quality models the best models uh to to",
+    "start": 2311.92,
+    "duration": 3.88
+  },
+  {
+    "text": "get consistent",
+    "start": 2314.48,
+    "duration": 3.4
+  },
+  {
+    "text": "outcomes and then lastly of course we",
+    "start": 2315.8,
+    "duration": 3.88
+  },
+  {
+    "text": "have decision-making which is again our",
+    "start": 2317.88,
+    "duration": 4.239
+  },
+  {
+    "text": "AI agents right and of course we're",
+    "start": 2319.68,
+    "duration": 4
+  },
+  {
+    "text": "always going to use our best models",
+    "start": 2322.119,
+    "duration": 3.681
+  },
+  {
+    "text": "because this is the hardest uh sort of",
+    "start": 2323.68,
+    "duration": 4.76
+  },
+  {
+    "text": "task uh to do for for these L&M and it",
+    "start": 2325.8,
+    "duration": 4.6
+  },
+  {
+    "text": "because it usually has multiple",
+    "start": 2328.44,
+    "duration": 3.879
+  },
+  {
+    "text": "responsibilities uh we always go with",
+    "start": 2330.4,
+    "duration": 3.199
+  },
+  {
+    "text": "the best models right and we use the",
+    "start": 2332.319,
+    "duration": 4.241
+  },
+  {
+    "text": "agent prompting framework now lastly if",
+    "start": 2333.599,
+    "duration": 5.201
+  },
+  {
+    "text": "you're using relevance",
+    "start": 2336.56,
+    "duration": 4.279
+  },
+  {
+    "text": "there are a few more uh prompting use",
+    "start": 2338.8,
+    "duration": 3.48
+  },
+  {
+    "text": "cases right so we have tool input",
+    "start": 2340.839,
+    "duration": 3.24
+  },
+  {
+    "text": "prompting sub agent prompting labeling",
+    "start": 2342.28,
+    "duration": 3.16
+  },
+  {
+    "text": "and naming tasks and we have the flow",
+    "start": 2344.079,
+    "duration": 3.161
+  },
+  {
+    "text": "Builder so very quickly if you use",
+    "start": 2345.44,
+    "duration": 3.36
+  },
+  {
+    "text": "relevance AI I'll go over it very",
+    "start": 2347.24,
+    "duration": 3.96
+  },
+  {
+    "text": "quickly so first we have tool input",
+    "start": 2348.8,
+    "duration": 4.68
+  },
+  {
+    "text": "prompting right so basically when we",
+    "start": 2351.2,
+    "duration": 4.08
+  },
+  {
+    "text": "make a tool right we have here the name",
+    "start": 2353.48,
+    "duration": 3.2
+  },
+  {
+    "text": "of the tool and the description of the",
+    "start": 2355.28,
+    "duration": 4.48
+  },
+  {
+    "text": "tool now these are actually read by our",
+    "start": 2356.68,
+    "duration": 6.04
+  },
+  {
+    "text": "agent so we actually want to name this",
+    "start": 2359.76,
+    "duration": 4.52
+  },
+  {
+    "text": "in a way that makes it easy for the",
+    "start": 2362.72,
+    "duration": 3.119
+  },
+  {
+    "text": "agent to understand what this tool",
+    "start": 2364.28,
+    "duration": 3.72
+  },
+  {
+    "text": "actually does right so get email this",
+    "start": 2365.839,
+    "duration": 4.24
+  },
+  {
+    "text": "tool retrieves emails or inbox uh emails",
+    "start": 2368,
+    "duration": 4.28
+  },
+  {
+    "text": "from my inbox right so just describing",
+    "start": 2370.079,
+    "duration": 3.841
+  },
+  {
+    "text": "very quickly what this tool actually",
+    "start": 2372.28,
+    "duration": 4.319
+  },
+  {
+    "text": "does will help your agent use it better",
+    "start": 2373.92,
+    "duration": 5.36
+  },
+  {
+    "text": "right uh then we have the same basically",
+    "start": 2376.599,
+    "duration": 4.921
+  },
+  {
+    "text": "for the user inputs right so the name of",
+    "start": 2379.28,
+    "duration": 3.92
+  },
+  {
+    "text": "the user input will also be read by your",
+    "start": 2381.52,
+    "duration": 4.4
+  },
+  {
+    "text": "agent right red Onre emails use only un",
+    "start": 2383.2,
+    "duration": 5.72
+  },
+  {
+    "text": "red so basically this part description",
+    "start": 2385.92,
+    "duration": 4.84
+  },
+  {
+    "text": "of our user input is basically prompt to",
+    "start": 2388.92,
+    "duration": 4.52
+  },
+  {
+    "text": "our agent on how to fill it out right so",
+    "start": 2390.76,
+    "duration": 5.2
+  },
+  {
+    "text": "we can tell it directly use only unread",
+    "start": 2393.44,
+    "duration": 4.96
+  },
+  {
+    "text": "when retrieving new unread emails Etc",
+    "start": 2395.96,
+    "duration": 3.879
+  },
+  {
+    "text": "right so we actually want to describe",
+    "start": 2398.4,
+    "duration": 3.48
+  },
+  {
+    "text": "here what our agents should do or what",
+    "start": 2399.839,
+    "duration": 3.801
+  },
+  {
+    "text": "your agent should choose in this case",
+    "start": 2401.88,
+    "duration": 3.28
+  },
+  {
+    "text": "with the drop down or what it should put",
+    "start": 2403.64,
+    "duration": 4.8
+  },
+  {
+    "text": "in right or default value like we can uh",
+    "start": 2405.16,
+    "duration": 4.88
+  },
+  {
+    "text": "we can really prompt it",
+    "start": 2408.44,
+    "duration": 5
+  },
+  {
+    "text": "here and then uh also important in my",
+    "start": 2410.04,
+    "duration": 6.16
+  },
+  {
+    "text": "experience is send clean data back to",
+    "start": 2413.44,
+    "duration": 4.56
+  },
+  {
+    "text": "your agent so we don't want to for",
+    "start": 2416.2,
+    "duration": 4.639
+  },
+  {
+    "text": "example we scrape a website right or we",
+    "start": 2418,
+    "duration": 5.96
+  },
+  {
+    "text": "get 50 emails uh back from our inbox we",
+    "start": 2420.839,
+    "duration": 5.161
+  },
+  {
+    "text": "don't want to send this blob of text",
+    "start": 2423.96,
+    "duration": 3.52
+  },
+  {
+    "text": "that is completely unorganized back back",
+    "start": 2426,
+    "duration": 3.04
+  },
+  {
+    "text": "to our agent because basically we're",
+    "start": 2427.48,
+    "duration": 3.2
+  },
+  {
+    "text": "giving another task another",
+    "start": 2429.04,
+    "duration": 3.84
+  },
+  {
+    "text": "responsibility to our agent which is",
+    "start": 2430.68,
+    "duration": 4.679
+  },
+  {
+    "text": "cleaning up data and because our agent",
+    "start": 2432.88,
+    "duration": 4.4
+  },
+  {
+    "text": "is already a little bit overwhelmed with",
+    "start": 2435.359,
+    "duration": 3.96
+  },
+  {
+    "text": "the amount of things he has to do uh we",
+    "start": 2437.28,
+    "duration": 3.64
+  },
+  {
+    "text": "want to make it as simp his life as",
+    "start": 2439.319,
+    "duration": 3.8
+  },
+  {
+    "text": "simple as possible and send clean data",
+    "start": 2440.92,
+    "duration": 4.159
+  },
+  {
+    "text": "back to our agent so yeah I just have a",
+    "start": 2443.119,
+    "duration": 4.48
+  },
+  {
+    "text": "quick example Summarize each email below",
+    "start": 2445.079,
+    "duration": 4.401
+  },
+  {
+    "text": "right so this this is from the get email",
+    "start": 2447.599,
+    "duration": 4.961
+  },
+  {
+    "text": "Tool uh in 30 words in a concise way",
+    "start": 2449.48,
+    "duration": 4.599
+  },
+  {
+    "text": "still include all relevant info make",
+    "start": 2452.56,
+    "duration": 3.519
+  },
+  {
+    "text": "sure to mention action item so I just",
+    "start": 2454.079,
+    "duration": 5.28
+  },
+  {
+    "text": "sent back to the agent a very concise",
+    "start": 2456.079,
+    "duration": 5.361
+  },
+  {
+    "text": "summary of each email instead of a",
+    "start": 2459.359,
+    "duration": 4.841
+  },
+  {
+    "text": "blable text of 30 30 emails and then he",
+    "start": 2461.44,
+    "duration": 5.12
+  },
+  {
+    "text": "will have to summarize and do all kinds",
+    "start": 2464.2,
+    "duration": 3.8
+  },
+  {
+    "text": "of other things before he sends it back",
+    "start": 2466.56,
+    "duration": 4.72
+  },
+  {
+    "text": "to me right uh then we have sub agent",
+    "start": 2468,
+    "duration": 5.52
+  },
+  {
+    "text": "prompting so important prompt techniques",
+    "start": 2471.28,
+    "duration": 4.48
+  },
+  {
+    "text": "for sub agents right so in in the sub",
+    "start": 2473.52,
+    "duration": 5.36
+  },
+  {
+    "text": "agent section of your manager agent um",
+    "start": 2475.76,
+    "duration": 5.359
+  },
+  {
+    "text": "you have a a setting there which is",
+    "start": 2478.88,
+    "duration": 3.76
+  },
+  {
+    "text": "called prompt for how to use right this",
+    "start": 2481.119,
+    "duration": 4.161
+  },
+  {
+    "text": "is basically you can double down and say",
+    "start": 2482.64,
+    "duration": 4.84
+  },
+  {
+    "text": "tell your manager agent again what this",
+    "start": 2485.28,
+    "duration": 3.64
+  },
+  {
+    "text": "agent does right that's all you do this",
+    "start": 2487.48,
+    "duration": 2.72
+  },
+  {
+    "text": "agent gathers competitor data from",
+    "start": 2488.92,
+    "duration": 3.6
+  },
+  {
+    "text": "review sites Google News blogs Etc so",
+    "start": 2490.2,
+    "duration": 3.52
+  },
+  {
+    "text": "again we double down and we let our",
+    "start": 2492.52,
+    "duration": 3.72
+  },
+  {
+    "text": "manager agent very clearly know what",
+    "start": 2493.72,
+    "duration": 5.52
+  },
+  {
+    "text": "this agent can do right then we have",
+    "start": 2496.24,
+    "duration": 5.119
+  },
+  {
+    "text": "another option there which is a template",
+    "start": 2499.24,
+    "duration": 4.04
+  },
+  {
+    "text": "for communication right so as I said",
+    "start": 2501.359,
+    "duration": 4.72
+  },
+  {
+    "text": "before we want to sort of uh make sure",
+    "start": 2503.28,
+    "duration": 4.88
+  },
+  {
+    "text": "that our manager agent clearly",
+    "start": 2506.079,
+    "duration": 4.361
+  },
+  {
+    "text": "communicates to our sub agent uh with",
+    "start": 2508.16,
+    "duration": 3.76
+  },
+  {
+    "text": "the things he has to do because if he",
+    "start": 2510.44,
+    "duration": 4.56
+  },
+  {
+    "text": "doesn't our system fails right so we can",
+    "start": 2511.92,
+    "duration": 4.76
+  },
+  {
+    "text": "do this through a template for",
+    "start": 2515,
+    "duration": 4.079
+  },
+  {
+    "text": "communication right so we can say please",
+    "start": 2516.68,
+    "duration": 4.32
+  },
+  {
+    "text": "do a comp this is from another agent",
+    "start": 2519.079,
+    "duration": 2.961
+  },
+  {
+    "text": "right but please do a competitive",
+    "start": 2521,
+    "duration": 3.48
+  },
+  {
+    "text": "research on this this for the past these",
+    "start": 2522.04,
+    "duration": 5.4
+  },
+  {
+    "text": "days right so we can sort of specify",
+    "start": 2524.48,
+    "duration": 5.16
+  },
+  {
+    "text": "that he always has to say this to our",
+    "start": 2527.44,
+    "duration": 4.08
+  },
+  {
+    "text": "sub agent right to make sure that our",
+    "start": 2529.64,
+    "duration": 3.8
+  },
+  {
+    "text": "sub agent retrieves receives all the",
+    "start": 2531.52,
+    "duration": 3.4
+  },
+  {
+    "text": "data he needs to actually perform his",
+    "start": 2533.44,
+    "duration": 3.12
+  },
+  {
+    "text": "actions right and then we can add in",
+    "start": 2534.92,
+    "duration": 4
+  },
+  {
+    "text": "these variables here these variables we",
+    "start": 2536.56,
+    "duration": 3.88
+  },
+  {
+    "text": "can basically then here you can see",
+    "start": 2538.92,
+    "duration": 5.08
+  },
+  {
+    "text": "companies Define again in another prompt",
+    "start": 2540.44,
+    "duration": 5.679
+  },
+  {
+    "text": "to our agent on what how to actually",
+    "start": 2544,
+    "duration": 5.079
+  },
+  {
+    "text": "fill in the variables right so I'll I'll",
+    "start": 2546.119,
+    "duration": 4.321
+  },
+  {
+    "text": "tell him the companies that have to be",
+    "start": 2549.079,
+    "duration": 3.081
+  },
+  {
+    "text": "researched right the platforms that have",
+    "start": 2550.44,
+    "duration": 3.919
+  },
+  {
+    "text": "to be researched right so lot of",
+    "start": 2552.16,
+    "duration": 5.64
+  },
+  {
+    "text": "prompting here but uh yes it it it can",
+    "start": 2554.359,
+    "duration": 5.76
+  },
+  {
+    "text": "be helpful right like I notice even if",
+    "start": 2557.8,
+    "duration": 3.88
+  },
+  {
+    "text": "you just add it in the system prompt",
+    "start": 2560.119,
+    "duration": 3.96
+  },
+  {
+    "text": "like how to communicate what it works",
+    "start": 2561.68,
+    "duration": 3.96
+  },
+  {
+    "text": "quite well already but you can really",
+    "start": 2564.079,
+    "duration": 3.121
+  },
+  {
+    "text": "double down on the reliability through",
+    "start": 2565.64,
+    "duration": 4.4
+  },
+  {
+    "text": "these templates for communication right",
+    "start": 2567.2,
+    "duration": 5.52
+  },
+  {
+    "text": "then uh we have another way to double",
+    "start": 2570.04,
+    "duration": 5.64
+  },
+  {
+    "text": "down on that uh letting our manager",
+    "start": 2572.72,
+    "duration": 5.08
+  },
+  {
+    "text": "agent know what our sof agent does which",
+    "start": 2575.68,
+    "duration": 5.24
+  },
+  {
+    "text": "is in the agent profile of the sub agent",
+    "start": 2577.8,
+    "duration": 4.88
+  },
+  {
+    "text": "we have the agent description and agent",
+    "start": 2580.92,
+    "duration": 3.399
+  },
+  {
+    "text": "name and again we want to describe there",
+    "start": 2582.68,
+    "duration": 4.2
+  },
+  {
+    "text": "very well what the sub agent does to",
+    "start": 2584.319,
+    "duration": 4.601
+  },
+  {
+    "text": "because our manager agent will read",
+    "start": 2586.88,
+    "duration": 5.08
+  },
+  {
+    "text": "that and then what I also do in terms of",
+    "start": 2588.92,
+    "duration": 5.199
+  },
+  {
+    "text": "the sub agents and I'm not sure if this",
+    "start": 2591.96,
+    "duration": 3.879
+  },
+  {
+    "text": "is actually necessary or if this just",
+    "start": 2594.119,
+    "duration": 4.121
+  },
+  {
+    "text": "hardcoded in but I always tell our my",
+    "start": 2595.839,
+    "duration": 4.801
+  },
+  {
+    "text": "sub agents to Al always report back the",
+    "start": 2598.24,
+    "duration": 5.68
+  },
+  {
+    "text": "information or uh to my manager agent",
+    "start": 2600.64,
+    "duration": 4.76
+  },
+  {
+    "text": "right I don't know if this is actually",
+    "start": 2603.92,
+    "duration": 3
+  },
+  {
+    "text": "necessary but I usually do it I add it",
+    "start": 2605.4,
+    "duration": 3.64
+  },
+  {
+    "text": "in the SOP right as the last step you",
+    "start": 2606.92,
+    "duration": 4.08
+  },
+  {
+    "text": "report back all the links back to your",
+    "start": 2609.04,
+    "duration": 4.2
+  },
+  {
+    "text": "manager agent right and also make clear",
+    "start": 2611,
+    "duration": 5.319
+  },
+  {
+    "text": "what he has to send back right and then",
+    "start": 2613.24,
+    "duration": 5
+  },
+  {
+    "text": "uh and I also add that actually in the",
+    "start": 2616.319,
+    "duration": 2.841
+  },
+  {
+    "text": "flow",
+    "start": 2618.24,
+    "duration": 4
+  },
+  {
+    "text": "Builder and then we have another few",
+    "start": 2619.16,
+    "duration": 5.04
+  },
+  {
+    "text": "prompting things inside of relevance AI",
+    "start": 2622.24,
+    "duration": 3.4
+  },
+  {
+    "text": "specifically which is the first one is",
+    "start": 2624.2,
+    "duration": 3.32
+  },
+  {
+    "text": "labeling tasks so basically we can sort",
+    "start": 2625.64,
+    "duration": 5.32
+  },
+  {
+    "text": "of organize our dashboard and uh sort of",
+    "start": 2627.52,
+    "duration": 6.079
+  },
+  {
+    "text": "have labels for what has been done with",
+    "start": 2630.96,
+    "duration": 4.2
+  },
+  {
+    "text": "each task right and basically this is a",
+    "start": 2633.599,
+    "duration": 3
+  },
+  {
+    "text": "prompt too right so we can say blog",
+    "start": 2635.16,
+    "duration": 3.76
+  },
+  {
+    "text": "posted right and that's that's the",
+    "start": 2636.599,
+    "duration": 4.52
+  },
+  {
+    "text": "actual label right and then we prompted",
+    "start": 2638.92,
+    "duration": 3.8
+  },
+  {
+    "text": "when to give it that label right so",
+    "start": 2641.119,
+    "duration": 3.321
+  },
+  {
+    "text": "after post the web flow tool",
+    "start": 2642.72,
+    "duration": 4.119
+  },
+  {
+    "text": "successfully run right so you can do",
+    "start": 2644.44,
+    "duration": 4
+  },
+  {
+    "text": "this if you want to sort of organize it",
+    "start": 2646.839,
+    "duration": 2.961
+  },
+  {
+    "text": "a little bit better have a better",
+    "start": 2648.44,
+    "duration": 3.32
+  },
+  {
+    "text": "overview in my experience I'm not a huge",
+    "start": 2649.8,
+    "duration": 4.24
+  },
+  {
+    "text": "fan of this because I notice sometimes",
+    "start": 2651.76,
+    "duration": 4.12
+  },
+  {
+    "text": "it runs into error because of this",
+    "start": 2654.04,
+    "duration": 3.64
+  },
+  {
+    "text": "errors because of this uh feature",
+    "start": 2655.88,
+    "duration": 3.479
+  },
+  {
+    "text": "specifically because for my",
+    "start": 2657.68,
+    "duration": 2.919
+  },
+  {
+    "text": "understanding it's basically just a tool",
+    "start": 2659.359,
+    "duration": 4.041
+  },
+  {
+    "text": "that relevant I added in the background",
+    "start": 2660.599,
+    "duration": 3.681
+  },
+  {
+    "text": "but if you want to get better",
+    "start": 2663.4,
+    "duration": 2.679
+  },
+  {
+    "text": "organization you can use this and then",
+    "start": 2664.28,
+    "duration": 3.319
+  },
+  {
+    "text": "you have we have one more",
+    "start": 2666.079,
+    "duration": 3.28
+  },
+  {
+    "text": "thing which is naming task right",
+    "start": 2667.599,
+    "duration": 3.361
+  },
+  {
+    "text": "basically same thing but instead of",
+    "start": 2669.359,
+    "duration": 3.521
+  },
+  {
+    "text": "putting labels we can also name the",
+    "start": 2670.96,
+    "duration": 3.84
+  },
+  {
+    "text": "different tasks in a specific way and",
+    "start": 2672.88,
+    "duration": 3.719
+  },
+  {
+    "text": "here in the advanced settings we have an",
+    "start": 2674.8,
+    "duration": 3.72
+  },
+  {
+    "text": "option for instruct instructions for",
+    "start": 2676.599,
+    "duration": 4.201
+  },
+  {
+    "text": "naming tasks there we can basically tell",
+    "start": 2678.52,
+    "duration": 4.76
+  },
+  {
+    "text": "our agent how to name these task Right",
+    "start": 2680.8,
+    "duration": 4.319
+  },
+  {
+    "text": "Use the the video title for naming the",
+    "start": 2683.28,
+    "duration": 3.68
+  },
+  {
+    "text": "task for example now again I'm not a",
+    "start": 2685.119,
+    "duration": 4.041
+  },
+  {
+    "text": "huge fan because we already overwhelming",
+    "start": 2686.96,
+    "duration": 4.359
+  },
+  {
+    "text": "these agents usually with tasks to do",
+    "start": 2689.16,
+    "duration": 5.52
+  },
+  {
+    "text": "and if we do these things too you know",
+    "start": 2691.319,
+    "duration": 5.24
+  },
+  {
+    "text": "you know you can imagine the reliability",
+    "start": 2694.68,
+    "duration": 4.76
+  },
+  {
+    "text": "might go down a",
+    "start": 2696.559,
+    "duration": 2.881
+  },
+  {
+    "text": "bit and then lastly we have the flow",
+    "start": 2700.119,
+    "duration": 5.361
+  },
+  {
+    "text": "Builder also specific for relevance AI",
+    "start": 2702.48,
+    "duration": 4.76
+  },
+  {
+    "text": "now this becomes important when you have",
+    "start": 2705.48,
+    "duration": 3.839
+  },
+  {
+    "text": "like a very specific sop or a very",
+    "start": 2707.24,
+    "duration": 4.359
+  },
+  {
+    "text": "complicated sop that has to be followed",
+    "start": 2709.319,
+    "duration": 4.681
+  },
+  {
+    "text": "right you can basically just double down",
+    "start": 2711.599,
+    "duration": 3.96
+  },
+  {
+    "text": "on that sop in your prompt because it is",
+    "start": 2714,
+    "duration": 4.559
+  },
+  {
+    "text": "very difficult sometimes to write out in",
+    "start": 2715.559,
+    "duration": 5.201
+  },
+  {
+    "text": "language an sop you're writing out",
+    "start": 2718.559,
+    "duration": 4.56
+  },
+  {
+    "text": "conditions Etc inside of a prompt it's",
+    "start": 2720.76,
+    "duration": 6.359
+  },
+  {
+    "text": "not very uh easy to do you know so that",
+    "start": 2723.119,
+    "duration": 5.521
+  },
+  {
+    "text": "why we can use this flow Builder to sort",
+    "start": 2727.119,
+    "duration": 3.361
+  },
+  {
+    "text": "of double down on on that and make it",
+    "start": 2728.64,
+    "duration": 4.04
+  },
+  {
+    "text": "clearer right and in my experience when",
+    "start": 2730.48,
+    "duration": 3.8
+  },
+  {
+    "text": "you need it when there is this sort of",
+    "start": 2732.68,
+    "duration": 3.8
+  },
+  {
+    "text": "complicated it really helps to do this",
+    "start": 2734.28,
+    "duration": 3.6
+  },
+  {
+    "text": "now I'm gonna not going to go in detail",
+    "start": 2736.48,
+    "duration": 3.16
+  },
+  {
+    "text": "but basically what you can do is just",
+    "start": 2737.88,
+    "duration": 4.239
+  },
+  {
+    "text": "instruction right this do this then do",
+    "start": 2739.64,
+    "duration": 3.959
+  },
+  {
+    "text": "this then do this and then if you want",
+    "start": 2742.119,
+    "duration": 3.2
+  },
+  {
+    "text": "you can add in a condition and then you",
+    "start": 2743.599,
+    "duration": 4.881
+  },
+  {
+    "text": "have a separate sort of uh tree that it",
+    "start": 2745.319,
+    "duration": 5.641
+  },
+  {
+    "text": "has to follow if this condition was met",
+    "start": 2748.48,
+    "duration": 5.28
+  },
+  {
+    "text": "or that conditional met so use it if you",
+    "start": 2750.96,
+    "duration": 6.52
+  },
+  {
+    "text": "have a complicated sop now lastly I just",
+    "start": 2753.76,
+    "duration": 6.48
+  },
+  {
+    "text": "updated my um AI agent prompt helper",
+    "start": 2757.48,
+    "duration": 5.16
+  },
+  {
+    "text": "tool now again it doesn't replace",
+    "start": 2760.24,
+    "duration": 5.079
+  },
+  {
+    "text": "prompting but it helps you write them",
+    "start": 2762.64,
+    "duration": 4.479
+  },
+  {
+    "text": "better and faster right because it can",
+    "start": 2765.319,
+    "duration": 3.8
+  },
+  {
+    "text": "be quite timec consuming to write these",
+    "start": 2767.119,
+    "duration": 4.081
+  },
+  {
+    "text": "good Agent prompts but they are very",
+    "start": 2769.119,
+    "duration": 3.561
+  },
+  {
+    "text": "important so that's really what this",
+    "start": 2771.2,
+    "duration": 4.68
+  },
+  {
+    "text": "tool does so here here I have it right I",
+    "start": 2772.68,
+    "duration": 6.48
+  },
+  {
+    "text": "make sure to also um share this a agent",
+    "start": 2775.88,
+    "duration": 4.92
+  },
+  {
+    "text": "prompt helper tool inside of my",
+    "start": 2779.16,
+    "duration": 4.52
+  },
+  {
+    "text": "community for free um so you can use it",
+    "start": 2780.8,
+    "duration": 4.759
+  },
+  {
+    "text": "yourself so you can see here this tool",
+    "start": 2783.68,
+    "duration": 2.919
+  },
+  {
+    "text": "is meant to help you save time and",
+    "start": 2785.559,
+    "duration": 3.081
+  },
+  {
+    "text": "optimiz prompts for AI agent and AI",
+    "start": 2786.599,
+    "duration": 4.24
+  },
+  {
+    "text": "agent teams you can keep input short and",
+    "start": 2788.64,
+    "duration": 4.84
+  },
+  {
+    "text": "fast the tool will do the rest your sop",
+    "start": 2790.839,
+    "duration": 4.24
+  },
+  {
+    "text": "is the only one that should be actual",
+    "start": 2793.48,
+    "duration": 3.76
+  },
+  {
+    "text": "actually detailed right because my",
+    "start": 2795.079,
+    "duration": 4.04
+  },
+  {
+    "text": "prompt helper can come up with your s",
+    "start": 2797.24,
+    "duration": 4.28
+  },
+  {
+    "text": "specific s so the idea is you could just",
+    "start": 2799.119,
+    "duration": 4.281
+  },
+  {
+    "text": "type it in very quickly and it",
+    "start": 2801.52,
+    "duration": 3.52
+  },
+  {
+    "text": "automatically sort of improves Clarity",
+    "start": 2803.4,
+    "duration": 3.24
+  },
+  {
+    "text": "it expands a little on the prompt and it",
+    "start": 2805.04,
+    "duration": 4
+  },
+  {
+    "text": "also adds in um those proven best",
+    "start": 2806.64,
+    "duration": 5.16
+  },
+  {
+    "text": "practices automatically right and then",
+    "start": 2809.04,
+    "duration": 4.68
+  },
+  {
+    "text": "uh most importantly maybe it auto",
+    "start": 2811.8,
+    "duration": 4.039
+  },
+  {
+    "text": "generates the example section and the",
+    "start": 2813.72,
+    "duration": 4.04
+  },
+  {
+    "text": "notes section this can also be quite",
+    "start": 2815.839,
+    "duration": 3.76
+  },
+  {
+    "text": "consuming now it is important to",
+    "start": 2817.76,
+    "duration": 3.599
+  },
+  {
+    "text": "actually double check if that example",
+    "start": 2819.599,
+    "duration": 4.561
+  },
+  {
+    "text": "section makes sense right uh before you",
+    "start": 2821.359,
+    "duration": 5.121
+  },
+  {
+    "text": "actually put it out and it also formats",
+    "start": 2824.16,
+    "duration": 4.28
+  },
+  {
+    "text": "your prompts in a markdown format so I",
+    "start": 2826.48,
+    "duration": 3.8
+  },
+  {
+    "text": "just put in a quick example here right",
+    "start": 2828.44,
+    "duration": 3.399
+  },
+  {
+    "text": "you could just type it in very quickly",
+    "start": 2830.28,
+    "duration": 4.039
+  },
+  {
+    "text": "your Ben personal assistant for Ben",
+    "start": 2831.839,
+    "duration": 4.161
+  },
+  {
+    "text": "right you handle his task related to his",
+    "start": 2834.319,
+    "duration": 3.52
+  },
+  {
+    "text": "email inbox so you can be very short and",
+    "start": 2836,
+    "duration": 3.72
+  },
+  {
+    "text": "our prompt helper tool will sort of",
+    "start": 2837.839,
+    "duration": 4
+  },
+  {
+    "text": "expand on it and you know add these",
+    "start": 2839.72,
+    "duration": 3.92
+  },
+  {
+    "text": "proven best practices context you're",
+    "start": 2841.839,
+    "duration": 5.081
+  },
+  {
+    "text": "doing this to help Ben Ben manage this",
+    "start": 2843.64,
+    "duration": 5.08
+  },
+  {
+    "text": "personal Administration right now the",
+    "start": 2846.92,
+    "duration": 5.12
+  },
+  {
+    "text": "SOP I actually wrote out right um",
+    "start": 2848.72,
+    "duration": 6.56
+  },
+  {
+    "text": "instructions the rules very quickly and",
+    "start": 2852.04,
+    "duration": 4.92
+  },
+  {
+    "text": "the tools and sub agents then we can run",
+    "start": 2855.28,
+    "duration": 5.88
+  },
+  {
+    "text": "the tool we don't have to add in the",
+    "start": 2856.96,
+    "duration": 4.2
+  },
+  {
+    "text": "examples and you can see now generated",
+    "start": 2865.4,
+    "duration": 5
+  },
+  {
+    "text": "uh The Prompt the AI agent prompt you",
+    "start": 2868.64,
+    "duration": 3.28
+  },
+  {
+    "text": "can see you're an expert personal",
+    "start": 2870.4,
+    "duration": 3.24
+  },
+  {
+    "text": "assistance for B now it added that sort",
+    "start": 2871.92,
+    "duration": 5.24
+  },
+  {
+    "text": "of you know extra sort of role prompt",
+    "start": 2873.64,
+    "duration": 5.479
+  },
+  {
+    "text": "with the expert or world class with a",
+    "start": 2877.16,
+    "duration": 3.679
+  },
+  {
+    "text": "particular knack for managing right it",
+    "start": 2879.119,
+    "duration": 4.361
+  },
+  {
+    "text": "added in the qualities right your goal",
+    "start": 2880.839,
+    "duration": 5.041
+  },
+  {
+    "text": "is it expanded a bit on the objective",
+    "start": 2883.48,
+    "duration": 5.2
+  },
+  {
+    "text": "and it added in think step by step right",
+    "start": 2885.88,
+    "duration": 5.28
+  },
+  {
+    "text": "um the SOP is still the same and it",
+    "start": 2888.68,
+    "duration": 4.48
+  },
+  {
+    "text": "added in in the instructions the",
+    "start": 2891.16,
+    "duration": 4.04
+  },
+  {
+    "text": "emotional manipulation tricks right it",
+    "start": 2893.16,
+    "duration": 4.679
+  },
+  {
+    "text": "is vital to my career I will tip you",
+    "start": 2895.2,
+    "duration": 5.52
+  },
+  {
+    "text": "blah blah blah and it expanded a bit on",
+    "start": 2897.839,
+    "duration": 5.28
+  },
+  {
+    "text": "the tools and sub agents and you can see",
+    "start": 2900.72,
+    "duration": 5.16
+  },
+  {
+    "text": "it generated examples right so schedule",
+    "start": 2903.119,
+    "duration": 6
+  },
+  {
+    "text": "meeting with uh Dr Smith at 10 a.m. next",
+    "start": 2905.88,
+    "duration": 6.04
+  },
+  {
+    "text": "Monday right and you can see the output",
+    "start": 2909.119,
+    "duration": 5
+  },
+  {
+    "text": "is like his sop an example of an sop now",
+    "start": 2911.92,
+    "duration": 3.72
+  },
+  {
+    "text": "let's see if he actually did it right",
+    "start": 2914.119,
+    "duration": 3.44
+  },
+  {
+    "text": "decide which agent use calendar manager",
+    "start": 2915.64,
+    "duration": 3.88
+  },
+  {
+    "text": "agent did it right right communicate",
+    "start": 2917.559,
+    "duration": 3.601
+  },
+  {
+    "text": "clearly to each please schedule a",
+    "start": 2919.52,
+    "duration": 3.48
+  },
+  {
+    "text": "meeting with Dr Smith at 10: a.m. next",
+    "start": 2921.16,
+    "duration": 4.36
+  },
+  {
+    "text": "Monday sa Paulo time so did it well",
+    "start": 2923,
+    "duration": 4.68
+  },
+  {
+    "text": "right and always communicate updates",
+    "start": 2925.52,
+    "duration": 3.96
+  },
+  {
+    "text": "back to Ben meeting with Dr Smith",
+    "start": 2927.68,
+    "duration": 3.639
+  },
+  {
+    "text": "scheduled for 10: a.m. next Monday so",
+    "start": 2929.48,
+    "duration": 3.8
+  },
+  {
+    "text": "you can see did it perfectly the example",
+    "start": 2931.319,
+    "duration": 3.321
+  },
+  {
+    "text": "so you don't have to waste time with",
+    "start": 2933.28,
+    "duration": 3.72
+  },
+  {
+    "text": "this right did another one add by gross",
+    "start": 2934.64,
+    "duration": 4.12
+  },
+  {
+    "text": "to my to-do list and then it also added",
+    "start": 2937,
+    "duration": 3.079
+  },
+  {
+    "text": "in the note section where it basically",
+    "start": 2938.76,
+    "duration": 3.799
+  },
+  {
+    "text": "doubl down on his perspective my tools",
+    "start": 2940.079,
+    "duration": 4.04
+  },
+  {
+    "text": "perspective on the most important rules",
+    "start": 2942.559,
+    "duration": 4.28
+  },
+  {
+    "text": "or things to follow right so again it",
+    "start": 2944.119,
+    "duration": 4.041
+  },
+  {
+    "text": "doesn't replace your prompting but it",
+    "start": 2946.839,
+    "duration": 2.681
+  },
+  {
+    "text": "might help you write them a little bit",
+    "start": 2948.16,
+    "duration": 4
+  },
+  {
+    "text": "better and a little bit faster so that's",
+    "start": 2949.52,
+    "duration": 5
+  },
+  {
+    "text": "it for this video uh I hope this was",
+    "start": 2952.16,
+    "duration": 4.84
+  },
+  {
+    "text": "useful I I added in one more thing here",
+    "start": 2954.52,
+    "duration": 4.799
+  },
+  {
+    "text": "which is an LM pricing calculator which",
+    "start": 2957,
+    "duration": 4.319
+  },
+  {
+    "text": "I found very useful when you trying to",
+    "start": 2959.319,
+    "duration": 4.321
+  },
+  {
+    "text": "price the system for clients when you're",
+    "start": 2961.319,
+    "duration": 4.081
+  },
+  {
+    "text": "trying to because it's sometimes very",
+    "start": 2963.64,
+    "duration": 5.08
+  },
+  {
+    "text": "hard to predict uh the the L&M",
+    "start": 2965.4,
+    "duration": 5.719
+  },
+  {
+    "text": "pricing uh when you start running this",
+    "start": 2968.72,
+    "duration": 4.48
+  },
+  {
+    "text": "on large volume of tasks so usually what",
+    "start": 2971.119,
+    "duration": 4.72
+  },
+  {
+    "text": "I try to do is run these systems once",
+    "start": 2973.2,
+    "duration": 5.639
+  },
+  {
+    "text": "through this openi API price calculator",
+    "start": 2975.839,
+    "duration": 6.201
+  },
+  {
+    "text": "you can basically put in prompts and",
+    "start": 2978.839,
+    "duration": 6.041
+  },
+  {
+    "text": "outputs and and through that you can",
+    "start": 2982.04,
+    "duration": 5.039
+  },
+  {
+    "text": "sort of see the cost right so you can do",
+    "start": 2984.88,
+    "duration": 3.88
+  },
+  {
+    "text": "that run your whole system through which",
+    "start": 2987.079,
+    "duration": 4.601
+  },
+  {
+    "text": "is a little bit of a hassle but once uh",
+    "start": 2988.76,
+    "duration": 5
+  },
+  {
+    "text": "to see the price per one run and",
+    "start": 2991.68,
+    "duration": 3.76
+  },
+  {
+    "text": "therefore you can then calculate how",
+    "start": 2993.76,
+    "duration": 5
+  },
+  {
+    "text": "much this will cost if they run it on",
+    "start": 2995.44,
+    "duration": 5.919
+  },
+  {
+    "text": "5,000 or 10,000 tasks now that's it for",
+    "start": 2998.76,
+    "duration": 4.039
+  },
+  {
+    "text": "this video uh thank you so much for",
+    "start": 3001.359,
+    "duration": 3.601
+  },
+  {
+    "text": "watching if you're still watching uh and",
+    "start": 3002.799,
+    "duration": 3.52
+  },
+  {
+    "text": "if you got any value out of it I would",
+    "start": 3004.96,
+    "duration": 3.32
+  },
+  {
+    "text": "highly appreciate if you can like And",
+    "start": 3006.319,
+    "duration": 4.881
+  },
+  {
+    "text": "subscribe and maybe leave a comment uh",
+    "start": 3008.28,
+    "duration": 4.319
+  },
+  {
+    "text": "again thank you so much and I'll see you",
+    "start": 3011.2,
+    "duration": 4.28
+  },
+  {
+    "text": "in the next one",
+    "start": 3012.599,
+    "duration": 2.881
+  }
+]

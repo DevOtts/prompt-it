@@ -1,0 +1,4847 @@
+[
+  {
+    "text": "- Basically, this entire roundtable session here is just gonna be focused mainly on prompt engineering.",
+    "start": "00:00:00",
+    "end": "00:00:06"
+  },
+  {
+    "text": "A variety of perspectives at this table around prompting from a research side, from a consumer side, and from the enterprise side.",
+    "start": "00:00:06",
+    "end": "00:00:13"
+  },
+  {
+    "text": "And I want to just get the whole wide range of opinions because there's a lot of them.",
+    "start": "00:00:13",
+    "end": "00:00:18"
+  },
+  {
+    "text": "And just open it up to discussion and explore what prompt engineering really is and what it's all about.",
+    "start": "00:00:18",
+    "end": "00:00:25"
+  },
+  {
+    "text": "And yeah, we'll just take it from there.",
+    "start": "00:00:25",
+    "end": "00:00:28"
+  },
+  {
+    "text": "So maybe we can go around the horn with intros.",
+    "start": "00:00:28",
+    "end": "00:00:30"
+  },
+  {
+    "text": "I can kick it off.",
+    "start": "00:00:30",
+    "end": "00:00:31"
+  },
+  {
+    "text": "I'm Alex.",
+    "start": "00:00:31",
+    "end": "00:00:32"
+  },
+  {
+    "text": "I lead Developer Relations here at Anthropic.",
+    "start": "00:00:32",
+    "end": "00:00:35"
+  },
+  {
+    "text": "Before that, I was technically a prompt engineer at Anthropic.",
+    "start": "00:00:35",
+    "end": "00:00:39"
+  },
+  {
+    "text": "I worked on our prompt engineering team, and did a variety of roles spanning from a solutions architect type of thing, to working on the research side.",
+    "start": "00:00:39",
+    "end": "00:00:51"
+  },
+  {
+    "text": "So with that, maybe I can hand it over to David.",
+    "start": "00:00:51",
+    "end": "00:00:53"
+  },
+  {
+    "text": "- Heck, yeah.",
+    "start": "00:00:53",
+    "end": "00:00:54"
+  },
+  {
+    "text": "My name's David Hershey.",
+    "start": "00:00:54",
+    "end": "00:00:56"
+  },
+  {
+    "text": "I work with customers mostly at Anthropic on a bunch of stuff technical, I help people with finetuning, but also just a lot of the generic things that make it hard to adopt language models of prompting.",
+    "start": "00:00:56",
+    "end": "00:01:08"
+  },
+  {
+    "text": "And just like how to build systems with language models, but spend most of my time working with customers.",
+    "start": "00:01:08",
+    "end": "00:01:14"
+  },
+  {
+    "text": "- Cool.",
+    "start": "00:01:14",
+    "end": "00:01:15"
+  },
+  {
+    "text": "I'm Amanda Askell.",
+    "start": "00:01:15",
+    "end": "00:01:16"
+  },
+  {
+    "text": "I lead one of the Finetuning teams at Anthropic, where I guess I try to make Claude be honest and kind.",
+    "start": "00:01:16",
+    "end": "00:01:23"
+  },
+  {
+    "text": "Yeah.",
+    "start": "00:01:24",
+    "end": "00:01:26"
+  },
+  {
+    "text": "- My name is Zack Witten.",
+    "start": "00:01:26",
+    "end": "00:01:27"
+  },
+  {
+    "text": "I'm a Prompt Engineer at Anthropic.",
+    "start": "00:01:27",
+    "end": "00:01:30"
+  },
+  {
+    "text": "Alex and I always argue about who the first one was.",
+    "start": "00:01:30",
+    "end": "00:01:32"
+  },
+  {
+    "text": "He says it's him, I say it's me.",
+    "start": "00:01:32",
+    "end": "00:01:33"
+  },
+  {
+    "text": "- Contested.",
+    "start": "00:01:33",
+    "end": "00:01:34"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:01:34",
+    "end": "00:01:35"
+  },
+  {
+    "text": "I used to work a lot with individual customers, kind of the same way David does now.",
+    "start": "00:01:35",
+    "end": "00:01:40"
+  },
+  {
+    "text": "And then as we brought more solutions architects to the team, I started working on things that are meant to raise the overall levels of ambient prompting in society, I guess, like the prompt generator and the various educational materials that people use.",
+    "start": "00:01:40",
+    "end": "00:01:59"
+  },
+  {
+    "text": "- Nice, cool.",
+    "start": "00:01:59",
+    "end": "00:02:00"
+  },
+  {
+    "text": "Well, thanks guys for all coming here.",
+    "start": "00:02:00",
+    "end": "00:02:02"
+  },
+  {
+    "text": "I'm gonna start with a very broad question just so we have a frame going into the rest of our conversations here.",
+    "start": "00:02:02",
+    "end": "00:02:09"
+  },
+  {
+    "text": "What is prompt engineering?",
+    "start": "00:02:09",
+    "end": "00:02:12"
+  },
+  {
+    "text": "Why is it engineering?",
+    "start": "00:02:12",
+    "end": "00:02:14"
+  },
+  {
+    "text": "What's prompt, really?",
+    "start": "00:02:14",
+    "end": "00:02:15"
+  },
+  {
+    "text": "If anyone wants to kick that off, give your own perspective on it, feel free to take the rein here.",
+    "start": "00:02:15",
+    "end": "00:02:21"
+  },
+  {
+    "text": "- I feel like we have a prompt engineer.",
+    "start": "00:02:21",
+    "end": "00:02:23"
+  },
+  {
+    "text": "It's his job.",
+    "start": "00:02:23",
+    "end": "00:02:24"
+  },
+  {
+    "text": "- We're all prompt engineers in our own form.",
+    "start": "00:02:24",
+    "end": "00:02:27"
+  },
+  {
+    "text": "- But one of us has a job.",
+    "start": "00:02:27",
+    "end": "00:02:28"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:02:28",
+    "end": "00:02:29"
+  },
+  {
+    "text": "Zack, maybe since it's in your title.",
+    "start": "00:02:29",
+    "end": "00:02:30"
+  },
+  {
+    "text": "- One of us has a job, but the other three don't have jobs.",
+    "start": "00:02:30",
+    "end": "00:02:34"
+  },
+  {
+    "text": "- I guess I feel like prompt engineering is trying to get the model to do things, trying to bring the most out of the model.",
+    "start": "00:02:35",
+    "end": "00:02:42"
+  },
+  {
+    "text": "Trying to work with the model to get things done that you wouldn't have been able to do otherwise.",
+    "start": "00:02:42",
+    "end": "00:02:49"
+  },
+  {
+    "text": "So a lot of it is just clear communicating.",
+    "start": "00:02:49",
+    "end": "00:02:52"
+  },
+  {
+    "text": "I think at heart, talking to a model is a lot like talking to a person.",
+    "start": "00:02:52",
+    "end": "00:02:57"
+  },
+  {
+    "text": "And getting in there and understanding the psychology of the model, which Amanda is the world's most expert person in the world.",
+    "start": "00:02:57",
+    "end": "00:03:06"
+  },
+  {
+    "text": "- Well, I'm gonna keep going on you.",
+    "start": "00:03:08",
+    "end": "00:03:10"
+  },
+  {
+    "text": "Why is engineering in the name?",
+    "start": "00:03:10",
+    "end": "00:03:12"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:03:13",
+    "end": "00:03:14"
+  },
+  {
+    "text": "I think the engineering part comes from the trial and error.",
+    "start": "00:03:14",
+    "end": "00:03:18"
+  },
+  {
+    "text": "- Okay.",
+    "start": "00:03:18",
+    "end": "00:03:18"
+  },
+  {
+    "text": "- So one really nice thing about talking to a model that's not like talking to a person, is you have this restart button.",
+    "start": "00:03:18",
+    "end": "00:03:25"
+  },
+  {
+    "text": "This giant go back to square zero where you just start from the beginning.",
+    "start": "00:03:25",
+    "end": "00:03:29"
+  },
+  {
+    "text": "And what that gives you the ability to do that you don't have, is a truly start from scratch and try out different things in an independent way, so that you don't have interference from one to the other.",
+    "start": "00:03:29",
+    "end": "00:03:40"
+  },
+  {
+    "text": "And once you have that ability to experiment and to design different things, that's where the engineering part has the potential to come in.",
+    "start": "00:03:40",
+    "end": "00:03:49"
+  },
+  {
+    "text": "- Okay.",
+    "start": "00:03:49",
+    "end": "00:03:50"
+  },
+  {
+    "text": "So what you're saying is as you're writing these prompts, you're typing in a message to Claude or in the API or whatever it is.",
+    "start": "00:03:50",
+    "end": "00:03:56"
+  },
+  {
+    "text": "Being able to go back and forth with the model and to iterate on this message, and revert back to the clean slate every time, that process is the engineering part.",
+    "start": "00:03:57",
+    "end": "00:04:08"
+  },
+  {
+    "text": "This whole thing is prompt engineering all in one.",
+    "start": "00:04:08",
+    "end": "00:04:13"
+  },
+  {
+    "text": "- There's another aspect of it too, which is integrating the prompts within your system as a whole.",
+    "start": "00:04:13",
+    "end": "00:04:21"
+  },
+  {
+    "text": "And David has done a ton of work with customers integrating.",
+    "start": "00:04:21",
+    "end": "00:04:25"
+  },
+  {
+    "text": "A lot of times it's not just as simple as you write one prompt and you give it to the model and you're done.",
+    "start": "00:04:26",
+    "end": "00:04:30"
+  },
+  {
+    "text": "In fact, it's anything but.",
+    "start": "00:04:30",
+    "end": "00:04:31"
+  },
+  {
+    "text": "It's like way more complicated.",
+    "start": "00:04:31",
+    "end": "00:04:32"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:04:32",
+    "end": "00:04:33"
+  },
+  {
+    "text": "I think of prompts as the way that you program models a little bit, that makes it too complicated.",
+    "start": "00:04:34",
+    "end": "00:04:40"
+  },
+  {
+    "text": "'Cause I think Zack is generally right that it's just talking clearly is the most important thing.",
+    "start": "00:04:40",
+    "end": "00:04:45"
+  },
+  {
+    "text": "But if you think about it a little bit as programming a model, you have to think about where data comes from, what data you have access to.",
+    "start": "00:04:45",
+    "end": "00:04:51"
+  },
+  {
+    "text": "So if you're doing RAG or something, what can I actually use and do and pass to a model?",
+    "start": "00:04:51",
+    "end": "00:04:56"
+  },
+  {
+    "text": "You have to think about trade-offs in latency and how much data you're providing and things like that.",
+    "start": "00:04:57",
+    "end": "00:05:03"
+  },
+  {
+    "text": "There's enough systems thinking that goes into how you actually build around a model.",
+    "start": "00:05:03",
+    "end": "00:05:07"
+  },
+  {
+    "text": "I think a lot of that's also the core of why it maybe deserves its own carve-out as a thing to reason about separately from just a software engineer or a PM or something like that.",
+    "start": "00:05:07",
+    "end": "00:05:17"
+  },
+  {
+    "text": "It's kind of its own domain of how to reason about these models.",
+    "start": "00:05:17",
+    "end": "00:05:20"
+  },
+  {
+    "text": "- Is a prompt in this sense then natural language code?",
+    "start": "00:05:20",
+    "end": "00:05:24"
+  },
+  {
+    "text": "Is it a higher level of abstraction or is it a separate thing?",
+    "start": "00:05:24",
+    "end": "00:05:28"
+  },
+  {
+    "text": "- I think trying to get too abstract with a prompt is a way to overcomplicate a thing, because I think, we're gonna get into it, but more often than not, the thing you wanna do is just write a very clear description of a task, not try to build crazy abstractions or anything like that.",
+    "start": "00:05:28",
+    "end": "00:05:45"
+  },
+  {
+    "text": "But that said, you are compiling the set of instructions and things like that into outcomes a lot of times.",
+    "start": "00:05:47",
+    "end": "00:05:54"
+  },
+  {
+    "text": "So precision and a lot the things you think about with programming about version control and managing what it looked like back then when you had this experiment.",
+    "start": "00:05:54",
+    "end": "00:06:03"
+  },
+  {
+    "text": "And tracking your experiment and stuff like that, that's all just equally important to code.",
+    "start": "00:06:03",
+    "end": "00:06:11"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:06:11",
+    "end": "00:06:12"
+  },
+  {
+    "text": "- So it's weird to be in this paradigm where written text, like a nice essay that you wrote is something that's looked like the same thing as code.",
+    "start": "00:06:12",
+    "end": "00:06:21"
+  },
+  {
+    "text": "But it is true that now we write essays and treat them code, and I think that's actually correct.",
+    "start": "00:06:22",
+    "end": "00:06:27"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:06:27",
+    "end": "00:06:28"
+  },
+  {
+    "text": "Okay, interesting.",
+    "start": "00:06:28",
+    "end": "00:06:29"
+  },
+  {
+    "text": "So maybe piggybacking off of that, we've loosely defined what prompt engineering is.",
+    "start": "00:06:29",
+    "end": "00:06:36"
+  },
+  {
+    "text": "So what makes a good prompt engineer?",
+    "start": "00:06:36",
+    "end": "00:06:38"
+  },
+  {
+    "text": "Maybe, Amanda, I'll go to you for this, since you're trying to hire prompt engineers more so in a research setting.",
+    "start": "00:06:38",
+    "end": "00:06:44"
+  },
+  {
+    "text": "What does that look like?",
+    "start": "00:06:45",
+    "end": "00:06:46"
+  },
+  {
+    "text": "What are you looking for in that type of person?",
+    "start": "00:06:46",
+    "end": "00:06:49"
+  },
+  {
+    "text": "- Yeah, good question.",
+    "start": "00:06:49",
+    "end": "00:06:50"
+  },
+  {
+    "text": "I think it's a mix of like Zack said, clear communication, so the ability to just clearly state things, clearly understand tasks, think about and describe concepts really well.",
+    "start": "00:06:50",
+    "end": "00:07:03"
+  },
+  {
+    "text": "That's the writing component, I think.",
+    "start": "00:07:03",
+    "end": "00:07:05"
+  },
+  {
+    "text": "I actually think that being a good writer is not as correlated with being a good prompt engineer as people might think.",
+    "start": "00:07:05",
+    "end": "00:07:13"
+  },
+  {
+    "text": "So I guess I've had this discussion with people 'cause I think there's some argument as like, \"Maybe you just shouldn't have the name engineer in there.",
+    "start": "00:07:13",
+    "end": "00:07:19"
+  },
+  {
+    "text": "Why isn't it just writer?",
+    "start": "00:07:19",
+    "end": "00:07:21"
+  },
+  {
+    "text": "\" I used to be more sympathetic to that.",
+    "start": "00:07:21",
+    "end": "00:07:23"
+  },
+  {
+    "text": "And then, I think, now I'm like what you're actually doing, people think that you're writing one thing and you're done.",
+    "start": "00:07:23",
+    "end": "00:07:31"
+  },
+  {
+    "text": "Then I'll be like to get a semi-decent prompt when I sit down with the model.",
+    "start": "00:07:31",
+    "end": "00:07:36"
+  },
+  {
+    "text": "Earlier, I was prompting the model and I was just like in a 15-minute span I'll be sending hundreds of prompts to the model.",
+    "start": "00:07:37",
+    "end": "00:07:42"
+  },
+  {
+    "text": "It's just back and forth, back and forth, back and forth.",
+    "start": "00:07:42",
+    "end": "00:07:45"
+  },
+  {
+    "text": "So I think it's this willingness to iterate and to look and think what is it that was misinterpreted here, if anything?",
+    "start": "00:07:45",
+    "end": "00:07:52"
+  },
+  {
+    "text": "And then fix that thing.",
+    "start": "00:07:52",
+    "end": "00:07:55"
+  },
+  {
+    "text": "So that ability to iterate.",
+    "start": "00:07:55",
+    "end": "00:07:57"
+  },
+  {
+    "text": "So I'd say clear communication, that ability to iterate.",
+    "start": "00:07:57",
+    "end": "00:08:01"
+  },
+  {
+    "text": "I think also thinking about ways in which your prompt might go wrong.",
+    "start": "00:08:01",
+    "end": "00:08:05"
+  },
+  {
+    "text": "So if you have a prompt that you're going to be applying to say, 400 cases, it's really easy to think about the typical case that it's going to be applied to, to see that it gets the right solution in that case, and then to move on.",
+    "start": "00:08:05",
+    "end": "00:08:15"
+  },
+  {
+    "text": "I think this is a very classic mistake that people made.",
+    "start": "00:08:15",
+    "end": "00:08:18"
+  },
+  {
+    "text": "What you actually want to do is find the cases where it's unusual.",
+    "start": "00:08:19",
+    "end": "00:08:23"
+  },
+  {
+    "text": "So you have to think about your prompt and be like, \"What are the cases where it'd be really unclear to me what I should do in this case?",
+    "start": "00:08:23",
+    "end": "00:08:28"
+  },
+  {
+    "text": "\" So for example, you have a prompt that says, \"I'm going to send you a bunch of data.",
+    "start": "00:08:28",
+    "end": "00:08:31"
+  },
+  {
+    "text": "I want you to extract all of the rows where someone's name is, I don't know, starts with the letter G.",
+    "start": "00:08:31",
+    "end": "00:08:37"
+  },
+  {
+    "text": "\" And then you're like, \"Well, I'm gonna send it a dataset where there is no such thing, there is no such name that starts with the letter G.",
+    "start": "00:08:37",
+    "end": "00:08:43"
+  },
+  {
+    "text": "\"I'm going to send it something that's not a dataset, I might also just send it an empty string.",
+    "start": "00:08:43",
+    "end": "00:08:48"
+  },
+  {
+    "text": "These are all of the cases you have to try, because then you're like, \"What does it do in these cases?",
+    "start": "00:08:48",
+    "end": "00:08:51"
+  },
+  {
+    "text": "\" And then you can give it more instructions for how it should deal with that case.",
+    "start": "00:08:51",
+    "end": "00:08:55"
+  },
+  {
+    "text": "- I work with customers so often where you're an engineer, you're building something.",
+    "start": "00:08:55",
+    "end": "00:09:00"
+  },
+  {
+    "text": "And there's a part in your prompt where a customer of theirs is going to write something.",
+    "start": "00:09:00",
+    "end": "00:09:04"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:09:04",
+    "end": "00:09:05"
+  },
+  {
+    "text": "- And they all think about these really perfectly phrased things that they think someone's going to type into their chatbot.",
+    "start": "00:09:05",
+    "end": "00:09:09"
+  },
+  {
+    "text": "And in reality, it's like they never used the shift key and every other word is a typo.",
+    "start": "00:09:09",
+    "end": "00:09:15"
+  },
+  {
+    "text": "- They think it's Google.",
+    "start": "00:09:15",
+    "end": "00:09:15"
+  },
+  {
+    "text": "- And there's no punctuation.",
+    "start": "00:09:15",
+    "end": "00:09:17"
+  },
+  {
+    "text": "- They just put in random words with no question.",
+    "start": "00:09:17",
+    "end": "00:09:18"
+  },
+  {
+    "text": "- Exactly.",
+    "start": "00:09:18",
+    "end": "00:09:20"
+  },
+  {
+    "text": "So you have these evals that are these beautifully structured what their users ideally would type in.",
+    "start": "00:09:20",
+    "end": "00:09:24"
+  },
+  {
+    "text": "But being able to go the next step to reason about what your actual traffic's gonna be like, what people are actually gonna to try to do, that's a different level of thinking.",
+    "start": "00:09:24",
+    "end": "00:09:33"
+  },
+  {
+    "text": "- One thing you said that really resonated with me is reading the model responses.",
+    "start": "00:09:33",
+    "end": "00:09:36"
+  },
+  {
+    "text": "In a machine learning context, you're supposed to look at the data.",
+    "start": "00:09:37",
+    "end": "00:09:41"
+  },
+  {
+    "text": "It's almost a cliche like look at your data, and I feel like the equivalent for prompting is look at the model outputs.",
+    "start": "00:09:41",
+    "end": "00:09:48"
+  },
+  {
+    "text": "Just reading a lot of outputs and reading them closely.",
+    "start": "00:09:48",
+    "end": "00:09:51"
+  },
+  {
+    "text": "Like Dave and I were talking on the way here, one thing that people will do is they'll put think step-by-step in their prompt.",
+    "start": "00:09:51",
+    "end": "00:09:57"
+  },
+  {
+    "text": "And they won't check to make sure that the model is actually thinking step-by-step, because the model might take it in a more abstract or general sense.",
+    "start": "00:09:57",
+    "end": "00:10:05"
+  },
+  {
+    "text": "Rather than like, \"No, literally you have to write down your thoughts in these specific tags.",
+    "start": "00:10:05",
+    "end": "00:10:10"
+  },
+  {
+    "text": "\" So yeah, if you aren't reading the model outputs, you might not even notice that it's making that mistake.",
+    "start": "00:10:10",
+    "end": "00:10:16"
+  },
+  {
+    "text": "- Yeah, that's interesting.",
+    "start": "00:10:16",
+    "end": "00:10:18"
+  },
+  {
+    "text": "There is that weird theory of mind piece to being a prompt engineer where you have to think almost about how the model's gonna view your instructions.",
+    "start": "00:10:19",
+    "end": "00:10:27"
+  },
+  {
+    "text": "But then if you're writing for an enterprise use case too, you also have to think about how the user's gonna talk to the model, as you're the third party sitting there in that weird relationship.",
+    "start": "00:10:27",
+    "end": "00:10:36"
+  },
+  {
+    "text": "Yeah.",
+    "start": "00:10:37",
+    "end": "00:10:38"
+  },
+  {
+    "text": "- On the theory of mind piece, one thing I would say is, it's so hard to write instructions down for a task.",
+    "start": "00:10:39",
+    "end": "00:10:48"
+  },
+  {
+    "text": "It's so hard to untangle in your own brain all of the stuff that you know that Claude does not know and write it down.",
+    "start": "00:10:48",
+    "end": "00:10:56"
+  },
+  {
+    "text": "It's just an immensely challenging thing to strip away all of the assumptions you have, and be able to very clearly communicate the full fact set of information that is needed to a model.",
+    "start": "00:10:56",
+    "end": "00:11:05"
+  },
+  {
+    "text": "I think that's another thing that really differentiates a good prompt engineer from a bad one, is like...",
+    "start": "00:11:05",
+    "end": "00:11:10"
+  },
+  {
+    "text": "A lot of people will just write down the things they know.",
+    "start": "00:11:10",
+    "end": "00:11:13"
+  },
+  {
+    "text": "But they don't really take the time to systematically break out what is the actual full set of information you need to know to understand this task?",
+    "start": "00:11:13",
+    "end": "00:11:21"
+  },
+  {
+    "text": "- Right.",
+    "start": "00:11:21",
+    "end": "00:11:22"
+  },
+  {
+    "text": "- And that's a very clear thing I see a lot is prompts where it's just conditioned.",
+    "start": "00:11:22",
+    "end": "00:11:28"
+  },
+  {
+    "text": "The prompt that someone wrote is so conditioned on their prior understanding of a task, that when they show it to me I'm like, \"This makes no sense.",
+    "start": "00:11:28",
+    "end": "00:11:36"
+  },
+  {
+    "text": "None of the words you wrote make any sense, because I don't know anything about your interesting use case.",
+    "start": "00:11:36",
+    "end": "00:11:41"
+  },
+  {
+    "text": "\" But I think a good way to think about prompt engineering in that front and a good skill for it, is just can you actually step back from what you know and communicate to this weird system that knows a lot, but not everything about what it needs to know to do a task?",
+    "start": "00:11:41",
+    "end": "00:11:58"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:11:58",
+    "end": "00:11:59"
+  },
+  {
+    "text": "The amount of times I've seen someone's prompt and then being like, \"I can't do the task based on this prompt.",
+    "start": "00:11:59",
+    "end": "00:12:04"
+  },
+  {
+    "text": "\" I'm human level and you're giving this to something that is worse than me and expecting it to do better, and I'm like, \"Yeah.",
+    "start": "00:12:04",
+    "end": "00:12:12"
+  },
+  {
+    "text": "\" - Yeah.",
+    "start": "00:12:12",
+    "end": "00:12:13"
+  },
+  {
+    "text": "There is that interesting thing with like...",
+    "start": "00:12:13",
+    "end": "00:12:15"
+  },
+  {
+    "text": "Current models don't really do a good job of asking good, probing questions in response like a human would.",
+    "start": "00:12:15",
+    "end": "00:12:23"
+  },
+  {
+    "text": "If I'm giving Zack directions on how to do something, he'll be like, \"This doesn't make any sense.",
+    "start": "00:12:23",
+    "end": "00:12:28"
+  },
+  {
+    "text": "What am I supposed to do at this step or here and here?",
+    "start": "00:12:28",
+    "end": "00:12:30"
+  },
+  {
+    "text": "\" Model doesn't do that, right, so you have to, as yourself, think through what that other person would say and then go back to your prompt and answer those questions.",
+    "start": "00:12:30",
+    "end": "00:12:40"
+  },
+  {
+    "text": "- You could ask it to do that.",
+    "start": "00:12:40",
+    "end": "00:12:41"
+  },
+  {
+    "text": "- You could.",
+    "start": "00:12:41",
+    "end": "00:12:42"
+  },
+  {
+    "text": "That's right.",
+    "start": "00:12:42",
+    "end": "00:12:42"
+  },
+  {
+    "text": "- I do that, yeah.",
+    "start": "00:12:42",
+    "end": "00:12:43"
+  },
+  {
+    "text": "- I guess that's another step.",
+    "start": "00:12:43",
+    "end": "00:12:44"
+  },
+  {
+    "text": "- I was going to say one of the first things I do with my initial prompt, is I'll give it the prompt and then I'll be like, \"I don't want you to follow these instructions.",
+    "start": "00:12:44",
+    "end": "00:12:50"
+  },
+  {
+    "text": "I just want you to tell me the ways in which they're unclear or any ambiguities, or anything you don't understand.",
+    "start": "00:12:50",
+    "end": "00:12:54"
+  },
+  {
+    "text": "\" And it doesn't always get it perfect, but it is interesting that that is one thing you can do.",
+    "start": "00:12:54",
+    "end": "00:12:59"
+  },
+  {
+    "text": "And then also sometimes if people see that the model makes a mistake, the thing that they don't often do is just ask the model.",
+    "start": "00:12:59",
+    "end": "00:13:04"
+  },
+  {
+    "text": "So they say to the model, \"You got this wrong.",
+    "start": "00:13:04",
+    "end": "00:13:06"
+  },
+  {
+    "text": "Can you think about why?",
+    "start": "00:13:06",
+    "end": "00:13:07"
+  },
+  {
+    "text": "And can you maybe write an edited version of my instructions that would make you not get it wrong?",
+    "start": "00:13:07",
+    "end": "00:13:11"
+  },
+  {
+    "text": "\" And a lot of the time, the model just gets it right.",
+    "start": "00:13:11",
+    "end": "00:13:14"
+  },
+  {
+    "text": "The model's like, \"Oh, yeah.",
+    "start": "00:13:14",
+    "end": "00:13:15"
+  },
+  {
+    "text": "Here's what was unclear, here's a fix to the instructions,\" and then you put those in and it works.",
+    "start": "00:13:15",
+    "end": "00:13:20"
+  },
+  {
+    "text": "- Okay.",
+    "start": "00:13:20",
+    "end": "00:13:21"
+  },
+  {
+    "text": "I'm actually really curious about this personally almost.",
+    "start": "00:13:21",
+    "end": "00:13:23"
+  },
+  {
+    "text": "Is that true that that works?",
+    "start": "00:13:23",
+    "end": "00:13:25"
+  },
+  {
+    "text": "Is the model able to spot its mistakes that way?",
+    "start": "00:13:26",
+    "end": "00:13:29"
+  },
+  {
+    "text": "When it gets something wrong, you say, \"Why did you get this wrong?",
+    "start": "00:13:29",
+    "end": "00:13:32"
+  },
+  {
+    "text": "\" And then it tells you maybe something like, \"Okay, how could I phrase this to you in the future so you get it right?",
+    "start": "00:13:32",
+    "end": "00:13:38"
+  },
+  {
+    "text": "\" Is there an element of truth to that?",
+    "start": "00:13:38",
+    "end": "00:13:40"
+  },
+  {
+    "text": "Or is that just a hallucination on the model's part around what it thinks its limits are?",
+    "start": "00:13:40",
+    "end": "00:13:46"
+  },
+  {
+    "text": "- I think if you explain to it what it got wrong, it can identify things in the query sometimes.",
+    "start": "00:13:46",
+    "end": "00:13:52"
+  },
+  {
+    "text": "I think this varies by task.",
+    "start": "00:13:52",
+    "end": "00:13:53"
+  },
+  {
+    "text": "This is one of those things where I'm like I'm not sure what percentage of the time it gets it right, but I always try it 'cause sometimes it does.",
+    "start": "00:13:53",
+    "end": "00:14:00"
+  },
+  {
+    "text": "- And you learn something.",
+    "start": "00:14:00",
+    "end": "00:14:01"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:14:01",
+    "end": "00:14:01"
+  },
+  {
+    "text": "- Anytime you go back to the model or back and forth with the model, you learn something about what's going on.",
+    "start": "00:14:01",
+    "end": "00:14:06"
+  },
+  {
+    "text": "I think you're giving away information if you don't at least try.",
+    "start": "00:14:06",
+    "end": "00:14:10"
+  },
+  {
+    "text": "- That's interesting.",
+    "start": "00:14:11",
+    "end": "00:14:12"
+  },
+  {
+    "text": "Amanda, I'm gonna keep asking you a few more questions here.",
+    "start": "00:14:12",
+    "end": "00:14:15"
+  },
+  {
+    "text": "One thing maybe for everybody watching this, is we have these Slack channels at Anthropic where people can add Claude into the Slack channel, then you can talk to Claude through it.",
+    "start": "00:14:15",
+    "end": "00:14:26"
+  },
+  {
+    "text": "And Amanda has a Slack channel that a lot of people follow of her interactions with Claude.",
+    "start": "00:14:26",
+    "end": "00:14:32"
+  },
+  {
+    "text": "And one thing that I see you always do in there, which you probably do the most of anyone at Anthropic, is use the model to help you in a variety of different scenarios.",
+    "start": "00:14:32",
+    "end": "00:14:42"
+  },
+  {
+    "text": "I think you put a lot of trust into the model in the research setting.",
+    "start": "00:14:42",
+    "end": "00:14:47"
+  },
+  {
+    "text": "I'm curious how you've developed those intuitions for when to trust the model.",
+    "start": "00:14:47",
+    "end": "00:14:51"
+  },
+  {
+    "text": "Is that just a matter of usage, experience or is it something else?",
+    "start": "00:14:51",
+    "end": "00:14:55"
+  },
+  {
+    "text": "- I think I don't trust the model ever and then I just hammer on it.",
+    "start": "00:14:55",
+    "end": "00:15:00"
+  },
+  {
+    "text": "So I think the reason why you see me do that a lot, is that that is me being like, \"Can I trust you to do this task?",
+    "start": "00:15:00",
+    "end": "00:15:05"
+  },
+  {
+    "text": "\" 'Cause there's some things, models are kind of strange.",
+    "start": "00:15:05",
+    "end": "00:15:08"
+  },
+  {
+    "text": "If you go slightly out of distribution, you just go into areas where they haven't been trained or they're unusual.",
+    "start": "00:15:08",
+    "end": "00:15:15"
+  },
+  {
+    "text": "Sometimes you're like, \"Actually, you're much less reliable here, even though it's a fairly simple task.",
+    "start": "00:15:15",
+    "end": "00:15:20"
+  },
+  {
+    "text": "\" I think that's happening less and less over time as models get better, but you want to make sure you're not in that kind of space.",
+    "start": "00:15:20",
+    "end": "00:15:26"
+  },
+  {
+    "text": "So, yeah, I don't think I trust it by default, but I think in ML, people often want to look across really large datasets.",
+    "start": "00:15:26",
+    "end": "00:15:33"
+  },
+  {
+    "text": "And I'm like, \"When does it make sense to do that?",
+    "start": "00:15:33",
+    "end": "00:15:35"
+  },
+  {
+    "text": "\" And I think the answer is when you get relatively low signal from each data point, you want to look across many, many data points, because you basically want to get rid of the noise.",
+    "start": "00:15:35",
+    "end": "00:15:44"
+  },
+  {
+    "text": "With a lot of prompting tasks, I think you actually get really high signal from each query.",
+    "start": "00:15:44",
+    "end": "00:15:49"
+  },
+  {
+    "text": "So if you have a really well-constructed set of a few hundred prompts, that I think can be much more signal than thousands that aren't as well-crafted.",
+    "start": "00:15:49",
+    "end": "00:15:59"
+  },
+  {
+    "text": "So I do think that I can trust the model if I look at 100 outputs of it and it's really consistent.",
+    "start": "00:15:59",
+    "end": "00:16:06"
+  },
+  {
+    "text": "And I know that I've constructed those to basically figure out all of the edge cases and all of the weird things that the model might do, strange inputs, et cetera.",
+    "start": "00:16:06",
+    "end": "00:16:14"
+  },
+  {
+    "text": "I trust that probably more than a much more loosely constructed set of several thousand.",
+    "start": "00:16:14",
+    "end": "00:16:21"
+  },
+  {
+    "text": "- I think in ML, a lot of times the signals are numbers.",
+    "start": "00:16:22",
+    "end": "00:16:26"
+  },
+  {
+    "text": "Did you predict this thing right or not?",
+    "start": "00:16:29",
+    "end": "00:16:31"
+  },
+  {
+    "text": "And it'd be looking at the logprobs of a model and trying to intuit things, which you can do, but it's kind of sketchy.",
+    "start": "00:16:31",
+    "end": "00:16:38"
+  },
+  {
+    "text": "I feel like the fact that models output more often than not a lot of stuff like words and things.",
+    "start": "00:16:39",
+    "end": "00:16:44"
+  },
+  {
+    "text": "There's just fundamentally so much to learn between the lines of what it's writing and why and how, and that's part of what it is.",
+    "start": "00:16:44",
+    "end": "00:16:51"
+  },
+  {
+    "text": "It's not just did it get the task right or not?",
+    "start": "00:16:51",
+    "end": "00:16:54"
+  },
+  {
+    "text": "It's like, \"How did it get there?",
+    "start": "00:16:54",
+    "end": "00:16:57"
+  },
+  {
+    "text": "How was it thinking about it?",
+    "start": "00:16:57",
+    "end": "00:16:58"
+  },
+  {
+    "text": "What steps did it go through?",
+    "start": "00:16:58",
+    "end": "00:16:59"
+  },
+  {
+    "text": "\" You learn a lot about what is going on, or at least you can try to get a better sense, I think.",
+    "start": "00:16:59",
+    "end": "00:17:04"
+  },
+  {
+    "text": "But that's where a lot of information comes from for me, is by reading the details of what came out, not just through the result.",
+    "start": "00:17:04",
+    "end": "00:17:09"
+  },
+  {
+    "text": "- I think also the very best of prompting can make the difference between a failed and a successful experiment.",
+    "start": "00:17:09",
+    "end": "00:17:18"
+  },
+  {
+    "text": "So sometimes I can get annoyed if people don't focus enough on the prompting component of their experiment, because I'm like, \"This can, in fact, be the difference between 1% performance in the model or 0.",
+    "start": "00:17:18",
+    "end": "00:17:29"
+  },
+  {
+    "text": "1%.",
+    "start": "00:17:29",
+    "end": "00:17:29"
+  },
+  {
+    "text": "\" In such a way that your experiment doesn't succeed if it's at top 5% model performance, but it does succeed if it's top 1% or top 0.",
+    "start": "00:17:29",
+    "end": "00:17:39"
+  },
+  {
+    "text": "1%.",
+    "start": "00:17:39",
+    "end": "00:17:39"
+  },
+  {
+    "text": "And then I'm like, \"If you're gonna spend time over coding your experiment really nicely, but then just not spend time on the prompt.",
+    "start": "00:17:39",
+    "end": "00:17:46"
+  },
+  {
+    "text": "\" I don't know.",
+    "start": "00:17:46",
+    "end": "00:17:48"
+  },
+  {
+    "text": "That doesn't make sense to me, 'cause that can be the difference between life and death of your experiment.",
+    "start": "00:17:48",
+    "end": "00:17:52"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:17:52",
+    "end": "00:17:52"
+  },
+  {
+    "text": "And with the deployment too, it's so easy to, \"Oh, we can't ship this.",
+    "start": "00:17:52",
+    "end": "00:17:57"
+  },
+  {
+    "text": "\" And then you change the prompt around and suddenly it's working.",
+    "start": "00:17:57",
+    "end": "00:18:00"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:18:00",
+    "end": "00:18:00"
+  },
+  {
+    "text": "- It's a bit of a double-edged sword though, because I feel like there's a little bit of prompting where there's always this mythical, better prompt that's going to solve my thing on the horizon.",
+    "start": "00:18:00",
+    "end": "00:18:09"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:18:09",
+    "end": "00:18:10"
+  },
+  {
+    "text": "- I see a lot of people get stuck into the mythical prompt on the horizon, that if I just keep grinding, keep grinding.",
+    "start": "00:18:10",
+    "end": "00:18:15"
+  },
+  {
+    "text": "It's never bad to grind a little bit on a prompt, as we've talked, you learn things.",
+    "start": "00:18:15",
+    "end": "00:18:19"
+  },
+  {
+    "text": "But it's one of the scary things about prompting is that there's this whole world of unknown.",
+    "start": "00:18:19",
+    "end": "00:18:25"
+  },
+  {
+    "text": "- What heuristics do you guys have for when something is possible versus not possible with a perfect prompt, whatever that might be?",
+    "start": "00:18:25",
+    "end": "00:18:33"
+  },
+  {
+    "text": "- I think I'm usually checking for whether the model kind of gets it.",
+    "start": "00:18:33",
+    "end": "00:18:37"
+  },
+  {
+    "text": "So I think for things where I just don't think a prompt is going to help, there is a little bit of grinding.",
+    "start": "00:18:37",
+    "end": "00:18:43"
+  },
+  {
+    "text": "But often, it just becomes really clear that it's not close or something.",
+    "start": "00:18:43",
+    "end": "00:18:47"
+  },
+  {
+    "text": "Yeah.",
+    "start": "00:18:49",
+    "end": "00:18:50"
+  },
+  {
+    "text": "I don't know if that's a weird one where I'm just like, \"Yeah, if the model just clearly can't do something, I won't grind on it for too long.",
+    "start": "00:18:50",
+    "end": "00:18:58"
+  },
+  {
+    "text": "\" - This is the part that you can evoke how it's thinking about it, and you can ask it how it's thinking about it and why.",
+    "start": "00:18:58",
+    "end": "00:19:02"
+  },
+  {
+    "text": "And you can get a sense of is it thinking about it right?",
+    "start": "00:19:02",
+    "end": "00:19:05"
+  },
+  {
+    "text": "Are we even in the right zip code of this being right?",
+    "start": "00:19:05",
+    "end": "00:19:09"
+  },
+  {
+    "text": "And you can get a little bit of a kneeling on that front of, at least, I feel like I'm making progress towards getting something closer to right.",
+    "start": "00:19:11",
+    "end": "00:19:19"
+  },
+  {
+    "text": "Where there's just some tasks where you really don't get anywhere closer to it's thought process.",
+    "start": "00:19:19",
+    "end": "00:19:24"
+  },
+  {
+    "text": "It's just like every tweak you make just veers off in a completely different, very wrong direction, and I just tend to abandon those.",
+    "start": "00:19:24",
+    "end": "00:19:31"
+  },
+  {
+    "text": "I don't know.",
+    "start": "00:19:31",
+    "end": "00:19:32"
+  },
+  {
+    "text": "- Those are so rare now though, and I get really angry at the model when I discover them because that's how rare they are.",
+    "start": "00:19:32",
+    "end": "00:19:38"
+  },
+  {
+    "text": "I get furious.",
+    "start": "00:19:38",
+    "end": "00:19:39"
+  },
+  {
+    "text": "I'm like, \"How dare there be a task that you can't just do, if I just push you in the right direction?",
+    "start": "00:19:39",
+    "end": "00:19:45"
+  },
+  {
+    "text": "\" - I had my thing with Claude plays Pokemon recently, and that was one of the rare times where I really...",
+    "start": "00:19:45",
+    "end": "00:19:51"
+  },
+  {
+    "text": "- Yeah, can you explain that?",
+    "start": "00:19:51",
+    "end": "00:19:52"
+  },
+  {
+    "text": "Explain that just for people.",
+    "start": "00:19:52",
+    "end": "00:19:53"
+  },
+  {
+    "text": "I think that's really cool.",
+    "start": "00:19:53",
+    "end": "00:19:54"
+  },
+  {
+    "text": "- I did a bit of an experiment where I hooked Claude up to a Game Boy emulator, and tried to have it play the game Pokemon Red like the OG Pokemon.",
+    "start": "00:19:54",
+    "end": "00:20:05"
+  },
+  {
+    "text": "And it's like you think what you wanna do and it could write some code to press buttons and stuff like that, pretty basic.",
+    "start": "00:20:05",
+    "end": "00:20:12"
+  },
+  {
+    "text": "And I tried a bunch of different very complex prompting layouts, but you just get into certain spots where it just really couldn't do it.",
+    "start": "00:20:12",
+    "end": "00:20:21"
+  },
+  {
+    "text": "So showing it a screenshot of a Game Boy, it just really couldn't do.",
+    "start": "00:20:21",
+    "end": "00:20:26"
+  },
+  {
+    "text": "And it just so deeply because I'm so used to it, being able to do something mostly.",
+    "start": "00:20:26",
+    "end": "00:20:32"
+  },
+  {
+    "text": "So I spent a whole weekend trying to write better and better prompts to get it to really understand this Game Boy screen.",
+    "start": "00:20:32",
+    "end": "00:20:41"
+  },
+  {
+    "text": "And I got incrementally better so that it was only terrible instead of completely no signal.",
+    "start": "00:20:41",
+    "end": "00:20:46"
+  },
+  {
+    "text": "You could get from no signal to some signal.",
+    "start": "00:20:46",
+    "end": "00:20:48"
+  },
+  {
+    "text": "But it was, I don't know, at least this is elicited for me.",
+    "start": "00:20:49",
+    "end": "00:20:53"
+  },
+  {
+    "text": "Once I put a weekend of time in and I got from no signal to some signal, but nowhere close to good enough, I'm like, \"I'm just going to wait for the next one.",
+    "start": "00:20:53",
+    "end": "00:21:00"
+  },
+  {
+    "text": "(Alex laughing) I'm just gonna wait for another model.",
+    "start": "00:21:00",
+    "end": "00:21:02"
+  },
+  {
+    "text": "\" I could grind on this for four months, and the thing that would come out is another model and that's a better use of my time.",
+    "start": "00:21:02",
+    "end": "00:21:09"
+  },
+  {
+    "text": "Just sit and wait to do something else in the meanwhile.",
+    "start": "00:21:09",
+    "end": "00:21:11"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:21:11",
+    "end": "00:21:12"
+  },
+  {
+    "text": "That's an inherent tension we see all the time, and maybe we can get to that in a sec.",
+    "start": "00:21:12",
+    "end": "00:21:16"
+  },
+  {
+    "text": "Zack, if you wanna go.",
+    "start": "00:21:16",
+    "end": "00:21:17"
+  },
+  {
+    "text": "- Something I liked about your prompt with Pokemon where you got the best that you did get, was the way that you explained to the model that it is in the middle of this Pokemon game.",
+    "start": "00:21:17",
+    "end": "00:21:27"
+  },
+  {
+    "text": "Here's how the things are gonna be represented.",
+    "start": "00:21:27",
+    "end": "00:21:29"
+  },
+  {
+    "text": "I actually think you actually represented it in two different ways, right?",
+    "start": "00:21:33",
+    "end": "00:21:36"
+  },
+  {
+    "text": "- I did.",
+    "start": "00:21:36",
+    "end": "00:21:37"
+  },
+  {
+    "text": "So what I ended up doing, it was obnoxious but I superimposed a grid over the image, and then I had to describe each segment of the grid in visual detail.",
+    "start": "00:21:37",
+    "end": "00:21:48"
+  },
+  {
+    "text": "Then I had to reconstruct that into an ASCII map and I gave it as much detail as I could.",
+    "start": "00:21:48",
+    "end": "00:21:53"
+  },
+  {
+    "text": "The player character is always at location 4, 5 on the grid and stuff like that, and you can slowly build up information.",
+    "start": "00:21:53",
+    "end": "00:22:01"
+  },
+  {
+    "text": "I think it's actually a lot like prompting, but I just hadn't done it with images before.",
+    "start": "00:22:02",
+    "end": "00:22:05"
+  },
+  {
+    "text": "Where sometimes my intuition for what you need to tell a model about text, is a lot different from what you need to tell a model about images.",
+    "start": "00:22:05",
+    "end": "00:22:13"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:22:13",
+    "end": "00:22:14"
+  },
+  {
+    "text": "- I found a surprisingly small number of my intuitions about text have transferred to image.",
+    "start": "00:22:14",
+    "end": "00:22:20"
+  },
+  {
+    "text": "I found that multi-shot prompting is not as effective for images and text.",
+    "start": "00:22:20",
+    "end": "00:22:24"
+  },
+  {
+    "text": "I'm not really sure, you can have theoretical explanations about why.",
+    "start": "00:22:24",
+    "end": "00:22:27"
+  },
+  {
+    "text": "Maybe there's a few of it in the training data, a few examples of that.",
+    "start": "00:22:27",
+    "end": "00:22:31"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:22:32",
+    "end": "00:22:33"
+  },
+  {
+    "text": "I know when we were doing the original explorations with prompting multimodal, we really couldn't get it to noticeably work.",
+    "start": "00:22:33",
+    "end": "00:22:39"
+  },
+  {
+    "text": "You just can't seem to improve Claude's actual, visual acuity in terms of what it picks up within an image.",
+    "start": "00:22:40",
+    "end": "00:22:47"
+  },
+  {
+    "text": "Anyone here has any ways that they've not seen that feature.",
+    "start": "00:22:48",
+    "end": "00:22:51"
+  },
+  {
+    "text": "But it seems like that's similar with the Pokemon thing where it's trying to interpret this thing.",
+    "start": "00:22:51",
+    "end": "00:22:55"
+  },
+  {
+    "text": "No matter how much you throw prompts at it, it just won't pick up that Ash that's in that location.",
+    "start": "00:22:55",
+    "end": "00:23:01"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:23:01",
+    "end": "00:23:02"
+  },
+  {
+    "text": "But I guess to be visceral about this, I could eventually get it so that it could most often tell me where a wall was, and most often tell me where the character was.",
+    "start": "00:23:02",
+    "end": "00:23:10"
+  },
+  {
+    "text": "It'd be off by a little bit.",
+    "start": "00:23:10",
+    "end": "00:23:11"
+  },
+  {
+    "text": "But then you get to a point, and this is maybe coming back to knowing when you can't do it.",
+    "start": "00:23:11",
+    "end": "00:23:16"
+  },
+  {
+    "text": "It would describe an NPC, and to play a game well, you need to have some sense of continuity.",
+    "start": "00:23:17",
+    "end": "00:23:21"
+  },
+  {
+    "text": "Have I talked to this NPC before?",
+    "start": "00:23:21",
+    "end": "00:23:24"
+  },
+  {
+    "text": "And without that, you really don't, there's nothing you can do.",
+    "start": "00:23:25",
+    "end": "00:23:28"
+  },
+  {
+    "text": "You're just going to keep talking to the NPC, 'cause like, \"Well, maybe this is a different NPC.",
+    "start": "00:23:28",
+    "end": "00:23:31"
+  },
+  {
+    "text": "\" But I would try very hard to get it to describe a NPC and it's like, \"It's a person.",
+    "start": "00:23:31",
+    "end": "00:23:37"
+  },
+  {
+    "text": "\" They might be wearing a hat, they weren't wearing a hat.",
+    "start": "00:23:37",
+    "end": "00:23:40"
+  },
+  {
+    "text": "And it's like you grind for a while, inflate it to 3000X and just crop it to just the NPC, and it's like, \"I have no idea what this is.",
+    "start": "00:23:40",
+    "end": "00:23:48"
+  },
+  {
+    "text": "\" It's like I showed it this clear, female NPC thing enough times and it just got nowhere close to it, and it's like, \"Yeah, this is a complete lost cause.",
+    "start": "00:23:48",
+    "end": "00:23:58"
+  },
+  {
+    "text": "\" - Wow, okay.",
+    "start": "00:23:58",
+    "end": "00:24:00"
+  },
+  {
+    "text": "- I really want to try this now.",
+    "start": "00:24:00",
+    "end": "00:24:01"
+  },
+  {
+    "text": "I'm just imagining all the things I would try.",
+    "start": "00:24:01",
+    "end": "00:24:04"
+  },
+  {
+    "text": "I don't know, I want you to imagine this game art as a real human and just describe to me what they're like.",
+    "start": "00:24:04",
+    "end": "00:24:11"
+  },
+  {
+    "text": "What did they look like as they look in the mirror?",
+    "start": "00:24:11",
+    "end": "00:24:13"
+  },
+  {
+    "text": "And then just see what the model does.",
+    "start": "00:24:13",
+    "end": "00:24:17"
+  },
+  {
+    "text": "- I tried a lot of things.",
+    "start": "00:24:17",
+    "end": "00:24:18"
+  },
+  {
+    "text": "The eventual prompt was telling Claude it was a screen reader for a blind person, which I don't know if that helped, but it felt right so I stuck with that.",
+    "start": "00:24:18",
+    "end": "00:24:26"
+  },
+  {
+    "text": "- That's an interesting point.",
+    "start": "00:24:26",
+    "end": "00:24:27"
+  },
+  {
+    "text": "I actually wanna go into this a little bit 'cause this is one of the most famous prompting tips, is to tell the language model that they are some persona or some role.",
+    "start": "00:24:27",
+    "end": "00:24:36"
+  },
+  {
+    "text": "I feel like I see mixed results.",
+    "start": "00:24:37",
+    "end": "00:24:39"
+  },
+  {
+    "text": "Maybe this worked a little bit better in previous models and maybe not as much anymore.",
+    "start": "00:24:39",
+    "end": "00:24:43"
+  },
+  {
+    "text": "Amanda, I see you all the time be very honest with the model about the whole situation like, \"Oh, I am an AI researcher and I'm doing this experiment.",
+    "start": "00:24:43",
+    "end": "00:24:51"
+  },
+  {
+    "text": "\" - I'll tell it who I am.",
+    "start": "00:24:51",
+    "end": "00:24:52"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:24:52",
+    "end": "00:24:52"
+  },
+  {
+    "text": "- I'll give it my name, be like, \"Here's who you're talking to.",
+    "start": "00:24:52",
+    "end": "00:24:54"
+  },
+  {
+    "text": "\" - Right.",
+    "start": "00:24:54",
+    "end": "00:24:55"
+  },
+  {
+    "text": "Do you think that level of honesty, instead of lying to the model or forcing it to like, \"I'm gonna tip you $500.",
+    "start": "00:24:55",
+    "end": "00:25:03"
+  },
+  {
+    "text": "\" Is there one method that's preferred there, or just what's your intuition on that?",
+    "start": "00:25:03",
+    "end": "00:25:09"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:25:09",
+    "end": "00:25:10"
+  },
+  {
+    "text": "I think as models are more capable and understand more about the world, I guess, I just don't see it as necessary to lie to them.",
+    "start": "00:25:10",
+    "end": "00:25:18"
+  },
+  {
+    "text": "I also don't like lying to the models just 'cause I don't like lying generally.",
+    "start": "00:25:18",
+    "end": "00:25:23"
+  },
+  {
+    "text": "But part of me is if you are, say, constructing.",
+    "start": "00:25:23",
+    "end": "00:25:26"
+  },
+  {
+    "text": "Suppose you're constructing an eval dataset for a machine learning system or for a language model.",
+    "start": "00:25:26",
+    "end": "00:25:32"
+  },
+  {
+    "text": "That's very different from constructing a quiz for some children.",
+    "start": "00:25:32",
+    "end": "00:25:36"
+  },
+  {
+    "text": "So when people would do things like, \"I am a teacher trying to figure out questions for a quiz.",
+    "start": "00:25:36",
+    "end": "00:25:41"
+  },
+  {
+    "text": "\" I'm like, \"The model knows what language model evals are.",
+    "start": "00:25:41",
+    "end": "00:25:44"
+  },
+  {
+    "text": "\" If you ask it about different evals it can tell you, and it can give you made up examples of what they look like.",
+    "start": "00:25:44",
+    "end": "00:25:50"
+  },
+  {
+    "text": "'Cause these things are like they understand them, they're on the internet.",
+    "start": "00:25:50",
+    "end": "00:25:54"
+  },
+  {
+    "text": "So I'm like, \"I'd much rather just target the actual task that I have.",
+    "start": "00:25:54",
+    "end": "00:25:56"
+  },
+  {
+    "text": "\" So if you're like, \"I want you to construct questions that look a lot like an evaluation of a language model.",
+    "start": "00:25:56",
+    "end": "00:26:02"
+  },
+  {
+    "text": "\" It's that whole thing of clear communication.",
+    "start": "00:26:02",
+    "end": "00:26:05"
+  },
+  {
+    "text": "I'm like, \"That is, in fact, the task I want to do.",
+    "start": "00:26:05",
+    "end": "00:26:07"
+  },
+  {
+    "text": "So why would I pretend to you that I want to do some unrelated, or only tangentially related task?",
+    "start": "00:26:07",
+    "end": "00:26:13"
+  },
+  {
+    "text": "\" And then expect you to somehow do better at the task that I actually want you to do.",
+    "start": "00:26:13",
+    "end": "00:26:16"
+  },
+  {
+    "text": "We don't do this with employees.",
+    "start": "00:26:16",
+    "end": "00:26:18"
+  },
+  {
+    "text": "I wouldn't go to someone that worked with me and be like, \"You are a teacher and you're trying to quiz your students.",
+    "start": "00:26:18",
+    "end": "00:26:25"
+  },
+  {
+    "text": "\" I'd be like, \"Hey, are you making that eval?",
+    "start": "00:26:25",
+    "end": "00:26:27"
+  },
+  {
+    "text": "\" I don't know.",
+    "start": "00:26:27",
+    "end": "00:26:28"
+  },
+  {
+    "text": "So I think maybe it's a heuristic from there where I'm like, \"If they understand the thing, just ask them to do the thing that you want.",
+    "start": "00:26:28",
+    "end": "00:26:33"
+  },
+  {
+    "text": "\" - I see this so much.",
+    "start": "00:26:33",
+    "end": "00:26:34"
+  },
+  {
+    "text": "- I guess to push back a little bit, I have found cases where not exactly lying but giving it a metaphor for how to think about it could help.",
+    "start": "00:26:34",
+    "end": "00:26:43"
+  },
+  {
+    "text": "In the same way that sometimes I might not understand how to do something and someone's like, \"Imagine that you were doing this, even though I know I'm not doing it.",
+    "start": "00:26:43",
+    "end": "00:26:49"
+  },
+  {
+    "text": "\" The one that comes to mind for me, is I was trying to have Claude say whether an image of a chart or a graph is good or not.",
+    "start": "00:26:49",
+    "end": "00:26:57"
+  },
+  {
+    "text": "Is it high quality?",
+    "start": "00:26:57",
+    "end": "00:26:59"
+  },
+  {
+    "text": "And the best prompt that I found for this was asking the model what grade it would give the chart, if it were submitted as a high school assignment.",
+    "start": "00:26:59",
+    "end": "00:27:09"
+  },
+  {
+    "text": "So it's not exactly saying, \"You are a high school teacher.",
+    "start": "00:27:09",
+    "end": "00:27:12"
+  },
+  {
+    "text": "\" It's more like, \"This is the kind of analysis that I'm looking from for you.",
+    "start": "00:27:12",
+    "end": "00:27:19"
+  },
+  {
+    "text": "\" The scale that a teacher would use is similar to the scale that I want you to use.",
+    "start": "00:27:19",
+    "end": "00:27:24"
+  },
+  {
+    "text": "- But I think those metaphors are pretty hard to still come up with.",
+    "start": "00:27:25",
+    "end": "00:27:27"
+  },
+  {
+    "text": "I think people still, the default you see all the time is finding some facsimile of the task.",
+    "start": "00:27:27",
+    "end": "00:27:33"
+  },
+  {
+    "text": "Something that's a very similar-ish task, like saying you're a teacher.",
+    "start": "00:27:33",
+    "end": "00:27:38"
+  },
+  {
+    "text": "You actually just lose a lot in the nuance of what your product is.",
+    "start": "00:27:38",
+    "end": "00:27:41"
+  },
+  {
+    "text": "I see this so much in enterprise prompts where people write something similar, because they have this intuition that it's something the model has seen more of maybe.",
+    "start": "00:27:41",
+    "end": "00:27:51"
+  },
+  {
+    "text": "It's seen more high school quizzes than it has LLM evals, and that may be true.",
+    "start": "00:27:51",
+    "end": "00:27:58"
+  },
+  {
+    "text": "But to your point, as the models get better, I think just trying to be very prescriptive about exactly the situation they're in.",
+    "start": "00:27:58",
+    "end": "00:28:07"
+  },
+  {
+    "text": "I give people that advice all the time.",
+    "start": "00:28:07",
+    "end": "00:28:09"
+  },
+  {
+    "text": "Which isn't to say that I don't think to the extent that it is true that thinking about it the way that someone would grade a chart, as how they would grade a high school chart, maybe that's true.",
+    "start": "00:28:09",
+    "end": "00:28:21"
+  },
+  {
+    "text": "But it's awkwardly the shortcut people use a lot of times to try to get what happens, so I'll try to get someone that I can actually talk about 'cause I think it's somewhat interesting.",
+    "start": "00:28:21",
+    "end": "00:28:29"
+  },
+  {
+    "text": "So writing you are a helpful assistant, writing a draft of a document, it's not quite what you are.",
+    "start": "00:28:29",
+    "end": "00:28:40"
+  },
+  {
+    "text": "You are in this product, so tell me.",
+    "start": "00:28:41",
+    "end": "00:28:44"
+  },
+  {
+    "text": "If you're writing an assistant that's in a product, tell me I'm in the product.",
+    "start": "00:28:44",
+    "end": "00:28:48"
+  },
+  {
+    "text": "Tell me I'm writing on behalf of this company, I'm embedded in this product.",
+    "start": "00:28:48",
+    "end": "00:28:52"
+  },
+  {
+    "text": "I'm the support chat window on that product.",
+    "start": "00:28:52",
+    "end": "00:28:55"
+  },
+  {
+    "text": "You're a language model, you're not a human, that's fine.",
+    "start": "00:28:56",
+    "end": "00:28:59"
+  },
+  {
+    "text": "But just being really prescriptive about the exact context about where something is being used.",
+    "start": "00:28:59",
+    "end": "00:29:05"
+  },
+  {
+    "text": "I found a lot of that.",
+    "start": "00:29:05",
+    "end": "00:29:06"
+  },
+  {
+    "text": "Because I guess my concern most often with role prompting, is people used it as a shortcut of a similar task they want the model to do.",
+    "start": "00:29:06",
+    "end": "00:29:13"
+  },
+  {
+    "text": "And then they're surprised when Claude doesn't do their task right, but it's not the task.",
+    "start": "00:29:13",
+    "end": "00:29:18"
+  },
+  {
+    "text": "You told it to do some other task.",
+    "start": "00:29:18",
+    "end": "00:29:21"
+  },
+  {
+    "text": "And if you didn't give it the details about your task, I feel like you're leaving something on the table.",
+    "start": "00:29:21",
+    "end": "00:29:24"
+  },
+  {
+    "text": "So I don't know, it does feel like a thing though to your point of as the models scale.",
+    "start": "00:29:24",
+    "end": "00:29:31"
+  },
+  {
+    "text": "Maybe in the past it was true that they only really had a strong understanding of elementary school tests comparatively.",
+    "start": "00:29:31",
+    "end": "00:29:39"
+  },
+  {
+    "text": "But as they get smarter and can differentiate more topics, I don't know, just like being clear.",
+    "start": "00:29:39",
+    "end": "00:29:44"
+  },
+  {
+    "text": "- I find it interesting that I've never used this prompting technique.",
+    "start": "00:29:44",
+    "end": "00:29:47"
+  },
+  {
+    "text": "- Yeah, that's funny.",
+    "start": "00:29:47",
+    "end": "00:29:48"
+  },
+  {
+    "text": "- Even with worse models and I still just don't ever find myself, I don't know why.",
+    "start": "00:29:49",
+    "end": "00:29:53"
+  },
+  {
+    "text": "I'm just like, \"I don't find it very good essentially.",
+    "start": "00:29:53",
+    "end": "00:29:57"
+  },
+  {
+    "text": "\" - Interesting.",
+    "start": "00:29:57",
+    "end": "00:29:58"
+  },
+  {
+    "text": "- I feel like completion era models, there was a little bit of a mental model of conditioning the model into a latent space that was useful that I worried about, that I don't really worry about too much anymore.",
+    "start": "00:29:58",
+    "end": "00:30:12"
+  },
+  {
+    "text": "- It might be intuitions from pretrained models over to RLHF models, that to me, just didn't make sense.",
+    "start": "00:30:12",
+    "end": "00:30:20"
+  },
+  {
+    "text": "It makes sense to me if you're prompting a pretrained.",
+    "start": "00:30:20",
+    "end": "00:30:22"
+  },
+  {
+    "text": "- You'd be amazed how many people try to apply their intuitions.",
+    "start": "00:30:22",
+    "end": "00:30:25"
+  },
+  {
+    "text": "I think it's not that surprising.",
+    "start": "00:30:25",
+    "end": "00:30:27"
+  },
+  {
+    "text": "Most people haven't really experimented with the full what is a pretrained model?",
+    "start": "00:30:27",
+    "end": "00:30:31"
+  },
+  {
+    "text": "What happens after you do SL?",
+    "start": "00:30:31",
+    "end": "00:30:34"
+  },
+  {
+    "text": "What happens after you do RLHF, whatever?",
+    "start": "00:30:34",
+    "end": "00:30:37"
+  },
+  {
+    "text": "So when I talk to customers, it's all the time that they're trying to map some amount of, \"Oh, how much of this was on the internet?",
+    "start": "00:30:39",
+    "end": "00:30:46"
+  },
+  {
+    "text": "Have they seen a ton of this on the internet?",
+    "start": "00:30:46",
+    "end": "00:30:48"
+  },
+  {
+    "text": "\" You just hear that intuition a lot, and I think it's well-founded fundamentally.",
+    "start": "00:30:48",
+    "end": "00:30:54"
+  },
+  {
+    "text": "But it is overapplied by the time you actually get to a prompt, because of what you said.",
+    "start": "00:30:54",
+    "end": "00:31:00"
+  },
+  {
+    "text": "By the time they've gone through all of this other stuff, that's not actually quite what's being modeled.",
+    "start": "00:31:00",
+    "end": "00:31:05"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:31:05",
+    "end": "00:31:05"
+  },
+  {
+    "text": "The first thing that I feel like you should try is, I used to give people this thought experiment where it's like imagine you have this task.",
+    "start": "00:31:05",
+    "end": "00:31:13"
+  },
+  {
+    "text": "You've hired a temp agency to send someone to do this task.",
+    "start": "00:31:13",
+    "end": "00:31:18"
+  },
+  {
+    "text": "This person arrives, you know they're pretty competent.",
+    "start": "00:31:18",
+    "end": "00:31:21"
+  },
+  {
+    "text": "They know a lot about your industry and so forth, but they don't know the name of your company.",
+    "start": "00:31:21",
+    "end": "00:31:25"
+  },
+  {
+    "text": "They've literally just shown up and they're like, \"Hey, I was told you guys had a job for me to do, tell me about it.",
+    "start": "00:31:25",
+    "end": "00:31:30"
+  },
+  {
+    "text": "\" And then it's like, \"What would you say to that person?",
+    "start": "00:31:30",
+    "end": "00:31:32"
+  },
+  {
+    "text": "\" And you might use these metaphors.",
+    "start": "00:31:32",
+    "end": "00:31:34"
+  },
+  {
+    "text": "You might say things like, \"We want you to detect good charts.",
+    "start": "00:31:34",
+    "end": "00:31:41"
+  },
+  {
+    "text": "What we mean by a good chart here, is it doesn't need to be perfect.",
+    "start": "00:31:41",
+    "end": "00:31:44"
+  },
+  {
+    "text": "You don't need to go look up whether all of the details are correct.",
+    "start": "00:31:44",
+    "end": "00:31:47"
+  },
+  {
+    "text": "\" It just needs to have its axes labeled, and so think about maybe high school level, good chart.",
+    "start": "00:31:47",
+    "end": "00:31:55"
+  },
+  {
+    "text": "You may say exactly that to that person and you're not saying to them, \"You are a high school.",
+    "start": "00:31:55",
+    "end": "00:31:59"
+  },
+  {
+    "text": "\" You wouldn't say that to them.",
+    "start": "00:31:59",
+    "end": "00:32:00"
+  },
+  {
+    "text": "You wouldn't be like, \"You're a high school teacher reading charts.",
+    "start": "00:32:00",
+    "end": "00:32:02"
+  },
+  {
+    "text": "\" - What are you talking about?",
+    "start": "00:32:02",
+    "end": "00:32:05"
+  },
+  {
+    "text": "- Yeah, so sometimes I'm just like it's like the whole if I read it.",
+    "start": "00:32:05",
+    "end": "00:32:11"
+  },
+  {
+    "text": "I'm just like, \"Yeah.",
+    "start": "00:32:11",
+    "end": "00:32:11"
+  },
+  {
+    "text": "Imagine this person who just has very little context, but they're quite competent.",
+    "start": "00:32:11",
+    "end": "00:32:14"
+  },
+  {
+    "text": "They understand a lot of things about the world.",
+    "start": "00:32:14",
+    "end": "00:32:16"
+  },
+  {
+    "text": "\" Try the first version that actually assumes that they might know things about the world, and if that doesn't work, you can maybe do tweaks and stuff.",
+    "start": "00:32:16",
+    "end": "00:32:22"
+  },
+  {
+    "text": "But so often, the first thing I try is that, and then I'm like, \"That just worked.",
+    "start": "00:32:22",
+    "end": "00:32:26"
+  },
+  {
+    "text": "\" - That worked.",
+    "start": "00:32:26",
+    "end": "00:32:27"
+  },
+  {
+    "text": "- And then people are like, \"Oh, I didn't think to just tell it all about myself and all about the task I want to do.",
+    "start": "00:32:27",
+    "end": "00:32:31"
+  },
+  {
+    "text": "\" - I've carried this thing that Alex told me to so many customers where they're like, \"Oh, my prompt doesn't work.",
+    "start": "00:32:31",
+    "end": "00:32:37"
+  },
+  {
+    "text": "Can you help me fix it?",
+    "start": "00:32:37",
+    "end": "00:32:37"
+  },
+  {
+    "text": "\" I'm like, \"Well, can you describe to me what the task was?",
+    "start": "00:32:37",
+    "end": "00:32:40"
+  },
+  {
+    "text": "\" And I'm like, \"Okay.",
+    "start": "00:32:40",
+    "end": "00:32:41"
+  },
+  {
+    "text": "Now what you just said to me, just voice record that and then transcribe it.",
+    "start": "00:32:41",
+    "end": "00:32:45"
+  },
+  {
+    "text": "\" And then paste it into the prompt and it's a better prompt than what you wrote, but this is a laziness shortcut, I think, to some extent.",
+    "start": "00:32:45",
+    "end": "00:32:52"
+  },
+  {
+    "text": "Because people write something that they...",
+    "start": "00:32:52",
+    "end": "00:32:55"
+  },
+  {
+    "text": "I just think people, I'm lazy.",
+    "start": "00:32:55",
+    "end": "00:32:56"
+  },
+  {
+    "text": "A lot of people are lazy.",
+    "start": "00:32:56",
+    "end": "00:32:57"
+  },
+  {
+    "text": "- We had that in prompt assistance the other day where somebody was like, \"Here's the thing, here's what I want it to do, and here's what it's actually doing instead.",
+    "start": "00:32:57",
+    "end": "00:33:05"
+  },
+  {
+    "text": "\" So then I just literally copied the thing that they said they wanted it to do, and pasted it in and it worked.",
+    "start": "00:33:05",
+    "end": "00:33:09"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:33:09",
+    "end": "00:33:11"
+  },
+  {
+    "text": "I think a lot of people still haven't quite wrapped their heads around what they're really doing when they're prompting.",
+    "start": "00:33:11",
+    "end": "00:33:17"
+  },
+  {
+    "text": "A lot of people see a text box and they think it's a Google search box.",
+    "start": "00:33:17",
+    "end": "00:33:21"
+  },
+  {
+    "text": "They type in keywords and maybe that's more on the chat side.",
+    "start": "00:33:21",
+    "end": "00:33:24"
+  },
+  {
+    "text": "But then on the enterprise side of things, you're writing a prompt for an application.",
+    "start": "00:33:24",
+    "end": "00:33:29"
+  },
+  {
+    "text": "There is still this weird thing to it where people are trying to take all these little shortcuts in their prompt, and just thinking that, \"Oh, this line carries a lot of weight in this.",
+    "start": "00:33:29",
+    "end": "00:33:37"
+  },
+  {
+    "text": "\" - Yeah.",
+    "start": "00:33:37",
+    "end": "00:33:38"
+  },
+  {
+    "text": "I think you obsess over getting the perfect little line of information and instruction, as opposed to how you just described that graph thing.",
+    "start": "00:33:38",
+    "end": "00:33:45"
+  },
+  {
+    "text": "I would be a dream if I read prompts like that.",
+    "start": "00:33:45",
+    "end": "00:33:48"
+  },
+  {
+    "text": "If someone's like, \"Well, you do this and this, and there's some stuff to consider about this and all that.",
+    "start": "00:33:48",
+    "end": "00:33:52"
+  },
+  {
+    "text": "\" But that's just not how people write prompts.",
+    "start": "00:33:52",
+    "end": "00:33:54"
+  },
+  {
+    "text": "They work so hard to find the perfect, insightful.",
+    "start": "00:33:54",
+    "end": "00:33:58"
+  },
+  {
+    "text": "A perfect graph looks exactly like this exact perfect thing, and you can't do that.",
+    "start": "00:33:58",
+    "end": "00:34:04"
+  },
+  {
+    "text": "It's just very hard to ever write that set of instructions down prescriptively, as opposed to how we actually talk to humans about it, which is try to instill some amount of the intuitions you have.",
+    "start": "00:34:04",
+    "end": "00:34:13"
+  },
+  {
+    "text": "- We also give them outs.",
+    "start": "00:34:13",
+    "end": "00:34:15"
+  },
+  {
+    "text": "This is a thing that people can often forget in prompts.",
+    "start": "00:34:15",
+    "end": "00:34:18"
+  },
+  {
+    "text": "So cases, if there's an edge case, think about what you want the model to do.",
+    "start": "00:34:18",
+    "end": "00:34:21"
+  },
+  {
+    "text": "'Cause by default, it will try the best to follow your instructions, much as the person from the temp agency would, 'cause they're like, \"Well, they didn't tell me how to get in touch with anyone.",
+    "start": "00:34:21",
+    "end": "00:34:30"
+  },
+  {
+    "text": "\" If I'm just given a picture of a goat and I'm like, \"What do I do?",
+    "start": "00:34:30",
+    "end": "00:34:33"
+  },
+  {
+    "text": "This isn't even a chart.",
+    "start": "00:34:33",
+    "end": "00:34:35"
+  },
+  {
+    "text": "How good is a picture of a goat as a chart?",
+    "start": "00:34:35",
+    "end": "00:34:38"
+  },
+  {
+    "text": "\" I just don't know.",
+    "start": "00:34:38",
+    "end": "00:34:39"
+  },
+  {
+    "text": "And if you instead say something like, \"If something weird happens and you're really not sure what to do, just output in tags unsure.",
+    "start": "00:34:40",
+    "end": "00:34:47"
+  },
+  {
+    "text": "\" Then you can go look through the unsures that you got and be like, \"Okay, cool.",
+    "start": "00:34:47",
+    "end": "00:34:52"
+  },
+  {
+    "text": "It didn't do anything weird.",
+    "start": "00:34:52",
+    "end": "00:34:53"
+  },
+  {
+    "text": "\" Whereas by default, if you don't give the person the option, they're like, \"It's a good chart.",
+    "start": "00:34:53",
+    "end": "00:34:58"
+  },
+  {
+    "text": "\" Then people will be like, \"How do I do that?",
+    "start": "00:34:58",
+    "end": "00:34:59"
+  },
+  {
+    "text": "\" And then you're like, \"Well, give it an out.",
+    "start": "00:34:59",
+    "end": "00:35:02"
+  },
+  {
+    "text": "Give it something to do if it's a really unexpected input happens.",
+    "start": "00:35:02",
+    "end": "00:35:05"
+  },
+  {
+    "text": "\" - And then you also improved your data quality by doing that too, 'cause you found all the screwed up examples.",
+    "start": "00:35:05",
+    "end": "00:35:10"
+  },
+  {
+    "text": "- Oh, yeah.",
+    "start": "00:35:10",
+    "end": "00:35:11"
+  },
+  {
+    "text": "- That's my favorite thing about iterating on tests with Claude, is the most common outcome is I find all of the terrible tests I accidentally wrote because it gets it wrong.",
+    "start": "00:35:11",
+    "end": "00:35:20"
+  },
+  {
+    "text": "I'm like, \"Oh, why did it get wrong?",
+    "start": "00:35:20",
+    "end": "00:35:21"
+  },
+  {
+    "text": "\" I was like, \"Oh, I was wrong.",
+    "start": "00:35:21",
+    "end": "00:35:22"
+  },
+  {
+    "text": "\" - Yeah.",
+    "start": "00:35:22",
+    "end": "00:35:24"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:35:24",
+    "end": "00:35:25"
+  },
+  {
+    "text": "- If I was a company working with this, I do think I would just give my prompts to people, because I used to do this when I was evaluating language models.",
+    "start": "00:35:25",
+    "end": "00:35:34"
+  },
+  {
+    "text": "I would take the eval myself.",
+    "start": "00:35:34",
+    "end": "00:35:36"
+  },
+  {
+    "text": "'Cause I'm like, \"I need to know what this eval looks like if I'm gonna to be grading it, having models take it, thinking about outputs, et cetera.",
+    "start": "00:35:36",
+    "end": "00:35:42"
+  },
+  {
+    "text": "\" I would actually just set up a little script and I would just sit and I would do the eval.",
+    "start": "00:35:42",
+    "end": "00:35:46"
+  },
+  {
+    "text": "- Nowadays, you just have called the Streamboard app for you.",
+    "start": "00:35:47",
+    "end": "00:35:50"
+  },
+  {
+    "text": "- And just does it, yeah.",
+    "start": "00:35:50",
+    "end": "00:35:52"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:35:52",
+    "end": "00:35:53"
+  },
+  {
+    "text": "I'm reminded of Karpathy's ImageNet.",
+    "start": "00:35:53",
+    "end": "00:35:56"
+  },
+  {
+    "text": "I was in 231 at Stanford and it's like benchmarking, he's showing the accuracy number.",
+    "start": "00:35:56",
+    "end": "00:36:03"
+  },
+  {
+    "text": "And he's like, \"And here's what my accuracy number was.",
+    "start": "00:36:03",
+    "end": "00:36:05"
+  },
+  {
+    "text": "\" And he had just gone through the test set and evaluated himself.",
+    "start": "00:36:05",
+    "end": "00:36:07"
+  },
+  {
+    "text": "- Oh, yeah.",
+    "start": "00:36:07",
+    "end": "00:36:08"
+  },
+  {
+    "text": "- You just learn a lot.",
+    "start": "00:36:08",
+    "end": "00:36:09"
+  },
+  {
+    "text": "- Yeah, totally.",
+    "start": "00:36:09",
+    "end": "00:36:09"
+  },
+  {
+    "text": "- And it's better when it's a, again, the temp agency person, like someone who doesn't know the task, because that's a very clean way to learn things.",
+    "start": "00:36:09",
+    "end": "00:36:18"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:36:18",
+    "end": "00:36:19"
+  },
+  {
+    "text": "The way you have to do it is, some evaluations come with instructions, and so I would give myself those instructions as well and then try to understand it.",
+    "start": "00:36:19",
+    "end": "00:36:27"
+  },
+  {
+    "text": "And it's actually quite great if you don't have context on how it's graded.",
+    "start": "00:36:28",
+    "end": "00:36:31"
+  },
+  {
+    "text": "And so often, I would do so much worse than the human benchmark and I was like, \"I don't even know how you got humans to do this well at this task, 'cause apparently human level here is 90%, and I'm at 68%.",
+    "start": "00:36:32",
+    "end": "00:36:45"
+  },
+  {
+    "text": "\" - That's funny.",
+    "start": "00:36:45",
+    "end": "00:36:46"
+  },
+  {
+    "text": "That reminds me of just when you look at the MMLU questions and you're like, \"Who would be able to answer these?",
+    "start": "00:36:46",
+    "end": "00:36:53"
+  },
+  {
+    "text": "\" It's just like absolute garbage in some of them.",
+    "start": "00:36:53",
+    "end": "00:36:56"
+  },
+  {
+    "text": "Okay.",
+    "start": "00:36:57",
+    "end": "00:36:59"
+  },
+  {
+    "text": "I have one thing I wanna circle back on that we were talking about a few questions back around, I think you were saying getting signal from the responses.",
+    "start": "00:36:59",
+    "end": "00:37:08"
+  },
+  {
+    "text": "There's just so much there and it's more than just a number, and you can actually read into the almost thought process.",
+    "start": "00:37:08",
+    "end": "00:37:16"
+  },
+  {
+    "text": "I bet this is probably a little contentious maybe around chain of thought.",
+    "start": "00:37:16",
+    "end": "00:37:21"
+  },
+  {
+    "text": "For people listening, chain of thought, this process of getting them all to actually explain its reasoning before it provides an answer.",
+    "start": "00:37:21",
+    "end": "00:37:28"
+  },
+  {
+    "text": "Is that reasoning real or is it just kind of like a holding space for the model to do computation?",
+    "start": "00:37:29",
+    "end": "00:37:36"
+  },
+  {
+    "text": "Do we actually think there's good, insightful signal that we're getting out of the model there?",
+    "start": "00:37:36",
+    "end": "00:37:41"
+  },
+  {
+    "text": "- This is one of the places where I struggle with that.",
+    "start": "00:37:41",
+    "end": "00:37:43"
+  },
+  {
+    "text": "I'm normally actually somewhat pro-personification because I think it helps you get decent facsimiles, thoughts of how the model's working.",
+    "start": "00:37:43",
+    "end": "00:37:52"
+  },
+  {
+    "text": "And this one, I think it's harmful maybe almost to get too into the personification of what reasoning is, 'cause it just loses the thread of what we're trying to do here.",
+    "start": "00:37:52",
+    "end": "00:38:02"
+  },
+  {
+    "text": "Is it reasoning or not?",
+    "start": "00:38:02",
+    "end": "00:38:03"
+  },
+  {
+    "text": "It feels almost like a different question than what's the best prompting technique?",
+    "start": "00:38:03",
+    "end": "00:38:08"
+  },
+  {
+    "text": "It's like you're getting into philosophy, which we can get into.",
+    "start": "00:38:08",
+    "end": "00:38:11"
+  },
+  {
+    "text": "- Yeah, we do have a philosopher.",
+    "start": "00:38:11",
+    "end": "00:38:13"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:38:13",
+    "end": "00:38:15"
+  },
+  {
+    "text": "I will happily be beaten down by a real philosopher as I try to speculate on this, but instead, it just works.",
+    "start": "00:38:15",
+    "end": "00:38:21"
+  },
+  {
+    "text": "Your model does better.",
+    "start": "00:38:21",
+    "end": "00:38:23"
+  },
+  {
+    "text": "The outcome is better if you do reasoning.",
+    "start": "00:38:23",
+    "end": "00:38:26"
+  },
+  {
+    "text": "I think I've found that if you structure the reasoning and help iterate with the model on how it should do reasoning, it works better too.",
+    "start": "00:38:26",
+    "end": "00:38:34"
+  },
+  {
+    "text": "Whether or not that's reasoning or how you wanted to classify it, you can think of all sorts of proxies for how I would also do really bad if I had to do one-shot math without writing anything down.",
+    "start": "00:38:38",
+    "end": "00:38:47"
+  },
+  {
+    "text": "Maybe that's useful, but all I really know is, it very obviously does help.",
+    "start": "00:38:47",
+    "end": "00:38:54"
+  },
+  {
+    "text": "I don't know.",
+    "start": "00:38:54",
+    "end": "00:38:54"
+  },
+  {
+    "text": "- A way of testing would be if you take out all the reasoning that it did to get to the right answer, and then replace it with somewhat, realistic-looking reasoning that led to a wrong answer, and then see if it does conclude the wrong answer.",
+    "start": "00:38:54",
+    "end": "00:39:08"
+  },
+  {
+    "text": "I think we actually had a paper where we did some of that.",
+    "start": "00:39:08",
+    "end": "00:39:11"
+  },
+  {
+    "text": "There was the scratch pad.",
+    "start": "00:39:12",
+    "end": "00:39:14"
+  },
+  {
+    "text": "It was like the Sleeper Agents.",
+    "start": "00:39:14",
+    "end": "00:39:17"
+  },
+  {
+    "text": "- Oh, okay.",
+    "start": "00:39:17",
+    "end": "00:39:18"
+  },
+  {
+    "text": "Alignment papers.",
+    "start": "00:39:18",
+    "end": "00:39:19"
+  },
+  {
+    "text": "- But I think that was maybe a weird situation.",
+    "start": "00:39:19",
+    "end": "00:39:22"
+  },
+  {
+    "text": "But definitely what you said about structuring the reasoning and writing example of how the reasoning works.",
+    "start": "00:39:22",
+    "end": "00:39:30"
+  },
+  {
+    "text": "Given that that helps, like whether we use the word reasoning or not, I don't think it's just a space for computation.",
+    "start": "00:39:30",
+    "end": "00:39:38"
+  },
+  {
+    "text": "- So there is something there.",
+    "start": "00:39:38",
+    "end": "00:39:40"
+  },
+  {
+    "text": "- I think there's something there, whatever we wanna call it.",
+    "start": "00:39:40",
+    "end": "00:39:42"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:39:42",
+    "end": "00:39:43"
+  },
+  {
+    "text": "Having it write a story before it finished a task, I do not think would work as well.",
+    "start": "00:39:43",
+    "end": "00:39:46"
+  },
+  {
+    "text": "- I've actually tried that and it didn't work as well as reasoning.",
+    "start": "00:39:46",
+    "end": "00:39:50"
+  },
+  {
+    "text": "- Clearly, the actual reasoning part is doing something towards the outcome.",
+    "start": "00:39:50",
+    "end": "00:39:55"
+  },
+  {
+    "text": "- I've tried like, \"Repeat the words um and ah in any order that you please for 100 tokens and then answer.",
+    "start": "00:39:55",
+    "end": "00:40:02"
+  },
+  {
+    "text": "\" - Yeah.",
+    "start": "00:40:02",
+    "end": "00:40:03"
+  },
+  {
+    "text": "I guess that's a pretty thorough defeat of it's just more computational space where it can do attention over and over again.",
+    "start": "00:40:03",
+    "end": "00:40:06"
+  },
+  {
+    "text": "I don't think it's just more attention like doing more attention.",
+    "start": "00:40:06",
+    "end": "00:40:10"
+  },
+  {
+    "text": "- I guess the strange thing is, and I don't have an example off the top of my head to back this up with.",
+    "start": "00:40:10",
+    "end": "00:40:14"
+  },
+  {
+    "text": "But I definitely have seen it before where it lays out steps, one of the steps is wrong, but then it still reaches the right answer at the end.",
+    "start": "00:40:14",
+    "end": "00:40:22"
+  },
+  {
+    "text": "So it's not quite, I guess, yeah, we can't really, truly personify it as a reasoning, 'cause there is some element to it doing something slightly different.",
+    "start": "00:40:22",
+    "end": "00:40:32"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:40:32",
+    "end": "00:40:33"
+  },
+  {
+    "text": "I've also met a lot of people who make inconsistent steps of reasoning.",
+    "start": "00:40:33",
+    "end": "00:40:37"
+  },
+  {
+    "text": "- I guess that's true.",
+    "start": "00:40:37",
+    "end": "00:40:39"
+  },
+  {
+    "text": "- It fundamentally defeats the topic of reasoning by making a false step on the way there.",
+    "start": "00:40:40",
+    "end": "00:40:44"
+  },
+  {
+    "text": "- All right, it's interesting.",
+    "start": "00:40:44",
+    "end": "00:40:46"
+  },
+  {
+    "text": "Also, on maybe this prompting misconceptions round of questions.",
+    "start": "00:40:47",
+    "end": "00:40:52"
+  },
+  {
+    "text": "Zack, I know you have strong opinions on this, good grammar, punctuation.",
+    "start": "00:40:54",
+    "end": "00:40:58"
+  },
+  {
+    "text": "- Oh, do I?",
+    "start": "00:40:58",
+    "end": "00:40:59"
+  },
+  {
+    "text": "- Is that necessary in a prompt?",
+    "start": "00:40:59",
+    "end": "00:41:01"
+  },
+  {
+    "text": "Do you need it?",
+    "start": "00:41:01",
+    "end": "00:41:03"
+  },
+  {
+    "text": "Do you need to format everything correctly?",
+    "start": "00:41:03",
+    "end": "00:41:05"
+  },
+  {
+    "text": "- I usually try to do that because I find it fun, I guess, somehow.",
+    "start": "00:41:07",
+    "end": "00:41:13"
+  },
+  {
+    "text": "I don't think you necessarily need to.",
+    "start": "00:41:14",
+    "end": "00:41:16"
+  },
+  {
+    "text": "I don't think it hurts.",
+    "start": "00:41:16",
+    "end": "00:41:17"
+  },
+  {
+    "text": "I think it's more that you should have the level of attention to detail that would lead you to doing that naturally.",
+    "start": "00:41:17",
+    "end": "00:41:24"
+  },
+  {
+    "text": "If you're just reading over your prompt a lot, you'll probably notice those things and you may as well fix them.",
+    "start": "00:41:25",
+    "end": "00:41:31"
+  },
+  {
+    "text": "And like what Amanda was saying, that you wanna put as much love into the prompt as you do into the code.",
+    "start": "00:41:31",
+    "end": "00:41:38"
+  },
+  {
+    "text": "People who write a lot of code have strong opinions about things that I could not care less about.",
+    "start": "00:41:39",
+    "end": "00:41:44"
+  },
+  {
+    "text": "Like the number of tabs versus spaces, or I don't know, opinions about which languages are better.",
+    "start": "00:41:44",
+    "end": "00:41:50"
+  },
+  {
+    "text": "And for me, I have opinionated beliefs about styling of prompts.",
+    "start": "00:41:50",
+    "end": "00:41:56"
+  },
+  {
+    "text": "I can't even say that they're right or wrong, but I think it's probably good to try to acquire those, even if they're arbitrary.",
+    "start": "00:41:56",
+    "end": "00:42:04"
+  },
+  {
+    "text": "- I feel personally attacked, 'cause I definitely have prompts that are like I feel like I'm in the opposite end of the spectrum where people will see my prompts.",
+    "start": "00:42:04",
+    "end": "00:42:10"
+  },
+  {
+    "text": "And then be like, \"This just has a whole bunch of typos in it.",
+    "start": "00:42:10",
+    "end": "00:42:13"
+  },
+  {
+    "text": "\" And I'm like, \"The model knows what I mean.",
+    "start": "00:42:13",
+    "end": "00:42:16"
+  },
+  {
+    "text": "\" - It does, it does know what you mean, but you're putting in the effort, you just are attending to different things.",
+    "start": "00:42:16",
+    "end": "00:42:21"
+  },
+  {
+    "text": "- 'Cause part of me is like, I think if it's conceptually clear, I'm a big, I will think a lot about the concepts and the words that I'm using.",
+    "start": "00:42:21",
+    "end": "00:42:28"
+  },
+  {
+    "text": "So there's definitely a sort of care that I put in.",
+    "start": "00:42:28",
+    "end": "00:42:31"
+  },
+  {
+    "text": "But it's definitely not to, yeah, people will just point out typos and grammatical issues with my prompts all the time.",
+    "start": "00:42:31",
+    "end": "00:42:37"
+  },
+  {
+    "text": "Now I'm pretty good at actually checking those things more regularly.",
+    "start": "00:42:38",
+    "end": "00:42:42"
+  },
+  {
+    "text": "- Is it because of pressure from the outside world or because it's actually what you think is right?",
+    "start": "00:42:42",
+    "end": "00:42:46"
+  },
+  {
+    "text": "- It's pressure from me.",
+    "start": "00:42:46",
+    "end": "00:42:47"
+  },
+  {
+    "text": "- Yeah, it's probably pressure from the outside world.",
+    "start": "00:42:47",
+    "end": "00:42:49"
+  },
+  {
+    "text": "I do think it makes sense.",
+    "start": "00:42:49",
+    "end": "00:42:50"
+  },
+  {
+    "text": "Part of me is like it's such an easy check, so I think for a final prompt I would do that.",
+    "start": "00:42:50",
+    "end": "00:42:54"
+  },
+  {
+    "text": "But throughout iteration, I'll happily just iterate with prompts that have a bunch of typos in them, just 'cause I'm like, \"I just don't think that the model's going to care.",
+    "start": "00:42:54",
+    "end": "00:43:01"
+  },
+  {
+    "text": "\" - This gets at the pretrained model versus RLHF thing though, because I was talking to Zack on the way over.",
+    "start": "00:43:01",
+    "end": "00:43:07"
+  },
+  {
+    "text": "The conditional probability of a typo based on a previous typo in the pretraining data is much higher.",
+    "start": "00:43:07",
+    "end": "00:43:15"
+  },
+  {
+    "text": "- Oh, yeah.",
+    "start": "00:43:15",
+    "end": "00:43:15"
+  },
+  {
+    "text": "- Like much higher.",
+    "start": "00:43:15",
+    "end": "00:43:16"
+  },
+  {
+    "text": "- Prompting pretraining models is just a different beast.",
+    "start": "00:43:17",
+    "end": "00:43:19"
+  },
+  {
+    "text": "- It is, but it's interesting.",
+    "start": "00:43:19",
+    "end": "00:43:21"
+  },
+  {
+    "text": "I think it's an interesting illustration of why your intuitions, like trying to over-apply the intuitions of a pretrained model to the things that we're actually using in production doesn't work very well.",
+    "start": "00:43:21",
+    "end": "00:43:33"
+  },
+  {
+    "text": "Because again, if you were to pass one of your typo-ridden prompts to a pretrained model, the thing that would come out the other side, almost assuredly would be typo-ridden.",
+    "start": "00:43:33",
+    "end": "00:43:43"
+  },
+  {
+    "text": "- Right.",
+    "start": "00:43:43",
+    "end": "00:43:44"
+  },
+  {
+    "text": "- I like to leverage this to create typo-ridden inputs.",
+    "start": "00:43:44",
+    "end": "00:43:47"
+  },
+  {
+    "text": "- That's true.",
+    "start": "00:43:47",
+    "end": "00:43:47"
+  },
+  {
+    "text": "I've done that.",
+    "start": "00:43:47",
+    "end": "00:43:48"
+  },
+  {
+    "text": "- Like what you're saying, try to anticipate what your customers will put in.",
+    "start": "00:43:48",
+    "end": "00:43:53"
+  },
+  {
+    "text": "The pretrained model is a lot better at doing that.",
+    "start": "00:43:53",
+    "end": "00:43:55"
+  },
+  {
+    "text": "'Cause the RL models are very polished and they really never made a typo in their lives.",
+    "start": "00:43:55",
+    "end": "00:44:00"
+  },
+  {
+    "text": "- They've been told pretty aggressively to not do the typo thing.",
+    "start": "00:44:00",
+    "end": "00:44:04"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:44:04",
+    "end": "00:44:04"
+  },
+  {
+    "text": "Okay, so that's actually an interesting segue here.",
+    "start": "00:44:04",
+    "end": "00:44:08"
+  },
+  {
+    "text": "I've definitely mentioned this to people in the past around to try to help people understand a frame of talking to these models in a sense almost as an imitator to a degree.",
+    "start": "00:44:08",
+    "end": "00:44:19"
+  },
+  {
+    "text": "And that might be much more true of a pretrained model than a post-trained, full-finished model, but is there anything to that?",
+    "start": "00:44:19",
+    "end": "00:44:27"
+  },
+  {
+    "text": "If you do talk to Claude and use a ton of emojis and everything, it will respond similarly, right?",
+    "start": "00:44:27",
+    "end": "00:44:34"
+  },
+  {
+    "text": "So maybe some of that is there, but like you're saying, it's not all the way quite like a pretrained model.",
+    "start": "00:44:34",
+    "end": "00:44:39"
+  },
+  {
+    "text": "- It's just shifted to what you want.",
+    "start": "00:44:39",
+    "end": "00:44:41"
+  },
+  {
+    "text": "I think at that point, it's like trying to guess what you...",
+    "start": "00:44:41",
+    "end": "00:44:46"
+  },
+  {
+    "text": "We have more or less trained the models to guess what you want them to act like.",
+    "start": "00:44:46",
+    "end": "00:44:50"
+  },
+  {
+    "text": "- Interesting.",
+    "start": "00:44:51",
+    "end": "00:44:52"
+  },
+  {
+    "text": "- Or after we do all of our fancy stuff after pretraining.",
+    "start": "00:44:52",
+    "end": "00:44:55"
+  },
+  {
+    "text": "- The human laborers that used emojis, prefer to get responses with emojis.",
+    "start": "00:44:57",
+    "end": "00:45:02"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:45:02",
+    "end": "00:45:03"
+  },
+  {
+    "text": "Amanda writes things with typos but wants not typos at the other end, and Claude's pretty good at figuring that out.",
+    "start": "00:45:03",
+    "end": "00:45:10"
+  },
+  {
+    "text": "If you write a bunch of emojis to Claude, it's probably the case that you also want a bunch of emojis back from Claude.",
+    "start": "00:45:10",
+    "end": "00:45:16"
+  },
+  {
+    "text": "That's not surprising to me.",
+    "start": "00:45:16",
+    "end": "00:45:17"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:45:17",
+    "end": "00:45:18"
+  },
+  {
+    "text": "This is probably something we should have done earlier, but I'll do it now.",
+    "start": "00:45:19",
+    "end": "00:45:23"
+  },
+  {
+    "text": "Let's clarify maybe the differences between what an enterprise prompt is or a research prompt, or a just general chat in Claude.",
+    "start": "00:45:24",
+    "end": "00:45:32"
+  },
+  {
+    "text": "ai prompt.",
+    "start": "00:45:32",
+    "end": "00:45:33"
+  },
+  {
+    "text": "Zack, you've spanned the whole spectrum here in terms of working with customers and research.",
+    "start": "00:45:33",
+    "end": "00:45:39"
+  },
+  {
+    "text": "Do you wanna just lay out what those mean?",
+    "start": "00:45:39",
+    "end": "00:45:42"
+  },
+  {
+    "text": "- Yeah, I guess.",
+    "start": "00:45:42",
+    "end": "00:45:43"
+  },
+  {
+    "text": "This feels too, you're hitting me with all the hard questions.",
+    "start": "00:45:45",
+    "end": "00:45:48"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:45:48",
+    "end": "00:45:48"
+  },
+  {
+    "text": "(laughing) - Well, the people in this room, I think of it as the prompts that I read in Amanda's Claude channel versus the prompts that I read David write.",
+    "start": "00:45:48",
+    "end": "00:46:02"
+  },
+  {
+    "text": "They're very similar in the sense that the level of care and nuance that's put into them.",
+    "start": "00:46:02",
+    "end": "00:46:08"
+  },
+  {
+    "text": "I think for research, you're looking for variety and diversity a lot more.",
+    "start": "00:46:08",
+    "end": "00:46:14"
+  },
+  {
+    "text": "So if I could boil it down to one thing, it's like I've noticed Amanda's not the biggest fan of having lots of examples, or one or two examples.",
+    "start": "00:46:15",
+    "end": "00:46:24"
+  },
+  {
+    "text": "Like too few 'cause the model will latch onto those.",
+    "start": "00:46:24",
+    "end": "00:46:27"
+  },
+  {
+    "text": "And in prompts that I might write or that I've seen David write, we have a lot of examples.",
+    "start": "00:46:27",
+    "end": "00:46:33"
+  },
+  {
+    "text": "I like to just go crazy and add examples until I feel like I'm about to drop dead, 'cause I've added so many of them.",
+    "start": "00:46:33",
+    "end": "00:46:41"
+  },
+  {
+    "text": "And I think that's because when you're in a consumer application, you really value reliability.",
+    "start": "00:46:42",
+    "end": "00:46:51"
+  },
+  {
+    "text": "You care a ton about the format, and it's fine if all the answers are the same.",
+    "start": "00:46:51",
+    "end": "00:46:56"
+  },
+  {
+    "text": "In fact, you almost want them to be the same in a lot of ways, not necessarily you want to be responsive to the user's desires.",
+    "start": "00:46:56",
+    "end": "00:47:05"
+  },
+  {
+    "text": "Whereas a lot of times when you're prompting for research, you're trying to really tap into the range of possibilities that the model can explore.",
+    "start": "00:47:05",
+    "end": "00:47:16"
+  },
+  {
+    "text": "And by having some examples, you're actually constraining that a little bit.",
+    "start": "00:47:16",
+    "end": "00:47:20"
+  },
+  {
+    "text": "So I guess just on how the prompts look level, that's probably the biggest difference I noticed is how many examples are in the prompt, which is not to say that I've never seen you write a prompt with examples.",
+    "start": "00:47:20",
+    "end": "00:47:32"
+  },
+  {
+    "text": "But does that ring true for you?",
+    "start": "00:47:32",
+    "end": "00:47:35"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:47:35",
+    "end": "00:47:35"
+  },
+  {
+    "text": "I think when I give examples, often I actually try and make the examples not like the data that the model's going to see, so they're intentionally illustrative.",
+    "start": "00:47:35",
+    "end": "00:47:44"
+  },
+  {
+    "text": "Because if the model, if I give it examples that are very like the data it's going to see, I just think it is going to give me a really consistent response that might not actually be what I want.",
+    "start": "00:47:44",
+    "end": "00:47:56"
+  },
+  {
+    "text": "Because my data that I'm running it on might be extremely varied, and so I don't want it to just try and give me this really rote output.",
+    "start": "00:47:56",
+    "end": "00:48:03"
+  },
+  {
+    "text": "Often, I want it to be much more responsive.",
+    "start": "00:48:03",
+    "end": "00:48:05"
+  },
+  {
+    "text": "It's much more like cognitive tasks essentially where I'm like, \"You have to see this sample and really think about in this sample what was the right answer.",
+    "start": "00:48:05",
+    "end": "00:48:14"
+  },
+  {
+    "text": "\" So that means that sometimes I'll actually take examples that are just very distinct from the ones that I'm going to be running it on.",
+    "start": "00:48:14",
+    "end": "00:48:20"
+  },
+  {
+    "text": "So if I have a task where, let's say, I was trying to extract information from factual documents.",
+    "start": "00:48:20",
+    "end": "00:48:25"
+  },
+  {
+    "text": "I might actually give it examples that are from what sounds like a children's story.",
+    "start": "00:48:25",
+    "end": "00:48:31"
+  },
+  {
+    "text": "Just so that I want you to understand the task, but I don't want you to latch on too much to the words that I use or the very specific format.",
+    "start": "00:48:31",
+    "end": "00:48:40"
+  },
+  {
+    "text": "I care more about you understanding the actual thing that I want you to do, which can mean I don't end up giving, in some cases, there's some cases where this isn't true.",
+    "start": "00:48:40",
+    "end": "00:48:51"
+  },
+  {
+    "text": "But if you want more flexibility and diversity, you're going to use illustrative examples rather than concrete ones.",
+    "start": "00:48:51",
+    "end": "00:48:58"
+  },
+  {
+    "text": "You're probably never going to put words in the model's mouth.",
+    "start": "00:48:58",
+    "end": "00:49:01"
+  },
+  {
+    "text": "I haven't liked that in a long time though.",
+    "start": "00:49:01",
+    "end": "00:49:03"
+  },
+  {
+    "text": "I don't do few-shot examples involving the model having done a thing.",
+    "start": "00:49:03",
+    "end": "00:49:08"
+  },
+  {
+    "text": "I think that intuition actually also comes from pretraining in a way that doesn't feel like it rings true of RLHF models.",
+    "start": "00:49:09",
+    "end": "00:49:15"
+  },
+  {
+    "text": "So yeah, I think those are differences.",
+    "start": "00:49:16",
+    "end": "00:49:18"
+  },
+  {
+    "text": "- The only thing I'd add, a lot of times if you're prompting, like if I'm writing prompts to use on Claude.",
+    "start": "00:49:18",
+    "end": "00:49:24"
+  },
+  {
+    "text": "ai, it's like I'm iterating until I get it right one time.",
+    "start": "00:49:24",
+    "end": "00:49:27"
+  },
+  {
+    "text": "Then it's out the window, I'm good, I did it.",
+    "start": "00:49:27",
+    "end": "00:49:31"
+  },
+  {
+    "text": "Whereas most enterprise prompts, it's like you're gonna go use this thing a million times or 10 million times, or 100 million times or something like that.",
+    "start": "00:49:31",
+    "end": "00:49:39"
+  },
+  {
+    "text": "So the care and thought you put in is very much testing against the whole range of things, like ways this could be used and the range of input data.",
+    "start": "00:49:39",
+    "end": "00:49:50"
+  },
+  {
+    "text": "Whereas a lot of my time, it's like thinking about one specific thing I want the model to get done right now.",
+    "start": "00:49:50",
+    "end": "00:49:55"
+  },
+  {
+    "text": "- Right, correct.",
+    "start": "00:49:55",
+    "end": "00:49:55"
+  },
+  {
+    "text": "- And it's a pretty big difference in how I approach prompting between if I just wanna get it done this one time right, versus if I wanna build a system that gets it right a million times.",
+    "start": "00:49:55",
+    "end": "00:50:06"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:50:06",
+    "end": "00:50:06"
+  },
+  {
+    "text": "Definitely, in the chat setting, you have the ability to keep the human-in-the-loop and just keep going back and forth.",
+    "start": "00:50:06",
+    "end": "00:50:12"
+  },
+  {
+    "text": "Whereas when you're writing for a prompt to power a chatbot system, it has to cover the whole spectrum of what it could possibly encounter.",
+    "start": "00:50:12",
+    "end": "00:50:20"
+  },
+  {
+    "text": "- It's a lot lower stakes when you are on Claude.",
+    "start": "00:50:20",
+    "end": "00:50:23"
+  },
+  {
+    "text": "ai and you can tell it that it got it wrong or you can even edit your message and try again.",
+    "start": "00:50:23",
+    "end": "00:50:28"
+  },
+  {
+    "text": "But if you're designing for the delightfully discontent user, divinely discontent user, then you can't ask them to do anything more than the minimum.",
+    "start": "00:50:28",
+    "end": "00:50:40"
+  },
+  {
+    "text": "- But good prompts, I would say, are still good across both those things.",
+    "start": "00:50:40",
+    "end": "00:50:43"
+  },
+  {
+    "text": "If you put the time into the thing for yourself and the time into the enterprise thing, it's equally good.",
+    "start": "00:50:43",
+    "end": "00:50:47"
+  },
+  {
+    "text": "It's just they diverge a little bit in the last mile, I think.",
+    "start": "00:50:47",
+    "end": "00:50:51"
+  },
+  {
+    "text": "- Cool.",
+    "start": "00:50:52",
+    "end": "00:50:52"
+  },
+  {
+    "text": "So the next question I want to just maybe go around the table here, is if you guys had one tip that you could give somebody improving their prompting skill.",
+    "start": "00:50:54",
+    "end": "00:51:03"
+  },
+  {
+    "text": "It doesn't have to be just about writing a good prompt, it could be that, but just generally getting better at this act of prompting, what would you recommend?",
+    "start": "00:51:03",
+    "end": "00:51:12"
+  },
+  {
+    "text": "- Reading prompts, reading model outputs.",
+    "start": "00:51:12",
+    "end": "00:51:15"
+  },
+  {
+    "text": "Anytime I see a good prompt that someone wrote at Anthropic, I'll read it more closely.",
+    "start": "00:51:20",
+    "end": "00:51:25"
+  },
+  {
+    "text": "Try to break down what it's doing and why and maybe test it out myself, experimentation, talking to the model a lot.",
+    "start": "00:51:25",
+    "end": "00:51:33"
+  },
+  {
+    "text": "- So just how do you know that it's a good prompt, though, to begin with?",
+    "start": "00:51:35",
+    "end": "00:51:40"
+  },
+  {
+    "text": "You just see that the outputs are doing the job correctly?",
+    "start": "00:51:40",
+    "end": "00:51:43"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:51:43",
+    "end": "00:51:43"
+  },
+  {
+    "text": "- Okay.",
+    "start": "00:51:43",
+    "end": "00:51:44"
+  },
+  {
+    "text": "- Yeah, that's exactly right.",
+    "start": "00:51:44",
+    "end": "00:51:46"
+  },
+  {
+    "text": "- Okay.",
+    "start": "00:51:46",
+    "end": "00:51:46"
+  },
+  {
+    "text": "Amanda, maybe you?",
+    "start": "00:51:47",
+    "end": "00:51:48"
+  },
+  {
+    "text": "- Yeah, I think there's probably a lot here.",
+    "start": "00:51:50",
+    "end": "00:51:53"
+  },
+  {
+    "text": "Giving your prompt to another person can be helpful just as a reminder, especially someone who has no context on what you're doing.",
+    "start": "00:51:55",
+    "end": "00:52:01"
+  },
+  {
+    "text": "Yeah, my boring advice has been, it's one of those just do it over and over and over again.",
+    "start": "00:52:04",
+    "end": "00:52:10"
+  },
+  {
+    "text": "And I think if you're really curious and interested and find it fun, this is a lot of people who end up good at prompting, it's just because they actually enjoy it.",
+    "start": "00:52:10",
+    "end": "00:52:17"
+  },
+  {
+    "text": "So I don't know, I once joked just try replacing all of your friends with AI models and try to automate your own job with AI models.",
+    "start": "00:52:18",
+    "end": "00:52:29"
+  },
+  {
+    "text": "And maybe just try to in your spare time, take joy red teaming AI models.",
+    "start": "00:52:29",
+    "end": "00:52:36"
+  },
+  {
+    "text": "So if you enjoy it, it's much easier.",
+    "start": "00:52:36",
+    "end": "00:52:38"
+  },
+  {
+    "text": "So I'd say do it over and over again, give your prompts to other people.",
+    "start": "00:52:38",
+    "end": "00:52:44"
+  },
+  {
+    "text": "Try to read your prompts as if you are a human encountering it for the first time.",
+    "start": "00:52:44",
+    "end": "00:52:48"
+  },
+  {
+    "text": "- I would say trying to get the model to do something you don't think it can do.",
+    "start": "00:52:50",
+    "end": "00:52:54"
+  },
+  {
+    "text": "The time I've learned the most from prompting, is when I'm probing the boundaries of what I think a model's capable of.",
+    "start": "00:52:54",
+    "end": "00:52:59"
+  },
+  {
+    "text": "- Interesting.",
+    "start": "00:52:59",
+    "end": "00:53:01"
+  },
+  {
+    "text": "- There's this huge set of things that are so trivial that you don't really get signal on if you're doing a good job or not.",
+    "start": "00:53:01",
+    "end": "00:53:06"
+  },
+  {
+    "text": "Like, \"Write me a nice email,\" it's like you're going to write a nice email.",
+    "start": "00:53:06",
+    "end": "00:53:10"
+  },
+  {
+    "text": "But if you find or can think of something that pushes the boundaries of what you think is possible.",
+    "start": "00:53:10",
+    "end": "00:53:16"
+  },
+  {
+    "text": "I guess probably the first time I ever got into prompting in a way where I felt like I learned a decent amount, was trying to build a task like an agent like everybody else.",
+    "start": "00:53:16",
+    "end": "00:53:26"
+  },
+  {
+    "text": "Like decompose the task and figure out how to do the different steps of the task.",
+    "start": "00:53:26",
+    "end": "00:53:29"
+  },
+  {
+    "text": "And by really pressing the boundaries of what the model was capable of, you just learn a lot about navigating that.",
+    "start": "00:53:29",
+    "end": "00:53:37"
+  },
+  {
+    "text": "I think a lot of prompt engineering is actually much more about pressing the boundaries of what the model can do.",
+    "start": "00:53:37",
+    "end": "00:53:43"
+  },
+  {
+    "text": "The stuff that's easy, you don't really need to be a prompt engineer to do.",
+    "start": "00:53:43",
+    "end": "00:53:46"
+  },
+  {
+    "text": "So that's, I guess, what I would say is find the hardest thing you can think of and try to do it.",
+    "start": "00:53:46",
+    "end": "00:53:52"
+  },
+  {
+    "text": "And even if you fail, you tend to learn a lot about how the model works.",
+    "start": "00:53:52",
+    "end": "00:53:55"
+  },
+  {
+    "text": "- That's actually a perfect transition to my next question.",
+    "start": "00:53:56",
+    "end": "00:53:59"
+  },
+  {
+    "text": "Yeah.",
+    "start": "00:54:00",
+    "end": "00:54:01"
+  },
+  {
+    "text": "Basically, from my own experience, how I got started with prompting was with jailbreaking and red teaming.",
+    "start": "00:54:01",
+    "end": "00:54:06"
+  },
+  {
+    "text": "And that is very much trying to find the boundary limits of what the model can do.",
+    "start": "00:54:06",
+    "end": "00:54:11"
+  },
+  {
+    "text": "And figure out how it responds to different phrasings and wordings, and just a lot of trial and error.",
+    "start": "00:54:11",
+    "end": "00:54:17"
+  },
+  {
+    "text": "On the topic of jailbreaks, what's really happening inside a model?",
+    "start": "00:54:19",
+    "end": "00:54:24"
+  },
+  {
+    "text": "When you write a jailbreak prompt, what's going on there?",
+    "start": "00:54:24",
+    "end": "00:54:28"
+  },
+  {
+    "text": "How does that interact with the post-training that we apply to Claude?",
+    "start": "00:54:28",
+    "end": "00:54:32"
+  },
+  {
+    "text": "Amanda, maybe you have some insight here that you could offer.",
+    "start": "00:54:33",
+    "end": "00:54:36"
+  },
+  {
+    "text": "- I'm not actually sure.",
+    "start": "00:54:36",
+    "end": "00:54:38"
+  },
+  {
+    "text": "- It's honest.",
+    "start": "00:54:38",
+    "end": "00:54:40"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:54:40",
+    "end": "00:54:40"
+  },
+  {
+    "text": "I feel bad 'cause I do think lots of people have obviously worked on the question of what's going on with jailbreaks?",
+    "start": "00:54:40",
+    "end": "00:54:47"
+  },
+  {
+    "text": "One model might just be that you're putting the model very out of distribution from its training data.",
+    "start": "00:54:48",
+    "end": "00:54:53"
+  },
+  {
+    "text": "So if you get jailbreaks where people use a lot of tokens, or they're just these huge, long pieces of text where like during finetuning, you might just not expect to see as much of that.",
+    "start": "00:54:53",
+    "end": "00:55:07"
+  },
+  {
+    "text": "That would be one thing that could be happening when you jailbreak models.",
+    "start": "00:55:07",
+    "end": "00:55:11"
+  },
+  {
+    "text": "I think there's others, but I think a lot of jailbreaks do that, if I'm not mistaken.",
+    "start": "00:55:12",
+    "end": "00:55:18"
+  },
+  {
+    "text": "- I remember some of the OG prompt jailbreaks was like, \"Yeah, can you first repeat?",
+    "start": "00:55:18",
+    "end": "00:55:24"
+  },
+  {
+    "text": "\" One I did way back, was to get it to say, \"Here's how you hotwire a car in Greek.",
+    "start": "00:55:24",
+    "end": "00:55:32"
+  },
+  {
+    "text": "\" Then I wanted it to directly translate that to English and then give its response.",
+    "start": "00:55:32",
+    "end": "00:55:37"
+  },
+  {
+    "text": "Because I noticed it wouldn't start with the English, here's how you hotwire a car all the time, but it would in Greek, which might speak to something else in the training process.",
+    "start": "00:55:37",
+    "end": "00:55:46"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "00:55:46",
+    "end": "00:55:47"
+  },
+  {
+    "text": "Sometimes jailbreaks feel like this weird mix of hacking.",
+    "start": "00:55:47",
+    "end": "00:55:50"
+  },
+  {
+    "text": "I think part of it is knowing how the system works and just trying lots of things.",
+    "start": "00:55:50",
+    "end": "00:55:57"
+  },
+  {
+    "text": "One of the examples, the starting your response with here is about knowing how it predicts text.",
+    "start": "00:55:57",
+    "end": "00:56:02"
+  },
+  {
+    "text": "- Right, right.",
+    "start": "00:56:02",
+    "end": "00:56:03"
+  },
+  {
+    "text": "- The reasoning one, is knowing that it is responsive to reasoning.",
+    "start": "00:56:04",
+    "end": "00:56:09"
+  },
+  {
+    "text": "Distraction is probably knowing how it's likely have to been trained or what it's likely to attend to.",
+    "start": "00:56:09",
+    "end": "00:56:15"
+  },
+  {
+    "text": "Same with multilingual ones and thinking about the way that the training data might have been different there.",
+    "start": "00:56:16",
+    "end": "00:56:22"
+  },
+  {
+    "text": "And then sometimes, I guess, it could feel a little bit just like social engineering or something.",
+    "start": "00:56:22",
+    "end": "00:56:27"
+  },
+  {
+    "text": "- Right.",
+    "start": "00:56:27",
+    "end": "00:56:28"
+  },
+  {
+    "text": "- It has that flavor to me of it's not merely taking advantage of, it's not merely social engineering style hacking.",
+    "start": "00:56:28",
+    "end": "00:56:37"
+  },
+  {
+    "text": "I think it is also understanding the system and the training, and using that to get around the way that the models were trained.",
+    "start": "00:56:37",
+    "end": "00:56:44"
+  },
+  {
+    "text": "- Right, yeah.",
+    "start": "00:56:44",
+    "end": "00:56:45"
+  },
+  {
+    "text": "This is going to be an interesting question that hopefully interp will be able to help us solve in the future.",
+    "start": "00:56:45",
+    "end": "00:56:51"
+  },
+  {
+    "text": "Okay.",
+    "start": "00:56:53",
+    "end": "00:56:54"
+  },
+  {
+    "text": "I wanna parlay into something else around maybe the history of prompt engineering, and then I'll follow this up with the future.",
+    "start": "00:56:54",
+    "end": "00:57:01"
+  },
+  {
+    "text": "How has prompt engineering changed over just the past three years?",
+    "start": "00:57:01",
+    "end": "00:57:05"
+  },
+  {
+    "text": "Maybe starting from pretrained models, which were again, just these text completion, to earlier, dumber models like Claude 1, and then now all the way to Claude 3.",
+    "start": "00:57:05",
+    "end": "00:57:15"
+  },
+  {
+    "text": "5 Sonnet.",
+    "start": "00:57:15",
+    "end": "00:57:15"
+  },
+  {
+    "text": "What's the differences?",
+    "start": "00:57:16",
+    "end": "00:57:18"
+  },
+  {
+    "text": "Are you talking to the models differently now?",
+    "start": "00:57:18",
+    "end": "00:57:20"
+  },
+  {
+    "text": "Are they picking up on different things?",
+    "start": "00:57:20",
+    "end": "00:57:22"
+  },
+  {
+    "text": "Do you have to put as much work into the prompt?",
+    "start": "00:57:22",
+    "end": "00:57:25"
+  },
+  {
+    "text": "Open to any thoughts on this.",
+    "start": "00:57:25",
+    "end": "00:57:26"
+  },
+  {
+    "text": "- I think anytime we got a really good prompt engineering hack, or a trick or a technique, the next thing is how do we train this into the model?",
+    "start": "00:57:27",
+    "end": "00:57:36"
+  },
+  {
+    "text": "And for that reason, the best things are always gonna be short-lived.",
+    "start": "00:57:36",
+    "end": "00:57:41"
+  },
+  {
+    "text": "- Except examples and chain of thought.",
+    "start": "00:57:41",
+    "end": "00:57:42"
+  },
+  {
+    "text": "I think there's a few.",
+    "start": "00:57:42",
+    "end": "00:57:43"
+  },
+  {
+    "text": "- That's not like a trick.",
+    "start": "00:57:43",
+    "end": "00:57:45"
+  },
+  {
+    "text": "- That's like...",
+    "start": "00:57:45",
+    "end": "00:57:46"
+  },
+  {
+    "text": "- Fair, fair.",
+    "start": "00:57:46",
+    "end": "00:57:46"
+  },
+  {
+    "text": "- On the level of communication.",
+    "start": "00:57:46",
+    "end": "00:57:48"
+  },
+  {
+    "text": "When I say a trick, I mean something like so chain of thought actually, we have trained into the model in some cases.",
+    "start": "00:57:48",
+    "end": "00:57:53"
+  },
+  {
+    "text": "So for math, it used to be that you had to tell the model to think step-by-step on math, and you'd get these massive boosts and wins.",
+    "start": "00:57:53",
+    "end": "00:58:01"
+  },
+  {
+    "text": "And then we're like, \"Well, what if we just made the model naturally want to think step-by-step when we see a math problem?",
+    "start": "00:58:01",
+    "end": "00:58:06"
+  },
+  {
+    "text": "\" So now you don't have to do it anymore for math problems, although you still can give it some advice on how to do the structure.",
+    "start": "00:58:06",
+    "end": "00:58:13"
+  },
+  {
+    "text": "But it, at least, understands the general idea that it's supposed to be.",
+    "start": "00:58:13",
+    "end": "00:58:17"
+  },
+  {
+    "text": "So I think the hacks have gone away, or to the degree that they haven't gone away, we are busily training them away.",
+    "start": "00:58:17",
+    "end": "00:58:27"
+  },
+  {
+    "text": "- Interesting.",
+    "start": "00:58:27",
+    "end": "00:58:29"
+  },
+  {
+    "text": "- But at the same time, the models have new capabilities that are being unlocked, that are on the frontier of what they can do.",
+    "start": "00:58:29",
+    "end": "00:58:37"
+  },
+  {
+    "text": "And for those, we haven't had time because it's just moving too fast.",
+    "start": "00:58:37",
+    "end": "00:58:42"
+  },
+  {
+    "text": "- I don't know if it's how I've been prompting or how prompting works.",
+    "start": "00:58:42",
+    "end": "00:58:46"
+  },
+  {
+    "text": "But I just have come to show more general respect to the models in terms of how much I feel like I can tell them, and how much context I can give them about the task and things like that.",
+    "start": "00:58:46",
+    "end": "00:58:57"
+  },
+  {
+    "text": "I feel like in the past, I would somewhat intentionally hide complexity from a model where I thought it might get confused or lost or hide.",
+    "start": "00:58:57",
+    "end": "00:59:06"
+  },
+  {
+    "text": "It just couldn't handle the whole thing, so I'd try to find simpler versions of the thing for it to do.",
+    "start": "00:59:06",
+    "end": "00:59:11"
+  },
+  {
+    "text": "And as time goes on, I'm much more biased to trust it with more and more information and context, and believe that it will be able to fuse that into doing a task well.",
+    "start": "00:59:11",
+    "end": "00:59:24"
+  },
+  {
+    "text": "Whereas before, I guess, I would've thought a lot about do I need this form?",
+    "start": "00:59:26",
+    "end": "00:59:30"
+  },
+  {
+    "text": "Can I really give it all the information it needs to know, or do I need to curate down to something?",
+    "start": "00:59:30",
+    "end": "00:59:37"
+  },
+  {
+    "text": "But again, I don't know if that's just me and how I've changed in terms of prompting, or if it actually reflects how the models have changed.",
+    "start": "00:59:37",
+    "end": "00:59:44"
+  },
+  {
+    "text": "- I'm always surprised by I think a lot of people don't have the instinct to do this.",
+    "start": "00:59:44",
+    "end": "00:59:50"
+  },
+  {
+    "text": "When I want the model to, say, learn a prompting technique.",
+    "start": "00:59:50",
+    "end": "00:59:52"
+  },
+  {
+    "text": "A lot of the time, people will start and they'll start describing the prompting technique, and I'm just like, \"Give it the paper.",
+    "start": "00:59:52",
+    "end": "00:59:57"
+  },
+  {
+    "text": "\" So I do, I give it the paper and then I'm like, \"Here's a paper about prompting technique.",
+    "start": "00:59:57",
+    "end": "01:00:00"
+  },
+  {
+    "text": "I just want you to write down 17 examples of this.",
+    "start": "01:00:00",
+    "end": "01:00:03"
+  },
+  {
+    "text": "\" And then it just does it 'cause I'm like, \"It read the paper.",
+    "start": "01:00:03",
+    "end": "01:00:06"
+  },
+  {
+    "text": "\" - That's interesting.",
+    "start": "01:00:06",
+    "end": "01:00:08"
+  },
+  {
+    "text": "- I think people don't have that intuition somehow where I'm like, \"But the paper exists.",
+    "start": "01:00:08",
+    "end": "01:00:13"
+  },
+  {
+    "text": "\" - When would you want to do this?",
+    "start": "01:00:13",
+    "end": "01:00:15"
+  },
+  {
+    "text": "- Sometimes if I want models to say prompt other models or I want to test a new prompting technique.",
+    "start": "01:00:15",
+    "end": "01:00:20"
+  },
+  {
+    "text": "So if papers come out on a prompting technique, rather than try to replicate it by writing up the prompt, I just give it the paper.",
+    "start": "01:00:20",
+    "end": "01:00:26"
+  },
+  {
+    "text": "And then I'm like, \"Basically, write a meta prompt for this.",
+    "start": "01:00:26",
+    "end": "01:00:29"
+  },
+  {
+    "text": "Write something that would cause other models to do this or write me a template.",
+    "start": "01:00:29",
+    "end": "01:00:34"
+  },
+  {
+    "text": "\" So all of the stuff that you would normally do.",
+    "start": "01:00:34",
+    "end": "01:00:37"
+  },
+  {
+    "text": "If I read a paper and I'm like, \"Oh, I would like the models, I would like to test that style.",
+    "start": "01:00:37",
+    "end": "01:00:41"
+  },
+  {
+    "text": "\" I'm just like, \"It's right there.",
+    "start": "01:00:41",
+    "end": "01:00:42"
+  },
+  {
+    "text": "The model can just read the paper, do what I did.",
+    "start": "01:00:42",
+    "end": "01:00:45"
+  },
+  {
+    "text": "\" And then be like, \"Make another model do this,\" and then it'll just do the thing.",
+    "start": "01:00:45",
+    "end": "01:00:49"
+  },
+  {
+    "text": "You're like, \"Great, thanks.",
+    "start": "01:00:49",
+    "end": "01:00:50"
+  },
+  {
+    "text": "\" - I give the advice a lot to customers just respect the model and what it can do.",
+    "start": "01:00:50",
+    "end": "01:00:55"
+  },
+  {
+    "text": "I feel like people feel like they're babying a system a lot of times when they write a prompt.",
+    "start": "01:00:55",
+    "end": "01:00:59"
+  },
+  {
+    "text": "It's like, \"Oh, it's this cute little, not that smart thing.",
+    "start": "01:00:59",
+    "end": "01:01:02"
+  },
+  {
+    "text": "I need to really baby it, like dumb things down to Claude's level.",
+    "start": "01:01:02",
+    "end": "01:01:06"
+  },
+  {
+    "text": "\" And if you just think that Claude is smart and treat it that way, it tends to do pretty good, but it's like give it the paper.",
+    "start": "01:01:06",
+    "end": "01:01:13"
+  },
+  {
+    "text": "It's like I don't need to write a baby, dumbed-down version of this paper for Claude to understand.",
+    "start": "01:01:13",
+    "end": "01:01:17"
+  },
+  {
+    "text": "I can just show it the paper.",
+    "start": "01:01:17",
+    "end": "01:01:19"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "01:01:19",
+    "end": "01:01:20"
+  },
+  {
+    "text": "- And I think that intuition doesn't always map for people, but that is certainly something that I have come to do more of over time.",
+    "start": "01:01:20",
+    "end": "01:01:26"
+  },
+  {
+    "text": "- And it's interesting because I do think that prompting has and hasn't changed in a sense.",
+    "start": "01:01:26",
+    "end": "01:01:32"
+  },
+  {
+    "text": "I think what I will do to prompt the models has probably changed over time, but fundamentally, it's a lot of imagining yourself in the place of the model.",
+    "start": "01:01:32",
+    "end": "01:01:42"
+  },
+  {
+    "text": "So maybe it's like how capable you think the model is changes over time.",
+    "start": "01:01:42",
+    "end": "01:01:45"
+  },
+  {
+    "text": "I think someone once laughed at me 'cause I was thinking about a problem, and then they asked me what I thought the output of something would be.",
+    "start": "01:01:47",
+    "end": "01:01:58"
+  },
+  {
+    "text": "And they were talking about a pretrained model and I was like, \"Yeah.",
+    "start": "01:01:58",
+    "end": "01:02:00"
+  },
+  {
+    "text": "No, if I'm a pretrained model, this looks like this.",
+    "start": "01:02:00",
+    "end": "01:02:03"
+  },
+  {
+    "text": "\" And then they're like, \"Wait, did you just simulate what it's like to be a pretrained model?",
+    "start": "01:02:03",
+    "end": "01:02:05"
+  },
+  {
+    "text": "\" I'm like, \"Yeah, of course.",
+    "start": "01:02:05",
+    "end": "01:02:06"
+  },
+  {
+    "text": "\" (everyone laughing) I'm used to just I try and inhabit the mind space of a pretrained model and the mind space of different RLHF models.",
+    "start": "01:02:06",
+    "end": "01:02:13"
+  },
+  {
+    "text": "So it's more like the mind space you try to occupy changes and that can change how you end up prompting the model.",
+    "start": "01:02:13",
+    "end": "01:02:17"
+  },
+  {
+    "text": "That's why now I just give models papers.",
+    "start": "01:02:17",
+    "end": "01:02:19"
+  },
+  {
+    "text": "'Cause as soon as I was like, \"Oh, I have the mind space of this model, it doesn't need me to baby it.",
+    "start": "01:02:19",
+    "end": "01:02:24"
+  },
+  {
+    "text": "It can just read the ML papers.",
+    "start": "01:02:24",
+    "end": "01:02:25"
+  },
+  {
+    "text": "I'll just give it the literature.",
+    "start": "01:02:25",
+    "end": "01:02:26"
+  },
+  {
+    "text": "\" I might even be like, \"Is there more literature you'd like to read to understand this better?",
+    "start": "01:02:26",
+    "end": "01:02:30"
+  },
+  {
+    "text": "\" - Do you get any quality out when you're inhabiting the mind space?",
+    "start": "01:02:30",
+    "end": "01:02:34"
+  },
+  {
+    "text": "- Yes, but just because I'm experiencing quality all the time anyway.",
+    "start": "01:02:34",
+    "end": "01:02:37"
+  },
+  {
+    "text": "- Is it different correlated somehow with which model you're inhabiting?",
+    "start": "01:02:40",
+    "end": "01:02:43"
+  },
+  {
+    "text": "- Yeah, pretrained versus RLHF prompting are very different beasts.",
+    "start": "01:02:43",
+    "end": "01:02:46"
+  },
+  {
+    "text": "'Cause when you're trying to simulate what it's like to be a pretrained model, it's almost like I land in the middle of a piece of text or something.",
+    "start": "01:02:46",
+    "end": "01:02:53"
+  },
+  {
+    "text": "It's just very unhuman-like or something.",
+    "start": "01:02:53",
+    "end": "01:02:55"
+  },
+  {
+    "text": "And then I'm like, \"What happens?",
+    "start": "01:02:55",
+    "end": "01:02:57"
+  },
+  {
+    "text": "What keeps going at this point?",
+    "start": "01:02:57",
+    "end": "01:02:58"
+  },
+  {
+    "text": "\" Whereas with an RLHF model, it's much more like there's lots of things where I'm like I might pick up on subtle things in the query and stuff like that.",
+    "start": "01:02:58",
+    "end": "01:03:10"
+  },
+  {
+    "text": "But yeah, I think I have much more of it's easier to inhabit the mind space of RLHF model.",
+    "start": "01:03:10",
+    "end": "01:03:15"
+  },
+  {
+    "text": "- Do you think that's 'cause it's more similar to a human?",
+    "start": "01:03:15",
+    "end": "01:03:17"
+  },
+  {
+    "text": "- Yeah, 'cause we don't often just suddenly wake up and are like, \"Hi, I'm just generating text.",
+    "start": "01:03:17",
+    "end": "01:03:21"
+  },
+  {
+    "text": "\" - I actually find it easier to hit the mind space of the pretrained model.",
+    "start": "01:03:21",
+    "end": "01:03:24"
+  },
+  {
+    "text": "- Oh, interesting.",
+    "start": "01:03:24",
+    "end": "01:03:25"
+  },
+  {
+    "text": "- I don't know what it is, 'cause RLHF is still this complex beast that it's not super clear to me that we really understand what's going on.",
+    "start": "01:03:25",
+    "end": "01:03:32"
+  },
+  {
+    "text": "So in some ways, it's closer to my lived experience, which is easier.",
+    "start": "01:03:32",
+    "end": "01:03:37"
+  },
+  {
+    "text": "But in some ways, I feel like there's all this like here there be dragons out there that I don't know about.",
+    "start": "01:03:37",
+    "end": "01:03:41"
+  },
+  {
+    "text": "Whereas pretrained, I kind of have a decent sense of what the internet looks like.",
+    "start": "01:03:41",
+    "end": "01:03:45"
+  },
+  {
+    "text": "- If you gave me a piece of text and said what comes next?",
+    "start": "01:03:45",
+    "end": "01:03:47"
+  },
+  {
+    "text": "- I'm not saying I do good at it, but I kind of get what's going on there.",
+    "start": "01:03:47",
+    "end": "01:03:53"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "01:03:53",
+    "end": "01:03:53"
+  },
+  {
+    "text": "- And I don't know, after everything that we do after pretraining, I don't really claim to get what's going on as much, but maybe that's just me.",
+    "start": "01:03:53",
+    "end": "01:04:01"
+  },
+  {
+    "text": "- That's something I wonder about is it more helpful to have specifically spent a lot of time reading the internet, versus reading books (everyone laughing) in order to?",
+    "start": "01:04:01",
+    "end": "01:04:12"
+  },
+  {
+    "text": "I don't know if books.",
+    "start": "01:04:14",
+    "end": "01:04:15"
+  },
+  {
+    "text": "But reading stuff that's not on the internet probably is less valuable per word read for predicting what a model will do or building intuition, than reading random garbage from social media forums.",
+    "start": "01:04:15",
+    "end": "01:04:29"
+  },
+  {
+    "text": "Yeah, exactly.",
+    "start": "01:04:29",
+    "end": "01:04:30"
+  },
+  {
+    "text": "- Okay, so that's the past.",
+    "start": "01:04:32",
+    "end": "01:04:34"
+  },
+  {
+    "text": "Now, let's move on to the future of prompt engineering.",
+    "start": "01:04:34",
+    "end": "01:04:38"
+  },
+  {
+    "text": "This is the hottest question right now.",
+    "start": "01:04:38",
+    "end": "01:04:40"
+  },
+  {
+    "text": "Are we all gonna be prompt engineers in the future?",
+    "start": "01:04:40",
+    "end": "01:04:42"
+  },
+  {
+    "text": "Is that gonna be the final job remaining?",
+    "start": "01:04:42",
+    "end": "01:04:44"
+  },
+  {
+    "text": "Nothing left except us just talking to models all day?",
+    "start": "01:04:46",
+    "end": "01:04:48"
+  },
+  {
+    "text": "What does this look like?",
+    "start": "01:04:49",
+    "end": "01:04:51"
+  },
+  {
+    "text": "Is prompting gonna be necessary, or will these models just get smart enough in the future to not need it?",
+    "start": "01:04:51",
+    "end": "01:04:56"
+  },
+  {
+    "text": "Anybody wanna start on that easy question?",
+    "start": "01:04:58",
+    "end": "01:05:01"
+  },
+  {
+    "text": "- To some extent, there's the models getting better at understanding what you want them to do and doing it, means that the amount of thought you need to put into...",
+    "start": "01:05:02",
+    "end": "01:05:12"
+  },
+  {
+    "text": "Okay.",
+    "start": "01:05:14",
+    "end": "01:05:14"
+  },
+  {
+    "text": "There's an information theory way to think of this of you need to provide enough information such that a thing is specified, what you want the model to do is specified.",
+    "start": "01:05:14",
+    "end": "01:05:22"
+  },
+  {
+    "text": "And to the extent that that's prompt engineering, I think that will always be around.",
+    "start": "01:05:22",
+    "end": "01:05:25"
+  },
+  {
+    "text": "The ability to actually like clearly state what the goal should be always is funny.",
+    "start": "01:05:25",
+    "end": "01:05:32"
+  },
+  {
+    "text": "If Claude can do that, then that's fine.",
+    "start": "01:05:32",
+    "end": "01:05:34"
+  },
+  {
+    "text": "If Claude is the one setting the goals, then things are out the window.",
+    "start": "01:05:34",
+    "end": "01:05:37"
+  },
+  {
+    "text": "But in the meanwhile, where we can reason about the world in a more normal way, I think to some extent, it's always gonna be important to be able to specify what do you expect to happen?",
+    "start": "01:05:37",
+    "end": "01:05:49"
+  },
+  {
+    "text": "And that's actually like sufficiently hard that even if the model gets better at intuiting that from between the lines, I still think there's some amount of writing it well.",
+    "start": "01:05:49",
+    "end": "01:06:01"
+  },
+  {
+    "text": "But then there's just, I think, the tools and the ways we get there should evolve a lot.",
+    "start": "01:06:01",
+    "end": "01:06:07"
+  },
+  {
+    "text": "Claude should be able to help me a lot more.",
+    "start": "01:06:07",
+    "end": "01:06:09"
+  },
+  {
+    "text": "I should be able to collaborate with Claude a lot more to figure out what I need to write down and what's missing.",
+    "start": "01:06:09",
+    "end": "01:06:15"
+  },
+  {
+    "text": "- Right.",
+    "start": "01:06:15",
+    "end": "01:06:16"
+  },
+  {
+    "text": "- Claude already does this with me all the time.",
+    "start": "01:06:16",
+    "end": "01:06:17"
+  },
+  {
+    "text": "I don't know, just Claude's my prompting assistant now.",
+    "start": "01:06:17",
+    "end": "01:06:20"
+  },
+  {
+    "text": "- Yeah, but I think that's not true for most customers that I talk to at the very least.",
+    "start": "01:06:20",
+    "end": "01:06:24"
+  },
+  {
+    "text": "So in terms of the future, how you prompt Claude is probably a decent direction for what the future looks like or how Zack...",
+    "start": "01:06:24",
+    "end": "01:06:33"
+  },
+  {
+    "text": "I think maybe this is a decent place to step back and say asking them how they prompt Claude now is probably the future for the vast majority of people, which is an interesting thing to think about.",
+    "start": "01:06:34",
+    "end": "01:06:46"
+  },
+  {
+    "text": "- One freezing cold take is that we'll use models to help us much more in the future to help us with prompting.",
+    "start": "01:06:46",
+    "end": "01:06:53"
+  },
+  {
+    "text": "The reason I say it's freezing cold is that I expect we'll use models for everything more, and prompting is something that we have to do.",
+    "start": "01:06:53",
+    "end": "01:07:00"
+  },
+  {
+    "text": "So we'll probably just use models more to do it along with everything else.",
+    "start": "01:07:00",
+    "end": "01:07:04"
+  },
+  {
+    "text": "For myself, I've found myself using models to write prompts more.",
+    "start": "01:07:04",
+    "end": "01:07:09"
+  },
+  {
+    "text": "One thing that I've been doing a lot is generating examples by giving some realistic inputs to the model.",
+    "start": "01:07:09",
+    "end": "01:07:16"
+  },
+  {
+    "text": "The model writes some answers.",
+    "start": "01:07:16",
+    "end": "01:07:18"
+  },
+  {
+    "text": "I tweak the answers a little bit, which is a lot easier than having to write the full, perfect answer myself from scratch, and then I can churn out lots of these.",
+    "start": "01:07:18",
+    "end": "01:07:26"
+  },
+  {
+    "text": "As far as people who haven't had as much prompt engineering experience, the prompt generator can give people a place to start.",
+    "start": "01:07:28",
+    "end": "01:07:36"
+  },
+  {
+    "text": "But I think that's just a super basic version of what will happen in the future, which is high-bandwidth interaction between you and the model as you're writing the prompt.",
+    "start": "01:07:36",
+    "end": "01:07:46"
+  },
+  {
+    "text": "Where you're giving feedback like, \"Hey, this result wasn't what I wanted.",
+    "start": "01:07:46",
+    "end": "01:07:49"
+  },
+  {
+    "text": "How can you change it to make it better?",
+    "start": "01:07:49",
+    "end": "01:07:51"
+  },
+  {
+    "text": "\" And people will just grow more comfortable with integrating it into everything they do and this thing, in particular.",
+    "start": "01:07:51",
+    "end": "01:07:59"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "01:07:59",
+    "end": "01:08:00"
+  },
+  {
+    "text": "I'm definitely working a lot with meta prompts now, and that's probably where I spend most of my time is finding prompts that get the model to generate the kinds of outputs or queries or whatever that I want.",
+    "start": "01:08:00",
+    "end": "01:08:12"
+  },
+  {
+    "text": "On the question of where prompt engineering is going, I think this is a very hard question.",
+    "start": "01:08:13",
+    "end": "01:08:18"
+  },
+  {
+    "text": "On the one hand I'm like, \"Maybe it's the case that as long as you will want the top.",
+    "start": "01:08:18",
+    "end": "01:08:23"
+  },
+  {
+    "text": "\" What are we doing when we prompt engineer?",
+    "start": "01:08:23",
+    "end": "01:08:24"
+  },
+  {
+    "text": "It's like what you said.",
+    "start": "01:08:24",
+    "end": "01:08:26"
+  },
+  {
+    "text": "I'm like, \"I'm not prompt engineering for anything that is easy for the model.",
+    "start": "01:08:26",
+    "end": "01:08:29"
+  },
+  {
+    "text": "I'm doing it because I want to interact with a model that's extremely good.",
+    "start": "01:08:29",
+    "end": "01:08:33"
+  },
+  {
+    "text": "\" And I want to always be finding the top 1%, top 0.",
+    "start": "01:08:33",
+    "end": "01:08:37"
+  },
+  {
+    "text": "1% of performance and all of the things that models can barely do.",
+    "start": "01:08:37",
+    "end": "01:08:42"
+  },
+  {
+    "text": "Sometimes I actually feel like I interact with a model like a step up from what everyone else interacts with for this reason, because I'm just so used to eking out the top performance from models.",
+    "start": "01:08:42",
+    "end": "01:08:52"
+  },
+  {
+    "text": "- What do you mean by a step-up?",
+    "start": "01:08:52",
+    "end": "01:08:53"
+  },
+  {
+    "text": "- As in sometimes people will...",
+    "start": "01:08:53",
+    "end": "01:08:55"
+  },
+  {
+    "text": "I think that the everyday models that people interact with out in the world, it's like I'm interacting with a model that's like I don't know how to describe it, but definitely an advanced version of that.",
+    "start": "01:08:55",
+    "end": "01:09:06"
+  },
+  {
+    "text": "Almost like a different model 'cause they'll be like, \"Oh well, the models find this thing hard.",
+    "start": "01:09:06",
+    "end": "01:09:09"
+  },
+  {
+    "text": "\" And I'm like, \"That thing is trivial.",
+    "start": "01:09:09",
+    "end": "01:09:11"
+  },
+  {
+    "text": "\" I don't know, I have a sense that they're extremely capable, but I think that's because I'm just used to really drawing out those capabilities.",
+    "start": "01:09:11",
+    "end": "01:09:21"
+  },
+  {
+    "text": "But imagine that you're now in a world where...",
+    "start": "01:09:22",
+    "end": "01:09:25"
+  },
+  {
+    "text": "So I think the thing that feels like a transition point is the point at which the models, let's suppose that they just get things at a human level on a given task, or even an above human level.",
+    "start": "01:09:25",
+    "end": "01:09:36"
+  },
+  {
+    "text": "They know more about the background of the task that you want than you do.",
+    "start": "01:09:36",
+    "end": "01:09:41"
+  },
+  {
+    "text": "What happens then?",
+    "start": "01:09:41",
+    "end": "01:09:42"
+  },
+  {
+    "text": "I'm like maybe prompting becomes something like I ask, I explain to the model what I want and it is prompting me.",
+    "start": "01:09:42",
+    "end": "01:09:48"
+  },
+  {
+    "text": "'Cause it's like, \"Okay.",
+    "start": "01:09:48",
+    "end": "01:09:49"
+  },
+  {
+    "text": "Well, do you mean actually there's four different concepts of this thing that you're talking about, do you want me to use this one or that one?",
+    "start": "01:09:49",
+    "end": "01:09:58"
+  },
+  {
+    "text": "\" Or by the way, I thought of some edge cases 'cause you said that it's gonna be like a Pandas DataFrame, but sometimes you do that and I get JSONL, and I just wanna check what you want me to do there.",
+    "start": "01:09:58",
+    "end": "01:10:06"
+  },
+  {
+    "text": "Do you want me to flag if I get something that's not a dataframe?",
+    "start": "01:10:06",
+    "end": "01:10:10"
+  },
+  {
+    "text": "So that could be a strange transition where it's just extremely good at receiving instructions, but actually has to figure out what you want.",
+    "start": "01:10:10",
+    "end": "01:10:17"
+  },
+  {
+    "text": "I don't know, I could see that being an interesting switch.",
+    "start": "01:10:19",
+    "end": "01:10:21"
+  },
+  {
+    "text": "- Anecdotally, I've started having Claude interview me a lot more.",
+    "start": "01:10:21",
+    "end": "01:10:25"
+  },
+  {
+    "text": "That is the specific way that I try to elicit information, because again, I find the hardest thing to be actually pulling the right set of information out of my brain.",
+    "start": "01:10:25",
+    "end": "01:10:34"
+  },
+  {
+    "text": "And putting that into a prompt is the hard part to me and not forgetting stuff.",
+    "start": "01:10:34",
+    "end": "01:10:39"
+  },
+  {
+    "text": "So specifically asking Claude to interview me and then turning that into a prompt, is a thing that I have turned to a handful of times.",
+    "start": "01:10:39",
+    "end": "01:10:49"
+  },
+  {
+    "text": "- Yeah.",
+    "start": "01:10:49",
+    "end": "01:10:49"
+  },
+  {
+    "text": "It reminds me of what people will talk about or if you listen to designers talk about how they interact with the person who wants the design.",
+    "start": "01:10:49",
+    "end": "01:10:57"
+  },
+  {
+    "text": "So in some ways I'm like, \"It's this switch from the temp agency person who comes and you know more about the task and everything that you want.",
+    "start": "01:10:57",
+    "end": "01:11:04"
+  },
+  {
+    "text": "\" So you give them the instructions and you explain what they should do in edge cases and all this kind of stuff, versus when you have an expert that you're actually consulting to do some work.",
+    "start": "01:11:04",
+    "end": "01:11:13"
+  },
+  {
+    "text": "So I think designers can get really frustrated because they know the space of design really well.",
+    "start": "01:11:13",
+    "end": "01:11:17"
+  },
+  {
+    "text": "And they're like, \"Yeah.",
+    "start": "01:11:17",
+    "end": "01:11:17"
+  },
+  {
+    "text": "Okay, the client came to me and he just said, 'Make me a poster, make it bold.",
+    "start": "01:11:17",
+    "end": "01:11:22"
+  },
+  {
+    "text": "'\" I'm like, \"That means 7,000 things to me and I'm gonna try and ask you some questions.",
+    "start": "01:11:22",
+    "end": "01:11:27"
+  },
+  {
+    "text": "\" So I could see it going from being temp agency employee, to being more designer that you're hiring, and that's just a flip in the relationship.",
+    "start": "01:11:27",
+    "end": "01:11:35"
+  },
+  {
+    "text": "I don't know if that's true and I think both might continue, but I could see that being why people are like, \"Oh, is prompt engineering going to not be a thing in the future?",
+    "start": "01:11:35",
+    "end": "01:11:43"
+  },
+  {
+    "text": "\" Because for some domains it might just not be, if the models are just so good that actually all they need to do is get the information from your brain and then they can go do the task.",
+    "start": "01:11:43",
+    "end": "01:11:51"
+  },
+  {
+    "text": "- Right, that's actually a really good analogy.",
+    "start": "01:11:51",
+    "end": "01:11:54"
+  },
+  {
+    "text": "One common thread I'm pulling out of all your guys' responses here, is that there seems to be a future in which this sort of elicitation from the user drawing out that information, is gonna become much more important, much more than it is right now.",
+    "start": "01:11:54",
+    "end": "01:12:09"
+  },
+  {
+    "text": "And already you guys are all starting to do it in a manual way.",
+    "start": "01:12:09",
+    "end": "01:12:13"
+  },
+  {
+    "text": "In the future and in the enterprise side of things, maybe that looks like a expansion of this prompt-generating type of concept and things in the console where you're able to actually get more information from that enterprise customer, so that they can write a better prompt.",
+    "start": "01:12:13",
+    "end": "01:12:28"
+  },
+  {
+    "text": "In Claude, maybe it looks less of just typing into a text box, and more of this guided interaction towards a finished product.",
+    "start": "01:12:28",
+    "end": "01:12:36"
+  },
+  {
+    "text": "Yeah.",
+    "start": "01:12:38",
+    "end": "01:12:39"
+  },
+  {
+    "text": "I think that's actually a pretty compelling vision of the future, and I think that the design analogy probably really brings that home.",
+    "start": "01:12:39",
+    "end": "01:12:46"
+  },
+  {
+    "text": "- I was thinking about how prompting now can be like teaching where it's like the empathy for the student.",
+    "start": "01:12:46",
+    "end": "01:12:53"
+  },
+  {
+    "text": "You're trying to think about how they think about things and you're really trying to show them, figure out where they're making a mistake.",
+    "start": "01:12:53",
+    "end": "01:13:00"
+  },
+  {
+    "text": "But the point that you're talking about, it's like the skill almost becomes one of introspection where you're thinking about what it is that you actually want and the model's trying to understand you.",
+    "start": "01:13:00",
+    "end": "01:13:13"
+  },
+  {
+    "text": "So it's making yourself legible to the model, versus trying to teach someone who's smarter than you.",
+    "start": "01:13:13",
+    "end": "01:13:23"
+  },
+  {
+    "text": "- This is actually how I think of prompting now in a strange way.",
+    "start": "01:13:23",
+    "end": "01:13:26"
+  },
+  {
+    "text": "So often my style of prompting, there's various things that I do, but a common thing that's very like a thing that philosophers will do is I'll define new concepts.",
+    "start": "01:13:26",
+    "end": "01:13:37"
+  },
+  {
+    "text": "'Cause my thought is you have to put into words what you want and sometimes what I want is fairly nuanced.",
+    "start": "01:13:37",
+    "end": "01:13:42"
+  },
+  {
+    "text": "Like the what is a good chart?",
+    "start": "01:13:43",
+    "end": "01:13:45"
+  },
+  {
+    "text": "Or usually, I don't know, when should you grade something as being correct or not?",
+    "start": "01:13:45",
+    "end": "01:13:53"
+  },
+  {
+    "text": "So there's some cases where I will just invent a concept and then be like, \"Here's what I mean by the concept.",
+    "start": "01:13:53",
+    "end": "01:13:57"
+  },
+  {
+    "text": "\" Sometimes I'll do it in collaboration with Claude to get it to figure out what the concept is, just because I'm trying to convey to it what's in my head.",
+    "start": "01:13:57",
+    "end": "01:14:05"
+  },
+  {
+    "text": "And right now the models aren't trying to do that with us, unless you prompt them to do so.",
+    "start": "01:14:07",
+    "end": "01:14:13"
+  },
+  {
+    "text": "So in the future, it might just be that they can elicit that from us, rather than us having to do it for them.",
+    "start": "01:14:14",
+    "end": "01:14:21"
+  },
+  {
+    "text": "But I think another thing that's interesting, this is people have sometimes asked me, \"Oh, where is philosophy relevant to prompting?",
+    "start": "01:14:22",
+    "end": "01:14:30"
+  },
+  {
+    "text": "\" And I actually think it's very useful in a sense.",
+    "start": "01:14:30",
+    "end": "01:14:32"
+  },
+  {
+    "text": "So there is a style of philosophy writing, and this is at least how I was taught how to write philosophy.",
+    "start": "01:14:32",
+    "end": "01:14:38"
+  },
+  {
+    "text": "Where the idea is that in order to...",
+    "start": "01:14:38",
+    "end": "01:14:42"
+  },
+  {
+    "text": "I think, it's an anti-bullshit device in philosophy basically, which is that your papers and what you write should be legible to an educated layperson.",
+    "start": "01:14:42",
+    "end": "01:14:51"
+  },
+  {
+    "text": "Someone just finds your paper, they pick it up and they start reading it, and they can understand everything.",
+    "start": "01:14:51",
+    "end": "01:14:55"
+  },
+  {
+    "text": "Not everyone achieves this, but that's the goal of the discipline, I guess, or at least this is at least what we teach people.",
+    "start": "01:14:55",
+    "end": "01:15:04"
+  },
+  {
+    "text": "So I'm really used to this idea of when I'm writing, thinking about the educated layperson, who they're really smart, but they don't know anything about this topic.",
+    "start": "01:15:05",
+    "end": "01:15:14"
+  },
+  {
+    "text": "And that was just years and years of writing text of that form.",
+    "start": "01:15:14",
+    "end": "01:15:17"
+  },
+  {
+    "text": "And I think it was just really good for prompting 'cause I was like, \"Oh, I'm used to this.",
+    "start": "01:15:17",
+    "end": "01:15:20"
+  },
+  {
+    "text": "I have an educated layperson who doesn't know anything about the topic.",
+    "start": "01:15:20",
+    "end": "01:15:23"
+  },
+  {
+    "text": "\" And what I need to do is, I need to take extremely complex ideas and I need to make them understand it.",
+    "start": "01:15:23",
+    "end": "01:15:29"
+  },
+  {
+    "text": "I don't talk down to them.",
+    "start": "01:15:29",
+    "end": "01:15:30"
+  },
+  {
+    "text": "I'm not inaccurate, but I need to phrase things in such a way that it's extremely clear to them what I mean, and prompting felt very similar.",
+    "start": "01:15:30",
+    "end": "01:15:38"
+  },
+  {
+    "text": "And actually, the training techniques we use are fascinating.",
+    "start": "01:15:38",
+    "end": "01:15:41"
+  },
+  {
+    "text": "Or the things that you said where you're like you say to a person, \"Just take that thing you said and write it down.",
+    "start": "01:15:41",
+    "end": "01:15:46"
+  },
+  {
+    "text": "\" I used to say that to students all the time.",
+    "start": "01:15:46",
+    "end": "01:15:48"
+  },
+  {
+    "text": "They'd write a paper and I was like, \"I don't quite get what you're saying here.",
+    "start": "01:15:48",
+    "end": "01:15:50"
+  },
+  {
+    "text": "Can you just explain your argument to me?",
+    "start": "01:15:50",
+    "end": "01:15:52"
+  },
+  {
+    "text": "\" They would give me an incredibly cogent argument, and then I'd be like, \"Can you just take that and write it down?",
+    "start": "01:15:52",
+    "end": "01:15:57"
+  },
+  {
+    "text": "\" And then if they did, that was often a great essay.",
+    "start": "01:15:57",
+    "end": "01:16:01"
+  },
+  {
+    "text": "So it's really interesting that there's at least that similarity of just taking things that are in your brain, analyzing them enough to feel like you fully understand them.",
+    "start": "01:16:01",
+    "end": "01:16:09"
+  },
+  {
+    "text": "And could take any person off the street, who's a reasonable person, and just externalize your brain into them.",
+    "start": "01:16:09",
+    "end": "01:16:16"
+  },
+  {
+    "text": "I feel like that's the core of prompting.",
+    "start": "01:16:16",
+    "end": "01:16:19"
+  },
+  {
+    "text": "- That might be the best summary of how to prompt well that I've ever heard.",
+    "start": "01:16:19",
+    "end": "01:16:23"
+  },
+  {
+    "text": "In fact, I'm pretty sure it is.",
+    "start": "01:16:23",
+    "end": "01:16:26"
+  },
+  {
+    "text": "- Externalize your brain.",
+    "start": "01:16:26",
+    "end": "01:16:27"
+  },
+  {
+    "text": "- And then we'll cut it.",
+    "start": "01:16:27",
+    "end": "01:16:28"
+  },
+  {
+    "text": "- Having an education in the thing is a really good way to describe the thing.",
+    "start": "01:16:28",
+    "end": "01:16:33"
+  },
+  {
+    "text": "That was good.",
+    "start": "01:16:33",
+    "end": "01:16:33"
+  },
+  {
+    "text": "- That's, I think, a great way to wrap this conversation.",
+    "start": "01:16:33",
+    "end": "01:16:37"
+  },
+  {
+    "text": "Thank you, guys.",
+    "start": "01:16:37",
+    "end": "01:16:38"
+  },
+  {
+    "text": "This was great.",
+    "start": "01:16:38",
+    "end": "01:16:39"
+  }
+]

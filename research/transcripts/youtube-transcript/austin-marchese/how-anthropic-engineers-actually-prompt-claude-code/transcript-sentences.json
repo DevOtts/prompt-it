@@ -1,0 +1,797 @@
+[
+  {
+    "text": "I listened to Anthropic's engineers at the AI Code Summit and I learned something I wasn't expecting.",
+    "start": "00:00:00",
+    "end": "00:00:06"
+  },
+  {
+    "text": "Almost everyone is prompting Claude code wrong.",
+    "start": "00:00:06",
+    "end": "00:00:08"
+  },
+  {
+    "text": "So, I decided to dig deeper and after studying everything Anthropic engineers have published, I uncovered four rules for how they actually prompt Claude code.",
+    "start": "00:00:07",
+    "end": "00:00:14"
+  },
+  {
+    "text": "And it turns out you don't need any technical experience to implement these rules.",
+    "start": "00:00:14",
+    "end": "00:00:18"
+  },
+  {
+    "text": "So, rule number one is they prompt skills, not Claude.",
+    "start": "00:00:18",
+    "end": "00:00:21"
+  },
+  {
+    "text": "Before we get to the rules that will transform how you work, we need to understand the foundation of how they use Claude.",
+    "start": "00:00:21",
+    "end": "00:00:28"
+  },
+  {
+    "text": "Generally, when people first start using AI, they start writing new prompts for everything they do.",
+    "start": "00:00:26",
+    "end": "00:00:31"
+  },
+  {
+    "text": "But, the reality is most of what people do is repetitive tasks.",
+    "start": "00:00:31",
+    "end": "00:00:34"
+  },
+  {
+    "text": "So, Anthropic engineers created Claude skills to help tackle these repetitive tasks.",
+    "start": "00:00:34",
+    "end": "00:00:39"
+  },
+  {
+    "text": "Here's them describing what they are and don't get worried about the technical terms.",
+    "start": "00:00:39",
+    "end": "00:00:43"
+  },
+  {
+    "text": ">> Skills are organized collections of files that package composable procedural knowledge for agents.",
+    "start": "00:00:42",
+    "end": "00:00:48"
+  },
+  {
+    "text": "In other words, they're folders.",
+    "start": "00:00:48",
+    "end": "00:00:49"
+  },
+  {
+    "text": "Barry describes it as procedural knowledge for agents, which is a fancy way to say a way to get a task done.",
+    "start": "00:00:49",
+    "end": "00:00:54"
+  },
+  {
+    "text": "And there's an art to actually creating these skills, which we'll cover in rules two, three, and four.",
+    "start": "00:00:54",
+    "end": "00:00:57"
+  },
+  {
+    "text": "But, first you need to have the mental shift.",
+    "start": "00:00:57",
+    "end": "00:01:01"
+  },
+  {
+    "text": "Stop thinking in traditional prompts, start thinking in prompting Claude skills.",
+    "start": "00:01:01",
+    "end": "00:01:05"
+  },
+  {
+    "text": "This may sound complicated, but it really it's quite simple.",
+    "start": "00:01:05",
+    "end": "00:01:07"
+  },
+  {
+    "text": "Here's what it could look like if you wanted to draft a response to an email.",
+    "start": "00:01:07",
+    "end": "00:01:10"
+  },
+  {
+    "text": "Instead of you having a crazy prompt to help you respond to an email with your voice, your tone, and your writing style, you would just type {slash} draft email and then bring in the email you want to respond to.",
+    "start": "00:01:10",
+    "end": "00:01:20"
+  },
+  {
+    "text": "So, that's how you do it in practice, but conceptually, how should you think about this?",
+    "start": "00:01:20",
+    "end": "00:01:22"
+  },
+  {
+    "text": "I pulled this graph from the Anthropic engineering presentation and added a slight tweak to it.",
+    "start": "00:01:22",
+    "end": "00:01:27"
+  },
+  {
+    "text": "Layer one, you have the AI model.",
+    "start": "00:01:27",
+    "end": "00:01:29"
+  },
+  {
+    "text": "This is the AI that you're using.",
+    "start": "00:01:29",
+    "end": "00:01:30"
+  },
+  {
+    "text": "Layer two is you have the AI agents and the prompts.",
+    "start": "00:01:30",
+    "end": "00:01:33"
+  },
+  {
+    "text": "This is likely how you've been interacting with AI to date, but you want to move up a layer to layer three, which is skills.",
+    "start": "00:01:33",
+    "end": "00:01:40"
+  },
+  {
+    "text": "This is the application layer of the AI world.",
+    "start": "00:01:38",
+    "end": "00:01:40"
+  },
+  {
+    "text": "If you were to compare this to your cell phone, Anthropic is building the phone itself.",
+    "start": "00:01:40",
+    "end": "00:01:45"
+  },
+  {
+    "text": "You have to create the apps.",
+    "start": "00:01:45",
+    "end": "00:01:46"
+  },
+  {
+    "text": "That's the layer to control.",
+    "start": "00:01:46",
+    "end": "00:01:49"
+  },
+  {
+    "text": "And before we get to how to best create these skills, here's a prompt you can run to help you identify the skills that are worth creating.",
+    "start": "00:01:49",
+    "end": "00:01:54"
+  },
+  {
+    "text": "So, you're no longer writing custom prompts, you're writing more specific prompts that clearly reference skills.",
+    "start": "00:01:54",
+    "end": "00:01:59"
+  },
+  {
+    "text": "And this leads to the next topic, which most people get wrong, which is how do you actually build a skill that works?",
+    "start": "00:01:59",
+    "end": "00:02:05"
+  },
+  {
+    "text": "Rule number two is skills are more than prompts.",
+    "start": "00:02:05",
+    "end": "00:02:07"
+  },
+  {
+    "text": "So, you're convinced you need to change how you prompt to prompt skills.",
+    "start": "00:02:07",
+    "end": "00:02:10"
+  },
+  {
+    "text": "So, the next question is how do you actually create skills that work?",
+    "start": "00:02:10",
+    "end": "00:02:13"
+  },
+  {
+    "text": "There's an art to this, a lot like when prompt engineering went viral when ChatGPT first came out, and it's important that you get this right.",
+    "start": "00:02:13",
+    "end": "00:02:18"
+  },
+  {
+    "text": "The act of actually creating the skill is super easy.",
+    "start": "00:02:18",
+    "end": "00:02:22"
+  },
+  {
+    "text": "You can just write in Claude, build me a skill for X, and it'll just create a skill for you.",
+    "start": "00:02:22",
+    "end": "00:02:26"
+  },
+  {
+    "text": "But to use these skills well, you need to understand what's actually inside them.",
+    "start": "00:02:26",
+    "end": "00:02:30"
+  },
+  {
+    "text": "Because it's not just a prompt that lives in a folder.",
+    "start": "00:02:28",
+    "end": "00:02:32"
+  },
+  {
+    "text": "A skill is more than a prompt.",
+    "start": "00:02:32",
+    "end": "00:02:32"
+  },
+  {
+    "text": "Inside a skill, there are three layers.",
+    "start": "00:02:32",
+    "end": "00:02:35"
+  },
+  {
+    "text": "Layer one is the description.",
+    "start": "00:02:35",
+    "end": "00:02:37"
+  },
+  {
+    "text": "This is what Claude checks every time you ask a specific question, and it determines if it should use the skill or not.",
+    "start": "00:02:37",
+    "end": "00:02:43"
+  },
+  {
+    "text": "Think of it like a title on a folder.",
+    "start": "00:02:43",
+    "end": "00:02:44"
+  },
+  {
+    "text": "If the label's vague, Claude's going to have tough time identifying when to use it.",
+    "start": "00:02:44",
+    "end": "00:02:49"
+  },
+  {
+    "text": "If it's specific, it'll know exactly when it needs to use it.",
+    "start": "00:02:49",
+    "end": "00:02:51"
+  },
+  {
+    "text": "And yes, when you're prompting Claude, you don't need to explicitly call a skill if it's properly described.",
+    "start": "00:02:51",
+    "end": "00:02:55"
+  },
+  {
+    "text": "Claude will automatically know when to use it, which is awesome.",
+    "start": "00:02:55",
+    "end": "00:03:00"
+  },
+  {
+    "text": "Layer two is the instructions.",
+    "start": "00:02:58",
+    "end": "00:03:01"
+  },
+  {
+    "text": "Once Claude grabs the skill, this is the playbook it follows.",
+    "start": "00:03:01",
+    "end": "00:03:04"
+  },
+  {
+    "text": "This is a step-by-step process on how to actually complete the task.",
+    "start": "00:03:04",
+    "end": "00:03:07"
+  },
+  {
+    "text": "And layer three are the tools it has access to.",
+    "start": "00:03:07",
+    "end": "00:03:11"
+  },
+  {
+    "text": "This is code scripts, API calls, reference files.",
+    "start": "00:03:11",
+    "end": "00:03:14"
+  },
+  {
+    "text": "This is where a skill becomes a lot more than prompts, and this layer three is where most of the leverage lives, but most people stop at that layer two.",
+    "start": "00:03:12",
+    "end": "00:03:21"
+  },
+  {
+    "text": "Here's Eric from the Anthropic team talking about exactly this.",
+    "start": "00:03:20",
+    "end": "00:03:24"
+  },
+  {
+    "text": "And I think maybe the funniest things I see is that people will put a lot of effort into creating these really beautiful, detailed prompts.",
+    "start": "00:03:24",
+    "end": "00:03:33"
+  },
+  {
+    "text": "Um, and then the tools that they make to give the model are sort of these incredibly bare-bones, uh, like, you know, no documentation, func- like the parameters are named A and B, and it's kind of like, oh, like an engineer wouldn't be able to like, you know, work with this as a, um, you know, work with this as if this was a function they I to use.",
+    "start": "00:03:31",
+    "end": "00:03:52"
+  },
+  {
+    "text": "People obsess over the prompt and skip the tools, the third layer of a skill.",
+    "start": "00:03:52",
+    "end": "00:03:56"
+  },
+  {
+    "text": "Anthropic engineers do the opposite.",
+    "start": "00:03:56",
+    "end": "00:03:57"
+  },
+  {
+    "text": "They focus on these tools.",
+    "start": "00:03:57",
+    "end": "00:03:58"
+  },
+  {
+    "text": "So, instead of this whole back and forth, I created my own custom skill that could check these domains programmatically, so that whatever domains it was telling me, it is already verified that I could go and buy it.",
+    "start": "00:03:58",
+    "end": "00:04:09"
+  },
+  {
+    "text": "So, I gave this skill access to the right tool and it leveled up the entire process.",
+    "start": "00:04:09",
+    "end": "00:04:12"
+  },
+  {
+    "text": "And like I mentioned in rule one, instead of manually thinking about domains, I could have 10 different sub agents using this skill to look through 10,000 plus domains to find the right one.",
+    "start": "00:04:12",
+    "end": "00:04:21"
+  },
+  {
+    "text": "Now, I can do something that I literally would have never been able to do before.",
+    "start": "00:04:21",
+    "end": "00:04:25"
+  },
+  {
+    "text": "Here's a prompt you can use to think deeper about the skills you create, so when you actually go ahead and prompt them, they'll be that much more effective.",
+    "start": "00:04:25",
+    "end": "00:04:32"
+  },
+  {
+    "text": "So, rule number two covers how anthropic engineers make skills, but what skills do they actually create?",
+    "start": "00:04:32",
+    "end": "00:04:36"
+  },
+  {
+    "text": "Rule number three is they build composable skills, not custom skills.",
+    "start": "00:04:36",
+    "end": "00:04:41"
+  },
+  {
+    "text": "Pulling directly from Anthropic's engineering blog about what skills are and how to position them, they are composable, portable, efficient, and powerful.",
+    "start": "00:04:40",
+    "end": "00:04:47"
+  },
+  {
+    "text": "Composability means multiple skills can work together with Claude automatically coordinating which to use.",
+    "start": "00:04:47",
+    "end": "00:04:54"
+  },
+  {
+    "text": "What this means is you should have small, focused, and reusable skills that can work together, versus having a single massive skill that does everything.",
+    "start": "00:04:53",
+    "end": "00:05:01"
+  },
+  {
+    "text": "A concrete example that I experienced when I first started building skills for my content engine, I built a single {slash} content creation skill that did everything.",
+    "start": "00:05:01",
+    "end": "00:05:11"
+  },
+  {
+    "text": "Generated ideas, wrote scripts, drafted social posts, all of it, one skill, a million possibilities, and it just became unmanageable.",
+    "start": "00:05:11",
+    "end": "00:05:17"
+  },
+  {
+    "text": "Every time I wanted to change how scripts were written, I had to rewrite the whole skill and I didn't know what it actually impacted.",
+    "start": "00:05:17",
+    "end": "00:05:24"
+  },
+  {
+    "text": "And so, instead I split it up to more specific skills, right?",
+    "start": "00:05:24",
+    "end": "00:05:27"
+  },
+  {
+    "text": "YouTube idea research, YouTube script writer, LinkedIn post.",
+    "start": "00:05:27",
+    "end": "00:05:33"
+  },
+  {
+    "text": "Each skill had a specific goal in mind.",
+    "start": "00:05:30",
+    "end": "00:05:35"
+  },
+  {
+    "text": "And the benefit is that each can call the other skills, so that they start chaining them together.",
+    "start": "00:05:33",
+    "end": "00:05:39"
+  },
+  {
+    "text": "This may seem a bit overkill, but it really isn't for three specific reasons.",
+    "start": "00:05:39",
+    "end": "00:05:43"
+  },
+  {
+    "text": "The first is that issues are easy to spot.",
+    "start": "00:05:43",
+    "end": "00:05:45"
+  },
+  {
+    "text": "When When focused skill breaks, you know exactly where to look, whereas if it's a giant skill, you don't know what exactly the issue was.",
+    "start": "00:05:45",
+    "end": "00:05:52"
+  },
+  {
+    "text": "The second is that improvements compound.",
+    "start": "00:05:52",
+    "end": "00:05:55"
+  },
+  {
+    "text": "If you update, let's call it YouTube idea research, every workflow that uses the same skill automatically gets upgraded.",
+    "start": "00:05:55",
+    "end": "00:06:02"
+  },
+  {
+    "text": "Whereas if you're using a giant skill, you're going to have overlapping functionality, which means you'll fix it in one skill and it will still be broken in the other.",
+    "start": "00:06:02",
+    "end": "00:06:10"
+  },
+  {
+    "text": "The third is that you can reuse instead of rebuilding.",
+    "start": "00:06:10",
+    "end": "00:06:11"
+  },
+  {
+    "text": "If you build something like the check domain skill I mentioned earlier, you can plug that into any workflow you want.",
+    "start": "00:06:11",
+    "end": "00:06:17"
+  },
+  {
+    "text": "You're not rebuilding the wheel every time with a new workflow.",
+    "start": "00:06:17",
+    "end": "00:06:19"
+  },
+  {
+    "text": "So you know you should break them up, but what's some more technical patterns that you should consider to make these even more powerful.",
+    "start": "00:06:19",
+    "end": "00:06:26"
+  },
+  {
+    "text": "So both of these come from directly how Anthropic engineers actually use them.",
+    "start": "00:06:26",
+    "end": "00:06:32"
+  },
+  {
+    "text": "So pattern one is save scripts inside of skills.",
+    "start": "00:06:29",
+    "end": "00:06:32"
+  },
+  {
+    "text": "This is part of the tools layer of a skill and it's how you actually make them sharper.",
+    "start": "00:06:32",
+    "end": "00:06:36"
+  },
+  {
+    "text": "Here's Barry at the AI Engineering Code Summit talking about how he does exactly this.",
+    "start": "00:06:36",
+    "end": "00:06:41"
+  },
+  {
+    "text": "We kept seeing Claude write the same Python script over and over again to apply styling to slides.",
+    "start": "00:06:41",
+    "end": "00:06:45"
+  },
+  {
+    "text": "So we just asked Claude it inside of the skill as a tool for his version for his future self.",
+    "start": "00:06:45",
+    "end": "00:06:50"
+  },
+  {
+    "text": "Now we can just run the script and that makes everything a lot more consistent, a lot more efficient.",
+    "start": "00:06:50",
+    "end": "00:06:54"
+  },
+  {
+    "text": "Let me break down what he said.",
+    "start": "00:06:54",
+    "end": "00:06:55"
+  },
+  {
+    "text": "Claude kept rewriting the same Python script every session and instead of him letting it rewrite it, they saved the script inside of a skill folder.",
+    "start": "00:06:55",
+    "end": "00:07:03"
+  },
+  {
+    "text": "So now the next session Claude doesn't have to rewrite the script, it just reruns it.",
+    "start": "00:07:03",
+    "end": "00:07:06"
+  },
+  {
+    "text": "And this is so powerful because code is deterministic, which essentially means if you give it the same input, it will give you the same output every single time.",
+    "start": "00:07:06",
+    "end": "00:07:13"
+  },
+  {
+    "text": "Whereas in the AI world, that's not necessarily the case.",
+    "start": "00:07:13",
+    "end": "00:07:17"
+  },
+  {
+    "text": "It interprets it, it guesses, it uses tokens that cost money.",
+    "start": "00:07:17",
+    "end": "00:07:20"
+  },
+  {
+    "text": "And when you have a script inside a skill, you're trading AI tokens for code compute, which is cheaper, faster and repeatable.",
+    "start": "00:07:20",
+    "end": "00:07:28"
+  },
+  {
+    "text": "A general rule of thumb is if you can use code instead of AI, you should.",
+    "start": "00:07:26",
+    "end": "00:07:31"
+  },
+  {
+    "text": "And you don't have to write the code, you can just have AI write it for you once and then you can reuse it as much as you want.",
+    "start": "00:07:31",
+    "end": "00:07:35"
+  },
+  {
+    "text": "The second pattern is you can control who invokes what.",
+    "start": "00:07:35",
+    "end": "00:07:38"
+  },
+  {
+    "text": "Most people don't know this exists, but Anthropic built two flags into Claude's skills that are important to understand.",
+    "start": "00:07:38",
+    "end": "00:07:45"
+  },
+  {
+    "text": "The first is user invocable.",
+    "start": "00:07:45",
+    "end": "00:07:45"
+  },
+  {
+    "text": "If you set this to false, it hides the skill from your slash menu.",
+    "start": "00:07:45",
+    "end": "00:07:48"
+  },
+  {
+    "text": "It means that the user, you or me or whoever, can't directly invoke this skill.",
+    "start": "00:07:48",
+    "end": "00:07:53"
+  },
+  {
+    "text": "It's only a skill for agents.",
+    "start": "00:07:53",
+    "end": "00:07:54"
+  },
+  {
+    "text": "This is perfect for any AI agent specific tools that you don't even want to think about.",
+    "start": "00:07:54",
+    "end": "00:07:59"
+  },
+  {
+    "text": "And then disable model invocation.",
+    "start": "00:07:59",
+    "end": "00:08:01"
+  },
+  {
+    "text": "This does the opposite.",
+    "start": "00:08:01",
+    "end": "00:08:03"
+  },
+  {
+    "text": "Only you can run it and the model can't.",
+    "start": "00:08:03",
+    "end": "00:08:05"
+  },
+  {
+    "text": "This is great for higher risk things like a skill that sends a message or deploys a new version of your code to production.",
+    "start": "00:08:05",
+    "end": "00:08:11"
+  },
+  {
+    "text": "Most of you watching this have likely never heard of either of those things, but now you have it in your bag when you're designing these skills.",
+    "start": "00:08:10",
+    "end": "00:08:17"
+  },
+  {
+    "text": "Here's a prompt you can run to audit your setup to make sure that you're properly applying these things into your skills.",
+    "start": "00:08:17",
+    "end": "00:08:23"
+  },
+  {
+    "text": "Screenshot this and just send the photo into Claude and I highly recommend you do this.",
+    "start": "00:08:21",
+    "end": "00:08:26"
+  },
+  {
+    "text": "So you know how to build skills and what to build, but how do you make these improve over time?",
+    "start": "00:08:26",
+    "end": "00:08:31"
+  },
+  {
+    "text": "And before I get to that, if this is your first video of mine, welcome to channel.",
+    "start": "00:08:31",
+    "end": "00:08:35"
+  },
+  {
+    "text": "But if it's your second or more, here is our anti-slop agreement.",
+    "start": "00:08:35",
+    "end": "00:08:38"
+  },
+  {
+    "text": "The visuals, the testing, the time I put into this video, that's entirely built for humans, not for AI robots or data scrapers.",
+    "start": "00:08:38",
+    "end": "00:08:45"
+  },
+  {
+    "text": "So all I ask is you subscribe as part of this agreement to help this content reach more people so I can keep making videos like this.",
+    "start": "00:08:45",
+    "end": "00:08:51"
+  },
+  {
+    "text": "Rule number four is their prompts get smarter every session.",
+    "start": "00:08:51",
+    "end": "00:08:55"
+  },
+  {
+    "text": "Here's where Anthropic engineers really pull ahead.",
+    "start": "00:08:53",
+    "end": "00:08:56"
+  },
+  {
+    "text": "Their skills and in turn their prompting doesn't just work.",
+    "start": "00:08:56",
+    "end": "00:09:00"
+  },
+  {
+    "text": "They get better every session.",
+    "start": "00:09:00",
+    "end": "00:09:01"
+  },
+  {
+    "text": "When you prompt Claude with a sentence, that prompt disadvantages the moment you close the chat.",
+    "start": "00:09:01",
+    "end": "00:09:06"
+  },
+  {
+    "text": "When you prompt with a skill, the skill stays.",
+    "start": "00:09:06",
+    "end": "00:09:09"
+  },
+  {
+    "text": "And every time you use it, you have a chance to sharpen it.",
+    "start": "00:09:09",
+    "end": "00:09:11"
+  },
+  {
+    "text": "Listen their engineering team talk about exactly this.",
+    "start": "00:09:11",
+    "end": "00:09:14"
+  },
+  {
+    "text": "When you first start using Claude, this standardized format gives a very important guarantee.",
+    "start": "00:09:14",
+    "end": "00:09:20"
+  },
+  {
+    "text": "Anything that Claude writes down can be used efficiently in by the future version of itself.",
+    "start": "00:09:18",
+    "end": "00:09:23"
+  },
+  {
+    "text": "Our goal is that Claude on day 30 of working with you is going to be a lot better on Claude on day one.",
+    "start": "00:09:23",
+    "end": "00:09:28"
+  },
+  {
+    "text": "Every time Claude learns something about how you work, your voice, your process, your edge cases, you write it down in the skill.",
+    "start": "00:09:28",
+    "end": "00:09:35"
+  },
+  {
+    "text": "Next session starts smarter than the last.",
+    "start": "00:09:35",
+    "end": "00:09:37"
+  },
+  {
+    "text": "So how do you actually do this?",
+    "start": "00:09:37",
+    "end": "00:09:38"
+  },
+  {
+    "text": "Every time you run a skill and the output isn't exactly what you want, ask yourself one question.",
+    "start": "00:09:38",
+    "end": "00:09:43"
+  },
+  {
+    "text": "Is this a one-time fix or should this be in the skill forever?",
+    "start": "00:09:43",
+    "end": "00:09:48"
+  },
+  {
+    "text": "If it's forever, update the skill.",
+    "start": "00:09:48",
+    "end": "00:09:49"
+  },
+  {
+    "text": "Add the rule, the example, the edge case.",
+    "start": "00:09:49",
+    "end": "00:09:51"
+  },
+  {
+    "text": "And a lot of people skip this entirely.",
+    "start": "00:09:51",
+    "end": "00:09:53"
+  },
+  {
+    "text": "They're just like, \"Okay, run the skill, get an output.",
+    "start": "00:09:51",
+    "end": "00:09:54"
+  },
+  {
+    "text": "\" Like, continue with their day.",
+    "start": "00:09:54",
+    "end": "00:09:55"
+  },
+  {
+    "text": "But Anthropic engineers use a skill, get the output, then update the skill so that there's a compounding loop that improves over time.",
+    "start": "00:09:55",
+    "end": "00:10:03"
+  },
+  {
+    "text": "And it's really quite simple.",
+    "start": "00:10:03",
+    "end": "00:10:04"
+  },
+  {
+    "text": "Like, it's literally you can just use your chat history as a reference point to improve the skill itself.",
+    "start": "00:10:04",
+    "end": "00:10:10"
+  },
+  {
+    "text": "Just say, \"Review the back and forth I just had after using this skill.",
+    "start": "00:10:10",
+    "end": "00:10:16"
+  },
+  {
+    "text": "Can we enhance the skill so this is handled automatically or we don't make the same mistake again?",
+    "start": "00:10:14",
+    "end": "00:10:20"
+  },
+  {
+    "text": "\" So, zooming out, these four rules are clear.",
+    "start": "00:10:20",
+    "end": "00:10:23"
+  },
+  {
+    "text": "Use skills, not prompts.",
+    "start": "00:10:23",
+    "end": "00:10:24"
+  },
+  {
+    "text": "Build tools, not just skills with prompts.",
+    "start": "00:10:24",
+    "end": "00:10:27"
+  },
+  {
+    "text": "Build skills that are composable, not custom.",
+    "start": "00:10:27",
+    "end": "00:10:29"
+  },
+  {
+    "text": "And update your skills every time you use them.",
+    "start": "00:10:29",
+    "end": "00:10:30"
+  },
+  {
+    "text": "Using Claude like an engineer doesn't have to be complicated.",
+    "start": "00:10:30",
+    "end": "00:10:34"
+  },
+  {
+    "text": "And if you like this, you'll love this video where I break down how Boris Cherny, the creator of Claude Code, uses Claude skills.",
+    "start": "00:10:34",
+    "end": "00:10:40"
+  },
+  {
+    "text": "It's pretty wild and builds on a lot of what we covered here.",
+    "start": "00:10:40",
+    "end": "00:10:45"
+  },
+  {
+    "text": "I'll see you over there.",
+    "start": "00:10:45",
+    "end": "00:10:45"
+  },
+  {
+    "text": "Peace.",
+    "start": "00:10:45",
+    "end": "00:10:46"
+  }
+]

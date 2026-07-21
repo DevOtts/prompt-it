@@ -1,0 +1,1762 @@
+[
+  {
+    "text": "I listened to Anthropic's engineers at",
+    "start": 0,
+    "duration": 3.24
+  },
+  {
+    "text": "the AI Code Summit and I learned",
+    "start": 1.68,
+    "duration": 3.44
+  },
+  {
+    "text": "something I wasn't expecting. Almost",
+    "start": 3.24,
+    "duration": 3.92
+  },
+  {
+    "text": "everyone is prompting Claude code wrong.",
+    "start": 5.12,
+    "duration": 3.64
+  },
+  {
+    "text": "So, I decided to dig deeper and after",
+    "start": 7.16,
+    "duration": 3.24
+  },
+  {
+    "text": "studying everything Anthropic engineers",
+    "start": 8.76,
+    "duration": 3.48
+  },
+  {
+    "text": "have published, I uncovered four rules",
+    "start": 10.4,
+    "duration": 3.6
+  },
+  {
+    "text": "for how they actually prompt Claude",
+    "start": 12.24,
+    "duration": 3.32
+  },
+  {
+    "text": "code. And it turns out you don't need",
+    "start": 14,
+    "duration": 3.2
+  },
+  {
+    "text": "any technical experience to implement",
+    "start": 15.56,
+    "duration": 3.52
+  },
+  {
+    "text": "these rules. So, rule number one is they",
+    "start": 17.2,
+    "duration": 4.92
+  },
+  {
+    "text": "prompt skills, not Claude. Before we get",
+    "start": 19.08,
+    "duration": 4.4
+  },
+  {
+    "text": "to the rules that will transform how you",
+    "start": 22.12,
+    "duration": 2.72
+  },
+  {
+    "text": "work, we need to understand the",
+    "start": 23.48,
+    "duration": 3.4
+  },
+  {
+    "text": "foundation of how they use Claude.",
+    "start": 24.84,
+    "duration": 3.44
+  },
+  {
+    "text": "Generally, when people first start using",
+    "start": 26.88,
+    "duration": 3.28
+  },
+  {
+    "text": "AI, they start writing new prompts for",
+    "start": 28.28,
+    "duration": 3.6
+  },
+  {
+    "text": "everything they do. But, the reality is",
+    "start": 30.16,
+    "duration": 3.52
+  },
+  {
+    "text": "most of what people do is repetitive",
+    "start": 31.88,
+    "duration": 4.24
+  },
+  {
+    "text": "tasks. So, Anthropic engineers created",
+    "start": 33.68,
+    "duration": 4.32
+  },
+  {
+    "text": "Claude skills to help tackle these",
+    "start": 36.12,
+    "duration": 3.72
+  },
+  {
+    "text": "repetitive tasks. Here's them describing",
+    "start": 38,
+    "duration": 2.92
+  },
+  {
+    "text": "what they are and don't get worried",
+    "start": 39.84,
+    "duration": 2.16
+  },
+  {
+    "text": "about the technical terms.",
+    "start": 40.92,
+    "duration": 3
+  },
+  {
+    "text": ">> Skills are organized collections of",
+    "start": 42,
+    "duration": 3.92
+  },
+  {
+    "text": "files that package composable procedural",
+    "start": 43.92,
+    "duration": 4.08
+  },
+  {
+    "text": "knowledge for agents. In other words,",
+    "start": 45.92,
+    "duration": 3.84
+  },
+  {
+    "text": "they're folders. Barry describes it as",
+    "start": 48,
+    "duration": 3.28
+  },
+  {
+    "text": "procedural knowledge for agents, which",
+    "start": 49.76,
+    "duration": 3.72
+  },
+  {
+    "text": "is a fancy way to say a way to get a",
+    "start": 51.28,
+    "duration": 3.64
+  },
+  {
+    "text": "task done. And there's an art to",
+    "start": 53.48,
+    "duration": 2.6
+  },
+  {
+    "text": "actually creating these skills, which",
+    "start": 54.92,
+    "duration": 2.6
+  },
+  {
+    "text": "we'll cover in rules two, three, and",
+    "start": 56.08,
+    "duration": 3.28
+  },
+  {
+    "text": "four. But, first you need to have the",
+    "start": 57.52,
+    "duration": 3.52
+  },
+  {
+    "text": "mental shift. Stop thinking in",
+    "start": 59.36,
+    "duration": 3.96
+  },
+  {
+    "text": "traditional prompts, start thinking in",
+    "start": 61.04,
+    "duration": 4.36
+  },
+  {
+    "text": "prompting Claude skills. This may sound",
+    "start": 63.32,
+    "duration": 3.56
+  },
+  {
+    "text": "complicated, but it really it's quite",
+    "start": 65.4,
+    "duration": 2.76
+  },
+  {
+    "text": "simple. Here's what it could look like",
+    "start": 66.88,
+    "duration": 2.88
+  },
+  {
+    "text": "if you wanted to draft a response to an",
+    "start": 68.16,
+    "duration": 3.36
+  },
+  {
+    "text": "email. Instead of you having a crazy",
+    "start": 69.76,
+    "duration": 3.4
+  },
+  {
+    "text": "prompt to help you respond to an email",
+    "start": 71.52,
+    "duration": 2.92
+  },
+  {
+    "text": "with your voice, your tone, and your",
+    "start": 73.16,
+    "duration": 2.68
+  },
+  {
+    "text": "writing style, you would just type",
+    "start": 74.44,
+    "duration": 3.24
+  },
+  {
+    "text": "{slash} draft email and then bring in",
+    "start": 75.84,
+    "duration": 3.4
+  },
+  {
+    "text": "the email you want to respond to. So,",
+    "start": 77.68,
+    "duration": 2.8
+  },
+  {
+    "text": "that's how you do it in practice, but",
+    "start": 79.24,
+    "duration": 2.88
+  },
+  {
+    "text": "conceptually, how should you think about",
+    "start": 80.48,
+    "duration": 3.12
+  },
+  {
+    "text": "this? I pulled this graph from the",
+    "start": 82.12,
+    "duration": 3.24
+  },
+  {
+    "text": "Anthropic engineering presentation and",
+    "start": 83.6,
+    "duration": 3.64
+  },
+  {
+    "text": "added a slight tweak to it. Layer one,",
+    "start": 85.36,
+    "duration": 3.64
+  },
+  {
+    "text": "you have the AI model. This is the AI",
+    "start": 87.24,
+    "duration": 3.76
+  },
+  {
+    "text": "that you're using. Layer two is you have",
+    "start": 89,
+    "duration": 4.12
+  },
+  {
+    "text": "the AI agents and the prompts. This is",
+    "start": 91,
+    "duration": 3.4
+  },
+  {
+    "text": "likely how you've been interacting with",
+    "start": 93.12,
+    "duration": 2.96
+  },
+  {
+    "text": "AI to date, but you want to move up a",
+    "start": 94.4,
+    "duration": 3.6
+  },
+  {
+    "text": "layer to layer three, which is skills.",
+    "start": 96.08,
+    "duration": 4.04
+  },
+  {
+    "text": "This is the application layer of the AI",
+    "start": 98,
+    "duration": 3.52
+  },
+  {
+    "text": "world. If you were to compare this to",
+    "start": 100.12,
+    "duration": 3.44
+  },
+  {
+    "text": "your cell phone, Anthropic is building",
+    "start": 101.52,
+    "duration": 4.24
+  },
+  {
+    "text": "the phone itself. You have to create the",
+    "start": 103.56,
+    "duration": 4.28
+  },
+  {
+    "text": "apps. That's the layer to control. And",
+    "start": 105.76,
+    "duration": 3.8
+  },
+  {
+    "text": "before we get to how to best create",
+    "start": 107.84,
+    "duration": 3.44
+  },
+  {
+    "text": "these skills, here's a prompt you can",
+    "start": 109.56,
+    "duration": 3.72
+  },
+  {
+    "text": "run to help you identify the skills that",
+    "start": 111.28,
+    "duration": 3.48
+  },
+  {
+    "text": "are worth creating. So, you're no longer",
+    "start": 113.28,
+    "duration": 2.92
+  },
+  {
+    "text": "writing custom prompts, you're writing",
+    "start": 114.76,
+    "duration": 3.48
+  },
+  {
+    "text": "more specific prompts that clearly",
+    "start": 116.2,
+    "duration": 3.8
+  },
+  {
+    "text": "reference skills. And this leads to the",
+    "start": 118.24,
+    "duration": 3.6
+  },
+  {
+    "text": "next topic, which most people get wrong,",
+    "start": 120,
+    "duration": 3.4
+  },
+  {
+    "text": "which is how do you actually build a",
+    "start": 121.84,
+    "duration": 3.8
+  },
+  {
+    "text": "skill that works? Rule number two is",
+    "start": 123.4,
+    "duration": 4.12
+  },
+  {
+    "text": "skills are more than prompts. So, you're",
+    "start": 125.64,
+    "duration": 3.039
+  },
+  {
+    "text": "convinced you need to change how you",
+    "start": 127.52,
+    "duration": 3
+  },
+  {
+    "text": "prompt to prompt skills. So, the next",
+    "start": 128.679,
+    "duration": 3.081
+  },
+  {
+    "text": "question is how do you actually create",
+    "start": 130.52,
+    "duration": 2.64
+  },
+  {
+    "text": "skills that work? There's an art to",
+    "start": 131.76,
+    "duration": 3.12
+  },
+  {
+    "text": "this, a lot like when prompt engineering",
+    "start": 133.16,
+    "duration": 4.04
+  },
+  {
+    "text": "went viral when ChatGPT first came out,",
+    "start": 134.88,
+    "duration": 3.4
+  },
+  {
+    "text": "and it's important that you get this",
+    "start": 137.2,
+    "duration": 3.16
+  },
+  {
+    "text": "right. The act of actually creating the",
+    "start": 138.28,
+    "duration": 3.72
+  },
+  {
+    "text": "skill is super easy. You can just write",
+    "start": 140.36,
+    "duration": 3.56
+  },
+  {
+    "text": "in Claude, build me a skill for X, and",
+    "start": 142,
+    "duration": 3.6
+  },
+  {
+    "text": "it'll just create a skill for you. But",
+    "start": 143.92,
+    "duration": 3.039
+  },
+  {
+    "text": "to use these skills well, you need to",
+    "start": 145.6,
+    "duration": 3.28
+  },
+  {
+    "text": "understand what's actually inside them.",
+    "start": 146.959,
+    "duration": 3.401
+  },
+  {
+    "text": "Because it's not just a prompt that",
+    "start": 148.88,
+    "duration": 3.079
+  },
+  {
+    "text": "lives in a folder. A skill is more than",
+    "start": 150.36,
+    "duration": 3.88
+  },
+  {
+    "text": "a prompt. Inside a skill, there are",
+    "start": 151.959,
+    "duration": 3.761
+  },
+  {
+    "text": "three layers. Layer one is the",
+    "start": 154.24,
+    "duration": 3.84
+  },
+  {
+    "text": "description. This is what Claude checks",
+    "start": 155.72,
+    "duration": 4.64
+  },
+  {
+    "text": "every time you ask a specific question,",
+    "start": 158.08,
+    "duration": 3.879
+  },
+  {
+    "text": "and it determines if it should use the",
+    "start": 160.36,
+    "duration": 3.32
+  },
+  {
+    "text": "skill or not. Think of it like a title",
+    "start": 161.959,
+    "duration": 3.601
+  },
+  {
+    "text": "on a folder. If the label's vague,",
+    "start": 163.68,
+    "duration": 3.36
+  },
+  {
+    "text": "Claude's going to have tough time",
+    "start": 165.56,
+    "duration": 3.04
+  },
+  {
+    "text": "identifying when to use it. If it's",
+    "start": 167.04,
+    "duration": 3.28
+  },
+  {
+    "text": "specific, it'll know exactly when it",
+    "start": 168.6,
+    "duration": 3.08
+  },
+  {
+    "text": "needs to use it. And yes, when you're",
+    "start": 170.32,
+    "duration": 2.639
+  },
+  {
+    "text": "prompting Claude, you don't need to",
+    "start": 171.68,
+    "duration": 3.4
+  },
+  {
+    "text": "explicitly call a skill if it's properly",
+    "start": 172.959,
+    "duration": 3.841
+  },
+  {
+    "text": "described. Claude will automatically",
+    "start": 175.08,
+    "duration": 3.28
+  },
+  {
+    "text": "know when to use it, which is awesome.",
+    "start": 176.8,
+    "duration": 3.439
+  },
+  {
+    "text": "Layer two is the instructions. Once",
+    "start": 178.36,
+    "duration": 3.879
+  },
+  {
+    "text": "Claude grabs the skill, this is the",
+    "start": 180.239,
+    "duration": 3.72
+  },
+  {
+    "text": "playbook it follows. This is a",
+    "start": 182.239,
+    "duration": 3.521
+  },
+  {
+    "text": "step-by-step process on how to actually",
+    "start": 183.959,
+    "duration": 3.641
+  },
+  {
+    "text": "complete the task. And layer three are",
+    "start": 185.76,
+    "duration": 4.56
+  },
+  {
+    "text": "the tools it has access to. This is code",
+    "start": 187.6,
+    "duration": 5.16
+  },
+  {
+    "text": "scripts, API calls, reference files.",
+    "start": 190.32,
+    "duration": 4.28
+  },
+  {
+    "text": "This is where a skill becomes a lot more",
+    "start": 192.76,
+    "duration": 3.56
+  },
+  {
+    "text": "than prompts, and this layer three is",
+    "start": 194.6,
+    "duration": 3.72
+  },
+  {
+    "text": "where most of the leverage lives, but",
+    "start": 196.32,
+    "duration": 4
+  },
+  {
+    "text": "most people stop at that layer two.",
+    "start": 198.32,
+    "duration": 3.6
+  },
+  {
+    "text": "Here's Eric from the Anthropic team",
+    "start": 200.32,
+    "duration": 3.56
+  },
+  {
+    "text": "talking about exactly this. And I think",
+    "start": 201.92,
+    "duration": 3.52
+  },
+  {
+    "text": "maybe the funniest things I see is that",
+    "start": 203.88,
+    "duration": 3.92
+  },
+  {
+    "text": "people will put a lot of effort into",
+    "start": 205.44,
+    "duration": 3.76
+  },
+  {
+    "text": "creating these really beautiful,",
+    "start": 207.8,
+    "duration": 3.32
+  },
+  {
+    "text": "detailed prompts.",
+    "start": 209.2,
+    "duration": 3.84
+  },
+  {
+    "text": "Um, and then the tools that they make to",
+    "start": 211.12,
+    "duration": 3.52
+  },
+  {
+    "text": "give the model are sort of these",
+    "start": 213.04,
+    "duration": 3.8
+  },
+  {
+    "text": "incredibly bare-bones,",
+    "start": 214.64,
+    "duration": 4.92
+  },
+  {
+    "text": "uh, like, you know, no documentation,",
+    "start": 216.84,
+    "duration": 4.36
+  },
+  {
+    "text": "func- like the parameters are named A",
+    "start": 219.56,
+    "duration": 3.88
+  },
+  {
+    "text": "and B, and it's kind of like, oh, like",
+    "start": 221.2,
+    "duration": 3.96
+  },
+  {
+    "text": "an engineer wouldn't be able to like,",
+    "start": 223.44,
+    "duration": 3.519
+  },
+  {
+    "text": "you know, work with this as a,",
+    "start": 225.16,
+    "duration": 2.44
+  },
+  {
+    "text": "um,",
+    "start": 226.959,
+    "duration": 2.521
+  },
+  {
+    "text": "you know, work with this as if this was",
+    "start": 227.6,
+    "duration": 4.04
+  },
+  {
+    "text": "a function they I to use. People obsess",
+    "start": 229.48,
+    "duration": 4.44
+  },
+  {
+    "text": "over the prompt and skip the tools, the",
+    "start": 231.64,
+    "duration": 4.12
+  },
+  {
+    "text": "third layer of a skill. Anthropic",
+    "start": 233.92,
+    "duration": 3.64
+  },
+  {
+    "text": "engineers do the opposite. They focus on",
+    "start": 235.76,
+    "duration": 3.28
+  },
+  {
+    "text": "these tools. So, instead of this whole",
+    "start": 237.56,
+    "duration": 3.4
+  },
+  {
+    "text": "back and forth, I created my own custom",
+    "start": 239.04,
+    "duration": 3.88
+  },
+  {
+    "text": "skill that could check these domains",
+    "start": 240.96,
+    "duration": 3.6
+  },
+  {
+    "text": "programmatically, so that whatever",
+    "start": 242.92,
+    "duration": 3.32
+  },
+  {
+    "text": "domains it was telling me, it is already",
+    "start": 244.56,
+    "duration": 3.88
+  },
+  {
+    "text": "verified that I could go and buy it. So,",
+    "start": 246.24,
+    "duration": 3.68
+  },
+  {
+    "text": "I gave this skill access to the right",
+    "start": 248.44,
+    "duration": 3.08
+  },
+  {
+    "text": "tool and it leveled up the entire",
+    "start": 249.92,
+    "duration": 3.36
+  },
+  {
+    "text": "process. And like I mentioned in rule",
+    "start": 251.52,
+    "duration": 3.36
+  },
+  {
+    "text": "one, instead of manually thinking about",
+    "start": 253.28,
+    "duration": 3.44
+  },
+  {
+    "text": "domains, I could have 10 different sub",
+    "start": 254.88,
+    "duration": 4.32
+  },
+  {
+    "text": "agents using this skill to look through",
+    "start": 256.72,
+    "duration": 4.84
+  },
+  {
+    "text": "10,000 plus domains to find the right",
+    "start": 259.2,
+    "duration": 3.84
+  },
+  {
+    "text": "one. Now, I can do something that I",
+    "start": 261.56,
+    "duration": 2.88
+  },
+  {
+    "text": "literally would have never been able to",
+    "start": 263.04,
+    "duration": 2.96
+  },
+  {
+    "text": "do before. Here's a prompt you can use",
+    "start": 264.44,
+    "duration": 3.08
+  },
+  {
+    "text": "to think deeper about the skills you",
+    "start": 266,
+    "duration": 3.12
+  },
+  {
+    "text": "create, so when you actually go ahead",
+    "start": 267.52,
+    "duration": 3.12
+  },
+  {
+    "text": "and prompt them, they'll be that much",
+    "start": 269.12,
+    "duration": 3.08
+  },
+  {
+    "text": "more effective. So, rule number two",
+    "start": 270.64,
+    "duration": 3.2
+  },
+  {
+    "text": "covers how anthropic engineers make",
+    "start": 272.2,
+    "duration": 3.719
+  },
+  {
+    "text": "skills, but what skills do they actually",
+    "start": 273.84,
+    "duration": 3.64
+  },
+  {
+    "text": "create? Rule number three is they build",
+    "start": 275.919,
+    "duration": 4.201
+  },
+  {
+    "text": "composable skills, not custom skills.",
+    "start": 277.48,
+    "duration": 4.04
+  },
+  {
+    "text": "Pulling directly from Anthropic's",
+    "start": 280.12,
+    "duration": 3.36
+  },
+  {
+    "text": "engineering blog about what skills are",
+    "start": 281.52,
+    "duration": 3.28
+  },
+  {
+    "text": "and how to position them, they are",
+    "start": 283.48,
+    "duration": 3.52
+  },
+  {
+    "text": "composable, portable, efficient, and",
+    "start": 284.8,
+    "duration": 4.44
+  },
+  {
+    "text": "powerful. Composability means multiple",
+    "start": 287,
+    "duration": 4.12
+  },
+  {
+    "text": "skills can work together with Claude",
+    "start": 289.24,
+    "duration": 4.24
+  },
+  {
+    "text": "automatically coordinating which to use.",
+    "start": 291.12,
+    "duration": 3.36
+  },
+  {
+    "text": "What this means is you should have",
+    "start": 293.48,
+    "duration": 3.6
+  },
+  {
+    "text": "small, focused, and reusable skills that",
+    "start": 294.48,
+    "duration": 4.6
+  },
+  {
+    "text": "can work together, versus having a",
+    "start": 297.08,
+    "duration": 3.6
+  },
+  {
+    "text": "single massive skill that does",
+    "start": 299.08,
+    "duration": 3.36
+  },
+  {
+    "text": "everything. A concrete example that I",
+    "start": 300.68,
+    "duration": 3.16
+  },
+  {
+    "text": "experienced when I first started",
+    "start": 302.44,
+    "duration": 3.4
+  },
+  {
+    "text": "building skills for my content engine, I",
+    "start": 303.84,
+    "duration": 4.4
+  },
+  {
+    "text": "built a single {slash} content creation",
+    "start": 305.84,
+    "duration": 4.52
+  },
+  {
+    "text": "skill that did everything. Generated",
+    "start": 308.24,
+    "duration": 4.08
+  },
+  {
+    "text": "ideas, wrote scripts, drafted social",
+    "start": 310.36,
+    "duration": 4.64
+  },
+  {
+    "text": "posts, all of it, one skill, a million",
+    "start": 312.32,
+    "duration": 4.2
+  },
+  {
+    "text": "possibilities, and it just became",
+    "start": 315,
+    "duration": 3.32
+  },
+  {
+    "text": "unmanageable. Every time I wanted to",
+    "start": 316.52,
+    "duration": 3.56
+  },
+  {
+    "text": "change how scripts were written, I had",
+    "start": 318.32,
+    "duration": 3.599
+  },
+  {
+    "text": "to rewrite the whole skill and I didn't",
+    "start": 320.08,
+    "duration": 3.72
+  },
+  {
+    "text": "know what it actually impacted. And so,",
+    "start": 321.919,
+    "duration": 3.721
+  },
+  {
+    "text": "instead I split it up to more specific",
+    "start": 323.8,
+    "duration": 4.28
+  },
+  {
+    "text": "skills, right? YouTube idea research,",
+    "start": 325.64,
+    "duration": 5.2
+  },
+  {
+    "text": "YouTube script writer, LinkedIn post.",
+    "start": 328.08,
+    "duration": 5.72
+  },
+  {
+    "text": "Each skill had a specific goal in mind.",
+    "start": 330.84,
+    "duration": 4.96
+  },
+  {
+    "text": "And the benefit is that each can call",
+    "start": 333.8,
+    "duration": 3.88
+  },
+  {
+    "text": "the other skills, so that they start",
+    "start": 335.8,
+    "duration": 3.6
+  },
+  {
+    "text": "chaining them together. This may seem a",
+    "start": 337.68,
+    "duration": 3.32
+  },
+  {
+    "text": "bit overkill, but it really isn't for",
+    "start": 339.4,
+    "duration": 3.68
+  },
+  {
+    "text": "three specific reasons. The first is",
+    "start": 341,
+    "duration": 4.08
+  },
+  {
+    "text": "that issues are easy to spot. When When",
+    "start": 343.08,
+    "duration": 3.839
+  },
+  {
+    "text": "focused skill breaks, you know exactly",
+    "start": 345.08,
+    "duration": 3.96
+  },
+  {
+    "text": "where to look, whereas if it's a giant",
+    "start": 346.919,
+    "duration": 4.321
+  },
+  {
+    "text": "skill, you don't know what exactly the",
+    "start": 349.04,
+    "duration": 3.92
+  },
+  {
+    "text": "issue was. The second is that",
+    "start": 351.24,
+    "duration": 3.8
+  },
+  {
+    "text": "improvements compound. If you update,",
+    "start": 352.96,
+    "duration": 4.04
+  },
+  {
+    "text": "let's call it YouTube idea research,",
+    "start": 355.04,
+    "duration": 4.36
+  },
+  {
+    "text": "every workflow that uses the same skill",
+    "start": 357,
+    "duration": 4.12
+  },
+  {
+    "text": "automatically gets upgraded. Whereas if",
+    "start": 359.4,
+    "duration": 3.64
+  },
+  {
+    "text": "you're using a giant skill, you're going",
+    "start": 361.12,
+    "duration": 4.12
+  },
+  {
+    "text": "to have overlapping functionality, which",
+    "start": 363.04,
+    "duration": 4.4
+  },
+  {
+    "text": "means you'll fix it in one skill and it",
+    "start": 365.24,
+    "duration": 3.8
+  },
+  {
+    "text": "will still be broken in the other. The",
+    "start": 367.44,
+    "duration": 3.6
+  },
+  {
+    "text": "third is that you can reuse instead of",
+    "start": 369.04,
+    "duration": 3.68
+  },
+  {
+    "text": "rebuilding. If you build something like",
+    "start": 371.04,
+    "duration": 3.28
+  },
+  {
+    "text": "the check domain skill I mentioned",
+    "start": 372.72,
+    "duration": 3.28
+  },
+  {
+    "text": "earlier, you can plug that into any",
+    "start": 374.32,
+    "duration": 3.36
+  },
+  {
+    "text": "workflow you want. You're not rebuilding",
+    "start": 376,
+    "duration": 3
+  },
+  {
+    "text": "the wheel every time with a new",
+    "start": 377.68,
+    "duration": 2.8
+  },
+  {
+    "text": "workflow. So you know you should break",
+    "start": 379,
+    "duration": 3.32
+  },
+  {
+    "text": "them up, but what's some more technical",
+    "start": 380.48,
+    "duration": 3.56
+  },
+  {
+    "text": "patterns that you should consider to",
+    "start": 382.32,
+    "duration": 3.8
+  },
+  {
+    "text": "make these even more powerful. So both",
+    "start": 384.04,
+    "duration": 3.48
+  },
+  {
+    "text": "of these come from directly how",
+    "start": 386.12,
+    "duration": 3.44
+  },
+  {
+    "text": "Anthropic engineers actually use them.",
+    "start": 387.52,
+    "duration": 4.6
+  },
+  {
+    "text": "So pattern one is save scripts inside of",
+    "start": 389.56,
+    "duration": 4.28
+  },
+  {
+    "text": "skills. This is part of the tools layer",
+    "start": 392.12,
+    "duration": 2.96
+  },
+  {
+    "text": "of a skill and it's how you actually",
+    "start": 393.84,
+    "duration": 2.84
+  },
+  {
+    "text": "make them sharper. Here's Barry at the",
+    "start": 395.08,
+    "duration": 3.36
+  },
+  {
+    "text": "AI Engineering Code Summit talking about",
+    "start": 396.68,
+    "duration": 4.12
+  },
+  {
+    "text": "how he does exactly this. We kept seeing",
+    "start": 398.44,
+    "duration": 4.2
+  },
+  {
+    "text": "Claude write the same Python script over",
+    "start": 400.8,
+    "duration": 3.52
+  },
+  {
+    "text": "and over again to apply styling to",
+    "start": 402.64,
+    "duration": 4.08
+  },
+  {
+    "text": "slides. So we just asked Claude it",
+    "start": 404.32,
+    "duration": 4.04
+  },
+  {
+    "text": "inside of the skill as a tool for his",
+    "start": 406.72,
+    "duration": 2.6
+  },
+  {
+    "text": "version",
+    "start": 408.36,
+    "duration": 2.559
+  },
+  {
+    "text": "for his future self. Now we can just run",
+    "start": 409.32,
+    "duration": 2.92
+  },
+  {
+    "text": "the script and that makes everything a",
+    "start": 410.919,
+    "duration": 2.601
+  },
+  {
+    "text": "lot more consistent, a lot more",
+    "start": 412.24,
+    "duration": 2.72
+  },
+  {
+    "text": "efficient. Let me break down what he",
+    "start": 413.52,
+    "duration": 3.08
+  },
+  {
+    "text": "said. Claude kept rewriting the same",
+    "start": 414.96,
+    "duration": 3.44
+  },
+  {
+    "text": "Python script every session and instead",
+    "start": 416.6,
+    "duration": 3.44
+  },
+  {
+    "text": "of him letting it rewrite it, they saved",
+    "start": 418.4,
+    "duration": 3.56
+  },
+  {
+    "text": "the script inside of a skill folder. So",
+    "start": 420.04,
+    "duration": 3.4
+  },
+  {
+    "text": "now the next session Claude doesn't have",
+    "start": 421.96,
+    "duration": 3.8
+  },
+  {
+    "text": "to rewrite the script, it just reruns",
+    "start": 423.44,
+    "duration": 4.4
+  },
+  {
+    "text": "it. And this is so powerful because code",
+    "start": 425.76,
+    "duration": 3.56
+  },
+  {
+    "text": "is deterministic, which essentially",
+    "start": 427.84,
+    "duration": 3.28
+  },
+  {
+    "text": "means if you give it the same input, it",
+    "start": 429.32,
+    "duration": 3.32
+  },
+  {
+    "text": "will give you the same output every",
+    "start": 431.12,
+    "duration": 3.44
+  },
+  {
+    "text": "single time. Whereas in the AI world,",
+    "start": 432.64,
+    "duration": 3.48
+  },
+  {
+    "text": "that's not necessarily the case. It",
+    "start": 434.56,
+    "duration": 3.56
+  },
+  {
+    "text": "interprets it, it guesses, it uses",
+    "start": 436.12,
+    "duration": 3.799
+  },
+  {
+    "text": "tokens that cost money. And when you",
+    "start": 438.12,
+    "duration": 3.08
+  },
+  {
+    "text": "have a script inside a skill, you're",
+    "start": 439.919,
+    "duration": 4.081
+  },
+  {
+    "text": "trading AI tokens for code compute,",
+    "start": 441.2,
+    "duration": 5.12
+  },
+  {
+    "text": "which is cheaper, faster and repeatable.",
+    "start": 444,
+    "duration": 4.2
+  },
+  {
+    "text": "A general rule of thumb is if you can",
+    "start": 446.32,
+    "duration": 4.12
+  },
+  {
+    "text": "use code instead of AI, you should. And",
+    "start": 448.2,
+    "duration": 3.2
+  },
+  {
+    "text": "you don't have to write the code, you",
+    "start": 450.44,
+    "duration": 2.64
+  },
+  {
+    "text": "can just have AI write it for you once",
+    "start": 451.4,
+    "duration": 3.16
+  },
+  {
+    "text": "and then you can reuse it as much as you",
+    "start": 453.08,
+    "duration": 2.96
+  },
+  {
+    "text": "want. The second pattern is you can",
+    "start": 454.56,
+    "duration": 3.48
+  },
+  {
+    "text": "control who invokes what. Most people",
+    "start": 456.04,
+    "duration": 3.76
+  },
+  {
+    "text": "don't know this exists, but Anthropic",
+    "start": 458.04,
+    "duration": 3.8
+  },
+  {
+    "text": "built two flags into Claude's skills",
+    "start": 459.8,
+    "duration": 3.4
+  },
+  {
+    "text": "that are important to understand. The",
+    "start": 461.84,
+    "duration": 3.56
+  },
+  {
+    "text": "first is user invocable. If you set this",
+    "start": 463.2,
+    "duration": 4.08
+  },
+  {
+    "text": "to false, it hides the skill from your",
+    "start": 465.4,
+    "duration": 4.32
+  },
+  {
+    "text": "slash menu. It means that the user, you",
+    "start": 467.28,
+    "duration": 4.6
+  },
+  {
+    "text": "or me or whoever, can't directly invoke",
+    "start": 469.72,
+    "duration": 4.48
+  },
+  {
+    "text": "this skill. It's only a skill for",
+    "start": 471.88,
+    "duration": 4.72
+  },
+  {
+    "text": "agents. This is perfect for any AI agent",
+    "start": 474.2,
+    "duration": 4
+  },
+  {
+    "text": "specific tools that you don't even want",
+    "start": 476.6,
+    "duration": 3.44
+  },
+  {
+    "text": "to think about. And then disable model",
+    "start": 478.2,
+    "duration": 4.16
+  },
+  {
+    "text": "invocation. This does the opposite. Only",
+    "start": 480.04,
+    "duration": 4.08
+  },
+  {
+    "text": "you can run it and the model can't. This",
+    "start": 482.36,
+    "duration": 3.64
+  },
+  {
+    "text": "is great for higher risk things like a",
+    "start": 484.12,
+    "duration": 3.92
+  },
+  {
+    "text": "skill that sends a message or deploys a",
+    "start": 486,
+    "duration": 4.36
+  },
+  {
+    "text": "new version of your code to production.",
+    "start": 488.04,
+    "duration": 3.44
+  },
+  {
+    "text": "Most of you watching this have likely",
+    "start": 490.36,
+    "duration": 2.92
+  },
+  {
+    "text": "never heard of either of those things,",
+    "start": 491.48,
+    "duration": 3.32
+  },
+  {
+    "text": "but now you have it in your bag when",
+    "start": 493.28,
+    "duration": 3.16
+  },
+  {
+    "text": "you're designing these skills. Here's a",
+    "start": 494.8,
+    "duration": 3.56
+  },
+  {
+    "text": "prompt you can run to audit your setup",
+    "start": 496.44,
+    "duration": 3.24
+  },
+  {
+    "text": "to make sure that you're properly",
+    "start": 498.36,
+    "duration": 3.2
+  },
+  {
+    "text": "applying these things into your skills.",
+    "start": 499.68,
+    "duration": 3.68
+  },
+  {
+    "text": "Screenshot this and just send the photo",
+    "start": 501.56,
+    "duration": 3.84
+  },
+  {
+    "text": "into Claude and I highly recommend you",
+    "start": 503.36,
+    "duration": 3.92
+  },
+  {
+    "text": "do this. So you know how to build skills",
+    "start": 505.4,
+    "duration": 3.64
+  },
+  {
+    "text": "and what to build, but how do you make",
+    "start": 507.28,
+    "duration": 3.92
+  },
+  {
+    "text": "these improve over time? And before I",
+    "start": 509.04,
+    "duration": 3.879
+  },
+  {
+    "text": "get to that, if this is your first video",
+    "start": 511.2,
+    "duration": 3.56
+  },
+  {
+    "text": "of mine, welcome to channel. But if it's",
+    "start": 512.919,
+    "duration": 3.601
+  },
+  {
+    "text": "your second or more, here is our",
+    "start": 514.76,
+    "duration": 3.6
+  },
+  {
+    "text": "anti-slop agreement. The visuals, the",
+    "start": 516.52,
+    "duration": 3.68
+  },
+  {
+    "text": "testing, the time I put into this video,",
+    "start": 518.36,
+    "duration": 4.119
+  },
+  {
+    "text": "that's entirely built for humans, not",
+    "start": 520.2,
+    "duration": 4.84
+  },
+  {
+    "text": "for AI robots or data scrapers. So all I",
+    "start": 522.479,
+    "duration": 4.241
+  },
+  {
+    "text": "ask is you subscribe as part of this",
+    "start": 525.04,
+    "duration": 3.36
+  },
+  {
+    "text": "agreement to help this content reach",
+    "start": 526.72,
+    "duration": 3.6
+  },
+  {
+    "text": "more people so I can keep making videos",
+    "start": 528.4,
+    "duration": 3.64
+  },
+  {
+    "text": "like this. Rule number four is their",
+    "start": 530.32,
+    "duration": 3.56
+  },
+  {
+    "text": "prompts get smarter every session.",
+    "start": 532.04,
+    "duration": 3.52
+  },
+  {
+    "text": "Here's where Anthropic engineers really",
+    "start": 533.88,
+    "duration": 3.68
+  },
+  {
+    "text": "pull ahead. Their skills and in turn",
+    "start": 535.56,
+    "duration": 3.92
+  },
+  {
+    "text": "their prompting doesn't just work. They",
+    "start": 537.56,
+    "duration": 3.56
+  },
+  {
+    "text": "get better every session. When you",
+    "start": 539.48,
+    "duration": 3.32
+  },
+  {
+    "text": "prompt Claude with a sentence, that",
+    "start": 541.12,
+    "duration": 3.16
+  },
+  {
+    "text": "prompt disadvantages the moment you",
+    "start": 542.8,
+    "duration": 3.32
+  },
+  {
+    "text": "close the chat. When you prompt with a",
+    "start": 544.28,
+    "duration": 4.52
+  },
+  {
+    "text": "skill, the skill stays. And every time",
+    "start": 546.12,
+    "duration": 4.76
+  },
+  {
+    "text": "you use it, you have a chance to sharpen",
+    "start": 548.8,
+    "duration": 3.44
+  },
+  {
+    "text": "it. Listen their engineering team talk",
+    "start": 550.88,
+    "duration": 3.28
+  },
+  {
+    "text": "about exactly this. When you first start",
+    "start": 552.24,
+    "duration": 3.96
+  },
+  {
+    "text": "using Claude, this standardized format",
+    "start": 554.16,
+    "duration": 3.92
+  },
+  {
+    "text": "gives a very important guarantee.",
+    "start": 556.2,
+    "duration": 3.84
+  },
+  {
+    "text": "Anything that Claude writes down can be",
+    "start": 558.08,
+    "duration": 3.32
+  },
+  {
+    "text": "used efficiently in by the future",
+    "start": 560.04,
+    "duration": 3.24
+  },
+  {
+    "text": "version of itself. Our goal is that",
+    "start": 561.4,
+    "duration": 4.32
+  },
+  {
+    "text": "Claude on day 30 of working with you is",
+    "start": 563.28,
+    "duration": 4
+  },
+  {
+    "text": "going to be a lot better on Claude on",
+    "start": 565.72,
+    "duration": 3.32
+  },
+  {
+    "text": "day one. Every time Claude learns",
+    "start": 567.28,
+    "duration": 3.2
+  },
+  {
+    "text": "something about how you work, your",
+    "start": 569.04,
+    "duration": 3.24
+  },
+  {
+    "text": "voice, your process, your edge cases,",
+    "start": 570.48,
+    "duration": 3.56
+  },
+  {
+    "text": "you write it down in the skill. Next",
+    "start": 572.28,
+    "duration": 3.76
+  },
+  {
+    "text": "session starts smarter than the last. So",
+    "start": 574.04,
+    "duration": 3.84
+  },
+  {
+    "text": "how do you actually do this? Every time",
+    "start": 576.04,
+    "duration": 3.84
+  },
+  {
+    "text": "you run a skill and the output isn't",
+    "start": 577.88,
+    "duration": 4.24
+  },
+  {
+    "text": "exactly what you want, ask yourself one",
+    "start": 579.88,
+    "duration": 4.44
+  },
+  {
+    "text": "question. Is this a one-time fix or",
+    "start": 582.12,
+    "duration": 4.2
+  },
+  {
+    "text": "should this be in the skill forever? If",
+    "start": 584.32,
+    "duration": 4.2
+  },
+  {
+    "text": "it's forever, update the skill. Add the",
+    "start": 586.32,
+    "duration": 4.16
+  },
+  {
+    "text": "rule, the example, the edge case. And a",
+    "start": 588.52,
+    "duration": 3.28
+  },
+  {
+    "text": "lot of people skip this entirely.",
+    "start": 590.48,
+    "duration": 3
+  },
+  {
+    "text": "They're just like, \"Okay, run the skill,",
+    "start": 591.8,
+    "duration": 3.24
+  },
+  {
+    "text": "get an output.\" Like, continue with",
+    "start": 593.48,
+    "duration": 3.56
+  },
+  {
+    "text": "their day. But Anthropic engineers use a",
+    "start": 595.04,
+    "duration": 3.76
+  },
+  {
+    "text": "skill, get the output, then update the",
+    "start": 597.04,
+    "duration": 4
+  },
+  {
+    "text": "skill so that there's a compounding loop",
+    "start": 598.8,
+    "duration": 4.2
+  },
+  {
+    "text": "that improves over time. And it's really",
+    "start": 601.04,
+    "duration": 4.44
+  },
+  {
+    "text": "quite simple. Like, it's literally you",
+    "start": 603,
+    "duration": 4.6
+  },
+  {
+    "text": "can just use your chat history as a",
+    "start": 605.48,
+    "duration": 4.32
+  },
+  {
+    "text": "reference point to improve the skill",
+    "start": 607.6,
+    "duration": 4.24
+  },
+  {
+    "text": "itself. Just say, \"Review the back and",
+    "start": 609.8,
+    "duration": 4.56
+  },
+  {
+    "text": "forth I just had after using this skill.",
+    "start": 611.84,
+    "duration": 4.2
+  },
+  {
+    "text": "Can we enhance the skill so this is",
+    "start": 614.36,
+    "duration": 3.8
+  },
+  {
+    "text": "handled automatically or we don't make",
+    "start": 616.04,
+    "duration": 4.04
+  },
+  {
+    "text": "the same mistake again?\" So, zooming",
+    "start": 618.16,
+    "duration": 4.08
+  },
+  {
+    "text": "out, these four rules are clear. Use",
+    "start": 620.08,
+    "duration": 4.12
+  },
+  {
+    "text": "skills, not prompts. Build tools, not",
+    "start": 622.24,
+    "duration": 4.32
+  },
+  {
+    "text": "just skills with prompts. Build skills",
+    "start": 624.2,
+    "duration": 4.4
+  },
+  {
+    "text": "that are composable, not custom. And",
+    "start": 626.56,
+    "duration": 3.68
+  },
+  {
+    "text": "update your skills every time you use",
+    "start": 628.6,
+    "duration": 3
+  },
+  {
+    "text": "them. Using Claude like an engineer",
+    "start": 630.24,
+    "duration": 3.36
+  },
+  {
+    "text": "doesn't have to be complicated. And if",
+    "start": 631.6,
+    "duration": 4.12
+  },
+  {
+    "text": "you like this, you'll love this video",
+    "start": 633.6,
+    "duration": 3.92
+  },
+  {
+    "text": "where I break down how Boris Cherny, the",
+    "start": 635.72,
+    "duration": 4.119
+  },
+  {
+    "text": "creator of Claude Code, uses Claude",
+    "start": 637.52,
+    "duration": 4.4
+  },
+  {
+    "text": "skills. It's pretty wild and builds on a",
+    "start": 639.839,
+    "duration": 3.841
+  },
+  {
+    "text": "lot of what we covered here. I'll see",
+    "start": 641.92,
+    "duration": 4.88
+  },
+  {
+    "text": "you over there. Peace.",
+    "start": 643.68,
+    "duration": 3.12
+  }
+]

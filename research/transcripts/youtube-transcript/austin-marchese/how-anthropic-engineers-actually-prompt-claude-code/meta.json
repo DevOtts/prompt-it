@@ -1,0 +1,18 @@
+{
+  "videoId": "qOvc9IUKEIc",
+  "title": "How Anthropic Engineers ACTUALLY Prompt Claude Code",
+  "channel": "Austin Marchese",
+  "channelId": "UCFeFVytEkT8kaqPCJZGFswg",
+  "description": "Get my free 5-day AI playbook (what I used to build a $25M+ startup): https://the-ai-playbook.com/4rules\n\nIn this video, I break down 4 rules I uncovered from studying how Anthropic's own engineers ACTUALLY prompt Claude Code. Almost everyone is doing it wrong, and once you see these rules, you can't unsee them. No technical experience required, and they apply to any project you're working on.\n\nTimestamps:\n(0:00) - How Anthropic Engineers ACTUALLY Prompt Claude Code\n(0:18) - Rule #1: Prompt Skills, Not Claude\n(2:05) - Rule #2: Skills Are More Than Prompts\n(4:36) - Rule #3: Build Composable Skills, Not Custom Skills\n(6:30) - Pattern #1: Save Scripts Inside Skills\n(7:35) - Pattern #2: Control Who Invokes What\n(8:51) - Rule #4: Skills Get Smarter Every Session\n\n--------\nFOR INDIVIDUALS:\n- Free 5-day AI playbook (what I used to build a $25M+ startup): https://the-ai-playbook.com/4rules\n- Use BuildPartner to build 10x faster with Claude Code (try free): https://buildpartner.ai/4rules\n\nFOR BUSINESSES, Ways to work with me:\n- Want AI systems built into your operations? https://theincubator.xyz/ops/4rules\n- Want to build a SaaS product without hiring a CTO? https://www.theincubator.xyz/eng/4rules\n--------\n\nIf you're new here, I'm Austin Marchese. How I got here...\n16: First business (SAT Math Tutor)\n22: Graduated Stevens Tech, 4.0, College Basketball, software engineering job at JPM\n23: Bitcoin ATM company + building algorithms for a professional gambler (fun story)\n24: Started creating content, grew 100k+ followers, built first agency, The Incubator\n25: Scaled agency to 15+ team members, $75K/M while working full time\n26: Quit my job, joined a startup called IYK\n27: Became COO of a $25M+ tech startup, worked with Ed Sheeran, Chance the Rapper and more\n28: Built a $20M+ real estate portfolio in the background\n29: Transitioned from IYK, re-launched The Incubator, grew it to a 6-figure biz in 30 days. Now building BuildPartner.ai\n\nTo everyone who's spending time learning and putting the work in, cheers. Anyone can make comments from the sidelines but not everyone can build...\n\n- Austin\n\nFollow/Subscribe\n\n- Instagram: https://www.instagram.com/austin.marchese/\n- Youtube: https://www.youtube.com/@austin.marchese",
+  "duration": 645,
+  "publishDate": "2026-05-15",
+  "url": "https://www.youtube.com/watch?v=qOvc9IUKEIc",
+  "coverImage": "imgs/cover.jpg",
+  "thumbnailUrl": "https://i.ytimg.com/vi/qOvc9IUKEIc/maxresdefault.jpg",
+  "language": {
+    "code": "en",
+    "name": "English",
+    "isGenerated": true
+  },
+  "chapters": []
+}

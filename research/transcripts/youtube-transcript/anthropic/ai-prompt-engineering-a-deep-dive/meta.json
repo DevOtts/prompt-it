@@ -1,0 +1,74 @@
+{
+  "videoId": "T9aRN5JkmL8",
+  "title": "AI prompt engineering: A deep dive",
+  "channel": "Anthropic",
+  "channelId": "UCrDwWp7EBBv4NwvScIpBDOA",
+  "description": "Some of Anthropic's prompt engineering experts—Amanda Askell (Alignment Finetuning), Alex Albert (Developer Relations), David Hershey (Applied AI), and Zack Witten (Prompt Engineering)—reflect on how prompt engineering has evolved, practical tips, and thoughts on how prompting might change as AI capabilities grow. Timestamps:\n0:00 Introduction\n2:05 Defining prompt engineering\n6:34 What makes a good prompt engineer\n12:17 Refining prompts\n24:27 Honesty, personas and metaphors in prompts\n37:12 Model reasoning\n45:18 Enterprise vs research vs general chat prompts\n50:52 Tips to improve prompting skills\n53:56 Jailbreaking\n56:51 Evolution of prompt engineering\n1:04:34 Future of prompt engineering\n\nLearn more about Anthropic: https://www.anthropic.com/\nAnthropic prompt engineering docs: https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+  "duration": 4602,
+  "publishDate": "2024-09-05",
+  "url": "https://www.youtube.com/watch?v=T9aRN5JkmL8",
+  "coverImage": "imgs/cover.jpg",
+  "thumbnailUrl": "https://i.ytimg.com/vi/T9aRN5JkmL8/maxresdefault.jpg",
+  "language": {
+    "code": "en",
+    "name": "English",
+    "isGenerated": false
+  },
+  "chapters": [
+    {
+      "title": "Introduction",
+      "start": 0,
+      "end": 125
+    },
+    {
+      "title": "Defining prompt engineering",
+      "start": 125,
+      "end": 394
+    },
+    {
+      "title": "What makes a good prompt engineer",
+      "start": 394,
+      "end": 737
+    },
+    {
+      "title": "Refining prompts",
+      "start": 737,
+      "end": 1467
+    },
+    {
+      "title": "Honesty, personas and metaphors in prompts",
+      "start": 1467,
+      "end": 2232
+    },
+    {
+      "title": "Model reasoning",
+      "start": 2232,
+      "end": 2718
+    },
+    {
+      "title": "Enterprise vs research vs general chat prompts",
+      "start": 2718,
+      "end": 3052
+    },
+    {
+      "title": "Tips to improve prompting skills",
+      "start": 3052,
+      "end": 3236
+    },
+    {
+      "title": "Jailbreaking",
+      "start": 3236,
+      "end": 3411
+    },
+    {
+      "title": "Evolution of prompt engineering",
+      "start": 3411,
+      "end": 3874
+    },
+    {
+      "title": "Future of prompt engineering",
+      "start": 3874,
+      "end": 4602
+    }
+  ]
+}

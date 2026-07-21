@@ -1,0 +1,109 @@
+{
+  "videoId": "hqkAH_65-vY",
+  "title": "MASTER Prompt Engineering in 50 min",
+  "channel": "Ben AI",
+  "channelId": "UC3KK7ENB_ierAXvrxVNnbZQ",
+  "description": "🎁 Here is the free template mentioned in this video: \nhttps://benvansprundel.gumroad.com/l/szwyse\n\n👇 Join my community and get all my templates, 1-on-1 tech help & more:\nhttps://c.benai.co/mpei5-com\n\n💼 Work with my AI Agency:\nhttps://c.benai.co/mpei5-agency\n\n🔗 My links:\nLinkedin: https://www.linkedin.com/in/benvansprundel/\nX: https://x.com/ben_vs92\n\n💻 Softwares I use (some of these are affiliate-links, thanks!):\nRelevance AI: https://relevanceai.com/?via=ben\nSendspark: https://sendspark.com/?via=ben-ai\nMake.com: https://www.make.com/en/register?pc=benai\nAgentive: https://agentivehub.com/\nDumpling AI: https://www.dumplingai.com/?via=ben-ai\n\nChapters:\n00:00 - Intro\n02:59 - Types of Prompting\n07:51 - Prompting Frameworks\n09:13 - #1 - Long Structured Framework\n18:05 - #2 - Short Structured Framework\n21:32 - #3 - Agent Prompting Framework\n30:48 - Prompting GPT-o1\n32:56 - Use Case #1 - Extracting Data\n34:18 - Use Case #2 - Classification\n35:23 - Use Case #3 - Generation\n36:20 - Use Case #4 - Evaluation\n37:31 - Use Case #5 - Data Transformation\n38:37 - Use Case #6 - Decision Making\n38:55 - Other Use Cases #1 - Tool Input\n41:10 - Other Use Cases #2 - Subagents\n43:40 - Other Use Cases #3 - Labeling / Naming\n45:02 - Other Use Cases #4 - Flow Builder\n45:55 - My Agent Prompt Tool\n\n👋🏼 About me:\nI'm Ben, a 3-time founder & Dutch AI entrepreneur. In 2023, I started my AI agency.\nIn this channel, I help businesses, professionals & aspiring AI entrepreneurs to build powerful no-code AI Agents & Automations for 10x efficiency. I post new useful AI use cases for businesses weekly.",
+  "duration": 3014,
+  "publishDate": "2024-09-26",
+  "url": "https://www.youtube.com/watch?v=hqkAH_65-vY",
+  "coverImage": "imgs/cover.jpg",
+  "thumbnailUrl": "https://i.ytimg.com/vi/hqkAH_65-vY/maxresdefault.jpg",
+  "language": {
+    "code": "en",
+    "name": "English",
+    "isGenerated": true
+  },
+  "chapters": [
+    {
+      "title": "- Intro",
+      "start": 0,
+      "end": 179
+    },
+    {
+      "title": "- Types of Prompting",
+      "start": 179,
+      "end": 471
+    },
+    {
+      "title": "- Prompting Frameworks",
+      "start": 471,
+      "end": 553
+    },
+    {
+      "title": "- #1 - Long Structured Framework",
+      "start": 553,
+      "end": 1085
+    },
+    {
+      "title": "- #2 - Short Structured Framework",
+      "start": 1085,
+      "end": 1292
+    },
+    {
+      "title": "- #3 - Agent Prompting Framework",
+      "start": 1292,
+      "end": 1848
+    },
+    {
+      "title": "- Prompting GPT-o1",
+      "start": 1848,
+      "end": 1976
+    },
+    {
+      "title": "- Use Case #1 - Extracting Data",
+      "start": 1976,
+      "end": 2058
+    },
+    {
+      "title": "- Use Case #2 - Classification",
+      "start": 2058,
+      "end": 2123
+    },
+    {
+      "title": "- Use Case #3 - Generation",
+      "start": 2123,
+      "end": 2180
+    },
+    {
+      "title": "- Use Case #4 - Evaluation",
+      "start": 2180,
+      "end": 2251
+    },
+    {
+      "title": "- Use Case #5 - Data Transformation",
+      "start": 2251,
+      "end": 2317
+    },
+    {
+      "title": "- Use Case #6 - Decision Making",
+      "start": 2317,
+      "end": 2335
+    },
+    {
+      "title": "- Other Use Cases #1 - Tool Input",
+      "start": 2335,
+      "end": 2470
+    },
+    {
+      "title": "- Other Use Cases #2 - Subagents",
+      "start": 2470,
+      "end": 2620
+    },
+    {
+      "title": "- Other Use Cases #3 - Labeling / Naming",
+      "start": 2620,
+      "end": 2702
+    },
+    {
+      "title": "- Other Use Cases #4 - Flow Builder",
+      "start": 2702,
+      "end": 2755
+    },
+    {
+      "title": "- My Agent Prompt Tool",
+      "start": 2755,
+      "end": 3014
+    }
+  ]
+}
