@@ -43,7 +43,7 @@ Scored against the 24-item standards checklist (D2) and the tool landscape (D1).
 | Acknowledge-then-catch iteration style (bosslife) | Matches review best practice (fresh-eyes gap-finding + evidence citation). This is the Mode 2 template. |
 
 ### Fix (the three real defects)
-1. **Boilerplate drift.** The token-aware note is pasted verbatim even where it contradicts the task ("small single-feature fix — one Sonnet builder" on a major docs overhaul). prompt-it must *compute* this note from task shape (size, risk, parallelizability) every time. This is the #1 automatable win.
+1. **Boilerplate drift.** The token-aware note is pasted verbatim even where it contradicts the task ("small single-feature fix — one Sonnet builder" on a major docs overhaul). *(v2 correction: the fix is not to compute the note — fable-it v2 now owns tiering canonically via `model-tiers.md`. The fix is to **omit** it: routing to fable-it IS the economics decision. The note in the prompt library is a fossil from before fable-it codified this.)*
 2. **Missing verification + output contract on ~half the prompts.** Research/plan asks end at "create a plan" with no acceptance shape and no stated destination for deliverables. prompt-it always emits both (checklist #4, #22; missing-output-schema anti-pattern).
 3. **No uncertainty clause, no contradiction pass.** None of the 9 prompts tells the agent what to do when it hits ambiguity; several stack IMPORTANT/WARNING markers that Claude 4+ overtriggers on. prompt-it adds the "out" clause, normalizes emphasis to sparing use, and diffs DoD items against constraints for conflicts before emitting.
 
@@ -54,37 +54,50 @@ Duplicated library entries, typos, and narrative verbosity — normalization com
 
 ## 3. Spec-ready brief for prompt-it
 
-### 3.1 The optimized-prompt output template (the "anatomy")
+> **v2 scope correction (2026-07-21, after Fernando's overlap challenge):** the first draft of this section over-scoped prompt-it into responsibilities plan-it/fable-it/review-it already own. §3.0 records the boundary audit; §3.1–3.2 are the slimmed result. Core reframe: **prompt-it is a harness-aware intent compiler, not a mini-planner.** It extracts what lives in the *author's head* and routes it; everything discoverable from the repo, and all execution mechanics, belong to the target skill.
 
-Nine ordered slots. Slots marked ⚖ are **sized by the clarity gate** — present only when task complexity warrants (matching structural depth to task risk; simple asks get slots 1, 3, 5, 9 only):
+### 3.0 Boundary audit — what prompt-it must NOT do (owned downstream)
+
+| Cut from prompt-it | Owner | Evidence |
+|---|---|---|
+| Delegation/tiering/economics note ("Claude teams, lower models, escalate…") | **fable-it** Step 3 + `references/model-tiers.md` (explicitly "no divergent copies — copies drift"); plan-it Phase 0 sets its own research method | Emitting a tiering note would recreate the boilerplate-drift defect one level up |
+| Heavy codebase research fan-out to spec the task | **plan-it** Phases 3–4 (pre-ground + discovery); **fable-it** Step 2 (pre-grounding gate) | plan-it Phase 0: "Expect pointers, not content — your job is to go fetch the ground truth… one fuzzy paragraph with no pointers… is fine" |
+| Binding DoD authoring / test contracts / verification protocols | **plan-it** Phase 1 (DoD lock) + Test Contract; **fable-it** Step 0 (restructure to verifiable criteria); **review-it** Steps 3/5 (oracle ladder, evidence adapter) | prompt-it supplies a DoD *sketch* with verification *targets*; locking and executing are downstream |
+| Uncertainty/autonomy posture clause | **fable-it** Step 1 (autonomous posture, assumption-stating); **plan-it** gates G1/G2 | Only needed for bare targets (see harness-aware rule) |
+| Output contract / report location | **fable-it** Step 8 defaults (`.fable-it-reports/`); **review-it** Step 6 (`.review-it/`) | Emit only to *override* a default |
+| Long-horizon persistence contract (state files, don't-stop-early) | **fable-it** run-state contract | Never emit |
+| Continuation-prompt mechanics conventions | **next-session-prompt** (kickoff note + copy-paste prompt + `/read-chat` back-ref) | Mode 2 reuses its conventions, doesn't reinvent |
+
+**The harness-aware rule (the design center):** prompt-it carries a small responsibility map of the family. For each slot, if the routed target owns it, prompt-it **omits it**. A prompt routed to fable-it gets no tiering note, no persistence clause, no report-location boilerplate — routing *is* the economics decision. Only a **bare target** (plain Claude session, a product LLM like the bosslife ZeroClaw chat, an external tool) gets the fuller anatomy (uncertainty clause, output contract), because nothing downstream owns those there.
+
+### 3.1 The optimized-prompt output template (slimmed)
+
+Six slots for harness-routed prompts; ⚖ = sized by the clarity gate:
 
 ```
-1. ROUTING     — skill invocation line (plan-it / fable-it / review-it / none)
-2. GROUNDING ⚖ — 1–3 sentences: situation, why now, why it matters (compressed narrative)
-3. /goal       — one sentence, the real goal (the decision/outcome, not the literal task)
-4. CONTEXT PACKAGE ⚖ — pointers, not payloads: @file refs with one-line why each,
-                 pattern-to-imitate, /read-chat pre-reads, read-order if it matters
-5. DoD         — numbered, individually testable; EVERY item names its verification
-                 mechanism (command, test, URL, screenshot-diff); binding language
-6. SCOPE FENCES — labeled "Out of scope / do not touch" list, always present even if short
-7. UNCERTAINTY CLAUSE — what to do on ambiguity/missing input: ask (max N grounded
-                 questions) or flag [NEEDS CLARIFICATION: …] — never guess silently
-8. EXECUTION & ECONOMICS ⚖ — COMPUTED per task: teams/tiering (coordinator model, subagent
-                 tiers, escalate-on-struggle), and for long-horizon runs the persistence
-                 contract (state files, git checkpoints, don't-stop-early permission)
-9. OUTPUT CONTRACT — where deliverables land, report format, end-to-end verification step
+1. ROUTING       — skill invocation line (plan-it / fable-it / review-it / none)
+2. GROUNDING ⚖   — 1–3 sentences: situation, why now (compressed narrative)
+3. /goal         — one sentence, the real goal (the decision/outcome, not the literal task)
+4. CONTEXT PACKAGE ⚖ — author's-head pointers, validated to exist: @file refs with one-line
+                   why each, pattern-to-imitate, /read-chat session aliases, evidence URLs
+5. DoD SKETCH    — numbered, individually testable items with verification TARGETS
+                   (which endpoint/page/table proves it) — at the altitude plan-it Phase 1 /
+                   fable-it Step 0 can lock without reinterpretation
+6. SCOPE FENCES  — labeled "Out of scope / do not touch" — this is the interface fable-it
+                   explicitly lifts from goal text; making it explicit is the hand-off
+(+ bare-target only: uncertainty clause, output contract)
 ```
 
-Formatting rules baked in: goal near the top AND restated at the end when long; long reference material above the ask; ≤ ~10 discrete directives (consolidate or move to pointers); sparing emphasis markers; no persona stuffing; no contradictions (checked); "why" attached to instructions where it changes generalization.
+Formatting rules retained: goal restated at the end when long; reference material above the ask; ≤ ~10 discrete directives; sparing emphasis; no persona stuffing; contradiction-checked.
 
-### 3.2 Mode 1 — new-session optimizer (pipeline)
+### 3.2 Mode 1 — new-session intent compiler (slimmed pipeline)
 
-1. **Clarity gate** (from severity1, the strongest community precedent): if the rough prompt is already clear + scoped → minimal tighten (`[VERB] [WHAT] in [WHERE]. [CONSTRAINT].` compression) and stop. Don't over-engineer trivial asks — the #1 failure mode of existing community optimizers.
-2. **Goal extraction**: identify the real goal behind the stated task (Karpathy interview pattern). If material ambiguity survives research → up to N grounded, concrete-option questions (AskUserQuestion), never open-ended "what did you mean?".
-3. **Research fan-out (cheap tiers)**: haiku/sonnet subagents grep/read the codebase, docs, git history, session-history ledger (`.agents/history/`), CLAUDE.md — returning findings, not transcripts. Research fills hidden-context gaps *before* asking the human.
-4. **Structure before content** (metaprompt rule): decide which ⚖ slots this task needs, then draft.
-5. **Self-check passes**: (a) 5-item rubric — grounded / scoped / actionable / faithful (intent preserved, no silent scope change) / complete-enough; (b) contradiction diff across DoD + constraints; (c) ambiguity self-critique ("where is this unclear?").
-6. **Emit**: the optimized prompt in a copyable block + a short "what I changed and why" trail (assumptions made, research that grounded each addition). Never silent-rewrite — auditability is the value proposition.
+1. **Clarity gate**: already clear + scoped → minimal tighten and stop.
+2. **Route**: pick the target (plan-it for fuzzy/large, fable-it for goal+DoD delivery, review-it for QA asks, bare otherwise) — this decision replaces the old "economics" slot entirely.
+3. **Author-context extraction**: the one job nobody downstream can do — pull out what's in the user's head that pre-grounding can't find on disk: which prior session (`/read-chat` alias from the history ledger), which reference implementation they mean, the URLs/evidence they've seen, the fences they're assuming. Karpathy interview pattern, ≤3 grounded questions, only for what cheap lookup can't resolve.
+4. **Pointer validation (cheap, not research)**: verify the @-refs exist, resolve the session alias against `.agents/history/INDEX.md`, confirm the named pattern file is real. No discovery fan-out — that's plan-it's Phase 3–4.
+5. **Self-check passes**: 5-item rubric (grounded / scoped / actionable / faithful / complete-enough) + contradiction diff + ambiguity self-critique.
+6. **Emit**: copyable prompt + one-paragraph "what I added and why" trail. Never silent-rewrite.
 
 ### 3.3 Mode 2 — post-review continuation optimizer (pipeline)
 
@@ -94,7 +107,7 @@ Template = the bosslife case, generalized:
 2. **Acknowledge-then-catch**: open by crediting what's verified working (with its evidence), then pin each gap.
 3. **Class over instance**: for each gap, diagnose whether it's a point defect or an instance of a class (the "cliente" disambiguation move); prefer the mechanism-level fix, proposed from *existing* assets (name the file/module that should own it).
 4. **Pareto completeness**: address every materially distinct gap review-it found — never just the top-severity one.
-5. **Emit continuation prompt** with evidence citations (file:line, report paths, URLs), pointing at the *existing* test contract/DoD as the verification target, plus the standard slots (scope fences, uncertainty clause, output contract).
+5. **Emit continuation prompt** with evidence citations (file:line, report paths, URLs), pointing at the *existing* test contract/DoD as the verification target, plus scope fences. Reuse `/next-session-prompt`'s conventions (copy-paste block, `/read-chat` back-reference to the review session) rather than inventing a new handoff shape. Harness-aware rule applies: the continuation usually routes back into fable-it/iterate — so no tiering, persistence, or report-location content.
 6. Same self-check passes as Mode 1.
 
 ### 3.4 Family integration
@@ -108,15 +121,16 @@ Template = the bosslife case, generalized:
 
 Follow the family checklist: `.claude-plugin/marketplace.json` (devotts namespace) + `plugins/prompt-it/.claude-plugin/plugin.json` + `plugins/prompt-it/skills/prompt-it/SKILL.md` + root SKILL.md copy + README (300–600 lines) + CHANGELOG + LICENSE, version triple-matched. SKILL.md frontmatter: name, trigger-heavy description, version, `author: DevOtts`, `author_url`, and the DevOtts footer line. Start minimal (parallel-lifecycle-shaped); add machine.json only if the pipeline becomes stateful. Reference files (template, rubric, worked examples) under `skills/prompt-it/references/`.
 
-### 3.6 Open decisions for Fernando
+### 3.6 Open decisions for Fernando (revised after the v2 scope correction)
 
+Resolved by the boundary audit (no longer open): question budget → ≤3, since discovery is plan-it's job (old #3); quick actions → cut as overengineering, the clarity gate covers the "just tighten it" case (old #6).
+
+Still genuinely Fernando's to decide:
 1. **Invocation surface**: explicit `/prompt-it` skill only (recommended for v1), or also an always-on clarity-gate hook (severity1-style) that intercepts vague prompts automatically? Hook adds value but changes every session's behavior.
 2. **Output destination**: print the optimized prompt for copy/paste into a fresh session (recommended — auditable, matches usage vision #1), and/or write it to a file (`NEXT-PROMPT.md`), and/or offer "run it now in this session"?
-3. **Question budget**: cap grounded clarifying questions at 3 (lean) or 6 (severity1's ceiling)?
-4. **`/next-session-prompt` relationship**: fold it into prompt-it Mode 2, keep both with a routing note, or have next-session-prompt call prompt-it?
-5. **Mode 2 trigger**: manual invocation after review-it (recommended v1), or should review-it's report end by auto-invoking prompt-it?
-6. **Quick actions** (LangSmith-style named transforms: "add acceptance criteria", "narrow scope", "add repro steps"): v1 or backlog?
-7. **Version start**: 0.1.0 (alpha) or 1.0.0 — and standalone marketplace vs. devotts namespace from day one?
+3. **`/next-session-prompt` relationship**: Mode 2 reuses its conventions — but should they stay two skills (nsp = post-planning handoff, prompt-it = post-review continuation + new-session compiler), or should nsp eventually become a prompt-it mode?
+4. **Mode 2 trigger**: manual invocation after review-it (recommended v1), or should review-it's report end by auto-invoking prompt-it?
+5. **Version start**: 0.1.0 (alpha) or 1.0.0 — and standalone marketplace vs. devotts namespace from day one?
 
 ---
 
