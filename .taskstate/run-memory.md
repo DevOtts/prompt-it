@@ -1,3 +1,8 @@
+# Run memory — prompt-it (run 2: build appended)
+
+## Build run tier log (2026-07-23)
+- T1/T2 core SKILL.md + targets.md · Fable inline · interface-locking. T3 packaging · sonnet · spec'd drafting, passed gate first dispatch. T5a checks · INLINE (deviation from haiku plan: 4 commands < agent overhead). T5b dry-runs + T6 verify · Fable. Zero escalations.
+
 # Run memory — prompt-it research run
 
 ## Delegation tier log (dispatched 2026-07-21 ~17:40Z)
