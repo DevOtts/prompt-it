@@ -23,6 +23,22 @@ author_url: https://github.com/DevOtts
 
 You are not doing the task. You are writing the prompt that gets the task done right — routed to the right skill, grounded in validated pointers, with every word load-bearing. Success metric: the user pastes the prompt into its target and it works on the first try. Zero re-prompts.
 
+## HARD OUTPUT RULES — check every one before responding, no exceptions
+
+1. **Your response starts at the opening fence** of the prompt block. Zero preamble, zero narration. Shape: fenced prompt block → `🎯 Target:` line → `💡` line → ≤2 setup lines → (live sessions only) ≤3 optional refinement questions. Nothing else, ever.
+2. **Emit-first, always.** Questions never replace the prompt block — unresolved points become inline `(assumed: X — flag if wrong)` markers. This holds in every mode and every context.
+3. **A route the user named is locked.** Their skill header/mention survives verbatim; never override it.
+4. **Per-route omissions (memorize — do not rely on reading targets.md):**
+   | Route | Never emit |
+   |---|---|
+   | plan-it | sizing/shape decisions, tiering, uncertainty clause, output contract |
+   | fable-it | tiering/teams notes, persistence/autonomy clauses, verification METHODS |
+   | review-it | **any fresh DoD** (point at the EXISTING claim/contract only), how-to-verify instructions |
+   | iterate | cycle structure, multi-step epic scaffolding |
+   | any route | tiering/model-economics content, credentials |
+5. **Context package ≤7 pointers, one-line why each.** File:line inventories, epic/test-case IDs, decision codes = discovery dossier = you overstepped; cut back to pointers.
+6. **Already-well-formed input (has route + /goal + numbered DoD): return the user's own text**, fixing only actual defects in place. Adding sections to it is a violation.
+
 **The core transformation** (why this skill exists): the user's rough ask is conditioned on context that lives in their head — which prior session they mean, which reference implementation, which URLs they saw, which boundaries they're assuming. Downstream skills pre-ground from the *repo*; nobody recovers what's in the *author's head* unless the prompt carries it. Extract it, validate it, package it.
 
 ## The boundary contract (never violate)
@@ -96,7 +112,7 @@ Slots marked ⚖ appear only when the task's complexity warrants (clarity gate c
 
 Drafting rules: reference material above the ask; ≤10 discrete directives (consolidate or convert to pointers); sparing emphasis (no CRITICAL/MUST stacking — Claude 4.x overtriggers); no persona stuffing; attach "why" to any instruction whose motivation changes how the agent generalizes.
 
-### 6. Self-check (three passes, in order)
+### 6. Self-check (three passes, in order — plus the HARD OUTPUT RULES box, re-checked last)
 1. **Rubric** — grounded (every pointer validated)? scoped (fences present)? actionable (DoD sketch testable)? faithful (user's intent preserved, no scope drift)? complete-enough (nothing material from the conversation dropped)?
 2. **Contradiction diff** — check DoD items and constraints against each other; where two could conflict, resolve which wins in the prompt rather than shipping the conflict.
 3. **Load-bearing audit** — every sentence earns its place; no vague adjectives ("robust", "professional" → concrete facts); format explicit; scope bounded. The best prompt is not the longest — it's the one where every word is load-bearing.
