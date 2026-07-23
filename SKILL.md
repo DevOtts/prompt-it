@@ -15,8 +15,15 @@ description: >-
   (Mode 1) or post-REVIEW continuations (Mode 2). Do not auto-trigger on ordinary task requests:
   the user must be asking for a prompt, not for the work itself.
 version: 0.2.1
+license: MIT
 author: DevOtts
 author_url: https://github.com/DevOtts
+homepage: https://github.com/DevOtts/prompt-it
+repository: https://github.com/DevOtts/prompt-it
+metadata:
+  platforms: [claude-code, cursor, openclaw, mcp, openai]
+  category: "Agents & Orchestration"
+keywords: [prompt-engineering, prompt-optimizer, intent-compiler, prompt-router, claude-code, agent-skills, context-grounding]
 ---
 
 # /prompt-it — Harness-Aware Intent Compiler
@@ -163,6 +170,37 @@ Pipeline:
 - Do not embed secrets; `[ENV_VAR_NAME]` references only.
 - Do not add CoT scaffolding ("think step by step") for reasoning-native targets — see targets.md cautions.
 - Do not take over /next-session-prompt's job (post-planning handoff of a finished spec) — route there instead.
+
+---
+
+## Install
+
+**Claude Code (plugin, recommended):**
+
+```
+/plugin marketplace add DevOtts/prompt-it
+/plugin install prompt-it@devotts
+```
+
+**Any SKILL.md-compatible agent (Cursor, Codex CLI, Copilot, OpenCode, Windsurf, …):**
+
+```
+npx skills add DevOtts/prompt-it -a <agent>    # peek first: npx skills add DevOtts/prompt-it --list
+```
+
+**Getting started:** paste a rough ask behind the trigger —
+
+```
+/prompt-it there's a bug in auth — sessions die way too early. Fix it in our Engine workspace.
+```
+
+You get back one copyable, routed, pointer-validated prompt block (+ `🎯 Target` and `💡` lines) ready to paste into a fresh session — not the executed task.
+
+## Security considerations
+
+- **Never emits credentials**: generated prompts reference `[ENV_VAR_NAME]`-style placeholders only; embedding secrets is a hard output rule (and a G3 eval check).
+- **Read-only footprint**: pointer validation uses `ls`/`grep`/index lookups in the local tree — no network calls, no writes, no task execution.
+- **No silent rewrites**: every material change to your intent is disclosed in the output's `💡` line, so the compiled prompt is auditable against what you asked.
 
 ---
 _Authored by [DevOtts](https://github.com/DevOtts)._
