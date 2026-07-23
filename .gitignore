@@ -1,2 +1,4 @@
 .taskstate/RUNLOCK
 .DS_Store
+.agents/
+.fable-it-reports/

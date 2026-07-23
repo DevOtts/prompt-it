@@ -164,7 +164,7 @@ prompt-it/
 ├── eval/                                        # the 20-case eval suite + binding oracle + runner
 ├── assets/                                      # hero + pipeline diagrams
 ├── CHANGELOG.md · LICENSE · README.md
-└── research/ + research-SYNTHESIS.md           # the design brief this skill was built from
+└── docs/                                        # research, synthesis & prompt examples — the design brief this skill was built from
 ```
 
 The skill is deliberately small: the load-bearing rules live in a **hard-rules box at the top of `SKILL.md`** (first-character output discipline, emit-first, locked routes, the per-route omission table), and the full per-target detail lives in `references/targets.md`. Small and legible is the point — a bloated skill inherits the instruction-stacking failure mode it exists to prevent.
