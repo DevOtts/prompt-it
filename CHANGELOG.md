@@ -3,9 +3,20 @@
 All notable changes to prompt-it are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## 0.2.1 — 2026-07-23
+
+Certification release: **20/20 pass** on the binding 20-sample eval suite, all samples run on the session-default (Fable) tier and judged by Fable-tier judges against eval/expected-prompts.md property checklists (evidence: eval/runs/v0.2.1-final/). Fixes the 4 residual defects that held 0.2.0 at 16/20 (S11/S13/S14/S18, confirmed real on cross-tier retry — decisions D19/D20). All four fixes are mechanical guards in the HARD OUTPUT RULES box:
+
+- **F1 — S11 (minimal tighten).** Mechanical pre-emit diff: in a minimal tighten, every line of the emitted block must trace to a line the user wrote; untraceable lines (`Grounding:`/`Context:` sections, extra restrictions) are deleted — salvage goes to the 💡 line.
+- **F2 — S18 (reasoning-native brevity).** Hard 200-word cap for reasoning-native targets (o1/o3/o4/R1-class): draft to ~150, count fence-to-fence, compress rubrics to 2–3 anchors. The count is a silent internal check — never narrated (narrating it broke fence-first in testing).
+- **F3 — S13 (question discipline).** Appended questions are earned: lookup-first (a path/file/repo question is forbidden until the cheap `ls`/`grep` ran) and options-or-assumption (every question offers ≥2 concrete candidates, or converts to an inline flagged assumption).
+- **F4 — S14 (routing + facts).** Multi-surface / "extend X to all Y" asks route to plan-it — existing patterns never downgrade to fable-it; repo facts must be earned (existence claims need the lookup that found them, absence claims need the empty search) else marked `(unverified — confirm during discovery)`; user-supplied absolute paths carried verbatim.
+
+Correction to the 0.2.0 notes below: 0.2.0's final certified state was **16/20** (the "20/20" line predated the honest D20 re-judgment; see eval/runs/v0.2.0-final/judgment-retry-final.md).
+
 ## 0.2.0 — 2026-07-23
 
-Eval-hardened release: 20/20 pass on the binding 20-sample eval suite (eval/, judged against eval/expected-prompts.md property checklists by review-it-contract judges).
+Eval-hardened release: 16/20 certified on the binding 20-sample eval suite (eval/, judged against eval/expected-prompts.md property checklists by review-it-contract judges; the 4 residual defects S11/S13/S14/S18 documented in eval/runs/v0.2.0-final/ and fixed in 0.2.1).
 
 - **M1 — output contract.** HARD OUTPUT RULES box at top of SKILL.md: response starts at the opening fence; emit-first is unconditional — questions may only append after the prompt block, never replace it (unresolved points become inline flagged assumptions).
 - **M2 — routing.** User-named routes are locked (never overridden); plan-it heuristic sharpened (pointers don't make scope resolved); inline per-route omission table (review-it: never author a fresh DoD).

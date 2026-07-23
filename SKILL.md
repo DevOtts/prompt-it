@@ -14,7 +14,7 @@ description: >-
   handoffs of a finished PRD/spec — that is /next-session-prompt; prompt-it compiles NEW intent
   (Mode 1) or post-REVIEW continuations (Mode 2). Do not auto-trigger on ordinary task requests:
   the user must be asking for a prompt, not for the work itself.
-version: 0.2.0
+version: 0.2.1
 author: DevOtts
 author_url: https://github.com/DevOtts
 ---
