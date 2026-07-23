@@ -3,6 +3,19 @@
 All notable changes to prompt-it are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## 0.2.0 — 2026-07-23
+
+Eval-hardened release: 20/20 pass on the binding 20-sample eval suite (eval/, judged against eval/expected-prompts.md property checklists by review-it-contract judges).
+
+- **M1 — output contract.** HARD OUTPUT RULES box at top of SKILL.md: response starts at the opening fence; emit-first is unconditional — questions may only append after the prompt block, never replace it (unresolved points become inline flagged assumptions).
+- **M2 — routing.** User-named routes are locked (never overridden); plan-it heuristic sharpened (pointers don't make scope resolved); inline per-route omission table (review-it: never author a fresh DoD).
+- **M3 — grounding discipline.** Cross-tree pointers kept but marked unvalidated; validation-is-not-discovery cap (≤7 pointers, no file:line dossiers); clarity-gate minimal tighten preserves the user's structure and adds no sections.
+- **M4 — DoD altitude.** Sketch items name verification TARGETS (what proves it), never METHODS/protocols (whose design belongs to fable-it/review-it).
+- **M5 — hygiene.** No process narration/tool commentary in output; lookup failures fold into the 💡 line.
+- **M6 — eval suite.** eval/sample-prompts.md (20 cases + coverage matrix), eval/expected-prompts.md (binding property oracle), headless runner (eval/scripts/run-eval.sh), v0.1.x run outputs + 8 judgment files retained for regression baselines.
+
+Known limitation (documented): 17/20 pass with sonnet-tier headless runners; S03/S11/S14 (deep conditional rule-following) required the session-default model — matches real usage where /prompt-it runs on the session model.
+
 ## 0.1.0 — 2026-07-23
 
 Initial release. prompt-it is a harness-aware intent compiler for the DevOtts `*-it`

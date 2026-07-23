@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "prompt-it",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Harness-aware intent compiler: turns a rough ask into an optimized, context-grounded prompt — routed to the right *-it skill with exactly the slots that target parses, nothing it already owns. Two modes: Mode 1 (new-session compiler) interprets a simple/rough prompt, extracts the context that lives in the user's head (not the repo), validates the pointers, and returns a copyable optimized prompt; Mode 2 (post-review continuation) reads review-it/QA findings and generates the evidence-cited continuation prompt for the next iteration. The per-target responsibility map (references/targets.md) is the design center: know the target, include what it parses, omit what it owns.",
   "author": {
     "name": "DevOtts",
