@@ -51,9 +51,9 @@ If the rough prompt is already clear, scoped, and routed — target obvious, goa
 **Minimal tighten preserves the user's own structure and wording.** Fix only actual defects — a dead pointer, a missing verification target, a genuine ambiguity — and validate what's there. Never re-pour an already-well-formed prompt into the 6-slot template: if their structure works, your value is validation and a light touch, not reformatting.
 
 ### 2. Route
-Pick the target and say why (one line):
-- fuzzy/large idea, needs discovery+specs → **plan-it**
-- deliverable goal with checkable done-ness, autonomous run → **fable-it**
+**A route the user already named is LOCKED** — a skill header or explicit skill mention in the input is their routing decision; validate and keep it, never override it (disagree? say so in 💡, keep their route). Otherwise pick the target and say why (one line):
+- fuzzy/large idea, multi-surface feature cluster, or unresolved scope — even WITH good repo pointers → **plan-it** (pointers make planning easier; they don't make scope resolved)
+- deliverable goal whose done-ness is stated or trivially derivable, autonomous run → **fable-it**
 - "is it actually done/working" verification ask → **review-it**
 - single fix-test-verify loop in-session → **iterate**
 - none of the harness fits (plain session, product LLM, external agent) → **bare** (see targets.md for the extra slots bare targets get)
@@ -64,7 +64,7 @@ Recover what's in the user's head, cheapest source first:
 2. **Cheap lookups** — `.agents/history/INDEX.md` for the session alias they're gesturing at; `ls`/`grep` for the file/pattern they half-named; CLAUDE.md for standing constraints.
 3. **≤3 grounded questions** — only for what lookups cannot resolve, each with concrete options drawn from what you found ("Which auth flow do you mean: `src/auth/session.ts` or the SSO path in `sso/`?"), never open-ended "what did you mean?".
 
-**The question gate (hard rule).** A question is only allowed when the user can actually answer — a live interactive session. In ANY non-interactive context (headless/one-shot run, invoked by another agent or script, no reply possible this turn), you MUST still deliver the full output contract: convert every would-be question into an inline flagged assumption `(assumed: X — flag if wrong)` inside the prompt block, and surface the assumptions in the 💡 line. Ending an invocation with questions and no prompt block is a contract violation — the prompt block, 🎯 and 💡 lines are **unconditional**, in every mode, every context.
+**The question gate (hard rule — no exceptions, no context-detection).** Questions may ACCOMPANY the output, never REPLACE it. In every invocation, in every mode, you emit the full output contract (prompt block + 🎯 + 💡) FIRST: every unresolved point becomes an inline flagged assumption `(assumed: X — flag if wrong)` inside the prompt block, surfaced in the 💡 line. If (and only if) the session is live-interactive and an answer would materially change the prompt, you may APPEND up to 3 grounded questions AFTER the output contract as optional refinements ("answer these and I'll tighten the prompt"). Do not try to judge whether the context is interactive — emit-first is unconditional; ending any invocation with questions and no prompt block is a contract violation.
 
 Apply the Karpathy goal question to yourself: what *decision or outcome* is behind the stated task? `/goal` carries the outcome, not the chore.
 
@@ -72,6 +72,8 @@ Apply the Karpathy goal question to yourself: what *decision or outcome* is behi
 Every pointer that goes into the prompt gets verified in seconds: `@file` refs exist on disk; `/read-chat` aliases match a ledger card in `.agents/history/INDEX.md`; the named pattern-to-imitate file is real. A prompt with a dead pointer is worse than a prompt with no pointer — the downstream session burns its first turns on a ghost. Drop or fix anything that fails; say so in the 💡 note if it changes the prompt materially.
 
 **Cross-tree pointers:** a pointer outside the current working tree (another repo, another machine) that you cannot cheaply validate is KEPT, explicitly marked `(unvalidated — target session must confirm this path first)` — never block the compile on it, and never emit it as if verified. Only same-tree pointers that fail validation get dropped or fixed.
+
+**Validation is not discovery (hard cap):** pointer validation confirms pointers EXIST — it never expands into researching the task. The CONTEXT PACKAGE carries at most ~7 pointers with one-line whys; if your validation produced line-level inventories, test-case IDs, or a discovery dossier, you have crossed into plan-it/fable-it pre-grounding territory — cut it back to pointers and route accordingly.
 
 ### 5. Draft — the 6-slot template
 Slots marked ⚖ appear only when the task's complexity warrants (clarity gate calibrates); slots the routed target owns are OMITTED per `references/targets.md`:
@@ -107,7 +109,7 @@ Drafting rules: reference material above the ask; ≤10 discrete directives (con
 
 Never silent-rewrite: if you changed the user's meaning anywhere, say it in the 💡 line or a fourth line — auditability is the value proposition. Never embed credentials/keys/tokens in a generated prompt — write "requires `[ENV_VAR_NAME]`" or "assumes `<service>` is authenticated".
 
-**Output hygiene:** the response contains NOTHING but the four elements above. No process narration, no tool-call commentary, no apologies for failed lookups — fold any material lookup failure into the 💡 line or an inline flagged assumption. The reader sees a finished artifact, not your workings.
+**Output hygiene (mechanical rule):** the FIRST character of your response is the opening fence of the prompt block. Then 🎯, then 💡, then ≤2 setup lines, then (live sessions only) up to 3 optional refinement questions. NOTHING else — no preamble, no process narration, no tool-call commentary, no apologies for failed lookups; fold any material lookup failure into the 💡 line or an inline flagged assumption. The reader sees a finished artifact, not your workings.
 
 ---
 
