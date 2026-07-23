@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0d1a2b"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <style>.mono { font-family: 'SF Mono','JetBrains Mono','Fira Code', Menlo, Consolas, monospace; }</style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="640" rx="20" fill="url(#bg2)"/>
+  <rect x="1" y="1" width="1198" height="638" rx="19" fill="none" stroke="#1e2d44" stroke-width="2"/>
+
+  <text x="600" y="56" text-anchor="middle" font-size="26" font-weight="700" fill="#e8eefc">How prompt-it compiles a prompt</text>
+  <text x="600" y="84" text-anchor="middle" font-size="14" class="mono" fill="#5b6b85">two modes over one anatomy · the boundary contract keeps every prompt lean</text>
+
+  <!-- MODE 1 lane -->
+  <text x="60" y="132" font-size="15" font-weight="700" class="mono" fill="#7dd3fc">MODE 1 · new-session compiler</text>
+  <g class="mono" font-size="12.5">
+    <rect x="60" y="146" width="150" height="52" rx="10" fill="#16233c" stroke="#33415c" stroke-dasharray="6 5"/>
+    <text x="135" y="169" text-anchor="middle" font-size="13" fill="#cbd5e1">rough ask</text>
+    <text x="135" y="187" text-anchor="middle" fill="#64748b">one line in</text>
+
+    <rect x="238" y="146" width="150" height="52" rx="10" fill="#101c30" stroke="#1e3148"/>
+    <rect x="238" y="146" width="5" height="52" rx="2.5" fill="#38bdf8"/>
+    <text x="256" y="169" font-size="13" fill="#e2e8f0">clarity gate</text>
+    <text x="256" y="187" fill="#5e7089">trivial→tighten</text>
+
+    <rect x="416" y="146" width="150" height="52" rx="10" fill="#101c30" stroke="#1e3148"/>
+    <rect x="416" y="146" width="5" height="52" rx="2.5" fill="#38bdf8"/>
+    <text x="434" y="169" font-size="13" fill="#e2e8f0">route</text>
+    <text x="434" y="187" fill="#5e7089">pick the target</text>
+
+    <rect x="594" y="146" width="164" height="52" rx="10" fill="#101c30" stroke="#1e3148"/>
+    <rect x="594" y="146" width="5" height="52" rx="2.5" fill="#38bdf8"/>
+    <text x="612" y="169" font-size="13" fill="#e2e8f0">extract + validate</text>
+    <text x="612" y="187" fill="#5e7089">head-context · live refs</text>
+
+    <rect x="786" y="146" width="150" height="52" rx="10" fill="#101c30" stroke="#1e3148"/>
+    <rect x="786" y="146" width="5" height="52" rx="2.5" fill="#34d399"/>
+    <text x="804" y="169" font-size="13" fill="#e2e8f0">self-check ×3</text>
+    <text x="804" y="187" fill="#5e7089">rubric·clash·terse</text>
+
+    <rect x="964" y="146" width="176" height="52" rx="10" fill="#13241c" stroke="#2f5b43"/>
+    <text x="982" y="169" font-size="13" fill="#bbf7d0">emit — routed prompt</text>
+    <text x="982" y="187" fill="#7dd3fc">🎯 target  💡 note</text>
+  </g>
+  <g stroke="#33415c" stroke-width="2" fill="none">
+    <path d="M212 172 L 236 172" marker-end="url(#arr)"/>
+    <path d="M390 172 L 414 172" marker-end="url(#arr)"/>
+    <path d="M568 172 L 592 172" marker-end="url(#arr)"/>
+    <path d="M760 172 L 784 172" marker-end="url(#arr)"/>
+    <path d="M938 172 L 962 172" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- MODE 2 lane -->
+  <text x="60" y="264" font-size="15" font-weight="700" class="mono" fill="#86efac">MODE 2 · post-review continuation</text>
+  <g class="mono" font-size="12.5">
+    <rect x="60" y="278" width="150" height="52" rx="10" fill="#16233c" stroke="#33415c" stroke-dasharray="6 5"/>
+    <text x="135" y="301" text-anchor="middle" font-size="13" fill="#cbd5e1">review findings</text>
+    <text x="135" y="319" text-anchor="middle" fill="#64748b">gaps in a build</text>
+
+    <rect x="238" y="278" width="176" height="52" rx="10" fill="#101c30" stroke="#1e3148"/>
+    <rect x="238" y="278" width="5" height="52" rx="2.5" fill="#34d399"/>
+    <text x="256" y="301" font-size="13" fill="#e2e8f0">acknowledge-then-catch</text>
+    <text x="256" y="319" fill="#5e7089">credit wins, pin gaps</text>
+
+    <rect x="442" y="278" width="164" height="52" rx="10" fill="#101c30" stroke="#1e3148"/>
+    <rect x="442" y="278" width="5" height="52" rx="2.5" fill="#34d399"/>
+    <text x="460" y="301" font-size="13" fill="#e2e8f0">class over instance</text>
+    <text x="460" y="319" fill="#5e7089">fix the class, not 1 bug</text>
+
+    <rect x="634" y="278" width="164" height="52" rx="10" fill="#101c30" stroke="#1e3148"/>
+    <rect x="634" y="278" width="5" height="52" rx="2.5" fill="#34d399"/>
+    <text x="652" y="301" font-size="13" fill="#e2e8f0">carry failed attempts</text>
+    <text x="652" y="319" fill="#5e7089">don't re-propose them</text>
+
+    <rect x="826" y="278" width="314" height="52" rx="10" fill="#13241c" stroke="#2f5b43"/>
+    <text x="844" y="301" font-size="13" fill="#bbf7d0">emit — evidence-cited continuation</text>
+    <text x="844" y="319" fill="#7dd3fc">file:line cites · /read-chat back-ref</text>
+  </g>
+  <g stroke="#33415c" stroke-width="2" fill="none">
+    <path d="M212 304 L 236 304" marker-end="url(#arr)"/>
+    <path d="M416 304 L 440 304" marker-end="url(#arr)"/>
+    <path d="M608 304 L 632 304" marker-end="url(#arr)"/>
+    <path d="M800 304 L 824 304" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- boundary contract -->
+  <rect x="60" y="382" width="1080" height="150" rx="14" fill="#0e1626" stroke="#26364f" stroke-width="1.5"/>
+  <text x="84" y="414" font-size="16" font-weight="700" class="mono" fill="#fcd34d">the boundary contract — omit what the target already owns</text>
+  <text x="84" y="438" font-size="12.5" class="mono" fill="#8595ac">prompt-it routes; it never duplicates the machinery the routed skill owns. That's what keeps every prompt lean and every word load-bearing.</text>
+
+  <g class="mono" font-size="12">
+    <rect x="84" y="452" width="250" height="62" rx="9" fill="#1c1633" stroke="#4c3d7a"/>
+    <text x="100" y="474" font-size="12.5" fill="#c4b5fd">→ /plan-it</text>
+    <text x="100" y="494" fill="#6b5e93">no sizing · no tiering</text>
+    <text x="100" y="509" fill="#6b5e93">no uncertainty clause</text>
+
+    <rect x="346" y="452" width="250" height="62" rx="9" fill="#0e2233" stroke="#1e4a63"/>
+    <text x="362" y="474" font-size="12.5" fill="#7dd3fc">→ /fable-it</text>
+    <text x="362" y="494" fill="#4d6f85">no teams/tiering note</text>
+    <text x="362" y="509" fill="#4d6f85">no persistence · no methods</text>
+
+    <rect x="608" y="452" width="250" height="62" rx="9" fill="#132a1f" stroke="#2f5b43"/>
+    <text x="624" y="474" font-size="12.5" fill="#86efac">→ /review-it</text>
+    <text x="624" y="494" fill="#4f7a5f">no fresh DoD authored</text>
+    <text x="624" y="509" fill="#4f7a5f">point at the existing contract</text>
+
+    <rect x="870" y="452" width="250" height="62" rx="9" fill="#231a10" stroke="#6b4f1e"/>
+    <text x="886" y="474" font-size="12.5" fill="#fcd34d">→ bare / product-LLM</text>
+    <text x="886" y="494" fill="#8a7038">the ONLY route that ADDS:</text>
+    <text x="886" y="509" fill="#8a7038">uncertainty clause + output contract</text>
+  </g>
+
+  <text x="600" y="576" text-anchor="middle" font-size="13.5" fill="#5b6b85">Hardened by a 20-case eval suite judged against a binding property oracle — see <tspan class="mono" fill="#7dd3fc">eval/</tspan>.</text>
+  <text x="600" y="602" text-anchor="middle" font-size="13.5" class="mono" fill="#4a5a72">plan-it plans it · fable-it builds it · review-it verifies it · prompt-it writes the prompts between them</text>
+</svg>

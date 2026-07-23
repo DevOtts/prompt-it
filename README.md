@@ -1,300 +1,217 @@
 <div align="center">
 
-# prompt-it
+<h1>prompt-it</h1>
 
-### The harness-aware intent compiler for the DevOtts `*-it` family
+<h3>
+  <strong>Turn a rough ask into an optimized, context-grounded prompt.</strong>
+</h3>
 
-*You are not doing the task. You are writing the prompt that gets the task done right.*
+<p>
+  Hand it a one-liner, a half-formed idea, or a pile of review findings.<br>
+  <strong>Get back one copyable prompt — routed to the right skill, with every word load-bearing.</strong>
+</p>
 
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)](./CHANGELOG.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Native Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-5A45FF)](#installation)
-[![SKILL.md portable](https://img.shields.io/badge/SKILL.md-portable-brightgreen)](#installation)
-[![Author](https://img.shields.io/badge/author-DevOtts-black)](https://github.com/DevOtts)
+<p>
+  <em>The intent compiler for the <a href="https://github.com/DevOtts/plan-it">*-it</a> family: plan-it plans it, fable-it builds it, review-it verifies it — prompt-it writes the prompts between them.</em>
+</p>
 
-[How it works](#how-it-works) ·
-[Installation](#installation) ·
-[Key features](#key-features) ·
-[The `*-it` family](#the--it-family) ·
-[Architecture](#architecture--whats-inside) ·
-[License](#license--links)
+<a href="#how-it-works">
+  <img src="assets/prompt-it-hero.svg" alt="prompt-it — a rough ask flows through a clarity gate, routing, head-context extraction, pointer validation and a triple self-check, and comes out as one copyable prompt routed to plan-it, fable-it, review-it, or a bare session" width="100%">
+</a>
 
+<p>
+  <a href="#installation"><img src="https://img.shields.io/badge/Quick%20Start-Install-06b6d4?style=for-the-badge" alt="Quick Start"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT"></a>
+  <a href="https://claude.ai/code"><img src="https://img.shields.io/badge/Native-Claude%20Code-orange?style=for-the-badge&logo=anthropic" alt="Native on Claude Code"></a>
+  <a href="#platform-compatibility"><img src="https://img.shields.io/badge/portable-SKILL.md-8b5cf6?style=for-the-badge" alt="Portable SKILL.md"></a>
+  <a href="https://github.com/DevOtts"><img src="https://img.shields.io/badge/author-DevOtts-181717?style=for-the-badge&logo=github" alt="Author: DevOtts"></a>
+</p>
+
+<p>
+  <a href="#installation">Install</a>
+  &nbsp;·&nbsp;
+  <a href="#the-bottleneck-it-kills">Why</a>
+  &nbsp;·&nbsp;
+  <a href="#how-it-works">How it works</a>
+  &nbsp;·&nbsp;
+  <a href="#the-boundary-contract">The boundary contract</a>
+  &nbsp;·&nbsp;
+  <a href="#eval-hardened">Eval-hardened</a>
+  &nbsp;·&nbsp;
+  <a href="#whats-inside">What's inside</a>
+  &nbsp;·&nbsp;
+  <a href="#platform-compatibility">Platforms</a>
+</p>
+
+> [!NOTE]
+> **A prompt compiler, not an executor.** It writes the prompt that gets the task done right — then hands it to the skill that does the work.
+
+<br>
 </div>
 
----
+The best prompt is not the longest — it's the one where every word is load-bearing. But the prompt you *type* is rarely that prompt. It's conditioned on everything already in your head: which prior session you mean, which file to mirror, which URLs you saw, which boundaries you're silently assuming. Downstream skills pre-ground themselves in your *repo*; none of them can recover what's in your *head*. So the rough ask goes in under-specified, the agent fills the gaps by guessing, and you pay for it in re-prompts.
 
-## Problem / Motivation
+`prompt-it` is the step that fixes this, packaged as one command. It reads your rough ask, decides **which skill should run it**, extracts the context that lives in your head (and validates it against disk in seconds, not a research pass), then emits **one copyable prompt** shaped exactly for that target — carrying nothing the target already owns. Two modes: a **new-session compiler** for a fresh ask, and a **post-review continuation** that turns review findings into the next iteration's prompt.
 
-The first few turns of almost every session get burned re-establishing context that was never written down: which prior session you mean, which file is the pattern to imitate, which URL you already looked at, which parts of the ask are genuinely in scope. That context isn't missing from the repo — pre-grounding tools can already read the repo. It's missing because it lives **in the author's head**, and nobody downstream goes looking for it unless the prompt carries it in.
+## The bottleneck it kills
 
-Rough asks also get routed wrong, or routed right but re-explain things the target skill already owns. Tell `fable-it` to "use Claude teams and lower-tier models for the boring parts" and you've just duplicated a decision `fable-it`'s own model-tiers reference already makes canonically — the same defect as copy-pasted boilerplate, one level up. Tell `plan-it` to do a deep research pass before it even starts discovery, and you've pre-empted its own Phase 3–4. Every one of these is a rough prompt paying a tax the target skill didn't need it to pay.
+You type *"add MCP support to the brain."* Pasted straight into a build agent, that becomes: a greenfield design for a subsystem that half-exists, an invented integrations schema, four architecture calls you never saw, and a "done" report verified against nothing. Not a capability problem — a **framing** problem. The agent never had your goal, your reference implementation, your scope fence, or a checkable definition of done, because none of them were in the sentence you typed.
 
-`prompt-it` exists to close that gap once, on the way in: pull what's in the user's head out of the conversation and cheap lookups, validate every pointer so the downstream session doesn't burn its first turn on a dead reference, and hand the routed target *exactly* the slots it parses — nothing it already owns.
+`prompt-it` supplies exactly that missing layer — and no more. It doesn't plan the feature (that's `plan-it`), doesn't build it (`fable-it`), doesn't verify it (`review-it`). It writes the prompt that invokes the right one of those **well**: goal surfaced, context pointed at (not pasted), scope fenced, definition-of-done sketched to the altitude the target can lock — and everything the target skill already handles left deliberately out.
 
-## How it works
-
-`prompt-it` runs one of two pipelines depending on what's in front of it. Both end the same way: one copyable prompt block, a routing line, and a one-line note on what the optimization actually changed.
-
-### Mode 1 — new-session compiler
-
-```
-rough ask
-   │
-   ▼
-1. Clarity gate ───────► already clear + scoped? → minimal tighten, emit, stop.
-   │ (needs more work)
-   ▼
-2. Route ──────────────► plan-it | fable-it | review-it | iterate | bare
-   │
-   ▼
-3. Author-context extraction
-   conversation evidence → cheap lookups (.agents/history/INDEX.md, ls/grep, CLAUDE.md)
-   → ≤3 grounded questions (only what lookups can't resolve)
-   │
-   ▼
-4. Pointer validation ─► every @ref / alias / pattern-file verified to exist (seconds)
-   │
-   ▼
-5. Draft ──────────────► the 6-slot template, sized by the clarity gate,
-   │                     slots the target owns OMITTED per targets.md
-   ▼
-6. Self-check ─────────► rubric → contradiction diff → load-bearing audit
-   │
-   ▼
-7. Emit ───────────────► copyable prompt + 🎯 Target line + 💡 what-changed line
-```
-
-### Mode 2 — post-review continuation
-
-```
-review-it / QA findings
-   │
-   ▼
-1. Ingest findings (read the gap descriptions, not the pass/fail counts)
-   │
-   ▼
-2. Acknowledge-then-catch — credit what's verified working (with evidence), then pin each gap
-   │
-   ▼
-3. Class over instance — point defect, or a class? prefer the mechanism-level fix,
-   │                      proposed from assets that already exist
-   ▼
-4. Pareto completeness — every materially distinct gap, not just the worst one
-   │
-   ▼
-5. Failed attempts — list what was already tried (run-memory.md / findings) so the
-   │                  next session doesn't re-propose it; restate locked decisions by
-   │                  READING decisions.md, never from memory
-   ▼
-6. Package ────────────► /next-session-prompt conventions: copyable block, evidence
-   │                      citations (file:line, report path, URL), /read-chat back-ref
-   ▼
-7. Same self-check passes + output contract as Mode 1
-```
-
-### The 6-slot template
-
-Every optimized prompt is built from the same anatomy. Slots marked ⚖ are sized by the clarity gate (a one-line ask doesn't get a three-page GROUNDING section); slots the routed target already owns are omitted entirely, per `references/targets.md`:
-
-| # | Slot | What goes in it |
-|---|------|------------------|
-| 1 | **ROUTING** | First line: the target skill invocation (or none, for a bare target) |
-| 2 | **GROUNDING** ⚖ | 1–3 sentences: situation, why now — compressed, no epic narration |
-| 3 | **`/goal`** | One sentence, the real goal (restated at the end if the prompt runs long) |
-| 4 | **CONTEXT PACKAGE** ⚖ | Pointers, not payloads — `@refs` with a one-line why each, pattern-to-imitate, `/read-chat` alias, evidence URLs |
-| 5 | **DoD SKETCH** | Numbered, individually testable items, each naming its verification *target* (endpoint/page/table/command) — not the verification protocol |
-| 6 | **SCOPE FENCES** | Labeled "Out of scope / do not touch" — always present, even if one line |
-
-Bare targets (no harness skill in the loop) additionally get an **uncertainty clause** and an **output contract**, because nothing downstream owns those there. See the quick table below.
-
-### The harness-aware omission rule
-
-This is the actual design center of the skill: **know the target, include what it parses, omit what it owns.** Duplicating a mechanism the target skill already owns creates drift against the canonical implementation — the same failure mode as a copy-pasted helper function that quietly diverges from the original. `references/targets.md` is the per-target ledger `prompt-it` reads before every draft. Quick reference:
-
-| Slot | plan-it | fable-it | review-it | iterate | bare | product-LLM |
-|---|---|---|---|---|---|---|
-| GROUNDING | ✔ | ✔ | — | — | ✔ | ✔ (self-contained) |
-| `/goal` | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| CONTEXT PACKAGE | ✔✔ | ✔ | ✔ (what's under test) | ✔ (paste the error) | ✔ | ✔ (disambiguation) |
-| DoD SKETCH | light | ✔✔ (verification targets) | ✗ points at existing contract | ✔ (1–3 items) | ✔ | ✔ (examples) |
-| SCOPE FENCES | ✔ | ✔✔ (lifted verbatim) | ✔ | ✔ | ✔ | ✔ |
-| Uncertainty clause | ✗ | ✗ | ✗ | ✗ | ✔ | ✔ |
-| Output contract | ✗ | ✗ | ✗ | ✗ | ✔ | ✔ |
-| Stop conditions | ✗ | ✗ | ✗ | ✗ | agentic only | ✗ |
-| Tiering / teams note | ✗ **NEVER** | ✗ **NEVER** | ✗ | ✗ | ✗ | ✗ |
-
-Some standing rules that fall out of this table:
-
-- **Never emit delegation/tiering/economics notes** ("use Claude teams, lower models…") — `fable-it` Step 3 and its `model-tiers.md` reference own this canonically. Routing to `fable-it` *is* the economics decision.
-- **Never run heavy research fan-out** to spec the task — that's `plan-it` Phases 3–4 and `fable-it` Step 2. `prompt-it` only does cheap *pointer validation* (`ls`/`grep`/index lookups, seconds not minutes).
-- **Never author binding DoDs, test contracts, or verification protocols** — `plan-it` Phase 1 locks DoDs; `review-it` owns oracles. `prompt-it` emits a DoD *sketch* with verification *targets*, at the altitude the target skill can lock without reinterpretation.
-- **Never emit persistence contracts, stop conditions, or autonomy clauses** for harness targets — `fable-it` owns run state and stop/permission semantics. Bare targets are the one exception.
-- **Preserve intent** — never silently expand or shrink the user's scope. A one-line ask does not come back as a three-page spec unless the complexity is genuinely there.
-
-## Worked example
-
-**Rough ask (Mode 1):** "prompt-it this: I want to build out the observability dashboard we talked about last week, using the same pattern as the billing one."
-
-What the pipeline does with that:
-
-1. **Clarity gate** — fails (target isn't named, "last week" and "the billing one" are unresolved pointers) → runs the full pipeline instead of a minimal tighten.
-2. **Route** — this is a deliverable goal with checkable done-ness, not a fuzzy idea needing discovery → routes to `fable-it`.
-3. **Author-context extraction** — checks `.agents/history/INDEX.md` for a session card matching "last week" + "observability", finds `done-observability-beacon`; greps the repo for the billing pattern file.
-4. **Pointer validation** — confirms the session alias resolves to a real ledger card, confirms the billing pattern file exists at the path found.
-5. **Draft** — 6-slot template, ROUTING = `fable-it`, CONTEXT PACKAGE carries the validated `/read-chat "done-observability-beacon"` alias and the billing file as pattern-to-imitate, DoD SKETCH lists testable items with verification targets (the dashboard route, the metrics endpoint), SCOPE FENCES marks the billing module itself as do-not-touch.
-6. **Self-check** — rubric passes; no contradictions between DoD items; load-bearing audit trims a leftover "make it robust" adjective down to the actual constraint it was gesturing at.
-7. **Emit:**
-
-```
-/fable-it
-
-Building the observability dashboard using the billing dashboard's pattern.
-
-/goal: ship a working observability dashboard that reuses the billing dashboard's
-layout and data-fetching pattern.
-
-Context:
-- @src/dashboards/billing/ — pattern to imitate: its layout + data-fetching approach
-- /read-chat "done-observability-beacon" — prior session where the requirements were discussed
-
-DoD sketch:
-1. Dashboard renders at /dashboards/observability with live metrics — verify: the route itself
-2. Metrics endpoint returns real data, not mocked — verify: GET /api/metrics response
-3. Layout matches the billing dashboard's grid/card structure — verify: side-by-side visual diff
-
-Out of scope / do not touch: the billing dashboard module itself — read from, don't modify.
-```
-
-```
-🎯 Target: fable-it — deliverable goal with a checkable DoD, fits an autonomous build run
-💡 Validated the session alias — you said "last week", the card is done-observability-beacon;
-   also confirmed src/dashboards/billing/ exists as the pattern file.
-```
-
-Notice what's *not* in that prompt: no tiering note ("use Claude teams for the boring parts"), no persistence contract, no autonomy/stop-condition clause. `fable-it` owns all of that — `prompt-it` routing to it *is* the decision to hand those over.
-
-## Platform compatibility
-
-`prompt-it` is a single `SKILL.md` file with no runtime dependencies, no scripts, and no state directory, so it runs anywhere a `SKILL.md`-compatible agent can load skills:
-
-| Platform | Support | Notes |
-|---|---|---|
-| Claude Code (plugin) | ✅ Native | Install via `/plugin install prompt-it@devotts` |
-| Claude Code (standalone SKILL.md) | ✅ Native | Drop `SKILL.md` + `references/targets.md` into your skills directory |
-| Other SKILL.md-compatible agents | ✅ Portable | `npx skills add DevOtts/prompt-it -a <agent>` |
-| Claude.ai (Projects / custom instructions) | ✅ Portable | Paste `SKILL.md` content as a project instruction or custom skill |
-| Non-Claude agents (Cursor, generic LLM tools) | ⚠️ Manual | The skill's *language* (6-slot template, self-check passes) ports fine; the `*-it` routing targets are DevOtts-specific and won't resolve unless those skills are also present |
+<a href="#how-it-works">
+  <img src="assets/prompt-it-pipeline.svg" alt="The prompt-it pipeline: Mode 1 (clarity gate, route, extract + validate, triple self-check, emit) and Mode 2 (acknowledge-then-catch, class over instance, carry failed attempts, emit continuation) — governed by the boundary contract that omits what each target skill already owns" width="100%">
+</a>
 
 ## Installation
 
-### Claude Code (plugin)
+`prompt-it` ships as both a **Claude Code plugin** and a portable **`SKILL.md`** (the workflow, on any agent). Pick your tool.
 
-```
+> [!TIP]
+> **Universal installers** understand the `SKILL.md` standard and drop the skill into the right place for 70+ tools — use these if your agent isn't listed below:
+> ```sh
+> npx skills add DevOtts/prompt-it -a <agent>   # e.g. -a cursor, -a codex ; add -g for global
+> gh skill install DevOtts/prompt-it            # GitHub CLI
+> ```
+> Peek first with `npx skills add DevOtts/prompt-it --list`.
+
+### Claude Code  ·  *native*
+
+```sh
+# 1. Register the marketplace
 /plugin marketplace add DevOtts/prompt-it
+
+# 2. Install the plugin (plugin-name@marketplace-name)
 /plugin install prompt-it@devotts
 ```
 
-`prompt-it` shares the `devotts` marketplace namespace with `plan-it`, `fable-it`, and `review-it` — if you already have the marketplace added for one of those, just install `prompt-it@devotts` directly.
+That's it. Type `/prompt-it` followed by your rough ask, or just describe what you want and ask for "the prompt for it." `prompt-it` shares the `devotts` marketplace with `plan-it`, `fable-it`, and `review-it` — if you've already added any of them, `/plugin install prompt-it@devotts` is all you need.
 
-### Standalone SKILL.md fallback
+### Cursor · Codex · VS Code + Copilot · Others
 
-`prompt-it` is a single portable `SKILL.md` with no external dependencies (no scripts, no hooks, no state directory) — it works anywhere a Claude Code–compatible agent can load a skill file:
-
-```bash
-npx skills add DevOtts/prompt-it -a claude-code
-# or, for any other SKILL.md-compatible agent:
-npx skills add DevOtts/prompt-it -a <agent>
+```sh
+npx skills add DevOtts/prompt-it -a cursor      # Cursor
+npx skills add DevOtts/prompt-it -a codex       # OpenAI Codex CLI  (or: gh skill install DevOtts/prompt-it)
+npx skills add DevOtts/prompt-it -a copilot     # VS Code + GitHub Copilot
 ```
 
-Or simply copy `SKILL.md` (root of this repo) plus `plugins/prompt-it/skills/prompt-it/references/targets.md` into your agent's skills directory — the skill has no hard dependency on the plugin packaging beyond that one reference file.
+For **OpenCode · Windsurf · Zed · Gemini CLI · Cline · Amp · Warp** and the rest, the same `npx skills add DevOtts/prompt-it -a <agent>` pattern applies. Any tool that reads a `SKILL.md` can run the workflow — see [Platform compatibility](#platform-compatibility).
 
-## Key features
+### Manual  ·  *any agent*
 
-- **Two modes, one anatomy.** Mode 1 compiles a rough new-session ask into a routed, validated prompt. Mode 2 reads `review-it`/QA findings and produces the evidence-cited continuation prompt for the next iteration — same 6-slot template, same self-check passes, same output contract.
-- **A clarity gate that refuses to over-engineer.** If the rough prompt is already clear, scoped, and routed, `prompt-it` does a minimal tighten and stops. Running the full pipeline on a trivial ask is the skill's #1 failure mode, and the gate exists specifically to prevent it.
-- **Author-context extraction, cheapest source first.** Conversation evidence, then cheap lookups (`.agents/history/INDEX.md`, `ls`/`grep`, `CLAUDE.md`), then — only for what lookups can't resolve — up to 3 grounded questions with concrete options, never open-ended "what did you mean?". If the user is unavailable, the assumption goes inline in the prompt, marked `(assumed — flag if wrong)`.
-- **Pointer validation, not research.** Every `@file` ref, `/read-chat` alias, and pattern-to-imitate file gets verified to exist before it ships. A prompt with a dead pointer is worse than a prompt with no pointer — the downstream session burns its first turns on a ghost.
-- **The harness-aware omission rule.** `references/targets.md` is a per-target responsibility ledger (plan-it / fable-it / review-it / iterate / bare session / product-LLM): parses → include, owns → omit, plus target-specific cautions (e.g. no chain-of-thought scaffolding on reasoning-native models). This is what keeps `prompt-it` from drifting into a mini-planner.
-- **Three-pass self-check before anything ships.** (1) A five-item rubric — grounded, scoped, actionable, faithful, complete-enough. (2) A contradiction diff across DoD items and constraints. (3) A load-bearing audit — every sentence earns its place, vague adjectives ("robust", "professional") get replaced with concrete facts, format is explicit, scope is bounded. The best prompt is not the longest one; it's the one where every word is load-bearing.
-- **A strict, auditable output contract.** One copyable fenced prompt block, a `🎯 Target:` line naming the route and why, a `💡` line naming the single most important thing the optimization added or fixed, and setup lines only when genuinely needed (≤2). Never silent-rewrite — if the user's meaning changed anywhere, that's said out loud.
-- **Credential-safe by construction.** Generated prompts never embed secrets or keys — `[ENV_VAR_NAME]` references only, or "assumes `<service>` is authenticated."
-- **No memory subsystem of its own.** Mode 2 restates locked decisions by *reading* `decisions.md` and failed attempts by reading `run-memory.md` — it never maintains a parallel memory store that could drift from the source of truth.
+Copy [`SKILL.md`](SKILL.md) into your agent's skills/rules directory (e.g. `~/.claude/skills/prompt-it/`, `.cursor/rules/`, `AGENTS.md`). The skill is self-contained; its one companion file, [`references/targets.md`](plugins/prompt-it/skills/prompt-it/references/targets.md), rides alongside it.
 
-## The `*-it` family
+## How it works
 
-`prompt-it` is the front door of the front door. It doesn't plan, and it doesn't build — it writes the prompt that invokes the skill that does either of those well.
+`prompt-it` runs one of two modes over a shared **six-slot anatomy**, and both are governed by a single rule: *emit only what the routed target parses; omit everything it already owns.*
 
-```
-        rough ask                          finished plan
-            │                                    │
-            ▼                                    ▼
-      ┌───────────┐                      ┌──────────────────┐
-      │ prompt-it │ ── Mode 1 routes ──► │  /next-session-   │
-      │  (Mode 1) │                      │  prompt (handoff) │
-      └───────────┘                      └──────────────────┘
-            │
-            ├────────────► plan-it     (fuzzy/large idea → discovery + spec package)
-            ├────────────► fable-it    (goal + DoD → autonomous delivery run)
-            ├────────────► iterate     (single fix-test-verify loop, in-session)
-            └────────────► bare        (plain session / product LLM / external agent)
+### Mode 1 — the new-session compiler
 
-      fable-it builds  ──►  review-it audits  ──►  prompt-it (Mode 2) writes the
-                                                     evidence-cited continuation prompt
-                                                     back into fable-it / iterate
-```
+You hand it a rough ask; it hands back the prompt to start a fresh session with.
 
-- **`plan-it` plans** — turns a fuzzy idea into discovery + a spec package, with its own DoD lock and human-decision gates.
-- **`fable-it` builds** — takes a goal + DoD and runs the delivery, owning its own run state, autonomy posture, and evidence ledger.
-- **`review-it` audits** — verifies what `fable-it` built actually obeys the plan, with its own oracle ladder and evidence adapter.
-- **`prompt-it` compiles the prompts between them** — Mode 1 gets a rough ask routed and grounded into the right invocation; Mode 2 turns `review-it`'s findings into the next iteration's prompt.
-- **`/next-session-prompt` is the sibling for a different moment**: post-planning handoff of an *already-finished* PRD/spec — kickoff note, memory update, and copy-paste launch prompt for a fresh session. `prompt-it` compiles *new* intent (Mode 1) or *post-review* continuations (Mode 2); it does not take over `/next-session-prompt`'s job, and routes there explicitly when that's the actual ask.
+1. **Clarity gate.** If the ask is already clear, scoped, and routed, it does a minimal tighten and stops — no ceremony on a one-line fix. Over-engineering trivial asks is the first failure mode of every prompt "optimizer," and the gate exists to refuse it.
+2. **Route.** It picks the target skill — `plan-it` for a fuzzy or large idea, `fable-it` for a goal with checkable done-ness, `review-it` for "is it actually done?", `iterate` for a single fix-test-verify loop, or a **bare / product-LLM** target when no harness fits. A route *you* name is locked — it never overrides your call.
+3. **Extract head-context.** The core move: surface what you know that the agent doesn't — the session you're gesturing at (resolved against your history ledger), the file you half-named, the reference implementation to mirror, the evidence URLs. Cheap lookups first; at most three grounded, concrete-option questions for what lookups can't resolve.
+4. **Validate pointers.** Every `@file`, every `/read-chat` alias, every pattern-to-imitate is checked to exist — in seconds. A prompt with a dead pointer is worse than one with no pointer; the downstream session burns its first turns chasing a ghost.
+5. **Self-check ×3.** A five-item rubric (grounded · scoped · actionable · faithful · complete-enough), a contradiction diff across the DoD and constraints, and a load-bearing audit that cuts every word that isn't pulling weight.
+6. **Emit.** One copyable prompt block, a `🎯 Target:` line naming the route and why, and a `💡` line calling out the single most important thing it fixed or added. Nothing else — the response *is* the artifact.
 
-None of this is enforced by a shared runtime — it's a set of routing conventions the family agrees on, so that invoking any one member (`fable-it`, `review-it`, `plan-it`, `prompt-it`) never requires re-explaining what the others already do.
+### Mode 2 — the post-review continuation
 
-## Architecture / What's inside
+`review-it` (or any QA pass) found gaps in a finished build. `prompt-it` turns them into the prompt for the next iteration — modeled on the hard-won "acknowledge-then-catch" style:
+
+- **Acknowledge, then catch** — credit what's verified working (with its evidence) before pinning each gap, so the next session doesn't re-fix what already works.
+- **Class over instance** — diagnose whether each finding is a point defect or an instance of a class, and frame the mechanism-level fix from assets that already exist.
+- **Carry the failed attempts** — list what was already tried and rejected (pulled from the run's memory / the review findings) so the next session doesn't re-propose it.
+- **Package it** — an evidence-cited continuation prompt with `file:line` citations, a `/read-chat` back-reference to the review session, and the existing test contract named as the verification target.
+
+## The boundary contract
+
+This is the design center, and the reason a `prompt-it` prompt reads lean where a hand-written one sprawls. Every target skill in the family owns machinery — and `prompt-it` refuses to duplicate any of it into the prompt:
+
+| Route | It never emits | Because that belongs to |
+|---|---|---|
+| **plan-it** | sizing/shape decisions, delegation/tiering notes, uncertainty clauses | plan-it's own scope governor and decision gates |
+| **fable-it** | "use Claude teams / lower models" tiering, persistence & autonomy clauses, verification *methods* | fable-it's model-tiers reference and run-state contract |
+| **review-it** | any freshly-authored DoD, how-to-verify instructions | review-it's oracle ladder — you point at the *existing* contract |
+| **iterate** | cycle structure, multi-step epic scaffolding | iterate's own diagnose→fix→verify loop |
+| **bare / product-LLM** | *(the one route that ADDS slots)* | nothing downstream owns them — so the prompt carries an explicit uncertainty clause + output contract, and for agents, stop conditions |
+| **any route** | credentials, model-economics content | the environment and the target skill |
+
+Telling `fable-it` to "split the work across teams and use cheaper models" isn't help — it's re-deciding something `fable-it` already decides canonically, and the moment that note drifts out of sync it's a bug. **Routing to `fable-it` *is* the tiering decision.** The boundary contract is what makes that true.
+
+## Eval-hardened
+
+`prompt-it` isn't tuned by vibes. It ships with a **20-case evaluation suite** — [`eval/`](eval/) — spanning every route, both modes, clarity-gate trivial cases, a dead-pointer trap, a legitimate-ambiguity case, and a tiering-note-that-must-be-stripped case.
+
+- [`eval/sample-prompts.md`](eval/sample-prompts.md) — 20 rough asks with a coverage matrix.
+- [`eval/expected-prompts.md`](eval/expected-prompts.md) — the **binding property oracle**: per sample, a checklist of what the output *must* contain and *must not* contain (route, slots present/omitted, `🎯`/`💡` lines, ≤10 directives, intent preserved). The oracle judges **properties**, never byte-equality — LLM output varies; the contract is what holds.
+- [`eval/scripts/run-eval.sh`](eval/scripts/run-eval.sh) — runs any sample through the *installed* plugin in a fresh session, so the eval tests the real trigger path, not a simulation.
+
+Every release is judged against that oracle by review-it-contract judges before it ships, and the judgments live in the repo as the regression baseline. The suite has already earned its keep — it caught a false premise in one of its own samples and an over-strict rule in its own oracle, alongside the skill defects it was built to find.
+
+## What's inside
 
 ```
 prompt-it/
-├── .claude-plugin/
-│   └── marketplace.json                  # devotts namespace registration
+├── SKILL.md                                    # the skill (root copy)
 ├── plugins/prompt-it/
-│   ├── .claude-plugin/
-│   │   └── plugin.json                   # plugin manifest (mirrors marketplace entry)
+│   ├── .claude-plugin/plugin.json              # plugin manifest
 │   └── skills/prompt-it/
-│       ├── SKILL.md                      # the skill — source of truth
-│       └── references/
-│           └── targets.md                # per-target responsibility map (owns/parses/cautions)
-├── SKILL.md                               # root copy, byte-identical to the plugin copy
-├── README.md                               # this file
-├── CHANGELOG.md
-├── LICENSE                                 # MIT
-├── research-BRIEF.md                      # research scope for the design phase
-├── research-SYNTHESIS.md                  # spec-ready brief this build was written against
-└── research/
-    ├── research-findings-A-local-evidence.md
-    ├── research-findings-B-sibling-plugins.md
-    ├── research-findings-C1-youtube.md
-    ├── research-findings-C2-youtube.md
-    ├── research-findings-D1-existing-tools.md
-    ├── research-findings-D2-best-practices.md
-    ├── research-findings-D3-prompt-master.md
-    └── transcripts/
+│       ├── SKILL.md                            # the skill — clarity gate, routing, 2 modes, self-check
+│       └── references/targets.md               # per-target profiles: what each route parses vs. owns
+├── .claude-plugin/marketplace.json             # devotts marketplace entry
+├── eval/                                        # the 20-case eval suite + binding oracle + runner
+├── assets/                                      # hero + pipeline diagrams
+├── CHANGELOG.md · LICENSE · README.md
+└── research/ + research-SYNTHESIS.md           # the design brief this skill was built from
 ```
 
-The skill itself is intentionally minimal: no `machine.json` statechart, no hooks, no `.taskstate/`-style persistence directory, no scripts. `prompt-it` doesn't run multi-cycle loops or enforce gates the way `fable-it` or `plan-it` do — it drafts, self-checks, and emits, in a single pass, so there's no run state to persist between turns. If a future version needs a stateful refinement loop, that's the trigger to add `machine.json`; v0.1.0 doesn't need one.
+The skill is deliberately small: the load-bearing rules live in a **hard-rules box at the top of `SKILL.md`** (first-character output discipline, emit-first, locked routes, the per-route omission table), and the full per-target detail lives in `references/targets.md`. Small and legible is the point — a bloated skill inherits the instruction-stacking failure mode it exists to prevent.
 
-`references/targets.md` is the one load-bearing reference file — it is read before every draft, and it is the only place the per-target omission rules live, so they never drift into copy-pasted duplicates inside the skill body.
+## prompt-it × the family
 
-## Development notes
+`prompt-it` is the front door to the front door. It doesn't replace any family skill — it makes the others easier to invoke well.
 
-This repository documents its own design process in `research-BRIEF.md`, `research-SYNTHESIS.md`, and the numbered `research/research-findings-*.md` files — including a v2 boundary-audit correction where an earlier draft over-scoped `prompt-it` into responsibilities `plan-it`/`fable-it`/`review-it` already own, and a later adoption pass against a third-party prompt-generation tool (`research-findings-D3-prompt-master.md`) that validated the harness-aware design center while explicitly rejecting a template library, a 30+-target coverage goal, and a parallel memory subsystem. If you're extending this skill, read the boundary audit in `research-SYNTHESIS.md` §3.0 first — it's the fastest way to avoid re-introducing a responsibility another `*-it` skill already owns.
+```
+                        rough ask ─┐
+                                   ▼
+                              ┌───────────┐
+                              │ prompt-it │   compile intent → routed prompt
+                              └─────┬─────┘
+        ┌───────────────┬──────────┼───────────┬──────────────┐
+        ▼               ▼          ▼           ▼              ▼
+   ┌─────────┐   ┌───────────┐  ┌────────┐  ┌─────────┐ ┌────────────┐
+   │ plan-it │   │  fable-it │  │ iterate│  │review-it│ │ bare / LLM │
+   └────┬────┘   └─────┬─────┘  └────────┘  └────┬────┘ └────────────┘
+        │  plans it    │ builds it                │ verifies it
+        └──────────────┴──── gaps found ──────────┘
+                                   │
+                                   ▼
+                   prompt-it (Mode 2) ── continuation prompt ──▶ next iteration
+```
 
-## License + links
+- **prompt-it → plan-it / fable-it** — the routing line makes the optimized prompt open with the right skill call, so a fuzzy idea reaches the planner and a goal-with-DoD reaches the builder.
+- **review-it → prompt-it → main thread** — after a QA pass reports gaps, Mode 2 writes the evidence-cited continuation prompt that drives the next iteration.
+- **Distinct from `/next-session-prompt`** — that skill hands off a *finished* plan/spec; `prompt-it` compiles *new* intent (Mode 1) or *post-review* continuations (Mode 2).
 
-Licensed under the [MIT License](./LICENSE) — Copyright © 2026 [DevOtts](https://github.com/DevOtts).
+## Platform compatibility
 
-- Repository: [github.com/DevOtts/prompt-it](https://github.com/DevOtts/prompt-it)
-- Author: [DevOtts](https://github.com/DevOtts)
-- Sibling plugins: `plan-it`, `fable-it`, `review-it` (shared `devotts` marketplace namespace)
-- Changelog: [CHANGELOG.md](./CHANGELOG.md)
+`prompt-it` is native on **Claude Code** and portable everywhere the `SKILL.md` standard is understood — **Cursor, OpenAI Codex, VS Code + GitHub Copilot, OpenCode, Windsurf, Zed, Gemini CLI, Cline, Amp, Warp**, and any agent that reads a skill/rules file. The workflow is model-agnostic in shape; deep layered rule-following runs best on a frontier-tier model (the tier your session already uses), and the skill states its output discipline mechanically so lighter models comply too.
 
+## Security considerations
+
+- **No credentials, ever.** `prompt-it` refuses to embed API keys, tokens, or secrets in a generated prompt — it writes `requires [ENV_VAR_NAME]` or "assumes `<service>` is authenticated" instead.
+- **Pointer validation is read-only.** It runs `ls`/`grep`/index lookups to confirm pointers exist; it does not modify your repo, and it never runs the task it's compiling a prompt for.
+- **No silent rewrites.** Anything it changed about your intent surfaces in the `💡` line — the audit trail is the value.
+
+## License
+
+[MIT](LICENSE) © [DevOtts](https://github.com/DevOtts)
+
+<div align="center">
+<br>
+<sub>Part of the <strong>*-it</strong> delivery family · <a href="https://github.com/DevOtts/plan-it">plan-it</a> · <a href="https://github.com/DevOtts/fable-it">fable-it</a> · <a href="https://github.com/DevOtts/review-it">review-it</a> · <strong>prompt-it</strong></sub>
+<br><br>
+<sub>Authored by <a href="https://github.com/DevOtts">DevOtts</a></sub>
+</div>

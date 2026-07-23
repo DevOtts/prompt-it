@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#0d1a2b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#475569"/>
+    </marker>
+    <style>
+      .mono { font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="620" rx="20" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="618" rx="19" fill="none" stroke="#1e2d44" stroke-width="2"/>
+
+  <!-- title -->
+  <text x="600" y="76" text-anchor="middle" font-size="46" font-weight="700" fill="#e8eefc">prompt-it</text>
+  <text x="600" y="114" text-anchor="middle" font-size="21" fill="#7dd3fc">Turn a rough ask into an optimized, context-grounded prompt.</text>
+  <text x="600" y="144" text-anchor="middle" font-size="15" class="mono" fill="#5b6b85">the harness-aware intent compiler — routes it, and emits nothing the target already owns</text>
+
+  <!-- rough ask (left) -->
+  <rect x="40" y="300" width="164" height="118" rx="12" fill="#16233c" stroke="#33415c" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="122" y="330" text-anchor="middle" font-size="16" font-weight="600" fill="#cbd5e1">rough ask</text>
+  <text x="122" y="354" text-anchor="middle" font-size="11" class="mono" fill="#64748b">"fix the auth bug"</text>
+  <text x="122" y="373" text-anchor="middle" font-size="11" class="mono" fill="#64748b">"add MCPs to the brain"</text>
+  <text x="122" y="392" text-anchor="middle" font-size="11" class="mono" fill="#64748b">"is it actually done?"</text>
+  <text x="122" y="411" text-anchor="middle" font-size="11" class="mono" fill="#64748b">+ review findings</text>
+
+  <!-- arrow into compiler -->
+  <path d="M210 359 L 344 359" fill="none" stroke="#33415c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- compiler (center) -->
+  <rect x="350" y="210" width="418" height="300" rx="14" fill="#101c30" stroke="#1e3148" stroke-width="1.5"/>
+  <rect x="350" y="210" width="6" height="300" rx="3" fill="#38bdf8"/>
+  <text x="376" y="244" font-size="18" font-weight="700" fill="#e2e8f0" class="mono">/prompt-it</text>
+  <text x="742" y="244" text-anchor="end" font-size="12" class="mono" fill="#5b6b85">compiler, not executor</text>
+  <line x1="376" y1="258" x2="742" y2="258" stroke="#1e3148" stroke-width="1"/>
+
+  <text x="376" y="290" font-size="14" class="mono" fill="#7dd3fc">1 · clarity gate</text>
+  <text x="560" y="290" font-size="12" class="mono" fill="#5e7089">trivial? tighten &amp; stop</text>
+  <text x="376" y="320" font-size="14" class="mono" fill="#7dd3fc">2 · route</text>
+  <text x="560" y="320" font-size="12" class="mono" fill="#5e7089">pick the target skill</text>
+  <text x="376" y="350" font-size="14" class="mono" fill="#7dd3fc">3 · extract context</text>
+  <text x="574" y="350" font-size="11.5" class="mono" fill="#5e7089">your head, not repo</text>
+  <text x="376" y="380" font-size="14" class="mono" fill="#7dd3fc">4 · validate pointers</text>
+  <text x="574" y="380" font-size="11.5" class="mono" fill="#5e7089">no dead @refs shipped</text>
+  <text x="376" y="410" font-size="14" class="mono" fill="#34d399">5 · self-check ×3</text>
+  <text x="574" y="410" font-size="11.5" class="mono" fill="#5e7089">rubric · clash · terse</text>
+
+  <rect x="370" y="430" width="380" height="62" rx="10" fill="#13241c" stroke="#2f5b43" stroke-width="1.2"/>
+  <text x="386" y="454" font-size="13" class="mono" fill="#bbf7d0">6 · emit — one copyable prompt</text>
+  <text x="386" y="476" font-size="12" class="mono" fill="#7dd3fc">🎯 Target: &lt;route + why&gt;   💡 &lt;what it fixed&gt;</text>
+
+  <!-- fan-out arrows to routes -->
+  <path d="M774 300 C 850 300, 870 262, 946 262" fill="none" stroke="#33415c" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M774 340 C 850 340, 870 330, 946 330" fill="none" stroke="#33415c" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M774 380 C 850 380, 870 398, 946 398" fill="none" stroke="#33415c" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M774 420 C 850 420, 870 466, 946 466" fill="none" stroke="#33415c" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- routed targets (right) -->
+  <rect x="952" y="240" width="208" height="44" rx="10" fill="#1c1633" stroke="#4c3d7a" stroke-width="1.4"/>
+  <text x="972" y="267" font-size="14" font-weight="600" class="mono" fill="#c4b5fd">→ /plan-it</text>
+  <text x="1148" y="267" text-anchor="end" font-size="10" class="mono" fill="#6b5e93">fuzzy / large</text>
+
+  <rect x="952" y="308" width="208" height="44" rx="10" fill="#0e2233" stroke="#1e4a63" stroke-width="1.4"/>
+  <text x="972" y="335" font-size="14" font-weight="600" class="mono" fill="#7dd3fc">→ /fable-it</text>
+  <text x="1148" y="335" text-anchor="end" font-size="10" class="mono" fill="#4d6f85">goal + DoD</text>
+
+  <rect x="952" y="376" width="208" height="44" rx="10" fill="#132a1f" stroke="#2f5b43" stroke-width="1.4"/>
+  <text x="972" y="403" font-size="14" font-weight="600" class="mono" fill="#86efac">→ /review-it</text>
+  <text x="1148" y="403" text-anchor="end" font-size="10" class="mono" fill="#4f7a5f">is it done?</text>
+
+  <rect x="952" y="444" width="208" height="44" rx="10" fill="#231a10" stroke="#6b4f1e" stroke-width="1.4"/>
+  <text x="972" y="471" font-size="14" font-weight="600" class="mono" fill="#fcd34d">→ bare / product-LLM</text>
+
+  <!-- caption -->
+  <text x="600" y="600" text-anchor="middle" font-size="14" fill="#5b6b85">Two modes — <tspan class="mono" fill="#7dd3fc">new-session compiler</tspan> and <tspan class="mono" fill="#86efac">post-review continuation</tspan>. It writes the prompt; the target skill does the work.</text>
+</svg>
