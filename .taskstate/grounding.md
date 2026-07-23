@@ -15,3 +15,15 @@ Run type: skill-authoring build (no runtime code). Source of truth: research-SYN
 ## Interfaces locked
 - SKILL.md is the interface every other artifact copies/describes → authored FIRST, by coordinator (never-downgrade: locks interface others consume).
 - Version string "0.1.0" appears in: .claude-plugin/marketplace.json, plugins/prompt-it/.claude-plugin/plugin.json, SKILL.md frontmatter (both copies), CHANGELOG.md first header.
+
+---
+# Grounding — v0.2.1 eval-fix + ship run (2026-07-23, fable-it resume)
+Source of truth: docs/v0.2.1-eval-fixes-KICKOFF.md + eval/expected-prompts.md (oracle) + judgment-retry-final.md (defect evidence). All read this session.
+
+## Per-DoD verification path
+| DoD | Verified against | Reachable? |
+|---|---|---|
+| 1 (S13) | fresh run-eval.sh output vs oracle S13 checklist (concrete-option questions, cheap-lookup-first), judged evidence-quoted | YES |
+| 2 (S14) | fresh run-eval.sh output vs oracle S14 checklist (plan-it route, Beacon path carried, no false facts), judged evidence-quoted | YES |
+| 3 (20/20) | full 20-sample run on session-default tier (EVAL_MODEL=fable), judged vs oracle; D19 retry policy for singles, D20 for repro | YES |
+| 4 (ship) | version grep = 0.2.1 in quad (marketplace.json, plugin.json, both SKILL.md) + CHANGELOG; 3 registry repos' marketplace.json; installed-cache version dir = 0.2.1 | YES (registry repos exist locally — verify before edit) |
