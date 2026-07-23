@@ -1,4 +1,15 @@
-# Evidence ledger — prompt-it research run
+# Evidence ledger — prompt-it (run 1: research · run 2: build)
+
+## Build run (2026-07-23)
+- [2026-07-23T~1] · DoD1+2 · Write core SKILL.md + references/targets.md, committed · "c2abd67 feat: prompt-it core SKILL.md + references/targets.md" · PASS (content conformance re-checked at DoD5 gate)
+- [2026-07-23T~2] · DoD4 · Edit ~/.claude/skills/next-session-prompt/SKILL.md description (routing note) · "The file … has been updated successfully" + harness re-listed nsp WITH the new "Sibling routing:" text in its live description; author/author_url untouched, footer untouched · PASS
+- [2026-07-23T~3] · DoD5c · real pointer validation for dry-run: `ls -d /Users/macbook/Workspace/ANM/Beacon` → exists; Engine-Core listing → exists; langfuse file grep → no hit (disclosed in dry-run 💡, dead-pointer rule exercised) · qa/dryrun-mode1.md written with 8-point conformance check · PASS
+- [2026-07-23T~4] · DoD5d · qa/dryrun-mode2.md written (bosslife synthetic findings) with 9-point conformance check — acknowledge-then-catch, evidence cites, class-over-instance, failed-attempts, no fable-it-owned content · PASS (honest label: coordinator-simulated, both files)
+
+- [2026-07-23T~5] · DoD3+5a+5b · delegation gate + inline checks (haiku packet run inline — 4 bash cmds cheaper than agent spawn, logged) · "JSON_OK · COPY_IDENTICAL · 0.1.0 grep: marketplace 1, plugin 1, SKILL 1, CHANGELOG 4 · README 300 ln, CHANGELOG 60 ln, LICENSE 21 ln · README tiering mentions only in boundary-explanation context (ln 30/124/128/174)" · PASS
+- [2026-07-23T~6] · DoD1 (content conformance) · grep-audit of core SKILL.md against DoD-1 mechanism list · clarity gate ✔ route(5 targets) ✔ ≤3 questions ✔ pointer validation (.agents/history/INDEX.md) ✔ 6-slot template ✔ bare-target extras ✔ Mode 2 (acknowledge-then-catch, class-over-instance, Pareto, failed attempts, nsp conventions, /read-chat) ✔ self-check (rubric+contradiction+load-bearing) ✔ output contract (🎯/💡) ✔ credential rule ✔ nsp-distinction in description ✔ DevOtts frontmatter+footer ✔ · PASS
+
+## Research run (2026-07-21)
 Format: [timestamp] · DoD# · command/check · quoted output · verdict
 
 - [2026-07-21T17:34Z] · setup · `git init -b main` + RUNLOCK exclusive-create · "Initialized empty Git repository … RUNLOCK_ACQUIRED" · PASS (repo + interlock)

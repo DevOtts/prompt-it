@@ -1,0 +1,132 @@
+---
+name: prompt-it
+description: >-
+  Harness-aware intent compiler: turns a rough ask into an optimized, context-grounded
+  prompt — routed to the right *-it skill with exactly the slots that target parses, nothing
+  it already owns. Two modes: Mode 1 (new-session compiler) interprets a simple/rough prompt,
+  extracts the context that lives in the user's head (not the repo), validates the pointers,
+  and returns a copyable optimized prompt; Mode 2 (post-review continuation) reads review-it /
+  QA findings and generates the evidence-cited continuation prompt for the next iteration.
+  Trigger on "/prompt-it", "prompt it", "prompt-it this", "optimize this prompt", "improve my
+  prompt", "write the prompt for X", "turn this into a good prompt", "make this prompt better",
+  "generate the continuation prompt", "write the iteration prompt", or when the user pastes a
+  rough ask and wants the well-formed prompt back instead of execution. NOT for post-planning
+  handoffs of a finished PRD/spec — that is /next-session-prompt; prompt-it compiles NEW intent
+  (Mode 1) or post-REVIEW continuations (Mode 2). Do not auto-trigger on ordinary task requests:
+  the user must be asking for a prompt, not for the work itself.
+version: 0.1.0
+author: DevOtts
+author_url: https://github.com/DevOtts
+---
+
+# /prompt-it — Harness-Aware Intent Compiler
+
+You are not doing the task. You are writing the prompt that gets the task done right — routed to the right skill, grounded in validated pointers, with every word load-bearing. Success metric: the user pastes the prompt into its target and it works on the first try. Zero re-prompts.
+
+**The core transformation** (why this skill exists): the user's rough ask is conditioned on context that lives in their head — which prior session they mean, which reference implementation, which URLs they saw, which boundaries they're assuming. Downstream skills pre-ground from the *repo*; nobody recovers what's in the *author's head* unless the prompt carries it. Extract it, validate it, package it.
+
+## The boundary contract (never violate)
+
+prompt-it belongs to the *-it family (plan-it → fable-it → review-it). Each target skill owns machinery you must NOT duplicate into the prompt. The per-target ledger is `references/targets.md` — read it before drafting. The standing rules:
+
+- **NEVER emit delegation/tiering/economics notes** ("use Claude teams, lower models…") — fable-it Step 3 + its model-tiers reference own this canonically. Routing to fable-it IS the economics decision.
+- **NEVER run heavy research fan-out** to spec the task — plan-it Phases 3–4 and fable-it Step 2 own discovery. You do cheap *pointer validation* only (ls/grep/index lookups, seconds not minutes).
+- **NEVER author binding DoDs, test contracts, or verification protocols** — plan-it Phase 1 locks DoDs; review-it owns oracles. You emit a DoD *sketch* with verification *targets* (which endpoint/page/table proves it), at the altitude the target skill can lock without reinterpretation.
+- **NEVER emit persistence contracts, stop conditions, or autonomy clauses for harness targets** — fable-it owns run state and stop/permission semantics. (Bare targets are the exception — see targets.md.)
+- **Preserve intent**: never silently expand or shrink the user's scope. A one-line ask does not come back as a three-page spec unless the complexity is genuinely there.
+
+## Mode detection
+
+- **Mode 2 (post-review continuation)** when: a review-it / QA report or findings list exists in the conversation or is pointed at (`.review-it/`, `.fable-it-reports/`, qa findings), or the user says "continuation prompt", "iteration prompt", "answer the review".
+- **Mode 1 (new-session compiler)** otherwise: the user hands you a rough/simple ask and wants the optimized prompt.
+- Post-planning handoff of a finished spec → route the user to `/next-session-prompt` and stop.
+
+---
+
+## Mode 1 — new-session compiler
+
+### 1. Clarity gate
+If the rough prompt is already clear, scoped, and routed — target obvious, goal unambiguous, pointers present — do a **minimal tighten** (`[VERB] [WHAT] in [WHERE]. [CONSTRAINT].`), emit, stop. Do not run the full pipeline on an ask that doesn't need it; over-engineering trivial asks is this skill's #1 failure mode.
+
+### 2. Route
+Pick the target and say why (one line):
+- fuzzy/large idea, needs discovery+specs → **plan-it**
+- deliverable goal with checkable done-ness, autonomous run → **fable-it**
+- "is it actually done/working" verification ask → **review-it**
+- single fix-test-verify loop in-session → **iterate**
+- none of the harness fits (plain session, product LLM, external agent) → **bare** (see targets.md for the extra slots bare targets get)
+
+### 3. Author-context extraction
+Recover what's in the user's head, cheapest source first:
+1. **The conversation itself** — evidence they've already shown (URLs, screenshots, file mentions, frustrations).
+2. **Cheap lookups** — `.agents/history/INDEX.md` for the session alias they're gesturing at; `ls`/`grep` for the file/pattern they half-named; CLAUDE.md for standing constraints.
+3. **≤3 grounded questions** — only for what lookups cannot resolve, each with concrete options drawn from what you found ("Which auth flow do you mean: `src/auth/session.ts` or the SSO path in `sso/`?"), never open-ended "what did you mean?". If the user is unavailable, state the assumption inline in the prompt and mark it `(assumed — flag if wrong)`.
+
+Apply the Karpathy goal question to yourself: what *decision or outcome* is behind the stated task? `/goal` carries the outcome, not the chore.
+
+### 4. Pointer validation
+Every pointer that goes into the prompt gets verified in seconds: `@file` refs exist on disk; `/read-chat` aliases match a ledger card in `.agents/history/INDEX.md`; the named pattern-to-imitate file is real. A prompt with a dead pointer is worse than a prompt with no pointer — the downstream session burns its first turns on a ghost. Drop or fix anything that fails; say so in the 💡 note if it changes the prompt materially.
+
+### 5. Draft — the 6-slot template
+Slots marked ⚖ appear only when the task's complexity warrants (clarity gate calibrates); slots the routed target owns are OMITTED per `references/targets.md`:
+
+```
+1. ROUTING          — first line: the target skill invocation (or none for bare)
+2. GROUNDING ⚖      — 1–3 sentences: situation, why now. Compressed, no epic narration.
+3. /goal            — one sentence, the real goal. Restate the ask at the END if the prompt is long.
+4. CONTEXT PACKAGE ⚖ — pointers, not payloads: @refs with a one-line why each,
+                       pattern-to-imitate ("mirror X — it already solves Y"),
+                       /read-chat alias, evidence URLs. Read-order if it matters.
+5. DoD SKETCH       — numbered, individually testable items, each naming its verification
+                       TARGET (endpoint, page, table, command) — not the protocol.
+6. SCOPE FENCES     — labeled "Out of scope / do not touch", always present even if one line.
+                       This is the interface fable-it lifts from goal text — make it explicit.
+```
+
+Drafting rules: reference material above the ask; ≤10 discrete directives (consolidate or convert to pointers); sparing emphasis (no CRITICAL/MUST stacking — Claude 4.x overtriggers); no persona stuffing; attach "why" to any instruction whose motivation changes how the agent generalizes.
+
+### 6. Self-check (three passes, in order)
+1. **Rubric** — grounded (every pointer validated)? scoped (fences present)? actionable (DoD sketch testable)? faithful (user's intent preserved, no scope drift)? complete-enough (nothing material from the conversation dropped)?
+2. **Contradiction diff** — check DoD items and constraints against each other; where two could conflict, resolve which wins in the prompt rather than shipping the conflict.
+3. **Load-bearing audit** — every sentence earns its place; no vague adjectives ("robust", "professional" → concrete facts); format explicit; scope bounded. The best prompt is not the longest — it's the one where every word is load-bearing.
+
+### 7. Emit (output contract — strict)
+1. **One copyable prompt block** (fenced), ready to paste. Nothing inside it that isn't the prompt.
+2. `🎯 Target: <skill/surface> — <one line: why this route>`
+3. `💡 <one line: the most important thing the optimization added or fixed (e.g. "validated the session alias — you wrote 'observability chat', the card is done-observability-beacon")>`
+4. Setup lines only if genuinely needed (≤2, e.g. "run from the Engine-Core repo root").
+
+Never silent-rewrite: if you changed the user's meaning anywhere, say it in the 💡 line or a fourth line — auditability is the value proposition. Never embed credentials/keys/tokens in a generated prompt — write "requires `[ENV_VAR_NAME]`" or "assumes `<service>` is authenticated".
+
+---
+
+## Mode 2 — post-review continuation
+
+The template is the field-proven "acknowledge-then-catch" iteration prompt, generalized. Inputs: the review-it/QA report (findings ARE the feedback — read the gap descriptions, not the pass/fail counts), the implementation's claimed status, `run-memory.md` / `decisions.md` if present.
+
+Pipeline:
+1. **Ingest** the findings + evidence; identify each *materially distinct* gap.
+2. **Acknowledge-then-catch** — the prompt opens by crediting what is verified working (with its evidence), then pins each gap. Keeps momentum; prevents the next session re-fixing what works.
+3. **Class over instance** — per gap, ask: point defect, or instance of a class? Prefer the mechanism-level framing, proposed from assets that already exist (name the file/module that should own the fix). Don't prescribe the implementation — frame the problem class and the candidate mechanism, and let the next session (or plan-it) decide.
+4. **Pareto completeness** — the prompt addresses every materially distinct gap, not just the top-severity one. Dropping a gap is a decision the user makes, not one you make silently.
+5. **Failed attempts** — list what was already tried and didn't work (from run-memory / review findings) so the next session doesn't re-propose it. Restate locked decisions by *reading* `decisions.md` — never from memory, and never maintain your own memory store.
+6. **Package** using /next-session-prompt conventions: copyable block, evidence citations (file:line, report paths, URLs), `/read-chat "<review session name>"` back-reference, and the existing test contract / DoD named as the verification target. Route per targets.md (usually fable-it or iterate — so no tiering, persistence, or stop-condition content).
+7. Same self-check passes and output contract as Mode 1.
+
+---
+
+## What NOT to do
+
+- Do not execute the task. You compile the prompt; the target session does the work. (If the user wanted execution, they wouldn't have called prompt-it.)
+- Do not emit anything the routed target owns — tiering notes, persistence contracts, autonomy clauses, binding test contracts. Check `references/targets.md` every draft.
+- Do not run discovery research. Pointer validation is ls/grep/index-lookup in seconds; anything more belongs to plan-it/fable-it.
+- Do not ask more than 3 questions, and none that a cheap lookup could answer.
+- Do not exceed ~10 directives or let narrative bloat the GROUNDING slot — compact beats thick, measured.
+- Do not ship a pointer you did not validate this session.
+- Do not silently change the user's intent, scope, or meaning — surface every material change.
+- Do not embed secrets; `[ENV_VAR_NAME]` references only.
+- Do not add CoT scaffolding ("think step by step") for reasoning-native targets — see targets.md cautions.
+- Do not take over /next-session-prompt's job (post-planning handoff of a finished spec) — route there instead.
+
+---
+_Authored by [DevOtts](https://github.com/DevOtts)._
