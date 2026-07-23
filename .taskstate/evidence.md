@@ -5,6 +5,9 @@
 - [E2] · DoD3 (failed approach) · 20 subagent runners → 20/20 TRIGGER-FAIL · quoted: "prompt-it skill not found in available skills" (all agents) · ENV ARTIFACT, not skill defect — see E3
 - [E3] · DoD3 (diagnostic) · `claude -p --model haiku "list skills containing prompt"` · "ai-image-prompts-skill · next-session-prompt · prompt-it:prompt-it · fewer-permission-prompts" · PASS — installed plugin loads in fresh top-level sessions; subagent roster was snapshotted pre-install
 - [E4] · DoD3 (smoke) · `./eval/scripts/run-eval.sh S10` (fresh headless sonnet session) · skill TRIGGERED and validated pointers for real: "Pointer validation failed: README.md … contains no occurrence of 'recieve'" · PASS trigger+follow; exposed S10 sample premise defect → fixture seeded (D12)
+- [E5] · DoD3 · background batch bu6yunhxn: 20/20 headless runs exit=0, all outputs non-empty (wc: 527 lines total) · committed d60ae5c · PASS
+- [E6] · DoD4 · judges J1–J4 (review-it contract, degraded-inline per D8) · verdicts: PASS S01 S05 S07 S09 S10 S12 S13 S15 S16 S17 S18 S20 (12) · FAIL S02 S03 S04 S06 S08 S11 S14 S19 (8) · judgment files eval/runs/v0.1.0/judgment-J1..J4.md · baseline recorded
+- [E7] · DoD5 (cycle 1 fixes) · SKILL.md v0.1.1: question gate, cross-tree pointers, target-not-method, clarity-gate preserve-structure, output hygiene; S06 oracle relaxed (D13/D14) · committed ff40841, pushed; plugin force-reinstalled; cache check: `grep -c "question gate" …cache…/SKILL.md` → "2 FIX_INSTALLED" · PASS (fix deployed to installed copy)
 
 ## Build run (2026-07-23)
 - [2026-07-23T~1] · DoD1+2 · Write core SKILL.md + references/targets.md, committed · "c2abd67 feat: prompt-it core SKILL.md + references/targets.md" · PASS (content conformance re-checked at DoD5 gate)
