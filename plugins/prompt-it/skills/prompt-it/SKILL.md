@@ -25,17 +25,19 @@ You are not doing the task. You are writing the prompt that gets the task done r
 
 ## HARD OUTPUT RULES — check every one before responding, no exceptions
 
-1. **Your response starts at the opening fence** of the prompt block. Zero preamble, zero narration. Shape: fenced prompt block → `🎯 Target:` line → `💡` line → ≤2 setup lines → (live sessions only) ≤3 optional refinement questions. Nothing else, ever.
-2. **Emit-first, always.** Questions never replace the prompt block — unresolved points become inline `(assumed: X — flag if wrong)` markers. This holds in every mode and every context.
-3. **A route the user named is locked.** Their skill header/mention survives verbatim; never override it.
-4. **Per-route omissions (memorize — do not rely on reading targets.md):**
-   | Route | Never emit |
-   |---|---|
-   | plan-it | sizing/shape decisions, tiering, uncertainty clause, output contract |
-   | fable-it | tiering/teams notes, persistence/autonomy clauses, verification METHODS |
-   | review-it | **any fresh DoD** (point at the EXISTING claim/contract only), how-to-verify instructions |
-   | iterate | cycle structure, multi-step epic scaffolding |
-   | any route | tiering/model-economics content, credentials |
+1. **Your response starts at the opening fence** of the prompt block. Zero preamble, zero narration — not even one confirming sentence. Shape: fenced prompt block → `🎯 Target:` line → `💡` line → ≤2 setup lines → (live sessions only) ≤3 optional refinement questions. Nothing else, ever. The block itself carries ≤10 discrete directives — consolidate redundant restatements.
+2. **Emit-first, always.** Questions never replace the prompt block — unresolved points become inline `(assumed: X — flag if wrong)` markers. Any appended refinement question must carry concrete options drawn from your lookups — never open-ended ("confirm the path" → "is it `A` or `B`?").
+3. **A route the user named is locked.** Their skill header/mention survives verbatim; never override it. And a request to improve a PRODUCT's own prompt/agent (tenant chat, external tool's system prompt) is ALWAYS product-LLM/bare — never a harness route; the harness cannot run inside the product.
+4. **Per-route requirements (memorize — do not rely on reading targets.md):**
+   | Route | Never emit | Must ADD in the block |
+   |---|---|---|
+   | plan-it | sizing/shape decisions, tiering, uncertainty clause, output contract | — |
+   | fable-it | tiering/teams notes, persistence/autonomy clauses, verification METHODS | — |
+   | review-it | **any fresh DoD** (point at the EXISTING claim/contract only), how-to-verify instructions | — |
+   | iterate | cycle structure, multi-step epic scaffolding | — |
+   | **bare session** | harness headers, @-refs to harness state | **uncertainty clause** (what to do on missing/ambiguous input) + **output contract** (where results land + run-and-show verification); agentic bare also: **stop conditions, forbidden actions, file-scope lock** |
+   | **product-LLM / external** | harness headers, @-refs, /read-chat, CoT scaffolding on reasoning-native models | **self-contained** content: disambiguation of colliding terms, ≥1 worked example, missing-data behavior, output schema |
+   | any route | tiering/model-economics content, credentials | — |
 5. **Context package ≤7 pointers, one-line why each.** File:line inventories, epic/test-case IDs, decision codes = discovery dossier = you overstepped; cut back to pointers.
 6. **Already-well-formed input (has route + /goal + numbered DoD): return the user's own text**, fixing only actual defects in place. Adding sections to it is a violation.
 
@@ -141,7 +143,7 @@ Pipeline:
 3. **Class over instance** — per gap, ask: point defect, or instance of a class? Prefer the mechanism-level framing, proposed from assets that already exist (name the file/module that should own the fix). Don't prescribe the implementation — frame the problem class and the candidate mechanism, and let the next session (or plan-it) decide.
 4. **Pareto completeness** — the prompt addresses every materially distinct gap, not just the top-severity one. Dropping a gap is a decision the user makes, not one you make silently.
 5. **Failed attempts** — list what was already tried and didn't work (from run-memory / review findings) so the next session doesn't re-propose it. Restate locked decisions by *reading* `decisions.md` — never from memory, and never maintain your own memory store.
-6. **Package** using /next-session-prompt conventions: copyable block, evidence citations (file:line, report paths, URLs), `/read-chat "<review session name>"` back-reference, and the existing test contract / DoD named as the verification target. Route per targets.md (usually fable-it or iterate — so no tiering, persistence, or stop-condition content).
+6. **Package** using /next-session-prompt conventions: copyable block, evidence citations (file:line, report paths, URLs), `/read-chat "<review session name>"` back-reference, and the existing test contract / DoD named as the verification target. Mode 2 routing: findings that are contested or were never truly verified (false greens, unchecked systems-of-record) → **review-it** (re-verify) or **fable-it** (fix + verify); use **iterate** only when the fix is one tight loop against an undisputed target. No tiering, persistence, or stop-condition content on any harness route.
 7. Same self-check passes and output contract as Mode 1.
 
 ---
