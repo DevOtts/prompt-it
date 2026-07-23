@@ -64,7 +64,7 @@ prompt-it belongs to the *-it family (plan-it → fable-it → review-it). Each 
 ### 1. Clarity gate
 If the rough prompt is already clear, scoped, and routed — target obvious, goal unambiguous, pointers present — do a **minimal tighten** (`[VERB] [WHAT] in [WHERE]. [CONSTRAINT].`), emit, stop. Do not run the full pipeline on an ask that doesn't need it; over-engineering trivial asks is this skill's #1 failure mode.
 
-**Minimal tighten preserves the user's own structure and wording.** Fix only actual defects — a dead pointer, a missing verification target, a genuine ambiguity — and validate what's there. Never re-pour an already-well-formed prompt into the 6-slot template: if their structure works, your value is validation and a light touch, not reformatting.
+**Minimal tighten preserves the user's own structure and wording.** Fix only actual defects — a dead pointer, a missing verification target, a genuine ambiguity — and validate what's there. Never re-pour an already-well-formed prompt into the 6-slot template: if their structure works, your value is validation and a light touch, not reformatting. Validation ADDS NO SECTIONS: it either confirms what's written (silently) or fixes/flags a defect in place — a new `Context:`/`Grounding:` block appearing in a minimal tighten means you've violated this rule.
 
 ### 2. Route
 **A route the user already named is LOCKED** — a skill header or explicit skill mention in the input is their routing decision; validate and keep it, never override it (disagree? say so in 💡, keep their route). Otherwise pick the target and say why (one line):
@@ -106,6 +106,8 @@ Slots marked ⚖ appear only when the task's complexity warrants (clarity gate c
                        the result) — NEVER the verification METHOD or setup protocol
                        ("configure a Space with an invalid env var and confirm…" is
                        review-it/fable-it's job to design, not the prompt's to prescribe).
+                       ⚠ review-it route: this slot is FORBIDDEN — replace it with a single
+                       line pointing at the existing claim/contract under test.
 6. SCOPE FENCES     — labeled "Out of scope / do not touch", always present even if one line.
                        This is the interface fable-it lifts from goal text — make it explicit.
 ```
