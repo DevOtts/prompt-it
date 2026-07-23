@@ -134,16 +134,18 @@ nidhinjs/prompt-master (a target-tool-aware prompt generator for 30+ AI tools) i
 
 Rejected (reasons in D3): the 13-template library (our 6-slot anatomy is the template), 30+ tool coverage, its Memory Block subsystem (CLAUDE.md/decisions.md/ledger own that here), signal-word maximization (contradicts Anthropic's Claude 4.x dial-back guidance), and "constraints in first 30%" (conflicts with adopted long-context placement rules).
 
-### 3.6 Open decisions for Fernando (revised after the v2 scope correction)
+### 3.6 Decisions — LOCKED by Fernando, 2026-07-23 (no longer open)
 
-Resolved by the boundary audit (no longer open): question budget → ≤3, since discovery is plan-it's job (old #3); quick actions → cut as overengineering, the clarity gate covers the "just tighten it" case (old #6).
+Resolved earlier by the boundary audit: question budget → ≤3, since discovery is plan-it's job; quick actions → cut as overengineering, the clarity gate covers the "just tighten it" case.
 
-Still genuinely Fernando's to decide:
-1. **Invocation surface**: explicit `/prompt-it` skill only (recommended for v1), or also an always-on clarity-gate hook (severity1-style) that intercepts vague prompts automatically? Hook adds value but changes every session's behavior.
-2. **Output destination**: print the optimized prompt for copy/paste into a fresh session (recommended — auditable, matches usage vision #1), and/or write it to a file (`NEXT-PROMPT.md`), and/or offer "run it now in this session"?
-3. **`/next-session-prompt` relationship**: Mode 2 reuses its conventions — but should they stay two skills (nsp = post-planning handoff, prompt-it = post-review continuation + new-session compiler), or should nsp eventually become a prompt-it mode?
-4. **Mode 2 trigger**: manual invocation after review-it (recommended v1), or should review-it's report end by auto-invoking prompt-it?
-5. **Version start**: 0.1.0 (alpha) or 1.0.0 — and standalone marketplace vs. devotts namespace from day one?
+Locked by Fernando:
+1. **Invocation surface**: explicit `/prompt-it` skill ONLY. No always-on hook in v1.
+2. **Output destination**: print the optimized prompt in chat as a copyable block (paste into a fresh session). File-write / run-now may come later as flags — not v1.
+3. **`/next-session-prompt` relationship**: KEEP BOTH — nsp = post-planning handoff; prompt-it = new-session compiler (Mode 1) + post-review continuation (Mode 2). Add a routing note in each skill's description; Mode 2 reuses nsp's conventions.
+4. **Mode 2 trigger**: MANUAL invocation after review-it. No auto-invoke edit to review-it in v1.
+5. **Version/namespace**: **0.1.0**, registered in the shared **devotts** marketplace from day one.
+
+The brief is now fully build-ready: template §3.1, pipelines §3.2–3.3, family integration §3.4, packaging §3.5 + §3.5b (target profiles, output contract), decisions locked here.
 
 ---
 
