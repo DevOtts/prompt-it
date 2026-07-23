@@ -1,27 +1,17 @@
-# Grounding — prompt-it research run (2026-07-21)
+# Grounding — prompt-it BUILD run (2026-07-23, run 2)
 
-Run type: research-only. No product code is built; deliverables are research files + synthesis + spec-ready brief. "Data" here = evidence sources, each with a named on-disk output.
-
-## Source-of-truth map
-- Local evidence: `prompt-examples.txt` (9 hand-written prompts, READ in main thread), `analysis-example/image-{1,2,3-prompt}.png` (bosslife/"cliente" case, VIEWED in main thread).
-- Sibling plugins (structure conventions): `/Users/macbook/Workspace/Devotts/{plan-it,fable-it,review-it,parallel-lifecycle}` — local disk, reachable.
-- YouTube: 8 video URLs → transcripts via user skill `/youtube-transcriber` (fallback: yt-dlp auto-subs). Reachability = network; test at first fetch.
-- Web: prompt-engineering standards + existing optimizer tools via WebSearch/WebFetch. Reachable (tools available to agents).
-
-## File conventions (mirrors review-it: `research/` dir + root synthesis)
-- `research/research-findings-A-local-evidence.md` (DoD 1)
-- `research/research-findings-B-sibling-plugins.md` (DoD 2)
-- `research/research-findings-C1..C2-youtube.md` + `research/transcripts/` (DoD 3)
-- `research/research-findings-D1-existing-tools.md`, `research/research-findings-D2-best-practices.md` (DoD 4)
-- `research-SYNTHESIS.md` at repo root (DoD 5)
-- `.fable-it-reports/report.md` (DoD 6)
+Run type: skill-authoring build (no runtime code). Source of truth: research-SYNTHESIS.md §3 (decisions LOCKED), findings-B (packaging conventions), findings-D3 (adopted mechanisms). All three read in full this session (synthesis + D3 authored by this session's coordinator; B's Part D/E read).
 
 ## Per-DoD verification path
-| DoD | Verified against | Reachable this session? |
+| DoD | Verified against | Reachable? |
 |---|---|---|
-| 1 | findings-A file on disk, content covers anatomy + bosslife case | YES (sources already in context) |
-| 2 | findings-B file on disk, covers all 4 sibling repos' conventions | YES (local disk) |
-| 3 | 8 transcripts on disk + findings-C files; per-video technique extraction | LIKELY (network-dependent; verify per URL, report per-video honestly) |
-| 4 | findings-D files with cited URLs incl. Anthropic prompt-improver, DSPy, meta-prompting + critical assessment of Fernando's patterns | LIKELY (WebSearch) |
-| 5 | research-SYNTHESIS.md on disk w/ output template, 2 modes, family integration, open decisions | YES |
-| 6 | report.md + fresh-eyes verifier verdicts | YES |
+| 1 | plugins/prompt-it/skills/prompt-it/SKILL.md on disk; section checklist vs DoD-1 spec (grep for each required mechanism) | YES |
+| 2 | plugins/prompt-it/skills/prompt-it/references/targets.md; 6 target profiles present | YES |
+| 3 | JSON parse (python json.load) on marketplace.json + plugin.json; `diff` root SKILL.md vs bundled; README wc -l in 300–600; version grep = 0.1.0 in 4 files | YES |
+| 4 | grep the routing note + attribution in ~/.claude/skills/next-session-prompt/SKILL.md after edit | YES |
+| 5 | qa/dryrun-mode1.md + qa/dryrun-mode2.md on disk; conformance judged against SKILL.md rules (slot presence/omission, 🎯/💡, ≤10 directives, no tiering note, acknowledge-then-catch, failed-attempts) | YES (dry-run = applying the skill's own instructions; honest label: authored-by-coordinator simulation, not an end-user session) |
+| 6 | report + ledger + git log | YES |
+
+## Interfaces locked
+- SKILL.md is the interface every other artifact copies/describes → authored FIRST, by coordinator (never-downgrade: locks interface others consume).
+- Version string "0.1.0" appears in: .claude-plugin/marketplace.json, plugins/prompt-it/.claude-plugin/plugin.json, SKILL.md frontmatter (both copies), CHANGELOG.md first header.
