@@ -1,0 +1,1 @@
+Fix the typo "recieve" → "receive" in eval/fixtures/notes.md in this repo.

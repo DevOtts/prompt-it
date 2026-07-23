@@ -1,0 +1,1 @@
+Our tenant chat agent keeps answering "no clients found" when the praxya owner asks "quantos clientes recorrentes tivemos este mês?" — in that question "clientes" means Shopify repeat buyers, not orgs of type=client. Improve the agent's system prompt so it handles "cliente" correctly.

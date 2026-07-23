@@ -20,3 +20,6 @@
 ## Env quirks
 - Folder was not a git repo at start; `git init -b main` run at 17:34Z.
 - No .fable-it-reports/lessons.md existed (first run on this project).
+
+## Eval run failed approach (2026-07-23)
+- FAILED: running eval samples via Agent-tool subagents — subagents inherit the parent session's skill roster, snapshotted BEFORE prompt-it was installed → 20/20 TRIGGER-FAIL, all artifacts of the environment. Diagnostic proof: fresh `claude -p --model haiku` lists `prompt-it:prompt-it`. NEW APPROACH: fresh headless `claude -p --model sonnet` per sample (real plugin loading, real trigger path). Never eval a freshly-installed plugin from inside the installing session's subagents.

@@ -1,0 +1,1 @@
+Have an agent go through ~/Downloads and move files into subfolders by type (images, pdfs, archives, installers), deleting nothing. I want a prompt I can paste into a plain Claude Code session with no plugins.

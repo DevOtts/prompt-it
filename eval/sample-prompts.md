@@ -58,7 +58,7 @@ Each sample is the EXACT text a runner agent hands to the installed /prompt-it s
 > Write the continuation prompt for the next session.
 
 ## S10 (clarity-trivial — must NOT get the full pipeline)
-> Fix the typo "recieve" → "receive" in this repo's README.md.
+> Fix the typo "recieve" → "receive" in eval/fixtures/notes.md in this repo.
 
 ## S11 (clarity-trivial — already well-formed)
 > plan-it. /goal add a CONTRIBUTING.md to this repo covering how to add a new target profile to references/targets.md. DoD: 1. file exists with profile-addition steps 2. linked from README. Out of scope: no CI changes.

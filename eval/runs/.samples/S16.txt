@@ -1,0 +1,1 @@
+The tasks-page dropdown throws "ResizeObserver loop limit exceeded" and detaches mid-click in our CDP e2e, so the suite is red. Get the e2e passing against the real page, not by skipping the test.

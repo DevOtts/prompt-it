@@ -1,0 +1,1 @@
+I'm heading out. Add a version-check script to this repo that exits non-zero when the 0.x.y version differs across marketplace.json, plugin.json, SKILL.md and CHANGELOG.md, wire it as scripts/check-version.sh, and prove it catches a mismatch. Run it to done.

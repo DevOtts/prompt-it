@@ -1,0 +1,1 @@
+The team says the feedback thumbs up/down component is finished and deployed to the test env. Before I tell the client, check it's actually done — the claim is in the last session's report.

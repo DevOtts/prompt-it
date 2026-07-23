@@ -1,0 +1,1 @@
+I'm in a scratch repo with no plugins installed. I have data/customers.csv with duplicate rows (same email, different casing). Write me a script that dedupes it and reports how many rows were removed.

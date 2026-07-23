@@ -1,0 +1,1 @@
+Ship the LLM key-source fix to done: brain-api-core ontology client must use the per-Space backbone key with env fallback, mirroring trigger-draft.service.ts. IMPORTANT: split the work using claude teams and use lower models for the subagents to save tokens, keep the coordinator on the big model.

@@ -1,0 +1,1 @@
+The ontology OpenRouter client in brain-api-core reads the global pod env var for the API key. It should resolve the per-Space "Direct (OpenRouter)" backbone connection key first, then fall back to OPENROUTER_API_KEY then OPENAI_API_KEY, same as trigger-draft.service.ts already does. Build and ship it.

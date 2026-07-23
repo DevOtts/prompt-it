@@ -1,0 +1,5 @@
+The airtable write feature had a rough review. Findings:
+- FAIL: e2e via CDP claimed green but the tasks dropdown throws UI errors when a human runs it.
+- FAIL: saving to tasks required enabling the integration first; nobody verified the record actually landed in Airtable.
+- Note: we already tried just re-running the CDP suite with longer waits — same false green, don't suggest that again.
+Write the continuation prompt for the next session.

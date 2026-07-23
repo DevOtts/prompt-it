@@ -1,0 +1,1 @@
+Write the system prompt for our log-triage analyzer that runs on o3-mini. It gets a batch of error logs and must output severity 0-4 plus a one-line cause hypothesis per log.

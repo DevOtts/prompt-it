@@ -13,3 +13,4 @@
 - D9: sample runs use EXPLICIT "/prompt-it <sample>" invocation (locked decision #1: skill-only surface — explicit invocation IS the real usage). Trigger test = does the installed plugin skill load and get followed in a fresh agent.
 - D10: oracle judges property conformance (checklists in expected-prompts.md + globals G1–G6), never byte equality with exemplars.
 - D11: eval outputs are disjoint files eval/runs/v0.1.0/S*.md; no agent touches git; coordinator commits.
+- D12: S10 sample referenced a typo that doesn't exist in README (skill correctly caught the false premise in smoke test — honest behavior, defective sample). Fixed the EVAL CONTRACT, not the skill: seeded eval/fixtures/notes.md with the typo and repointed S10. Oracle unchanged.

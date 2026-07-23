@@ -1,0 +1,1 @@
+Our brain system is robust but we're missing MCPs. Third parties like HubSpot and Airtable ship MCP servers and we have no plug-and-play way for tenants to install them. I imagine an MCP section in integrations settings like we have for backfill and webhooks, and brain-agent plus brain-apps need visibility of installed MCPs. Figure out how we'd do this.

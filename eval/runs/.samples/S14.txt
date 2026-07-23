@@ -1,0 +1,1 @@
+Extend the Beacon feedback thumbs to every page where users chat with the LLM (Intel, Design, all the regenerations), pop a review modal after each generation, and add a small "what went wrong" form on thumbs-down. The Beacon repo is at /Users/macbook/Workspace/ANM/Beacon.

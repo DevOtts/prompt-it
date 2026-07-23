@@ -1,0 +1,4 @@
+Review results for the trace-naming work, generate the next prompt:
+- PASS: traces from chat arrive named "chat" (langfuse project praxya, verified).
+- FAIL: calls from brain-apps arrive as bare "llm.generate" — 3 call sites in brain-apps/pulse were never given origin names.
+- FAIL: automation-triggered calls also unnamed.

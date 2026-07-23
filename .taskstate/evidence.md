@@ -1,4 +1,10 @@
-# Evidence ledger — prompt-it (run 1: research · run 2: build)
+# Evidence ledger — prompt-it (run 1: research · run 2: build · run 3: eval)
+
+## Eval run (2026-07-23)
+- [E1] · DoD1+2 · eval suite committed 1e15036 · "eval: 20-sample suite + binding oracle" · PASS (S10 later repointed to seeded fixture, D12)
+- [E2] · DoD3 (failed approach) · 20 subagent runners → 20/20 TRIGGER-FAIL · quoted: "prompt-it skill not found in available skills" (all agents) · ENV ARTIFACT, not skill defect — see E3
+- [E3] · DoD3 (diagnostic) · `claude -p --model haiku "list skills containing prompt"` · "ai-image-prompts-skill · next-session-prompt · prompt-it:prompt-it · fewer-permission-prompts" · PASS — installed plugin loads in fresh top-level sessions; subagent roster was snapshotted pre-install
+- [E4] · DoD3 (smoke) · `./eval/scripts/run-eval.sh S10` (fresh headless sonnet session) · skill TRIGGERED and validated pointers for real: "Pointer validation failed: README.md … contains no occurrence of 'recieve'" · PASS trigger+follow; exposed S10 sample premise defect → fixture seeded (D12)
 
 ## Build run (2026-07-23)
 - [2026-07-23T~1] · DoD1+2 · Write core SKILL.md + references/targets.md, committed · "c2abd67 feat: prompt-it core SKILL.md + references/targets.md" · PASS (content conformance re-checked at DoD5 gate)

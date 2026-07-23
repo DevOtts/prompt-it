@@ -1,0 +1,4 @@
+Here are the review findings on the observability epic — write me the continuation prompt:
+- PASS: langfuse deployed globally, per-tenant projects live, chat traces arriving (verified in langfuse UI, project praxya).
+- FAIL: the feedback thumbs component only renders on the chat page; Intel and Design pages have LLM interactions with no feedback UI.
+- FAIL: multi-step intel generation shows as one flat llm.generate trace; steps are not separated so we can't see where cost goes.

@@ -1,0 +1,5 @@
+Review found these in brain-admin-ui, write the next prompt:
+- FAIL: header title hardcoded "Painel" — English tenants see Portuguese.
+- FAIL: date formats hardcoded DD/MM/YYYY in the tasks table.
+- FAIL: currency symbol hardcoded "R$" in billing widget.
+All three were "fixed" once before by inline ternaries on tenant.language — that got reverted for being unmaintainable.
