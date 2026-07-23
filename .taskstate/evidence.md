@@ -9,6 +9,8 @@
 - [2026-07-23T~5] · DoD3+5a+5b · delegation gate + inline checks (haiku packet run inline — 4 bash cmds cheaper than agent spawn, logged) · "JSON_OK · COPY_IDENTICAL · 0.1.0 grep: marketplace 1, plugin 1, SKILL 1, CHANGELOG 4 · README 300 ln, CHANGELOG 60 ln, LICENSE 21 ln · README tiering mentions only in boundary-explanation context (ln 30/124/128/174)" · PASS
 - [2026-07-23T~6] · DoD1 (content conformance) · grep-audit of core SKILL.md against DoD-1 mechanism list · clarity gate ✔ route(5 targets) ✔ ≤3 questions ✔ pointer validation (.agents/history/INDEX.md) ✔ 6-slot template ✔ bare-target extras ✔ Mode 2 (acknowledge-then-catch, class-over-instance, Pareto, failed attempts, nsp conventions, /read-chat) ✔ self-check (rubric+contradiction+load-bearing) ✔ output contract (🎯/💡) ✔ credential rule ✔ nsp-distinction in description ✔ DevOtts frontmatter+footer ✔ · PASS
 
+- [2026-07-23T~7] · DoD6 · fresh-eyes verifier: rows 1–5 CONFIRM (independent artifact spot-checks), row 6 CHALLENGE (uncommitted report + premature verdict citation) · reconciled: verdict appended, row 6 rewritten, report+lessons committed at 5ac0528 · PASS
+
 ## Research run (2026-07-21)
 Format: [timestamp] · DoD# · command/check · quoted output · verdict
 
