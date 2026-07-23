@@ -16,7 +16,7 @@
 </p>
 
 <a href="#how-it-works">
-  <img src="assets/prompt-it-hero.svg" alt="prompt-it — a rough ask flows through a clarity gate, routing, head-context extraction, pointer validation and a triple self-check, and comes out as one copyable prompt routed to plan-it, fable-it, review-it, or a bare session" width="100%">
+  <img src="assets/prompt-it-her0.svg" alt="prompt-it — a rough ask flows through the /prompt-it compiler (clarity gate, route, extract context, validate pointers, self-check) and emits one copyable prompt routed to plan-it, fable-it, review-it, or a bare LLM — a her0 open-source skill" width="100%">
 </a>
 
 <p>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680" role="img" aria-label="prompt-it — the harness-aware intent compiler">
+  <title>prompt-it · the harness-aware intent compiler</title>
+
+  <defs>
+    <style>
+      .d  { font-family: 'Space Grotesk','SpaceGrotesk',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif; }
+      .b  { font-family: 'Inter','Inter var',system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif; }
+      .m  { font-family: 'JetBrains Mono','JetBrainsMono','SF Mono',Menlo,Consolas,monospace; }
+      .lbl{ letter-spacing: 3.2px; }
+    </style>
+
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="680" rx="20"/></clipPath>
+    <clipPath id="cCard"><rect x="358" y="218" width="440" height="316" rx="14"/></clipPath>
+    <clipPath id="r1"><rect x="958" y="246" width="196" height="46" rx="10"/></clipPath>
+    <clipPath id="r2"><rect x="958" y="314" width="196" height="46" rx="10"/></clipPath>
+    <clipPath id="r3"><rect x="958" y="382" width="196" height="46" rx="10"/></clipPath>
+    <clipPath id="r4"><rect x="958" y="450" width="196" height="46" rx="10"/></clipPath>
+    <clipPath id="zero"><rect x="100.2" y="623.1" width="9.6" height="13.9" rx="2"/></clipPath>
+
+    <pattern id="slash" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#00E5A0" stroke-width="2"/>
+    </pattern>
+
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#484F58"/>
+    </marker>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect x="0" y="0" width="1200" height="680" fill="#0D1117"/>
+    <rect x="880" y="0" width="320" height="182" fill="url(#slash)" opacity="0.07"/>
+    <rect x="0" y="0" width="1200" height="3" fill="#00E5A0"/>
+  </g>
+  <rect x="1" y="1" width="1198" height="678" rx="19" fill="none" stroke="#21262D" stroke-width="2"/>
+
+  <!-- header -->
+  <text class="m lbl" x="48" y="46" font-size="11" fill="#00E5A0">SKILL · INTENT COMPILER</text>
+  <text class="m lbl" x="1152" y="46" font-size="11" fill="#8B949E" text-anchor="end">HER0 · OPEN SOURCE</text>
+
+  <text class="d" x="48" y="114" font-size="52" font-weight="700" fill="#FFFFFF" letter-spacing="-1.5">prompt<tspan fill="#00E5A0">-it</tspan></text>
+  <text class="b" x="48" y="148" font-size="19" fill="#C9D1D9">Turn a rough ask into an optimized, context-grounded prompt.</text>
+  <text class="m" x="48" y="176" font-size="12.5" fill="#8B949E">the harness-aware intent compiler · routes it, and emits nothing the target already owns</text>
+
+  <!-- rough ask -->
+  <rect x="48" y="316" width="180" height="132" rx="12" fill="#161B22" stroke="#484F58" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text class="d" x="138" y="346" font-size="15" font-weight="600" fill="#C9D1D9" text-anchor="middle">rough ask</text>
+  <text class="m" x="138" y="374" font-size="11" fill="#8B949E" text-anchor="middle">"fix the auth bug"</text>
+  <text class="m" x="138" y="394" font-size="11" fill="#8B949E" text-anchor="middle">"add MCPs to the engine"</text>
+  <text class="m" x="138" y="414" font-size="11" fill="#8B949E" text-anchor="middle">"is it actually done?"</text>
+  <text class="m" x="138" y="434" font-size="11" fill="#8B949E" text-anchor="middle">+ review findings</text>
+
+  <path d="M240 382 L 348 382" fill="none" stroke="#484F58" stroke-width="2" marker-end="url(#arw)"/>
+
+  <!-- compiler -->
+  <rect x="358" y="218" width="440" height="316" rx="14" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+  <rect x="358" y="218" width="4" height="316" fill="#00E5A0" clip-path="url(#cCard)"/>
+
+  <text class="m" x="388" y="253" font-size="18" font-weight="700" fill="#FFFFFF">/prompt-it</text>
+  <rect x="596" y="235" width="178" height="22" rx="11" fill="none" stroke="#FF6B4A" stroke-width="1"/>
+  <text class="m" x="685" y="250" font-size="10.5" fill="#FF6B4A" text-anchor="middle">compiler · not executor</text>
+  <line x1="388" y1="271" x2="774" y2="271" stroke="#21262D" stroke-width="1"/>
+
+  <text class="m" x="388" y="302" font-size="13.5" fill="#00E5A0">1 · clarity gate</text>
+  <text class="m" x="588" y="302" font-size="11.5" fill="#8B949E">trivial? tighten and stop</text>
+  <text class="m" x="388" y="334" font-size="13.5" fill="#00E5A0">2 · route</text>
+  <text class="m" x="588" y="334" font-size="11.5" fill="#8B949E">pick the target skill</text>
+  <text class="m" x="388" y="366" font-size="13.5" fill="#00E5A0">3 · extract context</text>
+  <text class="m" x="588" y="366" font-size="11.5" fill="#8B949E">your head, not the repo</text>
+  <text class="m" x="388" y="398" font-size="13.5" fill="#00E5A0">4 · validate pointers</text>
+  <text class="m" x="588" y="398" font-size="11.5" fill="#8B949E">no dead @refs shipped</text>
+  <text class="m" x="388" y="430" font-size="13.5" fill="#2EA043">5 · self-check ×3</text>
+  <text class="m" x="588" y="430" font-size="11.5" fill="#8B949E">rubric · clash · terse</text>
+
+  <rect x="380" y="452" width="396" height="66" rx="10" fill="#00E5A0"/>
+  <text class="m" x="400" y="480" font-size="13" font-weight="700" fill="#0D1117">6 · emit → one copyable prompt</text>
+  <text class="m" x="400" y="502" font-size="11.5" fill="#0D1117" opacity="0.72">target: &lt;route + why&gt;    ·    delta: &lt;what it fixed&gt;</text>
+
+  <!-- routing -->
+  <path d="M804 320 C 872 320, 892 269, 950 269" fill="none" stroke="#484F58" stroke-width="2" marker-end="url(#arw)"/>
+  <path d="M804 360 C 872 360, 892 337, 950 337" fill="none" stroke="#484F58" stroke-width="2" marker-end="url(#arw)"/>
+  <path d="M804 400 C 872 400, 892 405, 950 405" fill="none" stroke="#484F58" stroke-width="2" marker-end="url(#arw)"/>
+  <path d="M804 440 C 872 440, 892 473, 950 473" fill="none" stroke="#484F58" stroke-width="2" marker-end="url(#arw)"/>
+
+  <rect x="958" y="246" width="196" height="46" rx="10" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+  <rect x="958" y="246" width="4" height="46" fill="#58A6FF" clip-path="url(#r1)"/>
+  <text class="m" x="980" y="274" font-size="13.5" font-weight="600" fill="#58A6FF">→ /plan-it</text>
+  <text class="m" x="1140" y="274" font-size="10" fill="#484F58" text-anchor="end">fuzzy · large</text>
+
+  <rect x="958" y="314" width="196" height="46" rx="10" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+  <rect x="958" y="314" width="4" height="46" fill="#00E5A0" clip-path="url(#r2)"/>
+  <text class="m" x="980" y="342" font-size="13.5" font-weight="600" fill="#00E5A0">→ /fable-it</text>
+  <text class="m" x="1140" y="342" font-size="10" fill="#484F58" text-anchor="end">goal + DoD</text>
+
+  <rect x="958" y="382" width="196" height="46" rx="10" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+  <rect x="958" y="382" width="4" height="46" fill="#2EA043" clip-path="url(#r3)"/>
+  <text class="m" x="980" y="410" font-size="13.5" font-weight="600" fill="#2EA043">→ /review-it</text>
+  <text class="m" x="1140" y="410" font-size="10" fill="#484F58" text-anchor="end">is it done?</text>
+
+  <rect x="958" y="450" width="196" height="46" rx="10" fill="#161B22" stroke="#21262D" stroke-width="1.5"/>
+  <rect x="958" y="450" width="4" height="46" fill="#8B949E" clip-path="url(#r4)"/>
+  <text class="m" x="980" y="478" font-size="13.5" font-weight="600" fill="#8B949E">→ bare LLM</text>
+  <text class="m" x="1140" y="478" font-size="10" fill="#484F58" text-anchor="end">no harness</text>
+
+  <!-- caption -->
+  <text class="b" x="600" y="578" font-size="14" fill="#8B949E" text-anchor="middle">Two modes: <tspan class="m" fill="#C9D1D9">new-session compiler</tspan> and <tspan class="m" fill="#C9D1D9">post-review continuation</tspan>. It writes the prompt; the target skill does the work.</text>
+
+  <!-- footer -->
+  <line x1="48" y1="604" x2="1152" y2="604" stroke="#21262D" stroke-width="1"/>
+
+  <text class="d" x="48" y="640" font-size="26" font-weight="700" fill="#FFFFFF" letter-spacing="-1" textLength="46" lengthAdjust="spacingAndGlyphs">her</text>
+  <rect x="97" y="619.5" width="16" height="21" rx="3.15" fill="#00E5A0"/>
+  <rect x="100.2" y="623.1" width="9.6" height="13.9" rx="2" fill="#0D1117"/>
+  <rect x="103.6" y="615" width="2.8" height="30" fill="#00E5A0" clip-path="url(#zero)" transform="rotate(-45 105 630.05)"/>
+  <text class="m" x="123" y="637" font-size="11" fill="#8B949E">· from zero to founder, with a method</text>
+
+  <text class="m" x="1152" y="637" font-size="11.5" fill="#8B949E" text-anchor="end">github.com/DevOtts/prompt-it</text>
+</svg>
