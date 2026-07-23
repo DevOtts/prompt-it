@@ -33,7 +33,7 @@ MUST: no harness skill header; UNCERTAINTY CLAUSE present; OUTPUT CONTRACT prese
 
 ## S06 → target: product-LLM
 Exemplar: self-contained system-prompt addition disambiguating "cliente": org type=client vs Shopify repeat buyer vs campaign-creator client config; instruction to state the interpretation used and offer alternatives when ambiguous; missing-data behavior ("no records for <interpretation>" not bare "no clients found"); example Q→A pair for the recurring-buyers question.
-MUST: the ≥3 colliding senses named; ambiguity behavior (state interpretation / offer alternatives); ≥1 worked example; self-contained (no @-refs, no /read-chat). MUST-NOT: harness slot headers; CoT scaffolding requirements.
+MUST: the colliding senses IN EVIDENCE named (≥2 — the two the sample supplies: org type=client vs Shopify repeat buyer; a third family-known sense is a bonus, never required — do not demand fabrication beyond the input); ambiguity behavior (state interpretation / offer alternatives); ≥1 worked example; self-contained (no @-refs, no /read-chat). MUST-NOT: harness slot headers; CoT scaffolding requirements. *(v2: relaxed from ≥3 — oracle defect caught by J2, see decisions D13.)*
 
 ## S07 → Mode 2, route: fable-it (or iterate; either accepted with a route rationale)
 Exemplar: acknowledge (langfuse live, chat traces verified) → two gaps as numbered work; feedback-UI gap scoped to Intel/Design surfaces; trace gap framed at mechanism level (step-span instrumentation for multi-step flows, not a one-off intel patch); DS with verification targets (feedback UI visible on both pages; intel trace shows ≥N named child steps in langfuse); fences (don't touch verified chat tracing).

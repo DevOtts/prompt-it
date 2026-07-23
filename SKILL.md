@@ -48,6 +48,8 @@ prompt-it belongs to the *-it family (plan-it → fable-it → review-it). Each 
 ### 1. Clarity gate
 If the rough prompt is already clear, scoped, and routed — target obvious, goal unambiguous, pointers present — do a **minimal tighten** (`[VERB] [WHAT] in [WHERE]. [CONSTRAINT].`), emit, stop. Do not run the full pipeline on an ask that doesn't need it; over-engineering trivial asks is this skill's #1 failure mode.
 
+**Minimal tighten preserves the user's own structure and wording.** Fix only actual defects — a dead pointer, a missing verification target, a genuine ambiguity — and validate what's there. Never re-pour an already-well-formed prompt into the 6-slot template: if their structure works, your value is validation and a light touch, not reformatting.
+
 ### 2. Route
 Pick the target and say why (one line):
 - fuzzy/large idea, needs discovery+specs → **plan-it**
@@ -60,12 +62,16 @@ Pick the target and say why (one line):
 Recover what's in the user's head, cheapest source first:
 1. **The conversation itself** — evidence they've already shown (URLs, screenshots, file mentions, frustrations).
 2. **Cheap lookups** — `.agents/history/INDEX.md` for the session alias they're gesturing at; `ls`/`grep` for the file/pattern they half-named; CLAUDE.md for standing constraints.
-3. **≤3 grounded questions** — only for what lookups cannot resolve, each with concrete options drawn from what you found ("Which auth flow do you mean: `src/auth/session.ts` or the SSO path in `sso/`?"), never open-ended "what did you mean?". If the user is unavailable, state the assumption inline in the prompt and mark it `(assumed — flag if wrong)`.
+3. **≤3 grounded questions** — only for what lookups cannot resolve, each with concrete options drawn from what you found ("Which auth flow do you mean: `src/auth/session.ts` or the SSO path in `sso/`?"), never open-ended "what did you mean?".
+
+**The question gate (hard rule).** A question is only allowed when the user can actually answer — a live interactive session. In ANY non-interactive context (headless/one-shot run, invoked by another agent or script, no reply possible this turn), you MUST still deliver the full output contract: convert every would-be question into an inline flagged assumption `(assumed: X — flag if wrong)` inside the prompt block, and surface the assumptions in the 💡 line. Ending an invocation with questions and no prompt block is a contract violation — the prompt block, 🎯 and 💡 lines are **unconditional**, in every mode, every context.
 
 Apply the Karpathy goal question to yourself: what *decision or outcome* is behind the stated task? `/goal` carries the outcome, not the chore.
 
 ### 4. Pointer validation
 Every pointer that goes into the prompt gets verified in seconds: `@file` refs exist on disk; `/read-chat` aliases match a ledger card in `.agents/history/INDEX.md`; the named pattern-to-imitate file is real. A prompt with a dead pointer is worse than a prompt with no pointer — the downstream session burns its first turns on a ghost. Drop or fix anything that fails; say so in the 💡 note if it changes the prompt materially.
+
+**Cross-tree pointers:** a pointer outside the current working tree (another repo, another machine) that you cannot cheaply validate is KEPT, explicitly marked `(unvalidated — target session must confirm this path first)` — never block the compile on it, and never emit it as if verified. Only same-tree pointers that fail validation get dropped or fixed.
 
 ### 5. Draft — the 6-slot template
 Slots marked ⚖ appear only when the task's complexity warrants (clarity gate calibrates); slots the routed target owns are OMITTED per `references/targets.md`:
@@ -78,7 +84,10 @@ Slots marked ⚖ appear only when the task's complexity warrants (clarity gate c
                        pattern-to-imitate ("mirror X — it already solves Y"),
                        /read-chat alias, evidence URLs. Read-order if it matters.
 5. DoD SKETCH       — numbered, individually testable items, each naming its verification
-                       TARGET (endpoint, page, table, command) — not the protocol.
+                       TARGET: WHAT proves it (the endpoint/page/table/test that must show
+                       the result) — NEVER the verification METHOD or setup protocol
+                       ("configure a Space with an invalid env var and confirm…" is
+                       review-it/fable-it's job to design, not the prompt's to prescribe).
 6. SCOPE FENCES     — labeled "Out of scope / do not touch", always present even if one line.
                        This is the interface fable-it lifts from goal text — make it explicit.
 ```
@@ -97,6 +106,8 @@ Drafting rules: reference material above the ask; ≤10 discrete directives (con
 4. Setup lines only if genuinely needed (≤2, e.g. "run from the Engine-Core repo root").
 
 Never silent-rewrite: if you changed the user's meaning anywhere, say it in the 💡 line or a fourth line — auditability is the value proposition. Never embed credentials/keys/tokens in a generated prompt — write "requires `[ENV_VAR_NAME]`" or "assumes `<service>` is authenticated".
+
+**Output hygiene:** the response contains NOTHING but the four elements above. No process narration, no tool-call commentary, no apologies for failed lookups — fold any material lookup failure into the 💡 line or an inline flagged assumption. The reader sees a finished artifact, not your workings.
 
 ---
 
@@ -121,6 +132,7 @@ Pipeline:
 - Do not emit anything the routed target owns — tiering notes, persistence contracts, autonomy clauses, binding test contracts. Check `references/targets.md` every draft.
 - Do not run discovery research. Pointer validation is ls/grep/index-lookup in seconds; anything more belongs to plan-it/fable-it.
 - Do not ask more than 3 questions, and none that a cheap lookup could answer.
+- Do not end ANY invocation without the emitted prompt block — questions never replace output; in non-interactive contexts convert them to flagged assumptions (question gate).
 - Do not exceed ~10 directives or let narrative bloat the GROUNDING slot — compact beats thick, measured.
 - Do not ship a pointer you did not validate this session.
 - Do not silently change the user's intent, scope, or meaning — surface every material change.

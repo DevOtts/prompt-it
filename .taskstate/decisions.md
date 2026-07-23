@@ -14,3 +14,5 @@
 - D10: oracle judges property conformance (checklists in expected-prompts.md + globals G1–G6), never byte equality with exemplars.
 - D11: eval outputs are disjoint files eval/runs/v0.1.0/S*.md; no agent touches git; coordinator commits.
 - D12: S10 sample referenced a typo that doesn't exist in README (skill correctly caught the false premise in smoke test — honest behavior, defective sample). Fixed the EVAL CONTRACT, not the skill: seeded eval/fixtures/notes.md with the typo and repointed S10. Oracle unchanged.
+- D13: ORACLE fix — S06 checklist demanded ≥3 "cliente" senses but the sample evidences only 2; skill correctly refused to fabricate. Relaxed to "senses in evidence (≥2)".
+- D14: v0.1.1 fix set (from J1–J4): question gate (one-shot = user unavailable → assume-and-flag, output unconditional); cross-tree unvalidated-pointer rule; DoD sketch = targets never methods; clarity-gate preserve-structure; output hygiene (no tool narration). Root SKILL.md re-synced.
