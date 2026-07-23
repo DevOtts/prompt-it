@@ -24,3 +24,8 @@
 - **Cross-source contradiction checking pays**: having two video lanes let one agent catch that another lane's source recommended a technique (emotional-manipulation prompting) that Anthropic practitioners dispute. When lanes cover overlapping topics, tell agents the other lanes exist… (they discovered it via shared transcript dir and self-corrected scope — a happy accident worth making deliberate next time by stating lane boundaries in each prompt).
 - **prompt-examples analysis is cheapest inline** when the coordinator already read the sources — don't re-delegate what's already in context.
 - Build-phase pointer: the spec-ready brief lives in `research-SYNTHESIS.md` §3; Fernando's 7 open decisions in §3.6 gate the build.
+
+## v0.2.1 run (2026-07-23)
+- Mechanical self-checks added to a SKILL.md must be declared SILENT ("never state the count/cap in your response") — otherwise lower-tier runners narrate the check and break the output contract (S18 first rerun narrated "192 words, safely under the cap" before the fence).
+- Guards that name the exact violation artifact ("a `Grounding:` line with no counterpart in the user's text = DELETE") outperform prose prohibitions of the same rule — all 4 residual defects fell to artifact-naming guards in the top rules box.
+- xargs -n1 -P4 over run-eval.sh is a stable way to run the 20-sample suite; all 20 fresh headless sessions loaded the plugin correctly after a cache purge.

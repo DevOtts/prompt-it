@@ -31,3 +31,9 @@
 - GOTCHA caught mid-phase: first version of rule 7 made the runner NARRATE its word count before the fence ("192 words, safely under…") → G1 fence-first violation. Patch: "the count is a silent internal check — never state count or cap in the response." Lesson: any mechanical self-check added to SKILL.md must say the check is SILENT, or lower tiers narrate it.
 - Rerun on patched version (eval/runs/v0.2.1-phase1b, EVAL_MODEL=sonnet): S11 PASS (passthrough, dead pointer fixed in place, no Grounding/Context section), S18 PASS (197 words fence-exclusive, fence-first, schema+uncertainty-out intact). Sonnet judge: judgment-phase1.md.
 - STOPPED for Fernando's review before Phase 2 (S13+S14), per kickoff.
+
+## v0.2.1 Phases 2–3 + ship (2026-07-23, fable-it run)
+- Phase 2 (fcd4088): rule 2 gained lookup-first + options-or-assumption; new rule 8 (plan-it scope tie-break, earned-facts, verbatim paths). S13+S14 PASS on sonnet rerun; S14 fact-check 11/12 true, 1 non-material.
+- Phase 3: full 20 on EVAL_MODEL=fable (4 concurrent via xargs), judged by 4 fable judge agents (A–D) → 20/20, ZERO D19 retries. First-ever clean certification.
+- Ship: quad + CHANGELOG (0.2.0 entry corrected 20/20→16/20 — it predated D20), 3 registries bumped+pushed, reinstall verified 0.2.1.
+- Tier log: coordinator Fable; eval runners sonnet (iteration) / fable (certification, per D22); judges sonnet (iteration) / fable ×4 (certification, never-downgrade). Zero escalations needed this run.
