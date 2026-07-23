@@ -121,6 +121,19 @@ Template = the bosslife case, generalized:
 
 Follow the family checklist: `.claude-plugin/marketplace.json` (devotts namespace) + `plugins/prompt-it/.claude-plugin/plugin.json` + `plugins/prompt-it/skills/prompt-it/SKILL.md` + root SKILL.md copy + README (300–600 lines) + CHANGELOG + LICENSE, version triple-matched. SKILL.md frontmatter: name, trigger-heavy description, version, `author: DevOtts`, `author_url`, and the DevOtts footer line. Start minimal (parallel-lifecycle-shaped); add machine.json only if the pipeline becomes stateful. Reference files (template, rubric, worked examples) under `skills/prompt-it/references/`.
 
+### 3.5b Adopted from prompt-master (post-v2 addition, 2026-07-23 — full analysis in `research/research-findings-D3-prompt-master.md`)
+
+nidhinjs/prompt-master (a target-tool-aware prompt generator for 30+ AI tools) independently validates our design center: its per-tool routing table is the same move as our harness-aware responsibility map — know the target, emit what it needs, omit what it handles natively. Boundary-checked adoptions:
+
+- **Implement the responsibility map as `references/targets.md` per-target profiles** (plan-it / fable-it / review-it / iterate / bare session / product-LLM): *owns → omit*, *parses → include*, target-specific cautions (e.g. no CoT scaffolding on reasoning-native models).
+- **Output contract tightened**: one copyable prompt block + `🎯 Target:` (route + why) + `💡` one-line optimization note; setup lines only if genuinely needed.
+- **Final self-check adds the load-bearing audit**: every sentence load-bearing, no vague adjectives, scope bounded ("the best prompt is not the longest — every word is load-bearing").
+- **Bare agentic targets get stop conditions + forbidden actions** (harness routes omit them — fable-it owns stop/permission semantics).
+- **Mode 2 lists failed attempts** (from `run-memory.md` / review findings) so the next session doesn't re-propose them; restates locked decisions by *reading* `decisions.md` — prompt-it never maintains its own memory store.
+- **Credential-safety line**: generated prompts never embed secrets — "requires [ENV_VAR_NAME]" style only.
+
+Rejected (reasons in D3): the 13-template library (our 6-slot anatomy is the template), 30+ tool coverage, its Memory Block subsystem (CLAUDE.md/decisions.md/ledger own that here), signal-word maximization (contradicts Anthropic's Claude 4.x dial-back guidance), and "constraints in first 30%" (conflicts with adopted long-context placement rules).
+
 ### 3.6 Open decisions for Fernando (revised after the v2 scope correction)
 
 Resolved by the boundary audit (no longer open): question budget → ≤3, since discovery is plan-it's job (old #3); quick actions → cut as overengineering, the clarity gate covers the "just tighten it" case (old #6).
@@ -141,3 +154,4 @@ Still genuinely Fernando's to decide:
 - `research/research-findings-C1-youtube.md`, `research/research-findings-C2-youtube.md` — 8 videos (transcripts in `research/transcripts/`)
 - `research/research-findings-D1-existing-tools.md` — optimizer landscape (Anthropic improver/generator, 5 community skills, DSPy/GEPA/PromptWizard, meta-prompting, rubrics)
 - `research/research-findings-D2-best-practices.md` — standards + the 24-item checklist prompt-it scores against
+- `research/research-findings-D3-prompt-master.md` — nidhinjs/prompt-master adopt/reject audit (post-v2 addition)
