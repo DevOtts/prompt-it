@@ -12,11 +12,11 @@
 </p>
 
 <p>
-  <em>The intent compiler for the <a href="https://github.com/DevOtts/plan-it">*-it</a> family: plan-it plans it, fable-it builds it, review-it verifies it — prompt-it writes the prompts between them.</em>
+  <em>The intent compiler for the <a href="https://github.com/DevOtts/plan-it">*-it</a> family: plan-it plans it, build-it builds it, review-it verifies it — prompt-it writes the prompts between them.</em>
 </p>
 
 <a href="#how-it-works">
-  <img src="assets/prompt-it-her0.svg" alt="prompt-it — a rough ask flows through the /prompt-it compiler (clarity gate, route, extract context, validate pointers, self-check) and emits one copyable prompt routed to plan-it, fable-it, review-it, or a bare LLM — a her0 open-source skill" width="100%">
+  <img src="assets/prompt-it-her0.svg" alt="prompt-it — a rough ask flows through the /prompt-it compiler (clarity gate, route, extract context, validate pointers, self-check) and emits one copyable prompt routed to plan-it, build-it, review-it, or a bare LLM — a her0 open-source skill" width="100%">
 </a>
 
 <p>
@@ -57,7 +57,7 @@ The best prompt is not the longest — it's the one where every word is load-bea
 
 You type *"add MCP support to the brain."* Pasted straight into a build agent, that becomes: a greenfield design for a subsystem that half-exists, an invented integrations schema, four architecture calls you never saw, and a "done" report verified against nothing. Not a capability problem — a **framing** problem. The agent never had your goal, your reference implementation, your scope fence, or a checkable definition of done, because none of them were in the sentence you typed.
 
-`prompt-it` supplies exactly that missing layer — and no more. It doesn't plan the feature (that's `plan-it`), doesn't build it (`fable-it`), doesn't verify it (`review-it`). It writes the prompt that invokes the right one of those **well**: goal surfaced, context pointed at (not pasted), scope fenced, definition-of-done sketched to the altitude the target can lock — and everything the target skill already handles left deliberately out.
+`prompt-it` supplies exactly that missing layer — and no more. It doesn't plan the feature (that's `plan-it`), doesn't build it (`build-it`), doesn't verify it (`review-it`). It writes the prompt that invokes the right one of those **well**: goal surfaced, context pointed at (not pasted), scope fenced, definition-of-done sketched to the altitude the target can lock — and everything the target skill already handles left deliberately out.
 
 <a href="#how-it-works">
   <img src="assets/prompt-it-pipeline.svg" alt="The prompt-it pipeline: Mode 1 (clarity gate, route, extract + validate, triple self-check, emit) and Mode 2 (acknowledge-then-catch, class over instance, carry failed attempts, emit continuation) — governed by the boundary contract that omits what each target skill already owns" width="100%">
@@ -85,7 +85,7 @@ You type *"add MCP support to the brain."* Pasted straight into a build agent, t
 /plugin install prompt-it@devotts
 ```
 
-That's it. Type `/prompt-it` followed by your rough ask, or just describe what you want and ask for "the prompt for it." `prompt-it` shares the `devotts` marketplace with `plan-it`, `fable-it`, and `review-it` — if you've already added any of them, `/plugin install prompt-it@devotts` is all you need.
+That's it. Type `/prompt-it` followed by your rough ask, or just describe what you want and ask for "the prompt for it." `prompt-it` shares the `devotts` marketplace with `plan-it`, `build-it`, and `review-it` — if you've already added any of them, `/plugin install prompt-it@devotts` is all you need.
 
 ### Cursor · Codex · VS Code + Copilot · Others
 
@@ -110,7 +110,7 @@ Copy [`SKILL.md`](SKILL.md) into your agent's skills/rules directory (e.g. `~/.c
 You hand it a rough ask; it hands back the prompt to start a fresh session with.
 
 1. **Clarity gate.** If the ask is already clear, scoped, and routed, it does a minimal tighten and stops — no ceremony on a one-line fix. Over-engineering trivial asks is the first failure mode of every prompt "optimizer," and the gate exists to refuse it.
-2. **Route.** It picks the target skill — `plan-it` for a fuzzy or large idea, `fable-it` for a goal with checkable done-ness, `review-it` for "is it actually done?", `iterate` for a single fix-test-verify loop, or a **bare / product-LLM** target when no harness fits. A route *you* name is locked — it never overrides your call.
+2. **Route.** It picks the target skill — `plan-it` for a fuzzy or large idea, `build-it` for a goal with checkable done-ness, `review-it` for "is it actually done?", `iterate` for a single fix-test-verify loop, or a **bare / product-LLM** target when no harness fits. A route *you* name is locked — it never overrides your call.
 3. **Extract head-context.** The core move: surface what you know that the agent doesn't — the session you're gesturing at (resolved against your history ledger), the file you half-named, the reference implementation to mirror, the evidence URLs. Cheap lookups first; at most three grounded, concrete-option questions for what lookups can't resolve.
 4. **Validate pointers.** Every `@file`, every `/read-chat` alias, every pattern-to-imitate is checked to exist — in seconds. A prompt with a dead pointer is worse than one with no pointer; the downstream session burns its first turns chasing a ghost.
 5. **Self-check ×3.** A five-item rubric (grounded · scoped · actionable · faithful · complete-enough), a contradiction diff across the DoD and constraints, and a load-bearing audit that cuts every word that isn't pulling weight.
@@ -132,13 +132,13 @@ This is the design center, and the reason a `prompt-it` prompt reads lean where 
 | Route | It never emits | Because that belongs to |
 |---|---|---|
 | **plan-it** | sizing/shape decisions, delegation/tiering notes, uncertainty clauses | plan-it's own scope governor and decision gates |
-| **fable-it** | "use Claude teams / lower models" tiering, persistence & autonomy clauses, verification *methods* | fable-it's model-tiers reference and run-state contract |
+| **build-it** | "use Claude teams / lower models" tiering, persistence & autonomy clauses, verification *methods* | build-it's model-tiers reference and run-state contract |
 | **review-it** | any freshly-authored DoD, how-to-verify instructions | review-it's oracle ladder — you point at the *existing* contract |
 | **iterate** | cycle structure, multi-step epic scaffolding | iterate's own diagnose→fix→verify loop |
 | **bare / product-LLM** | *(the one route that ADDS slots)* | nothing downstream owns them — so the prompt carries an explicit uncertainty clause + output contract, and for agents, stop conditions |
 | **any route** | credentials, model-economics content | the environment and the target skill |
 
-Telling `fable-it` to "split the work across teams and use cheaper models" isn't help — it's re-deciding something `fable-it` already decides canonically, and the moment that note drifts out of sync it's a bug. **Routing to `fable-it` *is* the tiering decision.** The boundary contract is what makes that true.
+Telling `build-it` to "split the work across teams and use cheaper models" isn't help — it's re-deciding something `build-it` already decides canonically, and the moment that note drifts out of sync it's a bug. **Routing to `build-it` *is* the tiering decision.** The boundary contract is what makes that true.
 
 ## Eval-hardened
 
@@ -182,7 +182,7 @@ The skill is deliberately small: the load-bearing rules live in a **hard-rules b
         ┌───────────────┬──────────┼───────────┬──────────────┐
         ▼               ▼          ▼           ▼              ▼
    ┌─────────┐   ┌───────────┐  ┌────────┐  ┌─────────┐ ┌────────────┐
-   │ plan-it │   │  fable-it │  │ iterate│  │review-it│ │ bare / LLM │
+   │ plan-it │   │  build-it │  │ iterate│  │review-it│ │ bare / LLM │
    └────┬────┘   └─────┬─────┘  └────────┘  └────┬────┘ └────────────┘
         │  plans it    │ builds it                │ verifies it
         └──────────────┴──── gaps found ──────────┘
@@ -191,7 +191,7 @@ The skill is deliberately small: the load-bearing rules live in a **hard-rules b
                    prompt-it (Mode 2) ── continuation prompt ──▶ next iteration
 ```
 
-- **prompt-it → plan-it / fable-it** — the routing line makes the optimized prompt open with the right skill call, so a fuzzy idea reaches the planner and a goal-with-DoD reaches the builder.
+- **prompt-it → plan-it / build-it** — the routing line makes the optimized prompt open with the right skill call, so a fuzzy idea reaches the planner and a goal-with-DoD reaches the builder.
 - **review-it → prompt-it → main thread** — after a QA pass reports gaps, Mode 2 writes the evidence-cited continuation prompt that drives the next iteration.
 - **Distinct from `/next-session-prompt`** — that skill hands off a *finished* plan/spec; `prompt-it` compiles *new* intent (Mode 1) or *post-review* continuations (Mode 2).
 
@@ -211,7 +211,7 @@ The skill is deliberately small: the load-bearing rules live in a **hard-rules b
 
 <div align="center">
 <br>
-<sub>Part of the <strong>*-it</strong> delivery family · <a href="https://github.com/DevOtts/plan-it">plan-it</a> · <a href="https://github.com/DevOtts/fable-it">fable-it</a> · <a href="https://github.com/DevOtts/review-it">review-it</a> · <strong>prompt-it</strong></sub>
+<sub>Part of the <strong>*-it</strong> delivery family · <a href="https://github.com/DevOtts/plan-it">plan-it</a> · <a href="https://github.com/DevOtts/build-it">build-it</a> · <a href="https://github.com/DevOtts/review-it">review-it</a> · <strong>prompt-it</strong></sub>
 <br><br>
 <sub>Authored by <a href="https://github.com/DevOtts">DevOtts</a></sub>
 </div>

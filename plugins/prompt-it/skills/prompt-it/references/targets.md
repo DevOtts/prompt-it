@@ -12,11 +12,11 @@ Slot key: R=ROUTING · G=GROUNDING · goal=/goal · CP=CONTEXT PACKAGE · DS=DoD
 - **OWNS → omit:** discovery research (Phases 3–4) · DoD lock (Phase 1) · sizing/shape (Phase 2 G1 gate) · research-team method + tiering (Phase 0 sets "parallel Claude teams at xhigh") · test contracts · UC (its human-decision gates G1/G2 handle ambiguity) · OC (its artifact shapes are governed).
 - **Cautions:** don't pre-decide size/shape ("this needs 4 squads") — that's the G1 gate's decision with the user. State the use-case honestly and let the governor size it.
 
-## fable-it (goal + DoD → autonomous delivery run)
+## build-it (goal + DoD → autonomous delivery run)
 
-- **PARSES → include:** R · G (1–2 lines) · goal · CP (validated @refs, pattern-to-imitate, /read-chat alias) · DS — the highest-value slot: numbered, testable, each item naming its verification TARGET (fable-it Step 2 must find a reachability path per item; giving the target saves the run from IMPLEMENTED-NOT-VERIFIED surprises) · SF — fable-it explicitly lifts scope fences from goal text; make them a labeled list.
+- **PARSES → include:** R · G (1–2 lines) · goal · CP (validated @refs, pattern-to-imitate, /read-chat alias) · DS — the highest-value slot: numbered, testable, each item naming its verification TARGET (build-it Step 2 must find a reachability path per item; giving the target saves the run from IMPLEMENTED-NOT-VERIFIED surprises) · SF — build-it explicitly lifts scope fences from goal text; make them a labeled list.
 - **OWNS → omit:** delegation/tiering/economics (Step 3 + model-tiers.md — NEVER emit a "use lower models / Claude teams" note) · persistence + run state (.taskstate contract) · autonomy posture + stop/permission semantics (Step 1) · verification protocol + evidence ledger (claim gate) · report format/location (Step 8 defaults) · UC (Step 0 states assumptions; Step 1 posture handles ambiguity).
-- **Cautions:** DoD items must be *individually* testable — compound items ("build and deploy and document") get split by Step 0 anyway; pre-split them. Name real verification targets (URL, table, command), not "works well" — and state only WHAT proves each item, never the verification procedure/setup (designing the method is fable-it/review-it's job).
+- **Cautions:** DoD items must be *individually* testable — compound items ("build and deploy and document") get split by Step 0 anyway; pre-split them. Name real verification targets (URL, table, command), not "works well" — and state only WHAT proves each item, never the verification procedure/setup (designing the method is build-it/review-it's job).
 
 ## review-it (is it actually done? → QA verdict)
 
@@ -45,7 +45,7 @@ Slot key: R=ROUTING · G=GROUNDING · goal=/goal · CP=CONTEXT PACKAGE · DS=DoD
 
 ## Quick omission table
 
-| Slot | plan-it | fable-it | review-it | iterate | bare | product-LLM |
+| Slot | plan-it | build-it | review-it | iterate | bare | product-LLM |
 |---|---|---|---|---|---|---|
 | GROUNDING | ✔ | ✔ | — | — | ✔ | ✔ (self-contained) |
 | /goal | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
