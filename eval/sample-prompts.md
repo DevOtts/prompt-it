@@ -6,7 +6,7 @@ Each sample is the EXACT text a runner agent hands to the installed /prompt-it s
 | Dimension | Samples |
 |---|---|
 | Route: plan-it | S01, S14 |
-| Route: fable-it | S02, S15, S19 |
+| Route: build-it | S02, S15, S19 |
 | Route: review-it | S03 |
 | Route: iterate | S04, S16 |
 | Route: bare session | S05, S17 (agentic) |
@@ -23,7 +23,7 @@ Each sample is the EXACT text a runner agent hands to the installed /prompt-it s
 ## S01 (plan-it — fuzzy platform feature)
 > Our brain system is robust but we're missing MCPs. Third parties like HubSpot and Airtable ship MCP servers and we have no plug-and-play way for tenants to install them. I imagine an MCP section in integrations settings like we have for backfill and webhooks, and brain-agent plus brain-apps need visibility of installed MCPs. Figure out how we'd do this.
 
-## S02 (fable-it — scoped fix with clear done-ness)
+## S02 (build-it — scoped fix with clear done-ness)
 > The ontology OpenRouter client in brain-api-core reads the global pod env var for the API key. It should resolve the per-Space "Direct (OpenRouter)" backbone connection key first, then fall back to OPENROUTER_API_KEY then OPENAI_API_KEY, same as trigger-draft.service.ts already does. Build and ship it.
 
 ## S03 (review-it — verify a done-claim)
@@ -72,7 +72,7 @@ Each sample is the EXACT text a runner agent hands to the installed /prompt-it s
 ## S14 (plan-it — multi-surface product enhancement)
 > Extend the Beacon feedback thumbs to every page where users chat with the LLM (Intel, Design, all the regenerations), pop a review modal after each generation, and add a small "what went wrong" form on thumbs-down. The Beacon repo is at /Users/macbook/Workspace/ANM/Beacon.
 
-## S15 (fable-it — small autonomous delivery)
+## S15 (build-it — small autonomous delivery)
 > I'm heading out. Add a version-check script to this repo that exits non-zero when the 0.x.y version differs across marketplace.json, plugin.json, SKILL.md and CHANGELOG.md, wire it as scripts/check-version.sh, and prove it catches a mismatch. Run it to done.
 
 ## S16 (iterate — flaky UI e2e)
@@ -84,7 +84,7 @@ Each sample is the EXACT text a runner agent hands to the installed /prompt-it s
 ## S18 (product-LLM, reasoning-native — must stay short, no CoT)
 > Write the system prompt for our log-triage analyzer that runs on o3-mini. It gets a batch of error logs and must output severity 0-4 plus a one-line cause hypothesis per log.
 
-## S19 (fable-it — input carries a stale tiering note that must be stripped)
+## S19 (build-it — input carries a stale tiering note that must be stripped)
 > Ship the LLM key-source fix to done: brain-api-core ontology client must use the per-Space backbone key with env fallback, mirroring trigger-draft.service.ts. IMPORTANT: split the work using claude teams and use lower models for the subagents to save tokens, keep the coordinator on the big model.
 
 ## S20 (Mode 2 — three point-bugs hiding one class)

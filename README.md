@@ -107,14 +107,14 @@ Copy [`SKILL.md`](SKILL.md) into your agent's skills/rules directory (e.g. `~/.c
 
 ### Mode 1 — the new-session compiler
 
-You hand it a rough ask; it hands back the prompt to start a fresh session with.
+You hand it a rough ask; it hands back the prompt that does the work — and tells you where to run it.
 
 1. **Clarity gate.** If the ask is already clear, scoped, and routed, it does a minimal tighten and stops — no ceremony on a one-line fix. Over-engineering trivial asks is the first failure mode of every prompt "optimizer," and the gate exists to refuse it.
 2. **Route.** It picks the target skill — `plan-it` for a fuzzy or large idea, `build-it` for a goal with checkable done-ness, `review-it` for "is it actually done?", `iterate` for a single fix-test-verify loop, or a **bare / product-LLM** target when no harness fits. A route *you* name is locked — it never overrides your call.
 3. **Extract head-context.** The core move: surface what you know that the agent doesn't — the session you're gesturing at (resolved against your history ledger), the file you half-named, the reference implementation to mirror, the evidence URLs. Cheap lookups first; at most three grounded, concrete-option questions for what lookups can't resolve.
 4. **Validate pointers.** Every `@file`, every `/read-chat` alias, every pattern-to-imitate is checked to exist — in seconds. A prompt with a dead pointer is worse than one with no pointer; the downstream session burns its first turns chasing a ghost.
 5. **Self-check ×3.** A five-item rubric (grounded · scoped · actionable · faithful · complete-enough), a contradiction diff across the DoD and constraints, and a load-bearing audit that cuts every word that isn't pulling weight.
-6. **Emit.** One copyable prompt block, a `🎯 Target:` line naming the route and why, and a `💡` line calling out the single most important thing it fixed or added. Nothing else — the response *is* the artifact.
+6. **Emit.** One copyable prompt block, a `🎯 Target:` line naming the route and why, a `💡` line calling out the single most important thing it fixed or added, and a `▶` delivery line saying where to run it — *here* or in a fresh session, decided from what this session is holding. Nothing else — the response *is* the artifact.
 
 ### Mode 2 — the post-review continuation
 
