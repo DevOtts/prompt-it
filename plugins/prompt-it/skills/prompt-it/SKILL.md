@@ -14,7 +14,7 @@ description: >-
   handoffs of a finished PRD/spec — that is /next-session-prompt; prompt-it compiles NEW intent
   (Mode 1) or post-REVIEW continuations (Mode 2). Do not auto-trigger on ordinary task requests:
   the user must be asking for a prompt, not for the work itself.
-version: 0.3.0
+version: 0.3.1
 author: DevOtts
 author_url: https://github.com/DevOtts
 ---
@@ -94,6 +94,8 @@ Every pointer that goes into the prompt gets verified in seconds: `@file` refs e
 **Cross-tree pointers:** a pointer outside the current working tree (another repo, another machine) that you cannot cheaply validate is KEPT, explicitly marked `(unvalidated — target session must confirm this path first)` — never block the compile on it, and never emit it as if verified. Only same-tree pointers that fail validation get dropped or fixed.
 
 **Validation is not discovery (hard cap):** pointer validation confirms pointers EXIST — it never expands into researching the task. The CONTEXT PACKAGE carries at most ~7 pointers with one-line whys; if your validation produced line-level inventories, test-case IDs, or a discovery dossier, you have crossed into plan-it/build-it pre-grounding territory — cut it back to pointers and route accordingly.
+
+**Brief budget (G-11):** every path or id the emitted prompt cites (files, `/read-chat` aliases, session ids, ticket or decision ids) has passed the check above or carries the `(unvalidated — ...)` marker; and the emitted prompt block stays at or under 8000 tokens (about 32000 characters). Over budget: cut context and keep pointers, because the target session can read the files itself.
 
 ### 5. Draft — the 6-slot template
 Slots marked ⚖ appear only when the task's complexity warrants (clarity gate calibrates); slots the routed target owns are OMITTED per `references/targets.md`:

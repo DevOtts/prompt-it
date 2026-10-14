@@ -3,6 +3,13 @@
 All notable changes to prompt-it are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## 0.3.1 — 2026-10-14
+
+do-it integration (companion-change catalog, prompt-it section; contract rule G-11). No behavior change to routing or the `▶` delivery line.
+
+- **Brief budget.** Step 4 (pointer validation) now states that every path or id the emitted prompt cites has been validated (or carries the existing `(unvalidated ...)` marker) and that the emitted prompt block stays at or under 8000 tokens.
+- Version bump in `plugin.json`, `marketplace.json` and both `SKILL.md` frontmatters. The 0.3.0 pin drift in build-it, plan-it and review-it is fixed in those repos (separate PRs).
+
 ## 0.3.0 — 2026-07-28
 
 Behavioral release: prompt-it now decides **where** its compiled prompt should run and says so in one line. Through 0.2.1 the skill hardcoded an answer to a question it never asked — the emit contract assumed a fresh session and the Install copy promised a block "ready to paste into a fresh session". That is wrong whenever the session holds evidence a copy-paste cannot carry: a compiled prompt is *text*, so pasted screenshots, uploads and live state do not travel, and `/read-chat` — the escape hatch prompt-it leans on — strips attachments from its digest, making them unrecoverable rather than merely degraded. (Field case: a feedback cycle compiled with six screenshots as its primary evidence, where the emitted setup line advised a fresh session and the user had to override it by hand.)
