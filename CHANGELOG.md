@@ -3,6 +3,13 @@
 All notable changes to prompt-it are documented here. This project adheres to
 [Semantic Versioning](https://semver.org/).
 
+## 1.0.0 — 2026-10-14
+
+Major release: the first stable prompt-it. No new behavior beyond what this branch already carries; the major bump marks the lifecycle family (prompt-it, plan-it, build-it, review-it, conclude-it, parallel-lifecycle) moving together to a stable, mutually pinned set.
+
+- **Carries the unpublished 0.3.0 and 0.3.1 changes** (see below): the `▶` delivery signal and dangling-evidence handling (0.3.0), and the do-it integration brief budget with validated pointers (0.3.1).
+- Version bump in `plugin.json`, `marketplace.json` and both `SKILL.md` frontmatters (1.0.0). Sibling plugins pin prompt-it at exactly 1.0.0.
+
 ## 0.3.1 — 2026-10-14
 
 do-it integration (companion-change catalog, prompt-it section; contract rule G-11). No behavior change to routing or the `▶` delivery line.
