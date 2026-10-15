@@ -14,7 +14,7 @@ description: >-
   handoffs of a finished PRD/spec — that is /next-session-prompt; prompt-it compiles NEW intent
   (Mode 1) or post-REVIEW continuations (Mode 2). Do not auto-trigger on ordinary task requests:
   the user must be asking for a prompt, not for the work itself.
-version: 0.2.1
+version: 1.0.0
 author: DevOtts
 author_url: https://github.com/DevOtts
 ---
@@ -25,7 +25,7 @@ You are not doing the task. You are writing the prompt that gets the task done r
 
 ## HARD OUTPUT RULES — check every one before responding, no exceptions
 
-1. **Your response starts at the opening fence** of the prompt block. Zero preamble, zero narration — not even one confirming sentence. Shape: fenced prompt block → `🎯 Target:` line → `💡` line → ≤2 setup lines → (live sessions only) ≤3 optional refinement questions. Nothing else, ever. The block itself carries ≤10 discrete directives — consolidate redundant restatements.
+1. **Your response starts at the opening fence** of the prompt block. Zero preamble, zero narration — not even one confirming sentence. Shape: fenced prompt block → `🎯 Target:` line → `💡` line → one `▶` delivery line → (live sessions only) ≤3 optional refinement questions. Nothing else, ever. The block itself carries ≤10 discrete directives — consolidate redundant restatements.
 2. **Emit-first, always.** Questions never replace the prompt block — unresolved points become inline `(assumed: X — flag if wrong)` markers. **Appended questions are earned, not free — two mechanical checks on every one:** (a) *lookup-first*: a question about a path/file/repo/session is forbidden until you ran the cheap lookup (`ls`, `grep`, history index) — if the lookup answers it, use the found value with an inline flagged assumption instead of asking; (b) *options-or-assumption*: every appended question must offer ≥2 concrete candidate answers drawn from your lookups ("is it `A` or `B`?") — a question you cannot give candidates for is not asked; it becomes an inline flagged assumption. "What/where is X?" with no candidates = violation.
 3. **A route the user named is locked.** Their skill header/mention survives verbatim; never override it. And a request to improve a PRODUCT's own prompt/agent (tenant chat, external tool's system prompt) is ALWAYS product-LLM/bare — never a harness route; the harness cannot run inside the product.
 4. **Per-route requirements (memorize — do not rely on reading targets.md):**
@@ -95,6 +95,8 @@ Every pointer that goes into the prompt gets verified in seconds: `@file` refs e
 
 **Validation is not discovery (hard cap):** pointer validation confirms pointers EXIST — it never expands into researching the task. The CONTEXT PACKAGE carries at most ~7 pointers with one-line whys; if your validation produced line-level inventories, test-case IDs, or a discovery dossier, you have crossed into plan-it/build-it pre-grounding territory — cut it back to pointers and route accordingly.
 
+**Brief budget (G-11):** every path or id the emitted prompt cites (files, `/read-chat` aliases, session ids, ticket or decision ids) has passed the check above or carries the `(unvalidated — ...)` marker; and the emitted prompt block stays at or under 8000 tokens (about 32000 characters). Over budget: cut context and keep pointers, because the target session can read the files itself.
+
 ### 5. Draft — the 6-slot template
 Slots marked ⚖ appear only when the task's complexity warrants (clarity gate calibrates); slots the routed target owns are OMITTED per `references/targets.md`:
 
@@ -127,11 +129,27 @@ Drafting rules: reference material above the ask; ≤10 discrete directives (con
 1. **One copyable prompt block** (fenced), ready to paste. Nothing inside it that isn't the prompt.
 2. `🎯 Target: <skill/surface> — <one line: why this route>`
 3. `💡 <one line: the most important thing the optimization added or fixed (e.g. "validated the session alias — you wrote 'observability chat', the card is done-observability-beacon")>`
-4. Setup lines only if genuinely needed (≤2, e.g. "run from the Engine-Core repo root").
+4. `▶ <Run here | Paste into a fresh session> — <the one reason>.` — always present, never omitted, and any genuinely needed setup ("Run from the Engine-Core repo root.") rides on this same line.
 
-Never silent-rewrite: if you changed the user's meaning anywhere, say it in the 💡 line or a fourth line — auditability is the value proposition. Never embed credentials/keys/tokens in a generated prompt — write "requires `[ENV_VAR_NAME]`" or "assumes `<service>` is authenticated".
+   Which one is **your** call, read off signals already in *this* session — never a mode flag, never a question, never something the user has to answer:
 
-**Output hygiene (mechanical rule):** the FIRST character of your response is the opening fence of the prompt block. Then 🎯, then 💡, then ≤2 setup lines, then (live sessions only) up to 3 optional refinement questions. NOTHING else — no preamble, no process narration, no tool-call commentary, no apologies for failed lookups; fold any material lookup failure into the 💡 line or an inline flagged assumption. The reader sees a finished artifact, not your workings.
+   | Signal present in this session | Delivery |
+   |---|---|
+   | Load-bearing images, pasted screenshots, uploaded files | **run here** — text cannot carry them |
+   | Live session state the run needs (open CDP browser, running dev server, active worktree) | **run here** |
+   | Pure text ask; every pointer is a file path | **fresh session** — clean context wins |
+   | No signal either way | fresh for overnight/autonomous runs; here for attended work |
+
+   ```
+   ▶ Run here — this session holds 6 screenshots the prompt can't carry.
+   ▶ Paste into a fresh session. Run from /Users/macbook/Workspace/Engine/Engine-Core.
+   ```
+
+**Dangling-evidence guard (fresh-session delivery only):** when you route the block to a fresh session, nothing inside it may point at in-session evidence — "the 5 screenshots above", "the error I pasted", "the log you shared". Describe that evidence in words, or point at a persisted file path instead. A compiled prompt is text: images and attachments do not travel, and `/read-chat` strips them from its digest, so the reference is unrecoverable at the target — the same failure class as a dead pointer. On *run here* delivery, such references are fine.
+
+Never silent-rewrite: if you changed the user's meaning anywhere, say it in the 💡 line — auditability is the value proposition. Never embed credentials/keys/tokens in a generated prompt — write "requires `[ENV_VAR_NAME]`" or "assumes `<service>` is authenticated".
+
+**Output hygiene (mechanical rule):** the FIRST character of your response is the opening fence of the prompt block. Then 🎯, then 💡, then the one `▶` delivery line, then (live sessions only) up to 3 optional refinement questions. NOTHING else — no preamble, no process narration, no tool-call commentary, no apologies for failed lookups; fold any material lookup failure into the 💡 line or an inline flagged assumption. The reader sees a finished artifact, not your workings.
 
 ---
 
