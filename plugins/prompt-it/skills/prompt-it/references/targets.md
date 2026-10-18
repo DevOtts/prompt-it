@@ -43,6 +43,15 @@ Slot key: R=ROUTING · G=GROUNDING · goal=/goal · CP=CONTEXT PACKAGE · DS=DoD
 
 ---
 
+## Delivery signal (cross-route)
+
+The `▶` delivery line is decided by session signals, not by route (SKILL.md emit step 4). Two profiles interact with it:
+
+- **iterate** is often chosen *because* live state exists — a running dev server, an open browser, a pasted error. That state is itself a run-here signal. When delivery is a fresh session instead, its "paste the actual error output into CP" caution is exactly how in-session evidence survives: paste the text, never point at it.
+- **product-LLM / external** targets never run in this session at all — the block leaves the harness. The delivery line names the destination surface (the product's system-prompt field, the external agent's config) instead of choosing between sessions.
+
+---
+
 ## Quick omission table
 
 | Slot | plan-it | build-it | review-it | iterate | bare | product-LLM |
